@@ -9,8 +9,6 @@
  */
 
 
-// Start modifying here:
-
 // Top level colors
 $foreground:  #333; // Base color: usually on Settings > Foreground
 $background:    #f7f7f7; // Background color: usually on Settings > Background
@@ -38,9 +36,8 @@ $string_regexp: #bb6688;
 $support: #008000;
 $variable: #19177c;
 
-// Additional classes, needed when migrating from Pandoc/Skyhighli
+// Additional classes, needed when migrating from Pandoc
 .highlight .sc{color: #40a070;} //String.Char uses CharToK
-.highlight .k{color: #007020; font-weight: bold;} //Keyword uses KeywordToK
 
 // tmTheme scopes as SASS variables
 // Naming convention: scope_without_dots
@@ -138,8 +135,6 @@ $variable_other:     $variable !default; //Other variables, like $some_variables
 // .w   -> Whitespace (for whitespace)
 
 
-
-// Stop modifying here.
 
 // Styles
 

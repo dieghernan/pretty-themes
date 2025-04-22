@@ -46,6 +46,11 @@ tm_ddbb <- read_csv("data/tm_ddbb.csv")
 pyg_ddbb <- read_csv("data/pygments_ddbb.csv")
 pandoc_ddbb <- read_csv("data/pandoc_ddbb.csv")
 
+pyg_ddbb <- pyg_ddbb |> 
+  arrange(tm_scope) |> 
+  select(tm_scope) |> 
+  distinct() |>  pull()
+pyg_ddbb
 
 full_ddbb <- tm_ddbb |> select(tm_scope, 
                                pygmn_css) |> 

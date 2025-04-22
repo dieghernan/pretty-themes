@@ -1,5 +1,5 @@
 
-input <- "tmTheme/OKSolar Dark.tmTheme"
+input <- "tmTheme/cobalt2.tmTheme"
 
 read_tmtheme <- function(input){
 require(xml2)
@@ -111,8 +111,6 @@ end[end$name != "Delete", ]
 }
 
 
-oksolar <- read_tmtheme("tmTheme/Dracula.tmTheme")
-
-aa <- readLines("dev.scss")
-bb <- sass::sass(aa, output = "C:\\Users\\q31407\\Desktop\\high.css")
+parsed_theme <- read_tmtheme(input)
+clipr::write_clip(parsed_theme)
 

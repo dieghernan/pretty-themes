@@ -26,45 +26,39 @@
 
 
 // Start modifying here:
-pre, code {
-  font-family: Consolas, Monaco, 'Courier New', monospace!important; // Delete in final css
-}
-
 
 // Top level colors
-$foreground:  #333; // Base color: usually on Settings > Foreground
-$background:    #f7f7f7; // Background color: usually on Settings > Background
+$foreground:  #FFFFFF; // Base color: usually on Settings > Foreground
+$background:    #193549; // Background color: usually on Settings > Background
 
-code {
-  color:$foreground;
-  background-color: $background;
-}
-
-
-$comment: #60a0b0;
-$constant_language: #880000;
-$constant_numeric: #40a070;
-$constant_numeric_float: #40a070;
-$entity_name: #06287e;
-$entity_other_attribute-name: #7d9029;
-$invalid: #ff0000;
-$keyword_control: #007020;
-$keyword_control_import: #008000;
-$keyword_operator: #4070a0;
-$markup_heading: #ba2121;
-$storage_type: #902000;
-$string: #4070a0;
-$string_regexp: #bb6688;
-$support: #008000;
-$variable: #19177c;
-
-// Additional classes, needed when migrating from Pandoc/Skyhighli
-.highlight .sc{color: #40a070;} //String.Char uses CharToK
-.highlight .k{color: #007020; font-weight: bold;} //Keyword uses KeywordToK
-
+$comment: #0088FF;
+$constant_character_escape: #FF628C;
+$constant_language: $constant_character_escape;
+$constant_numeric: $constant_character_escape;
+$constant_other: $constant_character_escape;
+$entity_name: #FFC600;
+$entity_name_tag: #9EFFFF;
+$entity_name_type: #FB94FF;
+$entity_other_attribute-name: #ffc600;
+$invalid: #F8F8F8;
+$keyword_control: #FF9D00;
+$keyword_operator: #FF9D00;
+$markup_bold: #C1AFFF;
+$markup_heading: #C8E4FD;
+$markup_italic: #B8FFD9;
+$punctuation_definition: #E1EFFF;
+$storage_type: #ffc600;
+$string: #3AD900;
+$string_quoted: #9EFF80;
+$string_regexp: #80FFC2;
+$support: #80FFBB;
+$support_constant:#EB939A;
+$variable: #CCCCCC;
+$variable_language: #FF80E1;
 // tmTheme scopes as SASS variables
 // Naming convention: scope_without_dots
 // See more in: https://macromates.com/manual/en/language_grammars
+
 
 // Comments
 $comment:                  $foreground !default; //Any comments
@@ -174,19 +168,19 @@ $variable_other:     $variable !default; //Other variables, like $some_variables
 /* Comments */
 .highlight {
   // Scope: comments
-  .c   {color:$comment;font-style: italic;} //Comment
-  .cp  {color:$comment;font-style: italic;} //Comment.Preproc
-  .cpf {color:$comment;font-style: italic;} //Comment.PreprocFile
+  .c   {color:$comment; font-style: italic;} //Comment
+  .cp  {color:$comment; font-style: italic} //Comment.Preproc
+  .cpf {color:$comment; font-style: italic} //Comment.PreprocFile
   
   // Scope: comments.block
-  .cm  {color:$comment_block;font-style: italic;} //Comment.Multiline
+  .cm  {color:$comment_block; font-style: italic} //Comment.Multiline
   
   // Scope: comments.line
-  .c1  {color:$comment_line;font-style: italic;} //Comment.Single
-  .cs  {color:$comment_line;font-style: italic;} //Comment.Special
+  .c1  {color:$comment_line; font-style: italic} //Comment.Single
+  .cs  {color:$comment_line; font-style: italic} //Comment.Special
   
   // Scope: comments.line.number-sign
-  .ch  {color:$comment_line_number-sign;font-style: italic;} //Comment.Hashbang
+  .ch  {color:$comment_line_number-sign; font-style: italic} //Comment.Hashbang
 }
 
 /* Constants */
@@ -227,23 +221,23 @@ $variable_other:     $variable !default; //Other variables, like $some_variables
   .nn {color:$entity_name_type;} //Name.Namespace
   
   // Scope: entity.other
-  .na {color:$entity_other_attribute-name;} //Name.Attribute
+  .na {color:$entity_other_attribute-name; font-style: italic;} //Name.Attribute
 }
 
 /* Invalid */
 .highlight {
   // Scope: Invalid
-  .err {color:$invalid; font-weight: bold;} //Error
-  .gr  {color:$invalid; font-weight: bold;} //Generic.Error
-  .gt  {color:$invalid; font-weight: bold;} //Generic.Traceback
-  .ne  {color:$invalid; font-weight: bold;} //Name.Exception
+  .err {color:$invalid; background-color: #800F00;} //Error
+  .gr  {color:$invalid; background-color: #800F00;} //Generic.Error
+  .gt  {color:$invalid; background-color: #800F00;} //Generic.Traceback
+  .ne  {color:$invalid; background-color: #800F00;} //Name.Exception
 }
 
 /* Keywords */
 .highlight {
   // Scope: keyword.control
-  .k  {color:$keyword_control; font-weight: bold;} //Keyword
-  .kn {color:$keyword_control_import; font-weight: bold;} //Keyword.Namespace
+  .k  {color:$keyword_control;} //Keyword
+  .kn {color:$keyword_control_import;} //Keyword.Namespace
   
   // Scope: keyword.operator
   .o  {color:$keyword_operator;} //Operator
@@ -255,10 +249,10 @@ $variable_other:     $variable !default; //Other variables, like $some_variables
 .highlight {
   // Scope: Subclasses of markup
   .gs  {color:$markup_bold; font-weight:bold;} //Generic.Strong
-  .gh  {color:$markup_heading;font-style: italic;} //Generic.Heading
-  .gu  {color:$markup_heading;font-style: italic;} //Generic.Subheading
+  .gh  {color:$markup_heading; background-color: #001221;} //Generic.Heading
+  .gu  {color:$markup_heading; background-color: #001221;} //Generic.Subheading
   .ge  {color:$markup_italic; font-style:italic;} //Generic.Emph
-  .ges {font-weight:bold; font-style:italic;} /* Generic.EmphStrong */
+  .ges {font-weight:bold; font-style:italic;} //Generic.EmphStrong
 }
 
 /* Punctuation */
@@ -310,12 +304,12 @@ $variable_other:     $variable !default; //Other variables, like $some_variables
 
 /* Variable */
 .highlight {
-  .vi {color:$variable;} //Name.Variable.Instance
+  .vi {color:$variable; background-color: #0d3a58;} //Name.Variable.Instance
   
   .kp {color:$variable_language;} //Keyword.Pseudo
   
   // Scope: variable.other
-  .nv {color:$variable_other;} // Name.Variable
-  .vc {color:$variable_other;} // Name.Variable.Class
-  .vg {color:$variable_other;} // Name.Variable.Global
+  .nv {color:$variable_other; background-color: #0d3a58;} // Name.Variable
+  .vc {color:$variable_other; background-color: #0d3a58;} // Name.Variable.Class
+  .vg {color:$variable_other; background-color: #0d3a58;} // Name.Variable.Global
 }
