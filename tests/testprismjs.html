@@ -1,0 +1,439 @@
+  <!DOCTYPE html> 
+  <html> 
+  <head> 
+     <link href="prism.css" rel="stylesheet" /> 
+  </head> 
+  <body> 
+  <h2>Javascript</h2>
+  <pre>
+   <code class="language-javascript">
+
+// Cross-browser xml parsing
+var parseXML = function( data ) {
+  var xml, tmp;
+  if ( !data || typeof data !== "string" ) {
+    return null;
+  }
+  try {
+    if ( window.DOMParser ) { // Standard
+      tmp = new DOMParser();
+      xml = tmp.parseFromString( data , "text/xml" );
+    } else { // IE
+      xml = new ActiveXObject( "Microsoft.XMLDOM" );
+      xml.async = false;
+      xml.loadXML( data );
+    }
+  } catch( e ) {
+    xml = undefined;
+  }
+  if ( !xml || !xml.documentElement || xml.getElementsByTagName( "parsererror" ).length ) {
+    jQuery.error( "Invalid XML: " + data );
+  }
+  return xml;
+};
+
+// Bind a function to a context, optionally partially applying any arguments.
+var proxy = function( fn, context ) {
+  var tmp, args, proxy;
+
+  if ( typeof context === "string" ) {
+    tmp = fn[ context ];
+    context = fn;
+    fn = tmp;
+  }
+
+  // Quick check to determine if target is callable, in the spec
+  // this throws a TypeError, but we will just return undefined.
+  if ( !jQuery.isFunction( fn ) ) {
+    return undefined;
+  }
+
+  // Simulated bind
+  args = core_slice.call( arguments, 2 );
+  proxy = function() {
+    return fn.apply( context || this, args.concat( core_slice.call( arguments ) ) );
+  };
+
+  // Set the guid of unique handler to the same of original handler, so it can be removed
+  proxy.guid = fn.guid = fn.guid || jQuery.guid++;
+
+  return proxy;
+};
+
+Sound.play = function() {}
+Sound.prototype = { something; }
+Sound.prototype.play = function() {}
+Sound.prototype.play = myfunc
+var parser = document.createElement('a');
+parser.href = "http://example.com:3000/pathname/?search=test#hash";
+parser.hostname; // => "example.com"
+
+
+
+
+   </code>
+</pre>
+
+  <h2>Python</h2>
+
+  <pre>
+   <code class="language-python">
+
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import re
+import sublime
+import sublime_plugin
+from datetime import datetime
+
+
+class SublimeTasksBase(sublime_plugin.TextCommand):
+    def run(self, edit):
+        self.open_tasks_bullet = self.view.settings().get('open_tasks_bullet')
+        self.done_tasks_bullet = self.view.settings().get('done_tasks_bullet')
+        self.date_format = self.view.settings().get('date_format')
+        if self.view.settings().get('done_tag'):
+            self.done_tag = "@done"
+        else:
+            self.done_tag = ""
+        self.runCommand(edit)
+
+
+class NewCommand(SublimeTasksBase):
+    def runCommand(self, edit):
+        for region in self.view.sel():
+            line = self.view.line(region)
+            line_contents = self.view.substr(line).rstrip()
+            has_bullet = re.match('^(\s*)[' + re.escape(self.open_tasks_bullet) + re.escape(self.done_tasks_bullet) + ']', self.view.substr(line))
+            current_scope = self.view.scope_name(self.view.sel()[0].b)
+            if has_bullet:
+                grps = has_bullet.groups()
+                line_contents = self.view.substr(line) + '\n' + grps[0] + self.open_tasks_bullet + ' '
+                self.view.replace(edit, line, line_contents)
+            elif 'header' in current_scope:
+                header = re.match('^(\s*)\S+', self.view.substr(line))
+                if header:
+                    grps = header.groups()
+                    line_contents = self.view.substr(line) + '\n' + grps[0] + ' ' + self.open_tasks_bullet + ' '
+                else:
+                    line_contents =  + self.open_tasks_bullet + ' '
+                self.view.replace(edit, line, line_contents)
+                end = self.view.sel()[0].b
+                pt = sublime.Region(end, end)
+                self.view.sel().clear()
+                self.view.sel().add(pt)
+            else:
+                has_space = re.match('^(\s+)(.*)', self.view.substr(line))
+                if has_space:
+                    grps = has_space.groups()
+                    spaces = grps[0]
+                    line_contents = spaces + self.open_tasks_bullet + ' ' + grps[1]
+                    self.view.replace(edit, line, line_contents)
+                else:
+                    line_contents = ' ' + self.open_tasks_bullet + ' ' + self.view.substr(line)
+                    self.view.replace(edit, line, line_contents)
+                    end = self.view.sel()[0].b
+                    pt = sublime.Region(end, end)
+                    self.view.sel().clear()
+                    self.view.sel().add(pt)
+
+
+
+
+   </code>
+</pre>
+<h2>CSS</h2>
+  <pre>
+   <code class="language-css">
+     
+body {
+  font-family: arial;
+}
+
+h1, p, table {
+  background-color:#CCC;
+  border: 1px solid;
+  color:#39F;
+  text-align: center;
+  width: 100%;
+}
+
+.addon-store .pagehead h1 { display: inline-block }
+.addon-store .addon-summary:after { clear: both }
+
+#addon-store .pagehead .electrocat-small {
+    bottom: -7px;
+    position: absolute;
+    right: 0;
+}
+
+.addon-store .addons-nav a.selected {
+    border-bottom-color: #d26911;
+    color: #333;
+    font-weight: bold;
+    padding: 0 0 14px;
+}
+
+.addon-store .addon-icon {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    float: left;
+    height: 80px;
+    margin-right: 14px;
+    width: 80px;
+}
+
+.addon-store .developer-callout {
+    background-color: #f1f1f1;
+    background-image: -moz-linear-gradient(#fafafa, #f1f1f1);
+    background-image: -webkit-linear-gradient(#fafafa, #f1f1f1);
+    background-image: linear-gradient(#fafafa, #f1f1f1);
+    background-repeat: repeat-x;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 #fff, 0 1px 5px #f1f1f1;
+    margin-top: 40px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.addon-field-editor .addon-field-list, .addon-field-editor .addon-new-field {
+    -moz-box-sizing: border-box;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    width: 595px;
+}
+
+
+     </code>
+     </pre>
+     <h2>PHP</h2>
+     <pre><code class="language-php">
+       
+// base class with member properties and methods
+class Vegetable {
+
+   var $edible;
+   var $color;
+
+   function Vegetable($edible, $color="green")
+   {
+       $this->edible = $edible;
+       $this->color = $color;
+   }
+
+   function is_edible()
+   {
+       return $this->edible;
+   }
+
+   function what_color()
+   {
+       return $this->color;
+   }
+
+} // end of class Vegetable
+
+// extends the base class
+class Spinach extends Vegetable {
+
+   var $cooked = false;
+
+   function Spinach()
+   {
+       $this->Vegetable(true, "green");
+   }
+
+   function cook_it()
+   {
+       $this->cooked = true;
+   }
+
+   function is_cooked()
+   {
+       return $this->cooked;
+   }
+
+} // end of class Spinach
+
+?>
+
+
+       
+     </code></pre>
+     <h2>Java</h2>
+     <pre><code class="language-java">
+       
+import java.util.Scanner;
+
+public class Life {
+    public static void show(boolean[][] grid){
+        String s = "";
+        for(boolean[] row : grid){
+            for(boolean val : row)
+                if(val)
+                    s += "*";
+                else
+                    s += ".";
+            s += "\n";
+        }
+        System.out.println(s);
+    }
+
+    public static boolean[][] gen(){
+        boolean[][] grid = new boolean[10][10];
+        for(int r = 0; r < 10; r++)
+            for(int c = 0; c < 10; c++)
+                if( Math.random() > 0.7 )
+                    grid[r][c] = true;
+        return grid;
+    }
+
+    public static void main(String[] args){
+        boolean[][] world = gen();
+        show(world);
+        System.out.println();
+        world = nextGen(world);
+        show(world);
+        Scanner s = new Scanner(System.in);
+        while(s.nextLine().length() == 0){
+            System.out.println();
+            world = nextGen(world);
+            show(world);
+
+        }
+    }
+
+    public static boolean[][] nextGen(boolean[][] world){
+        boolean[][] newWorld
+            = new boolean[world.length][world[0].length];
+        int num;
+        for(int r = 0; r < world.length; r++){
+            for(int c = 0; c < world[0].length; c++){
+                num = numNeighbors(world, r, c);
+                if( occupiedNext(num, world[r][c]) )
+                    newWorld[r][c] = true;
+            }
+        }
+        return newWorld;
+    }
+
+    public static boolean occupiedNext(int numNeighbors, boolean occupied){
+        if( occupied && (numNeighbors == 2 || numNeighbors == 3))
+            return true;
+        else if (!occupied && numNeighbors == 3)
+            return true;
+        else
+            return false;
+    }
+
+    private static int numNeighbors(boolean[][] world, int row, int col) {
+        int num = world[row][col] ? -1 : 0;
+        for(int r = row - 1; r <= row + 1; r++)
+            for(int c = col - 1; c <= col + 1; c++)
+                if( inbounds(world, r, c) && world[r][c] )
+                    num++;
+
+        return num;
+    }
+
+    private static boolean inbounds(boolean[][] world, int r, int c) {
+        return r >= 0 && r < world.length && c >= 0 &&
+        c < world[0].length;
+    }
+
+
+
+}
+
+
+
+       
+       
+     </code></code></pre>
+     
+     <h2>HTML</h2>
+     <pre><code class="language-html">
+       
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;!-- Meta, title, CSS, favicons, etc. --&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+    &lt;title&gt;Bootstrap&lt;/title&gt;
+
+    &lt;!-- Bootstrap core CSS --&gt;
+    &lt;link href=&quot;./dist/css/bootstrap.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- Documentation extras --&gt;
+    &lt;link href=&quot;./assets/css/docs.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;./assets/css/pygments-manni.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;./assets/ico/favicon.png&quot;&gt;
+  &lt;/head&gt;
+
+  &lt;body class=&quot;bs-docs-home&quot;&gt;
+
+  &lt;!-- Docs master nav --&gt;
+  &lt;div class=&quot;navbar navbar-inverse navbar-fixed-top bs-docs-nav&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;a href=&quot;./&quot; class=&quot;navbar-brand&quot;&gt;Bootstrap 3 RC1&lt;/a&gt;
+      &lt;button class=&quot;navbar-toggle&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.bs-navbar-collapse&quot;&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div class=&quot;nav-collapse collapse bs-navbar-collapse&quot;&gt;
+          &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;./getting-started&quot;&gt;Getting started&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;./css&quot;&gt;CSS&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;./components&quot;&gt;Components&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;./javascript&quot;&gt;JavaScript&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;./customize&quot;&gt;Customize&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Page content of course! --&gt;
+  &lt;div class=&quot;bs-masthead&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h1&gt;Bootstrap 3&lt;/h1&gt;
+      &lt;p class=&quot;lead&quot;&gt;Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.&lt;/p&gt;
+      &lt;p&gt;
+        &lt;a href=&quot;http://getbootstrap.com/bs-v3.0.0-rc1-dist.zip&quot; class=&quot;btn btn-bs btn-large&quot; onclick=&quot;_gaq.push([&#39;_trackEvent&#39;, &#39;Jumbotron actions&#39;, &#39;Download&#39;, &#39;Download 3.0.0 RC1&#39;]);&quot;&gt;Download Bootstrap&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src=&quot;./assets/js/jquery.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;./dist/js/bootstrap.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;./assets/js/holder.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;./assets/js/application.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+       
+     </code></pre>
+     <script src="prism.js"></script> 
+  </body> 
+  </html>
