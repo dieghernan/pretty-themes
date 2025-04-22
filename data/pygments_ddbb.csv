@@ -1,0 +1,80 @@
+pygmn_name,pygmn_css,pygmn_desc,tm_scope
+Whitespace,w,For whitespace,NA
+Escape,esc,NA,NA
+Error,err,Represents lexer errors,invalid
+Other,x,Special token for data not matched by a parser (e.g. Html markup in php code),NA
+High-lighted Line,hll,NA,NA
+Keyword,k,For any kind of keyword (especially if it doesn’t match any of the subtypes of course).,keyword.control
+Keyword.Constant,kc,For keywords that are constants (e.g. None in future python versions).,constant.language
+Keyword.Declaration,kd,For keywords used for variable declaration (e.g. var in some programming languages like javascript).,storage.type
+Keyword.Namespace,kn,For keywords used for namespace declarations (e.g. import in python and java and package in java).,keyword.control.import
+Keyword.Pseudo,kp,For keywords that aren’t really keywords (e.g. None in old python versions).,variable.language
+Keyword.Reserved,kr,For reserved keywords.,NA
+Keyword.Type,kt,"For builtin types that can’t be used as identifiers (e.g. int, char etc. in c).",storage.type
+Name,n,"For any name (variable names, function names, classes).",NA
+Name.Attribute,na,For all attributes (e.g. in html tags).,entity.other.attribute-name
+Name.Builtin,nb,Builtin names; names that are available in the global namespace.,support
+Name.Builtin.Pseudo,bp,"Builtin names that are implicit (e.g. self in ruby, this in java).",support
+Name.Class,nc,Class names. Because no lexer can know if a name is a class or a function or something else this token is meant for class declarations.,entity.name
+Name.Constant,no,Token type for constants. In some languages you can recognise a token by the way it’s defined (the value after a const keyword for example). In other languages constants are uppercase by definition (ruby).,constant.other
+Name.Decorator,nd,Token type for decorators. Decorators are syntactic elements in the python language. Similar syntax elements exist in c# and java.,entity.name
+Name.Entity,ni,Token type for special entities. (e.g. &nbsp; in html).,entity.name
+Name.Exception,ne,Token type for exception names (e.g. Runtimeerror in python). Some languages define exceptions in the function signature (java). You can highlight the name of that exception using this token then.,invalid
+Name.Function,nf,Token type for function names.,entity.name
+Name.Function.Magic,fm,Same as name.function but for special function names that have an implicit use in a language (e.g. __init__ method in python).,support.constant
+Name.Property,py,Additional token type occasionally used for class attributes.,entity.name
+Name.Label,nl,Token type for label names (e.g. in languages that support goto).,support.type
+Name.Namespace,nn,"Token type for namespaces. (e.g. import paths in java/python), names following the module/namespace keyword in other languages.",entity.name.type
+Name.Other,nx,Other names. Normally unused.,NA
+Name.Tag,nt,Tag names (in html/xml markup or configuration files).,entity.name.tag
+Name.Variable,nv,"Token type for variables. Some languages have prefixes for variable names (php, ruby, perl). You can highlight them using this token.",variable.other
+Name.Variable.Class,vc,Same as name.variable but for class variables (also static variables).,variable.other
+Name.Variable.Global,vg,"Same as name.variable but for global variables (used in ruby, for example).",variable.other
+Name.Variable.Instance,vi,Same as name.variable but for instance variables.,variable
+Name.Variable.Magic,vm,Same as name.variable but for special variable names that have an implicit use in a language (e.g. __doc__ in python).,support.constant
+Literal,l,For any literal (if not further defined).,NA
+Literal.Date,ld,For date literals (e.g. 42d in boo).,NA
+String,s,For any string literal.,string
+String.Affix,sa,"Token type for affixes that further specify the type of the string they’re attached to (e.g. the prefixes r and u8 in r""foo"" and u8""foo"").",NA
+String.Backtick,sb,Token type for strings enclosed in backticks.,string.quoted
+String.Char,sc,"Token type for single characters (e.g. Java, c).",NA
+String.Delimiter,dl,"Token type for delimiting identifiers in “heredoc”, raw and other similar strings (e.g. the word end in perl code print <<'end';).",punctuation.definition
+String.Doc,sd,Token type for documentation strings (for example python).,NA
+String.Double,s2,Double quoted strings.,string.quoted.double
+String.Escape,se,Token type for escape sequences in strings.,constant.character.escape
+String.Heredoc,sh,Token type for “heredoc” strings (e.g. in ruby or perl).,punctuation.definition
+String.Interpol,si,Token type for interpolated parts in strings (e.g. #{foo} in ruby).,string.interpolated
+String.Other,sx,Token type for any other strings (for example %q{foo} string constructs in ruby).,string.quoted.other
+String.Regex,sr,Token type for regular expression literals (e.g. /foo/ in javascript).,string.regexp
+String.Single,s1,Token type for single quoted strings.,string.quoted.single
+String.Symbol,ss,Token type for symbols (e.g. :foo in lisp or ruby).,constant.other.symbol
+Number,m,Token type for any number literal.,constant.numeric
+Number.Bin,mb,Token type for binary literals (e.g. 0b101010).,constant.numeric
+Number.Float,mf,Token type for float literals (e.g. 42.0).,constant.numeric.float
+Number.Hex,mh,Token type for hexadecimal number literals (e.g. 0xdeadbeef).,constant.numeric
+Number.Integer,mi,Token type for integer literals (e.g. 42).,constant.numeric.integer
+Number.Integer.Long,il,Token type for long integer literals (e.g. 42l in python).,constant.numeric.integer
+Number.Oct,mo,Token type for octal literals.,constant.numeric
+Operator,o,"For any punctuation operator (e.g. +, -).",keyword.operator
+Operator.Word,ow,For any operator that is a word (e.g. not).,keyword.operator
+Punctuation,p,"For any punctuation which is not an operator (e.g. [, (…)",punctuation.definition
+Punctuation.Marker,pm,"For markers that point to a location (e.g., carets in python tracebacks for syntax errors).",punctuation.definition
+Comment,c,Token type for any comment.,comment
+Comment.Hashbang,ch,Token type for hashbang comments (i.e. first lines of files that start with #!).,comment.line.number-sign
+Comment.Multiline,cm,Token type for multiline comments.,comment.block
+Comment.Preproc,cp,Token type for preprocessor comments (also <?Php/<% constructs).,comment
+Comment.PreprocFile,cpf,"Token type for filenames in preprocessor comments, such as include files in c/c++.",comment
+Comment.Single,c1,Token type for comments that end at the end of a line (e.g. # foo).,comment.line
+Comment.Special,cs,"Special data in comments. For example code tags, author and license information, etc.",comment.line
+Generic,g,"A generic, unstyled token. Normally you don’t use this token type.",NA
+Generic.Deleted,gd,Marks the token value as deleted.,NA
+Generic.Emph,ge,Marks the token value as emphasized.,markup.italic
+Generic.Error,gr,Marks the token value as an error message.,invalid
+Generic.Heading,gh,Marks the token value as headline.,markup.heading
+Generic.Inserted,gi,Marks the token value as inserted.,NA
+Generic.Output,go,Marks the token value as program output (e.g. for python cli lexer).,NA
+Generic.Prompt,gp,Marks the token value as command prompt (e.g. bash lexer).,NA
+Generic.Strong,gs,Marks the token value as bold (e.g. for rst lexer).,markup.bold
+Generic.Subheading,gu,Marks the token value as bold and emphasized.,markup.heading
+Generic.EmphStrong,ges,Marks the token value as subheadline.,NA
+Generic.Traceback,gt,Marks the token value as a part of an error traceback.,invalid

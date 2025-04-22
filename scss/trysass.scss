@@ -1,0 +1,240 @@
+/* SASS Template for Rouge / Pygments (css)
+ *
+ * @author Diego H <https://github.com/dieghernan/>
+ */
+
+/*
+ * Variables
+ */
+
+
+
+$base-col:  white; // Base color
+$bg-col:    #282a36; // Background color
+$code-col:  $bg-col; // Not highlighted code, i.e. <code>foo</code>
+
+
+
+// Top level
+$w-col:     $base-col;  // Whitespace - for whitespace
+$esc-col:   $base-col;  // Escape - 
+$err-col:   $base-col;  // Error - represents lexer errors
+$x-col:     $base-col;  // Other - special token for data not matched by a parser
+
+$hll-col:   $base-col;  // High-lighted Line
+
+// Keywords
+$k-col:     $base-col;  // Keyword - For any kind of keyword
+$kc-col:    $base-col;  // Keyword.Constant - For keywords that are constants (e.g. None in future Python versions).
+$kd-col:    $base-col;  // Keyword.Declaration - For keywords used for variable declaration (e.g. var in some programming languages like JavaScript).
+$kn-col:    $base-col;  // Keyword.Namespace - For keywords used for namespace declarations (e.g. import in Python and Java and package in Java).
+$kp-col:    $base-col;  // Keyword.Pseudo - For keywords that aren’t really keywords (e.g. None in old Python versions).
+$kr-col:    $base-col;  // Keyword.Reserved - For reserved keywords.
+$kt-col:    $base-col;  // Keyword.Type - For builtin types that can’t be used as identifiers (e.g. int, char etc. in C).
+
+
+// Name
+$n-col:     $base-col;  // Name - For any name (variable names, function names, classes).
+$na-col:    $base-col;  // Name.Attribute - For all attributes (e.g. in HTML tags).
+$nb-col:    $base-col;  // Name.Builtin - Builtin names; names that are available in the global namespace.
+$bp-col:    $base-col;  // Name.Builtin.Pseudo - Builtin names that are implicit (e.g. self in Ruby, this in Java).
+$nc-col:    $base-col;  // Name.Class - Class names. Because no lexer can know if a name is a class or a function or something else this token is meant for class declarations.
+$no-col:    $base-col;  // Name.Constant - Token type for constants. In some languages you can recognise a token by the way it’s defined (the value after a const keyword for example). In other languages constants are uppercase by definition (Ruby).
+$nd-col:    $base-col;  // Name.Decorator - Token type for decorators. Decorators are syntactic elements in the Python language. Similar syntax elements exist in C# and Java.
+$ni-col:    $base-col;  // Name.Entity - Token type for special entities. (e.g. &nbsp; in HTML).
+$ne-col:    $base-col;  // Name.Exception - Token type for exception names (e.g. RuntimeError in Python). Some languages define exceptions in the function signature (Java). You can highlight the name of that exception using this token then.
+$nf-col:    $base-col;  // Name.Function - Token type for function names.
+$fm-col:    $base-col;  // Name.Function.Magic - same as Name.Function but for special function names that have an implicit use in a language (e.g. __init__ method in Python).
+$py-col:    $base-col;  // Name.Property - Additional token type occasionally used for class attributes.
+$nl-col:    $base-col;  // Name.Label - Token type for label names (e.g. in languages that support goto).
+$nn-col:    $base-col;  // Name.Namespace - Token type for namespaces. (e.g. import paths in Java/Python), names following the module/namespace keyword in other languages.
+$nx-col:    $base-col;  // Name.Other - Other names. Normally unused.
+$nt-col:    $base-col;  // Name.Tag - Tag names (in HTML/XML markup or configuration files).
+$nv-col:    $base-col;  // Name.Variable - Token type for variables. Some languages have prefixes for variable names (PHP, Ruby, Perl). You can highlight them using this token.
+$vc-col:    $base-col;  // Name.Variable.Class - same as Name.Variable but for class variables (also static variables).
+$vg-col:    $base-col;  // Name.Variable.Global - same as Name.Variable but for global variables (used in Ruby, for example).
+$vi-col:    $base-col;  // Name.Variable.Instance - same as Name.Variable but for instance variables.
+$vm-col:    $base-col;  // Name.Variable.Magic - same as Name.Variable but for special variable names that have an implicit use in a language (e.g. __doc__ in Python).
+
+// Literal
+
+$l-col:     $base-col;  // Literal - For any literal (if not further defined).
+$ld-col:    $base-col;  // Literal.Date - for date literals (e.g. 42d in Boo).
+
+// String 
+$s-col:     $base-col;  // String - For any string literal.
+$sa-col:    $base-col;  // String.Affix - Token type for affixes that further specify the type of the string they’re attached to (e.g. the prefixes r and u8 in r"foo" and u8"foo").
+$sb-col:    $base-col;  // String.Backtick - Token type for strings enclosed in backticks.
+$sc-col:    $base-col;  // String.Char - Token type for single characters (e.g. Java, C).
+$dl-col:    $base-col;  // String.Delimiter - Token type for delimiting identifiers in “heredoc”, raw and other similar strings (e.g. the word END in Perl code print <<'END';).
+$sd-col:    $base-col;  // String.Doc - Token type for documentation strings (for example Python).
+$s2-col:    $base-col;  // String.Double - Double quoted strings.
+$se-col:    $base-col;  // String.Escape - Token type for escape sequences in strings.
+$sh-col:    $base-col;  // String.Heredoc - Token type for “heredoc” strings (e.g. in Ruby or Perl).
+$si-col:    $base-col;  // String.Interpol - Token type for interpolated parts in strings (e.g. #{foo} in Ruby).
+$sx-col:    $base-col;  // String.Other - Token type for any other strings (for example %q{foo} string constructs in Ruby).
+$sr-col:    $base-col;  // String.Regex - Token type for regular expression literals (e.g. /foo/ in JavaScript).
+$s1-col:    $base-col;  // String.Single - Token type for single quoted strings.
+$ss-col:    $base-col;  // String.Symbol - Token type for symbols (e.g. :foo in LISP or Ruby).
+
+
+// Number
+$m-col:     $base-col;  // Number - Token type for any number literal.
+$mb-col:    $base-col;  // Number.Bin - Token type for binary literals (e.g. 0b101010).
+$mf-col:    $base-col;  // Number.Float - Token type for float literals (e.g. 42.0).
+$mh-col:    $base-col;  // Number.Hex - Token type for hexadecimal number literals (e.g. 0xdeadbeef).
+$mi-col:    $base-col;  // Number.Integer - Token type for integer literals (e.g. 42).
+$il-col:    $base-col;  // Number.Integer.Long - Token type for long integer literals (e.g. 42L in Python).
+$mo-col:    $base-col;  // Number.Oct - Token type for octal literals.
+
+// Operator
+$o-col:     $base-col;  // Operator - For any punctuation operator (e.g. +, -).
+$ow-col:    $base-col;  // Operator.Word - For any operator that is a word (e.g. not).
+
+// Punctuation
+$p-col:     $base-col;  // Punctuation - For any punctuation which is not an operator (e.g. [, (…)
+$pm-col:    $base-col;  // Punctuation.Marker - For markers that point to a location (e.g., carets in Python tracebacks for syntax errors).
+
+// Comments
+$c-col:     $base-col;  // Comment - Token type for any comment.
+$ch-col:    $base-col;  // Comment.Hashbang - Token type for hashbang comments (i.e. first lines of files that start with #!).
+$cm-col:    $base-col;  // Comment.Multiline - Token type for multiline comments.
+$cp-col:    $base-col;  // Comment.Preproc - Token type for preprocessor comments (also <?php/<% constructs).
+$cpf-col:   $base-col;  // Comment.PreprocFile - Token type for filenames in preprocessor comments, such as include files in C/C++.
+$c1-col:    $base-col;  // Comment.Single - Token type for comments that end at the end of a line (e.g. # foo).
+$cs-col:    $base-col;  // Comment.Special - Special data in comments. For example code tags, author and license information, etc.
+
+
+// Generic
+$g-col:     $base-col;  // Generic - A generic, unstyled token. Normally you don’t use this token type.
+$gd-col:    $base-col;  // Generic.Deleted - Marks the token value as deleted.
+$ge-col:    $base-col;  // Generic.Emph - Marks the token value as emphasized.
+$gr-col:    $base-col;  // Generic.Error - Marks the token value as an error message.
+$gh-col:    $base-col;  // Generic.Heading - Marks the token value as headline.
+$gi-col:    $base-col;  // Generic.Inserted - Marks the token value as inserted.
+$go-col:    $base-col;  // Generic.Output - Marks the token value as program output (e.g. for python cli lexer).
+$gp-col:    $base-col;  // Generic.Prompt - Marks the token value as command prompt (e.g. bash lexer).
+$gs-col:    $base-col;  // Generic.Strong - Marks the token value as bold (e.g. for rst lexer).
+$gu-col:    $base-col;  // Generic.Subheading - Marks the token value as bold and emphasized.
+$ges-col:   $base-col;  // Generic.EmphStrong - Marks the token value as subheadline.
+$gt-col:    $base-col;  // Generic.Traceback - Marks the token value as a part of an error traceback.
+
+ 
+ /*
+   * Styles
+   */
+ 
+ // Overall
+ .highlight table td {
+   padding: 5px;
+ }
+ .highlight table pre {
+   margin: 0;
+ }
+ 
+ // Not highlighted color
+ code {
+   color: $code-col;
+ }
+ 
+ .highlight pre {
+   background: $bg-col;
+   color: $base-col;
+ }
+ 
+.highlight .w {color: $w-col;} // Whitespace
+.highlight .esc {color: $esc-col;} // Escape
+.highlight .err {color: $err-col;} // Error
+.highlight .x {color: $x-col;} // Other
+.highlight .hll {color: $hll-col;} // High-lighted Line
+
+// Keywords
+.highlight .k {color: $k-col;} // Keyword
+.highlight .kc {color: $kc-col;} // Keyword.Constant
+.highlight .kd {color: $kd-col;} // Keyword.Declaration
+.highlight .kn {color: $kn-col;} // Keyword.Namespace
+.highlight .kp {color: $kp-col;} // Keyword.Pseudo
+.highlight .kr {color: $kr-col;} // Keyword.Reserved
+.highlight .kt {color: $kt-col;} // Keyword.Type
+
+// Names
+.highlight .n {color: $n-col;} // Name
+.highlight .na {color: $na-col;} // Name.Attribute
+.highlight .nb {color: $nb-col;} // Name.Builtin
+.highlight .bp {color: $bp-col;} // Name.Builtin.Pseudo
+.highlight .nc {color: $nc-col;} // Name.Class
+.highlight .no {color: $no-col;} // Name.Constant
+.highlight .nd {color: $nd-col;} // Name.Decorator
+.highlight .ni {color: $ni-col;} // Name.Entity
+.highlight .ne {color: $ne-col;} // Name.Exception
+.highlight .nf {color: $nf-col;} // Name.Function
+.highlight .fm {color: $fm-col;} // Name.Function.Magic
+.highlight .py {color: $py-col;} // Name.Property
+.highlight .nl {color: $nl-col;} // Name.Label
+.highlight .nn {color: $nn-col;} // Name.Namespace
+.highlight .nx {color: $nx-col;} // Name.Other
+.highlight .nt {color: $nt-col;} // Name.Tag
+.highlight .nv {color: $nv-col;} // Name.Variable
+.highlight .vc {color: $vc-col;} // Name.Variable.Class
+.highlight .vg {color: $vg-col;} // Name.Variable.Global
+.highlight .vi {color: $vi-col;} // Name.Variable.Instance
+.highlight .vm {color: $vm-col;} // Name.Variable.Magic
+
+// Literals
+.highlight .l {color: $l-col;} // Literal
+.highlight .ld {color: $ld-col;} // Literal.Date
+
+// Strings
+.highlight .s {color: $s-col;} // String
+.highlight .sa {color: $sa-col;} // String.Affix
+.highlight .sb {color: $sb-col;} // String.Backtick
+.highlight .sc {color: $sc-col;} // String.Char
+.highlight .dl {color: $dl-col;} // String.Delimiter
+.highlight .sd {color: $sd-col;} // String.Doc
+.highlight .s2 {color: $s2-col;} // String.Double
+.highlight .se {color: $se-col;} // String.Escape
+.highlight .sh {color: $sh-col;} // String.Heredoc
+.highlight .si {color: $si-col;} // String.Interpol
+.highlight .sx {color: $sx-col;} // String.Other
+.highlight .sr {color: $sr-col;} // String.Regex
+.highlight .s1 {color: $s1-col;} // String.Single
+.highlight .ss {color: $ss-col;} // String.Symbol
+
+// Numbers
+.highlight .m {color: $m-col;} // Number
+.highlight .mb {color: $mb-col;} // Number.Bin
+.highlight .mf {color: $mf-col;} // Number.Float
+.highlight .mh {color: $mh-col;} // Number.Hex
+.highlight .mi {color: $mi-col;} // Number.Integer
+.highlight .il {color: $il-col;} // Number.Integer.Long
+.highlight .mo {color: $mo-col;} // Number.Oct
+
+// Operators and Punctuation
+.highlight .o {color: $o-col;} // Operator
+.highlight .ow {color: $ow-col;} // Operator.Word
+.highlight .p {color: $p-col;} // Punctuation
+.highlight .pm {color: $pm-col;} // Punctuation.Marker
+
+// Comments
+.highlight .c {color: $c-col;} // Comment
+.highlight .ch {color: $ch-col;} // Comment.Hashbang
+.highlight .cm {color: $cm-col;} // Comment.Multiline
+.highlight .cp {color: $cp-col;} // Comment.Preproc
+.highlight .cpf {color: $cpf-col;} // Comment.PreprocFile
+.highlight .c1 {color: $c1-col;} // Comment.Single
+.highlight .cs {color: $cs-col;} // Comment.Special
+
+// Generic
+.highlight .g {color: $g-col;} // Generic
+.highlight .gd {color: $gd-col;} // Generic.Deleted
+.highlight .ge {color: $ge-col;} // Generic.Emph
+.highlight .gr {color: $gr-col;} // Generic.Error
+.highlight .gh {color: $gh-col;} // Generic.Heading
+.highlight .gi {color: $gi-col;} // Generic.Inserted
+.highlight .go {color: $go-col;} // Generic.Output
+.highlight .gp {color: $gp-col;} // Generic.Prompt
+.highlight .gs {color: $gs-col;} // Generic.Strong
+.highlight .gu {color: $gu-col;} // Generic.Subheading
+.highlight .ges {color: $ges-col;} // Generic.EmphStrong
+.highlight .gt {color: $gt-col;} // Generic.Traceback
+

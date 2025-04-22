@@ -1,0 +1,72 @@
+tm_sublime_recommended,tm_scope,tm_desc,pygmn_css
+TRUE,comment,For comments,c
+FALSE,comment.line,Line comments,c1
+FALSE,comment.line.double-slash,// Comment,c1
+FALSE,comment.line.double-dash,-- Comment,c1
+FALSE,comment.line.number-sign,# Comment,ch
+FALSE,comment.line.percentage,% Comment,c1
+FALSE,comment.line.character,Other types,ch
+FALSE,comment.block,Multi-line comments like /* */ and <!-- -->.,cm
+FALSE,comment.block.documentation,Embedded documentation.,cm
+TRUE,constant,Various forms of constants,NA
+TRUE,constant.numeric,"Those which represent numbers, e.g. 42, 1.3f, 0x4ab1u.",m
+FALSE,constant.character,"Those which represent characters, e.g. &lt;, \e, \031",kc
+TRUE,constant.character.escape,Escape sequences like \e would be constant.character.escape.,se
+TRUE,constant.language,"Constants (generally) provided by the language which are 'special' like true, false, nil, yes, no, etc.",kc
+FALSE,constant.other,"Other constants, e.g. colors in css.",no
+FALSE,entity,"An entity refers to a larger part of the document, for example a chapter, class, function, or tag. We do not scope the entire entity as entity.* (we use meta.* for that). But we do use entity.* for the placeholders in the larger entity, e.g. if the entity is a chapter, we would use entity.name.section for the chapter title.",NA
+TRUE,entity.name,We are naming the larger entity,nc
+FALSE,entity.name.function,The name of a function,nf
+FALSE,entity.name.type,The name of a type declaration or class.,nn
+TRUE,entity.name.tag,A tag name.,nt
+TRUE,entity.name.section,The name is the name of a section/heading.,gh
+FALSE,entity.other,Other entities,NA
+TRUE,entity.other.inherited-class,The superclass/baseclass name.,nc
+TRUE,entity.other.attribute-name,The name of an attribute (mainly in tags).,na
+TRUE,invalid,Stuff which is invalid,err
+FALSE,invalid.illegal,"Illegal, e.g. an ampersand or lower-than character in html (which is not part of an entity/tag).",NA
+TRUE,invalid.deprecated,For deprecated stuff e.g. using an api function which is deprecated or using styling with strict html.,NA
+TRUE,keyword,Keywords (when these do not fall into the other groups).,NA
+TRUE,keyword.control,"Mainly related to flow control like continue, while, return, etc.",k
+FALSE,keyword.control.import,NA,kn
+TRUE,keyword.operator,Operators can either be textual (e.g. or) or be characters.,o
+FALSE,keyword.other,Other keywords.,NA
+TRUE,keyword.declaration,Functions and other stuff,kd
+FALSE,markup,This is for markup languages and generally applies to larger subsets of the text.,NA
+FALSE,markup.underline,Underlined text.,NA
+FALSE,markup.underline.link,"This is for links, as a convenience this is derived from markup.underline so that if there is no theme rule which specifically targetsmarkup.underline.link then it will inherit the underline style.",NA
+FALSE,markup.bold,Bold text (text which is strong and similar should preferably be derived from this name).,gs
+FALSE,markup.heading,"A section header. Optionally provide the heading level as the next element, for example markup.heading.2.html for <h2></h2> in html.",gh
+FALSE,markup.italic,Italic text (text which is emphasized and similar should preferably be derived from this name).,ge
+FALSE,markup.list,List items,NA
+FALSE,markup.list.numbered,Numbered list items.,NA
+FALSE,markup.list.unnumbered,Unnumbered list items.,NA
+FALSE,markup.quote,Quoted (sometimes block quoted) text.,NA
+FALSE,markup.raw,"Text which is verbatim, e.g. code listings. Normally spell checking is disabled for markup.raw.",NA
+FALSE,markup.other,Other markup constructs.,NA
+FALSE,meta,The meta scope is generally used to markup larger parts of the document.,NA
+FALSE,storage,Things relating to storage.,kd
+TRUE,storage.type,"The type of something, class, function, int, var, etc.",kd
+TRUE,storage.modifier,"A storage modifier like static, final, abstract,",kd
+TRUE,string,Strings,s
+FALSE,string.quoted,Quoted strings,sb
+FALSE,string.quoted.single,Single quoted strings: 'foo'.,s1
+FALSE,string.quoted.double,"Double quoted strings: ""foo"".",s2
+FALSE,string.quoted.triple,"Triple quoted strings: """"""python"""""".",NA
+FALSE,string.quoted.other,"Other types of quoting: $'shell', %s{...}.",sx
+FALSE,string.unquoted,For things like here-docs and here-strings.,NA
+FALSE,string.interpolated,"Strings which are evaluated: `date`, $(pwd).",si
+FALSE,string.regexp,Regular expressions:/(\w+)/.,sr
+FALSE,string.other,Other types of strings (should rarely be used).,sx
+TRUE,support,Things provided by a framework or library should be below support.,nb
+FALSE,support.function,Functions provided by the framework/library. For example nslog in objective-c is support.function.,nf
+FALSE,support.class,When the framework/library provides classes.,no
+FALSE,support.type,"Types provided by the framework/library, this is probably only used for languages derived from c, which has typedef (and struct). Most other languages would introduce new types as classes.",nl
+FALSE,support.constant,Constants (magic values) provided by the framework/library.,vm
+FALSE,support.variable,Variables provided by the framework/library. For example nsapp in appkit.,NA
+FALSE,support.other,"The above should be exhaustive, but for everything else use support.other.",NA
+TRUE,variable,Variables. Not all languages allow easy identification (and thus markup) of these.,vi
+TRUE,variable.parameter,When the variable is declared as the parameter.,NA
+TRUE,variable.language,"Reserved language variables like this, super, self, etc.",kp
+FALSE,variable.other,"Other variables, like $some_variables.",nv
+TRUE,variable.function,"Function and method names should be scoped using the following, but only when they are being invoked. When defined, they should use entity.name.function.",NA

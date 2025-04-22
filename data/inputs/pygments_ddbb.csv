@@ -1,0 +1,80 @@
+pygmn_name;pygmn_css;pygmn_desc;tm_scope
+Whitespace;w;for whitespace;
+Escape;esc;;
+Error;err;represents lexer errors;invalid
+Other;x;special token for data not matched by a parser (e.g. HTML markup in PHP code);
+High-lighted Line;hll;;
+Keyword;k;For any kind of keyword (especially if it doesn’t match any of the subtypes of course).;keyword.control 
+Keyword.Constant;kc;For keywords that are constants (e.g. None in future Python versions).;constant.language
+Keyword.Declaration;kd;For keywords used for variable declaration (e.g. var in some programming languages like JavaScript).;storage.type 
+Keyword.Namespace;kn;For keywords used for namespace declarations (e.g. import in Python and Java and package in Java).;keyword.control.import
+Keyword.Pseudo;kp;For keywords that aren’t really keywords (e.g. None in old Python versions).;variable.language 
+Keyword.Reserved;kr;For reserved keywords.;
+Keyword.Type;kt;For builtin types that can’t be used as identifiers (e.g. int, char etc. in C).;storage.type 
+Name;n;For any name (variable names, function names, classes).;
+Name.Attribute;na;For all attributes (e.g. in HTML tags).;entity.other.attribute-name
+Name.Builtin;nb;"Builtin names; names that are available in the global namespace.";support
+Name.Builtin.Pseudo;bp;Builtin names that are implicit (e.g. self in Ruby, this in Java).;support
+Name.Class;nc;Class names. Because no lexer can know if a name is a class or a function or something else this token is meant for class declarations.;entity.name
+Name.Constant;no;Token type for constants. In some languages you can recognise a token by the way it’s defined (the value after a const keyword for example). In other languages constants are uppercase by definition (Ruby).;constant.other
+Name.Decorator;nd;Token type for decorators. Decorators are syntactic elements in the Python language. Similar syntax elements exist in C# and Java.;entity.name
+Name.Entity;ni;"Token type for special entities. (e.g. &nbsp; in HTML).";entity.name
+Name.Exception;ne;Token type for exception names (e.g. RuntimeError in Python). Some languages define exceptions in the function signature (Java). You can highlight the name of that exception using this token then.;invalid
+Name.Function;nf;Token type for function names.;entity.name
+Name.Function.Magic;fm;same as Name.Function but for special function names that have an implicit use in a language (e.g. __init__ method in Python).;support.constant 
+Name.Property;py;Additional token type occasionally used for class attributes.;entity.name
+Name.Label;nl;Token type for label names (e.g. in languages that support goto).;support.type
+Name.Namespace;nn;Token type for namespaces. (e.g. import paths in Java/Python), names following the module/namespace keyword in other languages.;entity.name.type
+Name.Other;nx;Other names. Normally unused.;
+Name.Tag;nt;Tag names (in HTML/XML markup or configuration files).;entity.name.tag
+Name.Variable;nv;Token type for variables. Some languages have prefixes for variable names (PHP, Ruby, Perl). You can highlight them using this token.;variable.other
+Name.Variable.Class;vc;same as Name.Variable but for class variables (also static variables).;variable.other
+Name.Variable.Global;vg;same as Name.Variable but for global variables (used in Ruby, for example).;variable.other
+Name.Variable.Instance;vi;same as Name.Variable but for instance variables.;variable
+Name.Variable.Magic;vm;same as Name.Variable but for special variable names that have an implicit use in a language (e.g. __doc__ in Python).;support.constant 
+Literal;l;For any literal (if not further defined).;
+Literal.Date;ld;for date literals (e.g. 42d in Boo).;
+String;s;For any string literal.;string
+String.Affix;sa;"Token type for affixes that further specify the type of the string they’re attached to (e.g. the prefixes r and u8 in r""foo"" and u8""foo"").";
+String.Backtick;sb;Token type for strings enclosed in backticks.;string.quoted
+String.Char;sc;Token type for single characters (e.g. Java, C).;
+String.Delimiter;dl;"Token type for delimiting identifiers in “heredoc”, raw and other similar strings (e.g. the word END in Perl code print <<'END';).";punctuation.definition
+String.Doc;sd;Token type for documentation strings (for example Python).;
+String.Double;s2;Double quoted strings.;string.quoted.double 
+String.Escape;se;Token type for escape sequences in strings.;constant.character.escape
+String.Heredoc;sh;Token type for “heredoc” strings (e.g. in Ruby or Perl).;punctuation.definition
+String.Interpol;si;Token type for interpolated parts in strings (e.g. #{foo} in Ruby).;string.interpolated 
+String.Other;sx;Token type for any other strings (for example %q{foo} string constructs in Ruby).;string.quoted.other 
+String.Regex;sr;Token type for regular expression literals (e.g. /foo/ in JavaScript).;string.regexp 
+String.Single;s1;Token type for single quoted strings.;string.quoted.single 
+String.Symbol;ss;Token type for symbols (e.g. :foo in LISP or Ruby).;constant.other.symbol
+Number;m;Token type for any number literal.;constant.numeric
+Number.Bin;mb;Token type for binary literals (e.g. 0b101010).;constant.numeric
+Number.Float;mf;Token type for float literals (e.g. 42.0).;constant.numeric.float
+Number.Hex;mh;Token type for hexadecimal number literals (e.g. 0xdeadbeef).;constant.numeric
+Number.Integer;mi;Token type for integer literals (e.g. 42).;constant.numeric.integer
+Number.Integer.Long;il;Token type for long integer literals (e.g. 42L in Python).;constant.numeric.integer
+Number.Oct;mo;Token type for octal literals.;constant.numeric
+Operator;o;For any punctuation operator (e.g. +, -).;keyword.operator 
+Operator.Word;ow;For any operator that is a word (e.g. not).;keyword.operator 
+Punctuation;p;For any punctuation which is not an operator (e.g. [, (…);punctuation.definition
+Punctuation.Marker;pm;For markers that point to a location (e.g., carets in Python tracebacks for syntax errors).;punctuation.definition
+Comment;c;Token type for any comment.;comment
+Comment.Hashbang;ch;Token type for hashbang comments (i.e. first lines of files that start with #!).;comment.line.number-sign
+Comment.Multiline;cm;Token type for multiline comments.;comment.block
+Comment.Preproc;cp;Token type for preprocessor comments (also <?php/<% constructs).;comment
+Comment.PreprocFile;cpf;Token type for filenames in preprocessor comments, such as include files in C/C++.;comment
+Comment.Single;c1;Token type for comments that end at the end of a line (e.g. # foo).;comment.line
+Comment.Special;cs;Special data in comments. For example code tags, author and license information, etc.;comment.line
+Generic;g;A generic, unstyled token. Normally you don’t use this token type.;
+Generic.Deleted;gd;Marks the token value as deleted.;
+Generic.Emph;ge;Marks the token value as emphasized.;markup.italic
+Generic.Error;gr;Marks the token value as an error message.;invalid
+Generic.Heading;gh;Marks the token value as headline.;markup.heading
+Generic.Inserted;gi;Marks the token value as inserted.;
+Generic.Output;go;Marks the token value as program output (e.g. for python cli lexer).;
+Generic.Prompt;gp;Marks the token value as command prompt (e.g. bash lexer).;
+Generic.Strong;gs;Marks the token value as bold (e.g. for rst lexer).;markup.bold
+Generic.Subheading;gu;Marks the token value as bold and emphasized.;markup.heading
+Generic.EmphStrong;ges;Marks the token value as subheadline.;
+Generic.Traceback;gt;Marks the token value as a part of an error traceback.;invalid

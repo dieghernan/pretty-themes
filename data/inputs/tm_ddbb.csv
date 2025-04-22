@@ -1,0 +1,72 @@
+tm_sublime_recommended;tm_scope;tm_desc;pygmn_css
+x;comment;for comments;c
+;comment.line;line comments;c1
+;comment.line.double-slash;// comment;c1
+;comment.line.double-dash;-- comment;c1
+;comment.line.number-sign;# comment;ch
+;comment.line.percentage;% comment;c1
+;comment.line.character;other types;ch
+;comment.block;multi-line comments like /*  */ and <!--  -->.;cm
+;comment.block.documentation;embedded documentation.;cm
+x;constant;various forms of constants;
+x;constant.numeric; those which represent numbers, e.g. 42, 1.3f, 0x4AB1U.;m
+;constant.character;"those which represent characters, e.g. &lt;, \e, \031";kc
+x;constant.character.escape; escape sequences like \e would be constant.character.escape.;se
+x;constant.language;constants (generally) provided by the language which are 'special' like true, false, nil, YES, NO, etc.;kc
+;constant.other;other constants, e.g. colors in CSS.;no
+;entity; an entity refers to a larger part of the document, for example a chapter, class, function, or tag. We do not scope the entire entity as entity.* (we use meta.* for that). But we do use entity.* for the placeholders in the larger entity, e.g. if the entity is a chapter, we would use entity.name.section for the chapter title.;
+x;entity.name;we are naming the larger entity;nc
+;entity.name.function;the name of a function;nf
+;entity.name.type;the name of a type declaration or class.;nn
+x;entity.name.tag; a tag name.;nt
+x;entity.name.section;the name is the name of a section/heading.;gh
+;entity.other;other entities;
+x;entity.other.inherited-class;the superclass/baseclass name.;nc
+x;entity.other.attribute-name;the name of an attribute (mainly in tags).;na
+x;invalid;stuff which is invalid;err
+;invalid.illegal; illegal, e.g. an ampersand or lower-than character in HTML (which is not part of an entity/tag).;
+x;invalid.deprecated;for deprecated stuff e.g. using an API function which is deprecated or using styling with strict HTML.;
+x;keyword;keywords (when these do not fall into the other groups).;
+x;keyword.control;mainly related to flow control like continue, while, return, etc.;k
+;keyword.control.import;;kn
+x;keyword.operator;operators can either be textual (e.g. or) or be characters.;o
+;keyword.other;other keywords.;
+x;keyword.declaration;Functions and other stuff;kd
+;markup;this is for markup languages and generally applies to larger subsets of the text.;
+;markup.underline;underlined text.;
+;markup.underline.link;this is for links, as a convenience this is derived from markup.underline so that if there is no theme rule which specifically targetsmarkup.underline.link then it will inherit the underline style.;
+;markup.bold;bold text (text which is strong and similar should preferably be derived from this name).;gs
+;markup.heading; a section header. Optionally provide the heading level as the next element, for example markup.heading.2.html for <h2></h2> in HTML.;gh
+;markup.italic;italic text (text which is emphasized and similar should preferably be derived from this name).;ge
+;markup.list;list items;
+;markup.list.numbered;numbered list items.;
+;markup.list.unnumbered;unnumbered list items.;
+;markup.quote;quoted (sometimes block quoted) text.;
+;markup.raw;text which is verbatim, e.g. code listings. Normally spell checking is disabled for markup.raw.;
+;markup.other;other markup constructs.;
+;meta;the meta scope is generally used to markup larger parts of the document.;
+;storage;things relating to storage.;kd
+x;storage.type; the type of something, class, function, int, var, etc.;kd
+x;storage.modifier;a storage modifier like static, final, abstract,;kd
+x;string;strings;s
+;string.quoted;quoted strings;sb
+;string.quoted.single; single quoted strings: 'foo'.;s1
+;string.quoted.double;" double quoted strings: ""foo"".";s2
+;string.quoted.triple;" triple quoted strings: """"""Python"""""".";
+;string.quoted.other; other types of quoting: $'shell', %s{...}.;sx
+;string.unquoted; for things like here-docs and here-strings.;
+;string.interpolated; strings which are evaluated: `date`, $(pwd).;si
+;string.regexp; regular expressions:/(\w+)/.;sr
+;string.other; other types of strings (should rarely be used).;sx
+x;support;things provided by a framework or library should be below support.;nb
+;support.function; functions provided by the framework/library. For example NSLog in Objective-C is support.function.;nf
+;support.class; when the framework/library provides classes.;no
+;support.type; types provided by the framework/library, this is probably only used for languages derived from C, which has typedef (and struct). Most other languages would introduce new types as classes.;nl
+;support.constant; constants (magic values) provided by the framework/library.;vm
+;support.variable; variables provided by the framework/library. For example NSApp in AppKit.;
+;support.other; the above should be exhaustive, but for everything else use support.other.;
+x;variable;variables. Not all languages allow easy identification (and thus markup) of these.;vi
+x;variable.parameter; when the variable is declared as the parameter.;
+x;variable.language; reserved language variables like this, super, self, etc.;kp
+;variable.other; other variables, like $some_variables.;nv
+x;variable.function;Function and method names should be scoped using the following, but only when they are being invoked. When defined, they should use entity.name.function.;
