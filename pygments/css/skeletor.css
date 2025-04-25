@@ -3,11 +3,7 @@
 /* Special mapping rouge - Prismjs */
 .highlight .nc { color: #ffffff !important; }
 
-.highlight .si { color: #ffffff !important; }
-
 .highlight .sc { color: #f3e4a2; }
-
-.highlight .nb { color: #bd93f9 !important; }
 
 .language-css .highlight .nc, .language-scss .highlight .nc { color: #bd93f9 !important; }
 
@@ -21,6 +17,8 @@
 
 .language-css .highlight .cp { color: #ff8adb; font-weight: bold; }
 
+.language-css .highlight .n { color: #bd93f9; }
+
 .language-css .highlight .k { color: #f3e4a2; }
 
 .language-php .highlight .k, .language-php .highlight .kd, .language-php .highlight .kt { color: #84fba2; }
@@ -31,7 +29,7 @@
 
 .language-scss .highlight .k, .language-scss .highlight .ow { color: #f3e4a2; }
 
-.language-scss .highlight .nv, .language-scss .highlight .si { color: #84fba2 !important; }
+.language-scss .highlight .nv, .language-scss .highlight .si { color: #84fba2; }
 
 .language-scss .highlight .o, .language-scss .highlight .nt { color: #bd93f9; }
 

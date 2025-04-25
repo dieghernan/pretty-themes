@@ -168,6 +168,24 @@
 	</div>
 </header>
 	<main class="container-lg pb-3 flex-fill">
+<div class="row my-1">
+<div class="col-lg-8 offset-lg-2 col small">
+ <nav aria-label="breadcrumb">
+  <ol class="breadcrumb my-0 py-0 chulapa-bg-transparent pl-0" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem"><a href="https://dieghernan.github.io/chulapa/" itemprop="item"><span itemprop="name">Home</span></a>
+         <meta itemprop="position" content="1" ></li>
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem"><a href="https://dieghernan.github.io/chulapa/docs" itemprop="item"><span itemprop="name">Docs</span></a>
+         <meta itemprop="position" content="2" ></li>
+      <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Syntax highlighting demo</span>
+       <meta itemprop="position" content="3" >
+     </li>
+ </ol>
+ </nav>
+ </div></div>
 		<div class="row pt-2">
 			<aside class="col-lg-2 mt-lg-3 small"></aside>
 			<article id="maincontent" class="col-lg-8 mt-3 e-content">
@@ -181,11 +199,14 @@
 			</button>
 		</p>
 		<nav class="navbar-nav px-3 my-auto">		  <p class="mb-2" ><a class="nav-link font-weight-bold lead" href="#">Syntax highlighting demo</a></p>		
-			<ul class="nav flex-column" id="sidetoc"><li class="nav-item nav d-block"><a href="#javascript" class="nav-link">Javascript</a></li><li class="nav-item nav d-block"><a href="#python" class="nav-link">Python</a></li><li class="nav-item nav d-block"><a href="#css" class="nav-link">CSS</a></li><li class="nav-item nav d-block"><a href="#php" class="nav-link">PHP</a></li><li class="nav-item nav d-block"><a href="#java" class="nav-link">Java</a></li><li class="nav-item nav d-block"><a href="#c" class="nav-link">C#</a></li><li class="nav-item nav d-block"><a href="#html" class="nav-link">HTML</a></li><li class="nav-item nav d-block"><a href="#r" class="nav-link">R</a></li><li class="nav-item nav d-block"><a href="#ruby" class="nav-link">Ruby</a></li><li class="nav-item nav d-block"><a href="#perl" class="nav-link">Perl</a></li><li class="nav-item nav d-block"><a href="#r-cran" class="nav-link">R (CRAN)</a></li></ul>
+			<ul class="nav flex-column" id="sidetoc"><li class="nav-item nav d-block"><a href="#javascript" class="nav-link">Javascript</a></li><li class="nav-item nav d-block"><a href="#python" class="nav-link">Python</a></li><li class="nav-item nav d-block"><a href="#css" class="nav-link">CSS</a></li><li class="nav-item nav d-block"><a href="#scss" class="nav-link">SCSS</a></li><li class="nav-item nav d-block"><a href="#java" class="nav-link">Java</a></li><li class="nav-item nav d-block"><a href="#c" class="nav-link">C#</a></li><li class="nav-item nav d-block"><a href="#html" class="nav-link">HTML</a></li><li class="nav-item nav d-block"><a href="#r" class="nav-link">R</a></li><li class="nav-item nav d-block"><a href="#ruby" class="nav-link">Ruby</a></li><li class="nav-item nav d-block"><a href="#php" class="nav-link">PHP</a></li><li class="nav-item nav d-block"><a href="#markdown" class="nav-link">Markdown</a></li><li class="nav-item nav d-block"><a href="#yaml" class="nav-link">YAML</a></li>
+			<li class="nav-item nav d-block"><a href="#json" class="nav-link">JSON</a></li>
+			</ul>
 		</nav>   
 	</div>
-			<p>Demo of the different pieces of code for testing syntax highlighting.</p>
-			<p>See a <code>standalone_piece_of_code</code></p>
+
+<p>Demo of the different pieces of code for testing syntax highlighting.</p>
+<p>This is a <code>simple_tag_code_in_html</code>
 <div>
  <h2 id="javascript">Javascript</h2>
  <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Cross-browser xml parsing</span>
@@ -314,7 +335,7 @@
 
 
 </code></pre></div></div>
- <h2 id="css">CSS</h2>
+  <h2 id="css">CSS</h2>
  <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nt">body</span> <span class="p">{</span>
   <span class="nl">font-family</span><span class="p">:</span> <span class="n">arial</span><span class="p">;</span>
@@ -377,60 +398,51 @@
     <span class="nl">width</span><span class="p">:</span> <span class="m">595px</span><span class="p">;</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
- <h2 id="php">PHP</h2>
- <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="cp">&lt;?php</span>
+<span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="c1">// base class with member properties and methods</span>
-<span class="kd">class</span> <span class="nc">Vegetable</span> <span class="p">{</span>
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">100px</span><span class="p">)</span> <span class="p">{}</span>
 
-   <span class="k">var</span> <span class="nv">$edible</span><span class="p">;</span>
-   <span class="k">var</span> <span class="nv">$color</span><span class="p">;</span>
 
-   <span class="k">function</span> <span class="n">Vegetable</span><span class="p">(</span><span class="nv">$edible</span><span class="p">,</span> <span class="nv">$color</span><span class="o">=</span><span class="s2">"green"</span><span class="p">)</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">edible</span> <span class="o">=</span> <span class="nv">$edible</span><span class="p">;</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">color</span> <span class="o">=</span> <span class="nv">$color</span><span class="p">;</span>
-   <span class="p">}</span>
+<span class="k">@main-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
 
-   <span class="k">function</span> <span class="n">is_edible</span><span class="p">()</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">edible</span><span class="p">;</span>
-   <span class="p">}</span>
-
-   <span class="k">function</span> <span class="n">what_color</span><span class="p">()</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">color</span><span class="p">;</span>
-   <span class="p">}</span>
-
-<span class="p">}</span> <span class="c1">// end of class Vegetable</span>
-
-<span class="c1">// extends the base class</span>
-<span class="kd">class</span> <span class="nc">Spinach</span> <span class="kd">extends</span> <span class="nc">Vegetable</span> <span class="p">{</span>
-
-   <span class="k">var</span> <span class="nv">$cooked</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-
-   <span class="k">function</span> <span class="n">Spinach</span><span class="p">()</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">Vegetable</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">);</span>
-   <span class="p">}</span>
-
-   <span class="k">function</span> <span class="n">cook_it</span><span class="p">()</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cooked</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-   <span class="p">}</span>
-
-   <span class="k">function</span> <span class="n">is_cooked</span><span class="p">()</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cooked</span><span class="p">;</span>
-   <span class="p">}</span>
-
-<span class="p">}</span> <span class="c1">// end of class Spinach</span>
-
-<span class="cp">?&gt;</span>
+<span class="nc">.foo</span> <span class="p">{</span>
+	<span class="nl">background</span><span class="p">:</span> <span class="err">@</span><span class="n">main-color</span><span class="p">;</span>
+<span class="p">}</span>
 
 </code></pre></div></div>
+ <h2 id="scss">SCSS</h2>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+<span class="k">@import</span> <span class="s2">"foo.scss"</span><span class="p">;</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">600px</span><span class="p">)</span> <span class="p">{}</span>
+<span class="nc">.seriousError</span> <span class="p">{</span>
+    <span class="k">@extend</span> <span class="nc">.error</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span> <span class="p">{}</span>
+
+
+<span class="k">@font-face</span> <span class="p">{</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="s2">"opensans"</span><span class="p">;</span>
+	<span class="nl">src</span><span class="p">:</span> <span class="nf">font-url</span><span class="p">(</span><span class="s2">"opensans.ttf"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nv">$width</span><span class="p">:</span> <span class="m">5em</span><span class="p">;</span>
+
+<span class="nn">#main</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nv">$width</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="nc">.</span><span class="si">#{</span><span class="nv">$name</span><span class="si">}</span> <span class="p">{</span>
+    <span class="si">#{</span><span class="nv">$attr</span><span class="si">}</span><span class="nt">-color</span><span class="nd">:</span> <span class="nt">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+
+</code></pre></div></div>
+
  <h2 id="java">Java</h2>
  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
@@ -844,249 +856,232 @@
 
 
 </code></pre></div></div>
- <h2 id="perl">Perl</h2>
- <div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="k">use</span> <span class="nv">strict</span><span class="p">;</span>
+ <h2 id="php">PHP</h2>
+ <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">&lt;?php</span>
 
-<span class="c1">#</span>
-<span class="c1"># This script also prints the contents of all the listed files, but</span>
-<span class="c1"># it first scans through the list to check that each file exists and</span>
-<span class="c1"># is readable.  It will stop if there are any errors.</span>
-<span class="c1">#</span>
+<span class="c1">// base class with member properties and methods</span>
+<span class="kd">class</span> <span class="nc">Vegetable</span> <span class="p">{</span>
 
-<span class="k">my</span> <span class="nv">$bad</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">foreach</span> <span class="k">my</span> <span class="nv">$fn</span> <span class="p">(</span><span class="nv">@ARGV</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="o">!</span> <span class="o">-</span><span class="nv">r</span> <span class="nv">$fn</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1"># File cannot be read.  See if it exists or not for a better</span>
-        <span class="c1"># error message.</span>
-        <span class="k">if</span><span class="p">(</span><span class="o">-</span><span class="nv">e</span> <span class="nv">$fn</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">print</span> <span class="bp">STDERR</span> <span class="p">"</span><span class="s2">You do not have permission to read </span><span class="si">$fn</span><span class="s2">.</span><span class="se">\n</span><span class="p">";</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="k">print</span> <span class="bp">STDERR</span> <span class="p">"</span><span class="s2">File </span><span class="si">$fn</span><span class="s2"> does not exist.</span><span class="se">\n</span><span class="p">";</span>
-        <span class="p">}</span>
+   <span class="k">var</span> <span class="nv">$edible</span><span class="p">;</span>
+   <span class="k">var</span> <span class="nv">$color</span><span class="p">;</span>
 
-        <span class="c1"># One way or the other, it's bad.</span>
-        <span class="nv">$bad</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+   <span class="k">function</span> <span class="n">Vegetable</span><span class="p">(</span><span class="nv">$edible</span><span class="p">,</span> <span class="nv">$color</span><span class="o">=</span><span class="s2">"green"</span><span class="p">)</span>
+   <span class="p">{</span>
+       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">edible</span> <span class="o">=</span> <span class="nv">$edible</span><span class="p">;</span>
+       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">color</span> <span class="o">=</span> <span class="nv">$color</span><span class="p">;</span>
+   <span class="p">}</span>
 
-<span class="c1"># If there was a problem, bail out.</span>
-<span class="k">if</span><span class="p">(</span><span class="nv">$bad</span><span class="p">)</span> <span class="p">{</span> <span class="nb">exit</span> <span class="mi">2</span><span class="p">;</span> <span class="p">}</span>
+   <span class="k">function</span> <span class="n">is_edible</span><span class="p">()</span>
+   <span class="p">{</span>
+       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">edible</span><span class="p">;</span>
+   <span class="p">}</span>
 
-<span class="c1"># Copy all the files.</span>
-<span class="k">while</span><span class="p">(</span><span class="k">my</span> <span class="nv">$fn</span> <span class="o">=</span> <span class="nb">shift</span> <span class="nv">@ARGV</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">function</span> <span class="n">what_color</span><span class="p">()</span>
+   <span class="p">{</span>
+       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">color</span><span class="p">;</span>
+   <span class="p">}</span>
 
-    <span class="c1"># Open the file.</span>
-    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">open</span><span class="p">(</span><span class="nv">INFILE</span><span class="p">,</span> <span class="nv">$fn</span><span class="p">))</span> <span class="p">{</span>
-        <span class="c1"># We know the file is readable, but sometimes something else goes</span>
-        <span class="c1"># wrong.  It's safer to check.</span>
-        <span class="k">print</span> <span class="bp">STDERR</span> <span class="p">"</span><span class="s2">Cannot open </span><span class="si">$fn</span><span class="s2">: $!</span><span class="se">\n</span><span class="p">";</span>
-        <span class="k">next</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="p">}</span> <span class="c1">// end of class Vegetable</span>
 
-    <span class="c1"># Copy it.</span>
-    <span class="k">while</span><span class="p">(</span><span class="k">my</span> <span class="nv">$l</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nv">INFILE</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">print</span> <span class="nv">$l</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="c1">// extends the base class</span>
+<span class="kd">class</span> <span class="nc">Spinach</span> <span class="kd">extends</span> <span class="nc">Vegetable</span> <span class="p">{</span>
 
-    <span class="nb">close</span> <span class="nv">INFILE</span><span class="p">;</span>
-<span class="p">}</span>
+   <span class="k">var</span> <span class="nv">$cooked</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+   <span class="k">function</span> <span class="n">Spinach</span><span class="p">()</span>
+   <span class="p">{</span>
+       <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">Vegetable</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="k">function</span> <span class="n">cook_it</span><span class="p">()</span>
+   <span class="p">{</span>
+       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cooked</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="k">function</span> <span class="n">is_cooked</span><span class="p">()</span>
+   <span class="p">{</span>
+       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cooked</span><span class="p">;</span>
+   <span class="p">}</span>
+
+<span class="p">}</span> <span class="c1">// end of class Spinach</span>
+
+<span class="cp">?&gt;</span>
 
 </code></pre></div></div>
- <h2 id="r-cran">R (CRAN)</h2>
- <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">tidyterra</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
 
-</span><span class="n">f</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/cyl_temp.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tidyterra"</span><span class="p">)</span><span class="w">
+ <h2 id="markdown">Markdown</h2>
+ <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="gu">Title 1
+==
+</span>
+<span class="gh">Title 2
+-------
+</span>
+<span class="gh"># Title 1</span>
+<span class="gu">## Title 2</span>
+<span class="gu">### Title 3</span>
+<span class="gu">#### Title 4</span>
+<span class="gu">##### Title 5</span>
+<span class="gu">###### Title 6</span>
 
-</span><span class="n">temp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w">
+Normal text
 
-</span><span class="n">temp</span><span class="w">
-</span><span class="c1">#&gt; class       : SpatRaster </span><span class="w">
-</span><span class="c1">#&gt; dimensions  : 87, 118, 3  (nrow, ncol, nlyr)</span><span class="w">
-</span><span class="c1">#&gt; resolution  : 3881.255, 3881.255  (x, y)</span><span class="w">
-</span><span class="c1">#&gt; extent      : -612335.4, -154347.3, 4283018, 4620687  (xmin, xmax, ymin, ymax)</span><span class="w">
-</span><span class="c1">#&gt; coord. ref. : World_Robinson </span><span class="w">
-</span><span class="c1">#&gt; source      : cyl_temp.tif </span><span class="w">
-</span><span class="c1">#&gt; names       :   tavg_04,   tavg_05,  tavg_06 </span><span class="w">
-</span><span class="c1">#&gt; min values  :  1.885463,  5.817587, 10.46338 </span><span class="w">
-</span><span class="c1">#&gt; max values  : 13.283829, 16.740898, 21.11378</span><span class="w">
+<span class="ge">*Italic*</span>
+<span class="ge">**</span>Bold on
+multiple lines<span class="ge">**</span>
+<span class="err">*</span>Italic on
+multiple lines too<span class="err">*</span>
+<span class="gs">__It also works with underscores__</span>
+<span class="ge">_It also works with underscores_</span>
 
-</span><span class="n">mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">select</span><span class="p">(</span><span class="m">-1</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">mutate</span><span class="p">(</span><span class="n">newcol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tavg_06</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tavg_05</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">relocate</span><span class="p">(</span><span class="n">newcol</span><span class="p">,</span><span class="w"> </span><span class="n">.before</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">replace_na</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">newcol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">rename</span><span class="p">(</span><span class="n">difference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newcol</span><span class="p">)</span><span class="w">
+<span class="ge">__</span>An empty line
 
-</span><span class="n">mod</span><span class="w">
-</span><span class="c1">#&gt; class       : SpatRaster </span><span class="w">
-</span><span class="c1">#&gt; dimensions  : 87, 118, 3  (nrow, ncol, nlyr)</span><span class="w">
-</span><span class="c1">#&gt; resolution  : 3881.255, 3881.255  (x, y)</span><span class="w">
-</span><span class="c1">#&gt; extent      : -612335.4, -154347.3, 4283018, 4620687  (xmin, xmax, ymin, ymax)</span><span class="w">
-</span><span class="c1">#&gt; coord. ref. : World_Robinson </span><span class="w">
-</span><span class="c1">#&gt; source(s)   : memory</span><span class="w">
-</span><span class="c1">#&gt; names       : difference,   tavg_05,  tavg_06 </span><span class="w">
-</span><span class="c1">#&gt; min values  :   2.817647,  5.817587, 10.46338 </span><span class="w">
-</span><span class="c1">#&gt; max values  :   5.307511, 16.740898, 21.11378</span><span class="w">
-</span><span class="n">lux</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"ex/lux.shp"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"terra"</span><span class="p">)</span><span class="w">
+is not allowed__
 
-</span><span class="n">v_lux</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">vect</span><span class="p">(</span><span class="n">lux</span><span class="p">)</span><span class="w">
+<span class="p">[</span><span class="nv">Prism</span><span class="p">](</span><span class="sx">http://www.prismjs.com</span><span class="p">)</span>
+<span class="p">[</span><span class="nv">Prism</span><span class="p">](</span><span class="sx">http://www.prismjs.com</span> “Prism”)
 
-</span><span class="n">v_lux</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="c1"># Create categories</span><span class="w">
-  </span><span class="n">mutate</span><span class="p">(</span><span class="n">gr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cut</span><span class="p">(</span><span class="n">POP</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">group_by</span><span class="p">(</span><span class="n">gr</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="c1"># Summary</span><span class="w">
-  </span><span class="n">summarise</span><span class="p">(</span><span class="w">
-    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">(),</span><span class="w">
-    </span><span class="n">tot_pop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">POP</span><span class="p">),</span><span class="w">
-    </span><span class="n">mean_area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">AREA</span><span class="p">)</span><span class="w">
-  </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="c1"># Arrange</span><span class="w">
-  </span><span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">gr</span><span class="p">))</span><span class="w">
-</span><span class="c1">#&gt;  class       : SpatVector </span><span class="w">
-</span><span class="c1">#&gt;  geometry    : polygons </span><span class="w">
-</span><span class="c1">#&gt;  dimensions  : 3, 4  (geometries, attributes)</span><span class="w">
-</span><span class="c1">#&gt;  extent      : 5.74414, 6.528252, 49.44781, 50.18162  (xmin, xmax, ymin, ymax)</span><span class="w">
-</span><span class="c1">#&gt;  coord. ref. : lon/lat WGS 84 (EPSG:4326) </span><span class="w">
-</span><span class="c1">#&gt;  names       :          gr     n   tot_pop mean_area</span><span class="w">
-</span><span class="c1">#&gt;  type        :      &lt;fact&gt; &lt;int&gt;     &lt;num&gt;     &lt;num&gt;</span><span class="w">
-</span><span class="c1">#&gt;  values      :   (147,183]     2 3.594e+05       244</span><span class="w">
-</span><span class="c1">#&gt;                (40.7,76.1]     1 4.819e+04       185</span><span class="w">
-</span><span class="c1">#&gt;                (4.99,40.7]     9 1.944e+05     209.8</span><span class="w">
-
-</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># A faceted SpatRaster</span><span class="w">
-
-</span><span class="n">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatraster</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">lyr</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">scale_fill_whitebox_c</span><span class="p">(</span><span class="w">
-    </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"muted"</span><span class="p">,</span><span class="w">
-    </span><span class="n">na.value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"white"</span><span class="w">
-  </span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># Contour lines for a specific layer</span><span class="w">
-
-</span><span class="n">f_volcano</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/volcano2.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tidyterra"</span><span class="p">)</span><span class="w">
-</span><span class="n">volcano2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">f_volcano</span><span class="p">)</span><span class="w">
-
-</span><span class="n">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatraster</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">volcano2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatraster_contour</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">volcano2</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="m">200</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">scale_fill_whitebox_c</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">coord_sf</span><span class="p">(</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">labs</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"elevation"</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># Contour filled</span><span class="w">
-
-</span><span class="n">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatraster_contour_filled</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">volcano2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">scale_fill_whitebox_d</span><span class="p">(</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"atlas"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">labs</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"elevation"</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># Read a vector</span><span class="w">
-
-</span><span class="n">f_v</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/cyl.gpkg"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tidyterra"</span><span class="p">)</span><span class="w">
-</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">vect</span><span class="p">(</span><span class="n">f_v</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># Read a tile</span><span class="w">
-</span><span class="n">f_rgb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/cyl_tile.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tidyterra"</span><span class="p">)</span><span class="w">
-
-</span><span class="n">r_rgb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">f_rgb</span><span class="p">)</span><span class="w">
-
-</span><span class="n">rgb_plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatraster_rgb</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_rgb</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatvector</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
-
-</span><span class="n">rgb_plot</span><span class="w">
-
-</span><span class="n">asia</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/asia.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tidyterra"</span><span class="p">))</span><span class="w">
-
-</span><span class="n">asia</span><span class="w">
-</span><span class="c1">#&gt; class       : SpatRaster </span><span class="w">
-</span><span class="c1">#&gt; dimensions  : 164, 306, 1  (nrow, ncol, nlyr)</span><span class="w">
-</span><span class="c1">#&gt; resolution  : 31836.23, 31847.57  (x, y)</span><span class="w">
-</span><span class="c1">#&gt; extent      : 7619120, 17361007, -1304745, 3918256  (xmin, xmax, ymin, ymax)</span><span class="w">
-</span><span class="c1">#&gt; coord. ref. : WGS 84 / Pseudo-Mercator (EPSG:3857) </span><span class="w">
-</span><span class="c1">#&gt; source      : asia.tif </span><span class="w">
-</span><span class="c1">#&gt; name        : file44bc291153f2 </span><span class="w">
-</span><span class="c1">#&gt; min value   :        -9558.468 </span><span class="w">
-</span><span class="c1">#&gt; max value   :         5801.927</span><span class="w">
-
-</span><span class="n">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatraster</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asia</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">scale_fill_hypso_tint_c</span><span class="p">(</span><span class="w">
-    </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gmt_globe"</span><span class="p">,</span><span class="w">
-    </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scales</span><span class="o">::</span><span class="n">label_number</span><span class="p">(),</span><span class="w">
-    </span><span class="c1"># Further refinements</span><span class="w">
-    </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-10000</span><span class="p">,</span><span class="w"> </span><span class="m">-5000</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">2000</span><span class="p">,</span><span class="w"> </span><span class="m">5000</span><span class="p">,</span><span class="w"> </span><span class="m">8000</span><span class="p">),</span><span class="w">
-    </span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">guide_colorbar</span><span class="p">(</span><span class="n">reverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">labs</span><span class="p">(</span><span class="w">
-    </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"elevation (m)"</span><span class="p">,</span><span class="w">
-    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hypsometric map of Asia"</span><span class="w">
-  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">theme</span><span class="p">(</span><span class="w">
-    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bottom"</span><span class="p">,</span><span class="w">
-    </span><span class="n">legend.title.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
-    </span><span class="n">legend.key.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rel</span><span class="p">(</span><span class="m">3</span><span class="p">),</span><span class="w">
-    </span><span class="n">legend.ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_line</span><span class="p">(</span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.3</span><span class="p">),</span><span class="w">
-    </span><span class="n">legend.direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"horizontal"</span><span class="w">
-  </span><span class="p">)</span><span class="w">
-
-</span><span class="n">lux</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"ex/lux.shp"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"terra"</span><span class="p">)</span><span class="w">
-
-</span><span class="n">v_lux</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">vect</span><span class="p">(</span><span class="n">lux</span><span class="p">)</span><span class="w">
-
-</span><span class="n">ggplot</span><span class="p">(</span><span class="n">v_lux</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatvector</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">POP</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"white"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatvector_text</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NAME_2</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"grey90"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">scale_fill_binned</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scales</span><span class="o">::</span><span class="n">number_format</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">coord_sf</span><span class="p">(</span><span class="n">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3857</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># Dissolving</span><span class="w">
-</span><span class="n">v_lux</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="c1"># Create categories</span><span class="w">
-  </span><span class="n">mutate</span><span class="p">(</span><span class="n">gr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cut</span><span class="p">(</span><span class="n">POP</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">group_by</span><span class="p">(</span><span class="n">gr</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="c1"># Summary</span><span class="w">
-  </span><span class="n">summarise</span><span class="p">(</span><span class="w">
-    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">(),</span><span class="w">
-    </span><span class="n">tot_pop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">POP</span><span class="p">),</span><span class="w">
-    </span><span class="n">mean_area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">AREA</span><span class="p">)</span><span class="w">
-  </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatvector</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tot_pop</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatvector_label</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gr</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">coord_sf</span><span class="p">(</span><span class="n">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3857</span><span class="p">)</span><span class="w">
+<span class="p">[</span><span class="ss">prism link</span><span class="p">]:</span> <span class="sx">http://www.prismjs.com</span> <span class="nn">(Prism)</span>
+[Prism] [prism link]
+<span class="p">
+*</span> This is
+<span class="p">*</span> an unordered list
+<span class="p">
+1.</span> This is an
+<span class="p">2.</span> ordered list
+<span class="p">
+*</span> <span class="ge">*List item in italic*</span>
+<span class="p">*</span> <span class="gs">**List item in bold**</span>
+<span class="p">*</span> <span class="p">[</span><span class="nv">List item as a link</span><span class="p">](</span><span class="sx">http://example.com</span> “This is an example”)
+<span class="gt">
+&gt; This is a quotation</span>
+<span class="gt">&gt;&gt; With another quotation inside</span>
+<span class="gt">&gt; _italic here_, __bold there__</span>
+<span class="gt">&gt; And a [link](http://example.com)</span><span class="sb">
 
 
-</span><span class="c1"># Same but keeping internal boundaries</span><span class="w">
-</span><span class="n">v_lux</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="c1"># Create categories</span><span class="w">
-  </span><span class="n">mutate</span><span class="p">(</span><span class="n">gr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cut</span><span class="p">(</span><span class="n">POP</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">group_by</span><span class="p">(</span><span class="n">gr</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="c1"># Summary without dissolving</span><span class="w">
-  </span><span class="n">summarise</span><span class="p">(</span><span class="w">
-    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">(),</span><span class="w">
-    </span><span class="n">tot_pop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">POP</span><span class="p">),</span><span class="w">
-    </span><span class="n">mean_area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">AREA</span><span class="p">),</span><span class="w">
-    </span><span class="n">.dissolve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">
-  </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatvector</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tot_pop</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">geom_spatvector_label</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gr</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
-  </span><span class="n">coord_sf</span><span class="p">(</span><span class="n">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3857</span><span class="p">)</span><span class="w">
+</span>Inline code between backticks <span class="sb">`Paragraph`
+
+    some_code(); /* Indented
+    with four spaces */
+
+	some_code(); /* Indented
+	with a tab */
+
+
 </span></code></pre></div></div>
+ <h2 id="yaml">YAML</h2>
+ <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+<span class="nt">%YAML</span> <span class="m">1.2</span>
+<span class="nn">---</span> <span class="kt">!&lt;tag:clarkevans.com,2002:invoice&gt;</span>
+<span class="na">invoice</span><span class="pi">:</span> <span class="m">34843</span>
+<span class="na">date   </span><span class="pi">:</span> <span class="s">2001-01-23</span>
+<span class="na">bill-to</span><span class="pi">:</span> <span class="nl">&amp;id001</span>
+  <span class="na">given  </span><span class="pi">:</span> <span class="s">Chris</span>
+  <span class="na">family </span><span class="pi">:</span> <span class="s">Dumars</span>
+  <span class="na">address</span><span class="pi">:</span>
+    <span class="na">lines</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">458 Walkman Dr.</span>
+      <span class="s">Suite #292</span>
+    <span class="na">city    </span><span class="pi">:</span> <span class="s">Royal Oak</span>
+    <span class="na">state   </span><span class="pi">:</span> <span class="s">MI</span>
+    <span class="na">postal  </span><span class="pi">:</span> <span class="m">48046</span>
+<span class="na">ship-to</span><span class="pi">:</span>
+  <span class="na">&lt;&lt;</span><span class="pi">:</span> <span class="nv">*id001</span>
+  <span class="na">product</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">sku         </span><span class="pi">:</span> <span class="s">BL394D</span>
+      <span class="na">quantity    </span><span class="pi">:</span> <span class="m">4</span>
+      <span class="na">description </span><span class="pi">:</span> <span class="s">Basketball</span>
+      <span class="na">price       </span><span class="pi">:</span> <span class="m">450.00</span>
+    <span class="pi">-</span> <span class="na">sku         </span><span class="pi">:</span> <span class="s">BL4438H</span>
+      <span class="na">quantity    </span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">description </span><span class="pi">:</span> <span class="s">Super Hoop</span>
+      <span class="na">price       </span><span class="pi">:</span> <span class="m">2392.00</span>
+<span class="na">tax  </span><span class="pi">:</span> <span class="m">251.42</span>
+<span class="na">total</span><span class="pi">:</span> <span class="m">4443.52</span>
+<span class="na">comments</span><span class="pi">:</span>
+    <span class="s">Late afternoon is best.</span>
+    <span class="s">Backup contact is Nancy</span>
+
+
+</code></pre></div></div>
+<h2 id="json">JSON</h2>
+ <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+ </span><span class="nl">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-06-21T08:10:46Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en-US"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="nl">"photo"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"farm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5855620975"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfamily"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfriend"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"ispublic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32021554@N04"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f1f5e8515d"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5110"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7087 bandit cat"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"farm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5856170534"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfamily"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfriend"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"ispublic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32021554@N04"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ff1efb2a6f"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3217"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6975 rusty cat"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"farm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5856172972"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfamily"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfriend"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"ispublic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51249875@N03"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6c6887347c"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5192"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"watermarked-cats"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"farm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5856168328"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfamily"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfriend"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"ispublic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32021554@N04"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0c1cfdf64c"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5078"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7020 mandy cat"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"farm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5856171774"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfamily"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"isfriend"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"ispublic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32021554@N04"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7f5a3180ab"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2696"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7448 bobby cat"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+   </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
 </div>
 </article>
 		</div>
-	</main><nav aria-label="Navigation" class="container-lg chulapa-pagination  ">
+	</main>
+<nav aria-label="Navigation" class="container-lg chulapa-pagination  ">
  <ul class="col-lg-8 offset-lg-2 pagination chulapa-pagination-round px-0 ">
    <li class="page-item text-left mr-0 ">
       <a class="page-link border-0 px-4" href="https://dieghernan.github.io/chulapa-jekyll-sample/headers" tabindex="-1">

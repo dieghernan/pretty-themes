@@ -1,0 +1,231 @@
+/* selenized.dark theme
+ *
+ * Based on https://github.com/jan-warchol/selenized
+ *
+ * @author Diego H <https://github.com/dieghernan/>
+ */
+
+$bg_0: #103C48;
+$bg_1: #184956;
+$bg_2: #2D5B69;
+$dim_0: #72898F;
+$fg_0: #ADBCBC;
+$fg_1: #CAD8D9;
+$red: #FA5750;
+$green: #75B938;
+$yellow: #DBB32D;
+$blue: #4695F7;
+$magenta: #F275BE;
+$cyan: #41C7B9;
+$orange: #ED8649;
+$violet: #AF88EB;
+$br_red: #FF665C;
+$br_green: #84C747;
+$br_yellow: #EBC13D;
+$br_blue: #58A3FF;
+$br_magenta: #FF84CD;
+$br_cyan: #53D6C7;
+$br_orange: #FD9456;
+$br_violet: #BD96FA;
+
+
+$selection: $bg_2;
+
+$foreground: $fg_0; // Base color: usually on Settings > Foreground
+$background: $bg_0; // Background color: usually on Settings > Background
+$comment: $dim_0;
+$constant_character_escape: $red;
+$constant_language: $cyan;
+$constant_numeric: $cyan;
+$entity: $blue;
+$invalid: $br_red;
+$keyword_control: $green;
+$keyword_control_import: $orange;
+$keyword_operator: $green;
+$markup_heading: $br_yellow;
+$punctuation_definition: $fg_0;
+$storage_type: $green;
+$string: $cyan;
+$support: $blue;
+$support_type: $yellow;
+$variable: $fg_0;
+$variable_language: $red;
+$variable_other: $orange;
+
+// tmTheme scopes as SASS variables
+// Naming convention: scope_without_dots
+// See more in: https://macromates.com/manual/en/language_grammars
+
+// Comments
+$comment:                  $foreground !default; //Any comments
+$comment_block:            $comment !default; //Multi-line comments /* … */,<- … -->.
+$comment_line:             $comment !default; //Line comments
+$comment_line_number-sign: $comment_line !default; // # comment
+
+// Constants
+$constant_character_escape: $foreground !default; //Escape sequences.
+$constant_language:         $foreground !default; //Special constants like true, false,nil
+$constant_language_boolean: $constant_language !default; //True,False, etc.
+// Constant: Numbers 
+$constant_numeric:          $foreground !default; //Any number
+$constant_numeric_float:    $constant_numeric !default; // Floating number
+$constant_numeric_integer:  $constant_numeric !default; //Integers
+
+// Other constants
+$constant_other:        $foreground !default; //Any other constants, e.g. colors in CSS.
+$constant_other_symbol: $constant_other !default; // 
+
+// Entities: Part of the document, for example a chapter, class, function, or tag.
+$entity:                            $foreground !default; //Top class entity
+$entity_name:                       $entity !default; //Larger entity
+$entity_name_tag:                   $entity_name !default; //Tag name.
+$entity_name_tag_doctype:           $entity_name_tag !default;
+$entity_name_type:                  $entity_name !default; //Type declaration or class.
+$entity_name_css:                   $entity_name !default; //Type declaration or class for css.
+$entity_other_attribute-name:       $entity !default; //Name of an attribute (mainly in tags).
+$entity_other_attribute-name_html:  $entity_other_attribute-name !default; //Name of an attribute (mainly in HTML tags).
+
+// Invalid: Stuff that is invalid, illegal or deprecated
+// Mapped to errors in Pygments
+$invalid: $foreground !default;
+
+// Keywords
+$keyword_control:         $foreground !default; //Related to flow control: continue, while, return, etc.
+$keyword_control_import:  $keyword_control !default;
+$keyword_operator:        $foreground !default; //Operators can be textual (e.g. or) or be characters.
+
+// Markup: For markup languages and generally applies to larger subsets of the text
+$markup_bold:             $foreground !default; //Bold text.
+$markup_heading:          $foreground !default; //Section header.
+$markup_italic:           $foreground !default; //Italic text
+
+
+// Punctuation
+// Specific of SublimeText, see:
+// https://www.sublimetext.com/docs/scope_naming.html#alphabetical-reference
+$punctuation_definition: $foreground !default;
+
+// Storage: These are keywords in Pygments
+$storage_type: $foreground !default; //Type of something, class, function, int, var, etc.
+
+
+// Strings
+$string:                $foreground !default; //Strings
+$string_interpolated:   $string !default; //Strings which are "evaluated": `date`, $(pwd).
+$string_quoted:         $string !default; //Quoted strings
+$string_quoted_single:  $string_quoted !default; //Single quoted strings: 'foo'.
+$string_quoted_double:  $string_quoted !default; //Double quoted strings: "foo".
+$string_quoted_other:   $string_quoted !default; //Other types of quoting: $'shell', %s{...}.
+$string_regexp:         $string !default; //Regular expressions: /(\w+)/.
+
+// Support: Built-in things
+$support:           $foreground !default; //Things provided by a framework or library.
+$support_constant:  $support !default; //Constants (magic values) provided by the framework/library.
+$support_type:      $support !default; //Types provided by the framework/library,
+$support_class:     $support !default; //Classes provided by the framework/library,
+
+
+// Variable
+$variable:           $foreground !default; //Not all languages allow easy identification (and thus markup) of these.
+$variable_language:  $variable !default; //Reserved language variables like this,super,self, etc.
+$variable_other:     $variable !default; //Other variables, like $some_variables.
+
+
+
+/* Selection */
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection 
+{
+  text-shadow: none;
+  background-color: $selection;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection 
+{
+  text-shadow: none;
+  background-color: $selection;
+}
+
+code[class*="language-"],
+pre[class*="language-"] 
+{
+  color: $foreground;
+  background: $background;
+  text-shadow: none;
+  font-family: PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+
+pre[class*="language-"] 
+{
+  background: $background;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  height: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] 
+{
+  background: $background;
+}
+
+.token.cdata{color: $comment}
+.token.comment{color: $comment; font-style: italic}
+.token.prolog{color: $comment}
+.token.boolean{color: $constant_language_boolean}
+.token.constant{color: $constant_language}
+.token.keyword.null{color: $constant_language}
+.token.number{color: $constant_numeric}
+.token.builtin{color: $constant_other}
+.token.selector{color: $entity_name_css}
+.token.doctype{color: $entity_name_tag_doctype}
+.token.tag{color: $entity_name_tag}
+.token.directive{color: $entity_name_tag}
+.token.blockquote{color: $entity_name_tag}
+.token.namespace{color: $entity_name_type}
+.token.function{color: $entity_name}
+.token.atrule{color: $entity_other_attribute-name}
+.token.attr-name,{color: $entity_other_attribute-name}
+.token.keyword{color: $keyword_control}
+.token.operator{color: $keyword_operator}
+.token.bold{color: $markup_bold; font-weight: bold;}
+.token.title{color: $markup_heading}
+.token.italic{color: $markup_italic; font-style: italic;}
+.token.punctuation{color: $punctuation_definition}
+.token.entity{color: $string_interpolated}
+.token.regex{color: $string_regexp}
+.token.char{color: $string}
+.token.string{color: $string}
+.token.attr-value{color: $string}
+.token.property{color: $support_type}
+.token.class-name{color: $support_type}
+.token.property-access{color: $support_constant}
+.token.variable{color: $variable_other}
+.token.content{color: $variable_other}
+.token.important{font-weight: bold;}

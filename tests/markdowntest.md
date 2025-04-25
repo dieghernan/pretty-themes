@@ -1,6 +1,6 @@
 # A heading
 
-Here I am
+Here I am and `some code` here.
 
 ```r
 library(ggplot2)

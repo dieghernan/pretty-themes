@@ -6,6 +6,14 @@ comp <- sass::sass(test, output = "./tests/dev.css", cache = FALSE,
                    options = sass::sass_options(output_style = "compact"))
 
 
+testprism <- readLines("tests/devprism.scss")
+
+
+
+compprism <- sass::sass(testprism, output = "./tests/devprism.css", cache = FALSE, 
+                   options = sass::sass_options(output_style = "expanded"))
+
+
 # 
 # 
 # # test <- readLines("scss/template.scss")
