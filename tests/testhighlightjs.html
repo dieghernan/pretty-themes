@@ -1,8 +1,16 @@
   <!DOCTYPE html> 
   <html> 
   <head> 
-     <link href="devprism.css" rel="stylesheet" /> 
-  </head> 
+<link rel="stylesheet" href="devhljs.css">
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+</script>
+</head> 
   <body> 
 <h2 id="javascript">Javascript</h2>
 <style>
@@ -10,13 +18,27 @@
     font-size: 1rem;
     margin-left: 1.5rem !important;
     margin-right: 1.5rem !important;
+    font-family: Inconsolata,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 
   }
-  
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+}
+
 </style>
 <pre>
   <code class="language-javascript">
-              
 // Cross-browser xml parsing
 var parseXML = function( data ) {
   var xml, tmp;
@@ -354,6 +376,7 @@ public class Life {
 <h2>C#</h2>
 <pre>
   <code class="language-csharp">
+
 using System.Collections.Generic;
 using System.Linq;
 using Abp.Domain.Entities;
@@ -427,6 +450,7 @@ namespace Abp.MemoryDb.Repositories
 <h2>HTML</h2>
 <pre>
   <code class="language-html">
+
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
@@ -943,6 +967,5 @@ comments:
 </pre>
 
 
-<script src="prism.js"></script> 
 </body> 
 </html>

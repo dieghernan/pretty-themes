@@ -14,6 +14,13 @@ compprism <- sass::sass(testprism, output = "./tests/devprism.css", cache = FALS
                    options = sass::sass_options(output_style = "expanded"))
 
 
+testhljs <- readLines("tests/devhljs.scss")
+
+
+
+comphljs <- sass::sass(testhljs, output = "./tests/devhljs.css", cache = FALSE, 
+                        options = sass::sass_options(output_style = "expanded"))
+
 # 
 # 
 # # test <- readLines("scss/template.scss")
