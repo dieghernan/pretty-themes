@@ -58,7 +58,7 @@ thecols <- c(rs, sf) %>%
   unlist() %>%
   paste0("#", .)
 
-thecols[!thecols %in% tb$dark_spec] %>%  unique()
+thecols[!thecols %in% tb$dark_spec] %>% unique()
 
 
 # library(farver)

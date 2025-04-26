@@ -1,5 +1,5 @@
 library(tidyverse)
-all_prism <- list.files("prismjs",
+all_prism <- list.files("hljs",
   pattern = ".scss",
   full.names = TRUE
 )
@@ -7,7 +7,7 @@ all_prism <- list.files("prismjs",
 # No template
 all_prism <- all_prism[!grepl("template", all_prism)]
 
-exc <- c("skeletor|cobalt2")
+exc <- c("stackoverflow")
 
 exc_f <- all_prism[grepl(exc, all_prism)]
 
@@ -28,7 +28,7 @@ for (f in all_prism) {
     file.path("./prismjs", "css", .)
   in_f <- readLines(f)
 
-
+  message(f)
   # test <- readLines("scss/template.scss")
   comp <- sass::sass(in_f,
     output = out_f,

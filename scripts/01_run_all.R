@@ -1,6 +1,7 @@
 # Run all the scripts at once
-all_rs_scripts <- list.files("./scripts", 
-                             pattern = ".R$", full.names = TRUE)
+all_rs_scripts <- list.files("./scripts",
+  pattern = ".R$", full.names = TRUE
+)
 
 # Exclude this
 all_rs_scripts <- all_rs_scripts[!grepl("01_run", all_rs_scripts)]

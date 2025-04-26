@@ -45,10 +45,10 @@ tb$white_spec <- c(
 
 
 
-tb |> 
-  select(colnames, spec = white_spec) |> 
-  mutate(scss = paste0("$", colnames, ": ", spec, ";")) |> 
-  select(scss) |> 
+tb |>
+  select(colnames, spec = white_spec) |>
+  mutate(scss = paste0("$", colnames, ": ", spec, ";")) |>
+  select(scss) |>
   clipr::write_clip()
 
 
@@ -72,17 +72,19 @@ tb$oksolar_dark_spec <- c(
   "#002d38", "#093946", "#5b7279", "#657377", "#98a8a8", "#8faaab", "#f23749",
   "#819500", "#ac8300", "#2b90d8", "#dd459d", "#259d94", "#d56500", "#7d80d1",
   "#f23749", "#819500", "#ac8300", "#2b90d8", "#dd459d", "#259d94", "#d56500",
-  "#7d80d1") %>% toupper()
+  "#7d80d1"
+) %>% toupper()
 
 tb$oksolar_light_spec <- c(
-  "#f1e9d2", "#8faaab", "#98a8a8", "#657377", "#5b7279", "#093946",  "#f23749",
+  "#f1e9d2", "#8faaab", "#98a8a8", "#657377", "#5b7279", "#093946", "#f23749",
   "#819500", "#ac8300", "#2b90d8", "#dd459d", "#259d94", "#d56500", "#7d80d1",
   "#f23749", "#819500", "#ac8300", "#2b90d8", "#dd459d", "#259d94", "#d56500",
-  "#7d80d1") %>% toupper()
+  "#7d80d1"
+) %>% toupper()
 
 
-tb |> 
-  select(colnames, spec = oksolar_light_spec) |> 
-  mutate(scss = paste0("$", colnames, ": ", spec, ";")) |> 
-  select(scss) |> 
+tb |>
+  select(colnames, spec = oksolar_light_spec) |>
+  mutate(scss = paste0("$", colnames, ": ", spec, ";")) |>
+  select(scss) |>
   clipr::write_clip()
