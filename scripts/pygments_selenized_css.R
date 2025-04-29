@@ -44,14 +44,59 @@ tb$white_spec <- c(
 ) %>% toupper()
 
 
+# Use the css as template
 
-tb |>
-  select(colnames, spec = white_spec) |>
-  mutate(scss = paste0("$", colnames, ": ", spec, ";")) |>
-  select(scss) |>
-  clipr::write_clip()
+# Black ----
+ncols <- seq_len(nrow(tb))
+bpath <- list.files("./src/styles", "selenized.dark", full.names = TRUE)
+f <- bpath[1]
+
+for (f in bpath) {
+  rs <- readLines(f)
+  rs_bk <- rs
+
+  for (i in ncols) {
+    rs_bk <- gsub(tb$dark_spec[i], tb$black_spec[i], rs_bk, ignore.case = TRUE)
+  }
+  rs_bk <- gsub("selenized.dark", "selenized.black", rs_bk)
+  out_f <- gsub("selenized.dark", "selenized.black", f)
+  writeLines(rs_bk, out_f)
+}
 
 
+# Light ----
+ncols <- seq_len(nrow(tb))
+bpath <- list.files("./src/styles", "selenized.dark", full.names = TRUE)
+f <- bpath[1]
+
+for (f in bpath) {
+  rs <- readLines(f)
+  rs_bk <- rs
+
+  for (i in ncols) {
+    rs_bk <- gsub(tb$dark_spec[i], tb$light_spec[i], rs_bk, ignore.case = TRUE)
+  }
+  rs_bk <- gsub("selenized.dark", "selenized.light", rs_bk)
+  out_f <- gsub("selenized.dark", "selenized.light", f)
+  writeLines(rs_bk, out_f)
+}
+
+# White ----
+ncols <- seq_len(nrow(tb))
+bpath <- list.files("./src/styles", "selenized.dark", full.names = TRUE)
+f <- bpath[1]
+
+for (f in bpath) {
+  rs <- readLines(f)
+  rs_bk <- rs
+
+  for (i in ncols) {
+    rs_bk <- gsub(tb$dark_spec[i], tb$white_spec[i], rs_bk, ignore.case = TRUE)
+  }
+  rs_bk <- gsub("selenized.dark", "selenized.white", rs_bk)
+  out_f <- gsub("selenized.dark", "selenized.white", f)
+  writeLines(rs_bk, out_f)
+}
 # OkSolar
 
 tb <- tibble(colnames = c(
@@ -82,9 +127,36 @@ tb$oksolar_light_spec <- c(
   "#7d80d1"
 ) %>% toupper()
 
+# OKSolar Dark ----
+ncols <- seq_len(nrow(tb))
+bpath <- list.files("./src/styles", "selenized.dark", full.names = TRUE)
+f <- bpath[1]
 
-tb |>
-  select(colnames, spec = oksolar_light_spec) |>
-  mutate(scss = paste0("$", colnames, ": ", spec, ";")) |>
-  select(scss) |>
-  clipr::write_clip()
+for (f in bpath) {
+  rs <- readLines(f)
+  rs_bk <- rs
+
+  for (i in ncols) {
+    rs_bk <- gsub(tb$dark_spec[i], tb$oksolar_dark_spec[i], rs_bk, ignore.case = TRUE)
+  }
+  rs_bk <- gsub("selenized.dark", "oksolar.dark", rs_bk)
+  out_f <- gsub("selenized.dark", "oksolar.dark", f)
+  writeLines(rs_bk, out_f)
+}
+
+# OKSolar Light ----
+ncols <- seq_len(nrow(tb))
+bpath <- list.files("./src/styles", "selenized.dark", full.names = TRUE)
+f <- bpath[1]
+
+for (f in bpath) {
+  rs <- readLines(f)
+  rs_bk <- rs
+
+  for (i in ncols) {
+    rs_bk <- gsub(tb$dark_spec[i], tb$oksolar_light_spec[i], rs_bk, ignore.case = TRUE)
+  }
+  rs_bk <- gsub("selenized.dark", "oksolar.light", rs_bk)
+  out_f <- gsub("selenized.dark", "oksolar.light", f)
+  writeLines(rs_bk, out_f)
+}

@@ -122,9 +122,19 @@ pre[class*="language-"] {
   cursor: help;
 }
 
+/*
+
 .language-javascript {
   color: #dce7fd;
 }
+
+.language-javascript .token.keyword {
+  color: #f3e4a2;
+}
+.language-javascript .token.class-name {
+  color: #93b4ff;
+}
+
 
 .language-css .token.url {
   color: #84fba2;
@@ -138,13 +148,6 @@ pre[class*="language-"] {
 }
 .language-scss .token.variable {
   color: #84fba2;
-}
-
-.language-javascript .token.keyword {
-  color: #f3e4a2;
-}
-.language-javascript .token.class-name {
-  color: #93b4ff;
 }
 
 .language-php .token.keyword {
@@ -182,6 +185,8 @@ pre[class*="language-"] {
 .language-markdown .token.url .variable {
   color: #f3e4a2;
 }
+
+*/
 
 pre.line-numbers {
   position: relative;

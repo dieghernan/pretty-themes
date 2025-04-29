@@ -1,0 +1,67 @@
+/*!
+  Theme: StackOverflow Light
+  Description: Light theme as used on stackoverflow.com
+  Author: stackoverflow.com
+  Maintainer: @Hirse
+  Website: https://github.com/StackExchange/Stacks
+  License: MIT
+  Updated: 2021-05-15
+
+  Updated for @stackoverflow/stacks v0.64.0
+  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
+  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
+ 
+ 
+ Adapted by Diego H <https://github.com/dieghernan/> for pygments
+ based in https://github.com/highlightjs/highlight.js/blob/main/src/styles/stackoverflow-light.css
+ 
+ BSD 3-Clause License
+
+Copyright (c) 2006, Ivan Sagalaev.
+All rights reserved.
+ 
+ */
+ 
+ 
+// Based on https://github.com/highlightjs/highlight.js/blob/main/src/styles/stackoverflow-dark.css
+
+// Top level colors
+$foreground:  #2f3337;
+$background:  #f6f6f6;
+
+$comment: #656e77; // hljs: comment
+$constant_character_escape: $foreground; // hljs: char.escape
+$constant_language: #b75501; // hljs: literal
+$constant_numeric: #b75501; // hljs: number
+$constant_other_symbol: #54790d; // hljs: symbol 
+$entity_name: $foreground; // hljs: function, class
+$entity_name_tag: #b75501; // hljs: tag, name
+$entity_name_tag_css: #015692;// hljs: selector-tag, selector-class
+$entity_other_attribute-name_html: #015692; // hljs: attr
+$entity_other_attribute-name_id: #b75501; // hljs: selector-id
+$invalid: #c02d2e; // hljs: deletion
+$keyword_control: #015692; // hljs: keyword
+$keyword_other_important: #015692; // hljs: meta
+$keyword_control_at-rule: #015692;// attr on yaml
+$keyword_operator: $foreground;  // hljs: operator
+$markup_bold: $foreground; // hljs: strong
+$markup_italic: $foreground; // hljs: emphasis
+$markup_heading: #015692; // hljs: section
+$markup_raw: #535a60; // hljs: code
+$markup_quote: #b75501; // hljs: quote
+$punctuation_definition: $foreground; // hljs: punctuation
+$storage_type: $keyword_control; // Prismjs: keyword
+$string: #54790d; // hljs: string
+$string_html: $string; // hljs: string for html only
+$string_regexp: #54790d; // hljs: regexp
+$support_constant:  $foreground; // hljs: property
+$support_type: #803378; // hljs: attribute
+$variable: #54790d; // hljs: variable
+$variable_language: $variable; // hljs: variable language and constant
+
+// Special for json
+.language-json .highlight {
+  .nl {color: $entity_other_attribute-name_html;}
+}
+
+@import "./src/_tmtheme.scss";

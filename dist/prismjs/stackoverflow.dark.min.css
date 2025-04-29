@@ -1,0 +1,23 @@
+/*!
+  Theme: StackOverflow Dark
+  Description: Dark theme as used on stackoverflow.com
+  Author: stackoverflow.com
+  Maintainer: @Hirse
+  Website: https://github.com/StackExchange/Stacks
+  License: MIT
+  Updated: 2021-05-15
+
+  Updated for @stackoverflow/stacks v0.64.0
+  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
+  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
+ 
+ 
+ Adapted by Diego H <https://github.com/dieghernan/> for pygments
+ based in https://github.com/highlightjs/highlight.js/blob/main/src/styles/stackoverflow-dark.css
+ 
+ BSD 3-Clause License
+
+Copyright (c) 2006, Ivan Sagalaev.
+All rights reserved.
+ 
+ */.token.list.punctuation{color:#cccccc}.language-json .token.property{color:#88aece}code[class*="language-"],pre[class*="language-"]{color:#fff;background:#1c1b1b;text-shadow:none;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*="language-"]{background:#1c1b1b;border-radius:0.5em;padding:1em;margin:0.5em 0;overflow:auto;height:auto}:not(pre)>code[class*="language-"],pre[class*="language-"]{background:#1c1b1b}.token.atrule{color:#88aece}.token.attr-name{color:#88aece}.token.attr-value{color:#b5bd68}.token.blockquote.punctuation{color:#f08d49}.token.bold{color:#fff;font-weight:bold}.token.boolean{color:#f08d49}.token.builtin{color:#fff}.token.cdata{color:#999}.token.char{color:#b5bd68}.token.class-name{color:#fff}.token.class{color:#88aece}.token.code,.token.code.keyword{color:#ccc}.token.comment{color:#999}.token.constant{color:#f08d49}.token.content{color:#b5bd68}.token.directive{color:#88aece}.token.doctype{color:#999}.token.entity{color:#b5bd68}.token.function{color:#fff}.token.id{color:#f08d49}.token.important{color:#88aece;font-weight:bold}.token.italic{color:#fff;font-style:italic}.token.keyword.null{color:#f08d49}.token.keyword{color:#88aece}.token.namespace{color:#fff}.token.number{color:#f08d49}.token.operator{color:#fff}.token.prolog{color:#999}.token.property{color:#c59bc1}.token.punctuation{color:#fff}.token.regex{color:#b5bd68}.token.selector{color:#88aece}.token.string{color:#b5bd68}.token.tag{color:#f08d49}.token.title{color:#88aece}.token.variable{color:#b5bd68}code[class="language-css"]{color:#fff}code[class="language-scss"]{color:#fff}code[class="language-yaml"]{color:#b5bd68}.language-scss .token.variable,.language-css .token.variable{color:#b5bd68}.language-yaml{color:#b5bd68}

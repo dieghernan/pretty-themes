@@ -1,0 +1,158 @@
+/* selenized.dark theme
+ *
+ * Based on https://github.com/jan-warchol/selenized
+ *
+ * @author Diego H <https://github.com/dieghernan/>
+ */
+/* Selection */
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background-color: #2D5B69; }
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  text-shadow: none;
+  background-color: #2D5B69; }
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #ADBCBC;
+  background: #103C48;
+  text-shadow: none;
+  font-family: PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* Code blocks */
+pre[class*="language-"] {
+  background: #103C48;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  height: auto; }
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #103C48; }
+
+.token.cdata {
+  color: #72898F; }
+
+.token.comment {
+  color: #72898F;
+  font-style: italic; }
+
+.token.prolog {
+  color: #72898F; }
+
+.token.boolean {
+  color: #41C7B9; }
+
+.token.constant {
+  color: #41C7B9; }
+
+.token.keyword.null {
+  color: #41C7B9; }
+
+.token.number {
+  color: #41C7B9; }
+
+.token.builtin {
+  color: #ADBCBC; }
+
+.token.selector {
+  color: #4695F7; }
+
+.token.doctype {
+  color: #4695F7; }
+
+.token.tag {
+  color: #4695F7; }
+
+.token.directive {
+  color: #4695F7; }
+
+.token.blockquote {
+  color: #4695F7; }
+
+.token.namespace {
+  color: #4695F7; }
+
+.token.function {
+  color: #4695F7; }
+
+.token.atrule {
+  color: #4695F7; }
+
+.token.attr-name {
+  color: #4695F7; }
+
+.token.keyword {
+  color: #75B938; }
+
+.token.operator {
+  color: #75B938; }
+
+.token.bold {
+  color: #ADBCBC;
+  font-weight: bold; }
+
+.token.title {
+  color: #EBC13D; }
+
+.token.italic {
+  color: #ADBCBC;
+  font-style: italic; }
+
+.token.punctuation {
+  color: #ADBCBC; }
+
+.token.entity {
+  color: #41C7B9; }
+
+.token.regex {
+  color: #41C7B9; }
+
+.token.char {
+  color: #41C7B9; }
+
+.token.string {
+  color: #41C7B9; }
+
+.token.attr-value {
+  color: #41C7B9; }
+
+.token.property {
+  color: #DBB32D; }
+
+.token.class-name {
+  color: #DBB32D; }
+
+.token.property-access {
+  color: #4695F7; }
+
+.token.variable {
+  color: #ED8649; }
+
+.token.content {
+  color: #ED8649; }
+
+.token.important {
+  font-weight: bold; }

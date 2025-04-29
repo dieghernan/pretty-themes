@@ -62,7 +62,7 @@ tb$oksolar_light_spec <- c(
 
 
 # OK Solar Dark ------
-bpath <- "./tmTheme/Selenized Dark.tmTheme"
+bpath <- "./dist/tmTheme/Selenized Dark.tmTheme"
 spath <- "./scripts/rthemes_Selenized_Dark.R"
 rs <- readLines(bpath)
 sf <- readLines(spath)

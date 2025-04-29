@@ -1,0 +1,16 @@
+ /* Night Owl Theme for highlightjs
+ * 
+ * Based on https://github.com/sdras/night-owl-vscode-theme
+ * Copyright 2020, 2025, All rights reserved
+ *
+ * Code licensed under the MIT license
+ *
+ * @author Diego H <https://github.com/dieghernan/>
+ */
+
+
+// Top level colors
+$foreground:  #333;
+$background:  #f7f7f7;
+
+@import "./src/_hljs.scss";

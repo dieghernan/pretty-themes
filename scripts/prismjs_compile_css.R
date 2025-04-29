@@ -1,37 +1,45 @@
 library(tidyverse)
-all_prism <- list.files("prismjs",
-  pattern = ".scss",
-  full.names = TRUE
+all_prismjs <- list.files("./src/styles",
+  pattern = ".scss", full.names = TRUE
 )
 
-# No template
-all_prism <- all_prism[!grepl("template", all_prism)]
+# prismjs only
+all_prismjs <- all_prismjs[grepl("prismjs", all_prismjs)]
+f <- all_prismjs
 
-exc <- c("skeletor|cobalt2")
+for (f in all_prismjs) {
+  out_sass <- basename(f) %>%
+    gsub("_|prismjs", "", .) %>%
+    file.path("./dist", "prismjs", .)
 
-exc_f <- all_prism[grepl(exc, all_prism)]
-
-for (f in exc_f) {
-  out_f <- basename(f) |>
+  out_css <- basename(out_sass) %>%
+    gsub("_", "", .) |>
     tools::file_path_sans_ext() |>
     paste0(".css") %>%
-    file.path("./prismjs", "css", .)
-  file.copy(f, out_f, overwrite = TRUE)
-}
+    file.path("./dist", "prismjs", .)
 
-all_prism <- all_prism[!grepl(exc, all_prism)]
-
-for (f in all_prism) {
-  out_f <- basename(f) |>
+  out_css_min <- basename(out_sass) %>%
     tools::file_path_sans_ext() |>
-    paste0(".css") %>%
-    file.path("./prismjs", "css", .)
+    paste0(".min.css") %>%
+    file.path("./dist", "prismjs", .)
   in_f <- readLines(f)
 
+  message(basename(out_sass))
 
-  # test <- readLines("scss/template.scss")
   comp <- sass::sass(in_f,
-    output = out_f,
-    cache = FALSE
+    output = out_sass,
+    cache = FALSE,
+    options = sass::sass_options(output_style = "compact")
+  )
+
+  comp <- sass::sass(in_f,
+    output = out_css,
+    cache = FALSE,
+    options = sass::sass_options(output_style = "compact")
+  )
+  comp <- sass::sass(in_f,
+    output = out_css_min,
+    cache = FALSE,
+    options = sass::sass_options(output_style = "compressed")
   )
 }

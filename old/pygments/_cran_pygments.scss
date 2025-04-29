@@ -1,0 +1,54 @@
+ /* cran Theme for pygments/Jekyll
+ * 
+ * Based on https://cran.r-project.org/
+ * Copyright 2020, 2025, All rights reserved
+ *
+ * Code licensed under the MIT license
+ *
+ * @author Diego H <https://github.com/dieghernan/>
+ */
+
+
+// Top level colors
+$foreground:  #333;
+$background:  #f7f7f7;
+
+code {
+  color: $foreground;
+  background-color: $background;
+}
+
+
+$comment: #60a0b0;
+$constant_language: #880000;
+$constant_numeric: #40a070;
+$constant_numeric_float: #40a070;
+$entity_name: #06287e;
+$entity_other_attribute-name: #7d9029;
+$invalid: #ff0000;
+$keyword_control: #007020;
+$keyword_control_import: #008000;
+$keyword_operator: #4070a0;
+$markup_heading: #ba2121;
+$storage_type: #902000;
+$string: #4070a0;
+$string_regexp: #bb6688;
+$support: #008000;
+$variable: #19177c;
+
+
+// Specific things
+.highlight {
+  .sc {color: #40a070;} // CharTok
+  // Comments in italic
+  .c, .cp, .cpf, .cm, .c1, .cs, .ch  {font-style: italic;}
+  // Keywords in bold
+  .k, .kn {font-weight: bold;}
+  // Invalid in bold
+  .err, .gr, .gt, .ne {font-weight: bold;}
+  // Headings in italic
+  .gh, .gu {font-style: italic;} 
+}
+
+@import "./src/tmtheme.scss";
+

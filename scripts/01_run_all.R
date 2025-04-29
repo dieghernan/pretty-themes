@@ -6,7 +6,10 @@ all_rs_scripts <- list.files("./scripts",
 # Exclude this
 all_rs_scripts <- all_rs_scripts[!grepl("01_run", all_rs_scripts)]
 
-lapply(all_rs_scripts, source)
+lapply(all_rs_scripts, function(x) {
+  message(">>>> this is ", x, " >>>>")
+  source(x)
+})
 
 allt <- rstudioapi::getThemes()
 

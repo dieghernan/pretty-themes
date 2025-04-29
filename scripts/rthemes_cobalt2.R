@@ -1,7 +1,7 @@
 library(tidyverse)
 
-tm_path <- "tmTheme/cobalt2.tmTheme"
-outdir <- "./rstheme"
+tm_path <- "./dist/tmTheme/cobalt2.tmTheme"
+outdir <- "./dist/rstheme"
 rtheme <- tools::file_path_sans_ext(tm_path) |>
   basename() |>
   paste0(".rstheme") %>%

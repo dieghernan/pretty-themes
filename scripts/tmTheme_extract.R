@@ -1,4 +1,4 @@
-input <- "tmTheme/Selenized Dark.tmTheme"
+input <- "./dist/tmTheme/Selenized Dark.tmTheme"
 
 # See also (Rstudio Only)
 # tm <- .rs.parseTmTheme(input)
@@ -143,11 +143,17 @@ read_tmtheme <- function(input) {
     })
 
     # Spec df
-    nm <- names(specs)
-    val <- specs[nm == "string"] |> unlist()
-    names(val) <- specs[nm == "key"] |> unlist()
+    if (length(specs) == 0) {
+      df_spec <- tibble(foreground = "EMPTY")
+    } else {
+      # Spec df
+      nm <- names(specs)
+      val <- specs[nm == "string"] |> unlist()
+      names(val) <- specs[nm == "key"] |> unlist()
 
-    df_spec <- as_tibble_row(val)
+      df_spec <- as_tibble_row(val)
+    }
+
 
     bind_cols(df_top, df_spec)
   }) |>
@@ -187,3 +193,5 @@ read_tmtheme <- function(input) {
   end
 }
 parsed_theme <- read_tmtheme(input)
+
+clipr::write_clip(parsed_theme)

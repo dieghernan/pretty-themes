@@ -1,126 +1,81 @@
-/*!
-  Theme: StackOverflow Dark
-  Description: Dark theme as used on stackoverflow.com
-  Author: stackoverflow.com
-  Maintainer: @Hirse
-  Website: https://github.com/StackExchange/Stacks
-  License: MIT
-  Updated: 2021-05-15
+$foreground:  #f8f8f2;
+$background:  #223545;
 
-  Updated for @stackoverflow/stacks v0.64.0
-  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
-  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
-*/
+$comment: #0088FF; // hljs: comment
+$constant_character_escape: #3AD900; // hljs: char.escape
+$constant_language: #FF628C; // hljs: literal
+$constant_numeric: #FF628C; // hljs: number
+$constant_other_symbol: #3AD900; // hljs: symbol 
+$entity_name: #ffc600; // hljs: function, class
+$entity_name_tag: #f92672; // hljs: tag
+$entity_name_tag_css: #3AD900;// hljs: selector-tag, selector-class
+$entity_other_attribute-name_html: #3AD900; // hljs: attr
+$invalid: #f92672; // No mapping
+$keyword_control: #FF9D00; // hljs: keyword
+$keyword_other_important: #fd971f; // hljs: meta
+$keyword_operator: #FF9D00;  // hljs: operator
+$markup_bold: $foreground; // hljs: strong
+$markup_italic: $foreground; // hljs: emphasis
+$markup_heading: #FDC500; // hljs: section
+$punctuation_definition: #f8f8f2; // hljs: punctuation
+$storage_type: $keyword_control; // Prismjs: keyword
+$string: #3AD900; // hljs: string
+$string_html: #ffc600; // hljs: string for html only
+$string_regexp: #fd971f; // hljs: regexp
+$support_constant:  $foreground; // hljs: property
+$support_type: #f92672; // hljs: attribute
+$variable: #f8f8f2; // hljs: variable
+$variable_language: $variable; // hljs: variable language and constant
+
+pre {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0;
+  border: 0;
+}
 
 .hljs {
-  /* var(--highlight-color) */
-  color: #ffffff;
-  /* var(--highlight-bg) */
-  background: #1c1b1b;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: $foreground;
+  background: $background;
 }
 
-.hljs-subst {
-  /* var(--highlight-color) */
-  color: #ffffff;
-}
 
-.hljs-comment {
-  /* var(--highlight-comment) */
-  color: #999999;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-meta .hljs-keyword,
-.hljs-doctag,
-.hljs-section {
-  /* var(--highlight-keyword) */
-  color: #88aece;
-}
-
-.hljs-attr {
-  /* var(--highlight-attribute); */
-  color: #88aece;
-}
-
-.hljs-attribute {
-  /* var(--highlight-symbol) */
-  color: #c59bc1;
-}
-
-.hljs-name,
-.hljs-type,
-.hljs-number,
-.hljs-selector-id,
-.hljs-quote,
-.hljs-template-tag {
-  /* var(--highlight-namespace) */
-  color: #f08d49;
-}
-
-.hljs-selector-class {
-  /* var(--highlight-keyword) */
-  color: #88aece;
-}
-
-.hljs-string,
-.hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr {
-  /* var(--highlight-variable) */
-  color: #b5bd68;
-}
-
-.hljs-meta,
+.hljs-keyword {color: $keyword_control;}
+.hljs-built_in {color: $entity_name};
+.hljs-type {color: $entity_name;}
+.hljs-literal {color: $constant_language;}
+.hljs-number {color: $constant_numeric;}
+.hljs-operator {color: $keyword_operator;}
+.hljs-punctuation {color: $punctuation_definition;}
+.hljs-property {color: $support_constant;}
+.hljs-regexp {color: $string_regexp;}
+.hljs-string {color: $string;}
+.hljs-char.escape_ {color: $constant_character_escape;}
+.hljs-subst {color: $foreground;}
+.hljs-symbol {color: $constant_other_symbol;}
+.hljs-class {color: $entity_name;}
+.hljs-variable {color: $variable;}
+.hljs-variable.language_ {color: $variable_language;}
+.hljs-variable.constant_ {color: $variable_language;}
+.hljs-title {color: $entity_name;}
+.hljs-comment {color: $comment;}
+.hljs-meta {color: $keyword_other_important; font-weight: bold;}
+.hljs-section {color: $markup_heading;}
+.hljs-name {color: $entity_name_tag;}
+.hljs-attr {color: $entity_other_attribute-name_html;}
+.hljs-attribute {color: $support_type;}
+.hljs-code {color: $keyword_control;}
+.hljs-strong {color: $markup_bold; font-weight: bold;}
+.hljs-emphasis {color: $markup_italic; font-style: italic;}
+.hljs-selector-tag, .hljs-selector-id, 
+.hljs-selector-class, .hljs-selector-pseudo,
 .hljs-selector-pseudo {
-  /* var(--highlight-keyword) */
-  color: #88aece;
+  color: $entity_name_tag_css;
 }
 
-.hljs-built_in,
-.hljs-title,
-.hljs-literal {
-  /* var(--highlight-literal) */
-  color: #f08d49;
-}
+.language-html .hljs-string {color: $string_html;}
 
-.hljs-bullet,
-.hljs-code {
-  /* var(--highlight-punctuation) */
-  color: #cccccc;
-}
-
-.hljs-meta .hljs-string {
-  /* var(--highlight-variable) */
-  color: #b5bd68;
-}
-
-.hljs-deletion {
-  /* var(--highlight-deletion) */
-  color: #de7176;
-}
-
-.hljs-addition {
-  /* var(--highlight-addition) */
-  color: #76c490;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-.hljs-formula,
-.hljs-operator,
-.hljs-params,
-.hljs-property,
-.hljs-punctuation,
-.hljs-tag {
-  /* purposely ignored */
-}
