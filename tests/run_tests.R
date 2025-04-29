@@ -1,5 +1,5 @@
 
-theme_to_test <- "_cran"
+theme_to_test <- "_panda"
 
 test <- readLines(file.path("src", "styles", 
                             paste0(theme_to_test, "_pygments.scss")))
@@ -14,6 +14,7 @@ testprism <- readLines(file.path("src", "styles",
 compprism <- sass::sass(testprism, output = "./tests/devprism.css", 
                         cache = FALSE, 
                    options = sass::sass_options(output_style = "expanded"))
+
 
 
 testhljs <- readLines(file.path("src", "styles", 

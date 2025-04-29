@@ -1,37 +1,43 @@
-/* cran Theme for Prismjs
- * 
- * Based on https://cran.r-project.org/
- * Copyright 2020, 2025, All rights reserved
+/* panda Theme
  *
- * Code licensed under the MIT license
+ * Based on https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda
+ * v. 1.4.0
+ * By siamak
  *
- * @author Diego H <https://github.com/dieghernan/>
+ * Adapted by Diego H <https://github.com/dieghernan/>
  */
-code {
-  color: #333;
-  background-color: #f7f7f7;
-}
-
-.token.cdata, .token.comment, .token.prolog {
+.token.comment, .token.namespace {
   font-style: italic;
 }
 
-.token.keyword {
-  font-weight: bold;
+.language-css .token.property, .language-scss .token.property {
+  color: #E6E6E6;
 }
 
-.token.keyword.null {
-  font-weight: inherit;
+.language-css .token.keyword, .language-scss .token.keyword {
+  color: #B084EB;
 }
 
-.token.title {
+.language-css .token.selector, .language-scss .token.selector {
+  color: #FFCC95;
+}
+
+.language-java .token.keyword {
+  color: #FFB86C;
+}
+
+.language-html .token.tag {
+  color: #FF2C6D;
+}
+
+.language-markdown .token.code {
   font-style: italic;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #333;
-  background: #f7f7f7;
+  color: #E6E6E6;
+  background: #292A2B;
   text-shadow: none;
   text-align: left;
   white-space: pre;
@@ -50,7 +56,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-  background: #f7f7f7;
+  background: #292A2B;
   border-radius: 0.5em;
   padding: 1em;
   margin: 0.5em 0;
@@ -60,172 +66,176 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #f7f7f7;
+  background: #292A2B;
 }
 
 .token.atrule {
-  color: #007020;
+  color: #B084EB;
 }
 
 .token.attr-name {
-  color: #7d9029;
+  color: #FFB86C;
 }
 
 .token.attr-value {
-  color: #4070a0;
+  color: #19f9d8;
 }
 
 .token.blockquote.punctuation {
-  color: #333;
+  color: #FFB86C;
 }
 
 .token.bold {
-  color: #333;
+  color: #FFB86C;
   font-weight: bold;
 }
 
 .token.boolean {
-  color: #880000;
+  color: #FFB86C;
 }
 
 .token.builtin {
-  color: #333;
+  color: #E6E6E6;
 }
 
 .token.cdata {
-  color: #60a0b0;
+  color: #676B79;
 }
 
 .token.char {
-  color: #4070a0;
+  color: #19f9d8;
 }
 
 .token.class-name {
-  color: #06287e;
+  color: #6FC1FF;
 }
 
 .token.class {
-  color: #06287e;
+  color: #FFCC95;
 }
 
 .token.code, .token.code.keyword {
-  color: #007020;
+  color: #19f9d8;
 }
 
 .token.comment {
-  color: #60a0b0;
+  color: #676B79;
 }
 
 .token.constant {
-  color: #880000;
+  color: #FFB86C;
 }
 
 .token.content {
-  color: #19177c;
+  color: #FF9AC1;
 }
 
 .token.directive {
-  color: #007020;
+  color: #FF4B82;
 }
 
 .token.doctype {
-  color: #60a0b0;
+  color: #676B79;
 }
 
 .token.entity {
-  color: #4070a0;
+  color: #19f9d8;
 }
 
 .token.function {
-  color: #06287e;
+  color: #6FC1FF;
 }
 
 .token.id {
-  color: #7d9029;
+  color: #FFB86C;
 }
 
 .token.important {
-  color: #007020;
+  color: #FF4B82;
   font-weight: bold;
 }
 
 .token.italic {
-  color: #333;
+  color: #FF9AC1;
   font-style: italic;
 }
 
 .token.keyword.null {
-  color: #880000;
+  color: #FFB86C;
 }
 
 .token.keyword {
-  color: #007020;
+  color: #FF75B5;
 }
 
 .token.namespace {
-  color: #06287e;
+  color: #19f9d8;
 }
 
 .token.number {
-  color: #40a070;
+  color: #E6E6E6;
 }
 
 .token.operator {
-  color: #4070a0;
+  color: #E6E6E6;
 }
 
 .token.prolog {
-  color: #60a0b0;
+  color: #676B79;
 }
 
 .token.property {
-  color: #008000;
+  color: #FFCC95;
 }
 
 .token.punctuation {
-  color: #333;
+  color: #E6E6E6;
 }
 
 .token.regex {
-  color: #bb6688;
+  color: #6FC1FF;
 }
 
 .token.selector {
-  color: #06287e;
+  color: #FF2C6D;
 }
 
 .token.string {
-  color: #4070a0;
+  color: #19f9d8;
 }
 
 .token.tag {
-  color: #06287e;
+  color: #6FC1FF;
 }
 
 .token.title {
-  color: #ba2121;
+  color: #19f9d8;
 }
 
 .token.variable {
-  color: #19177c;
+  color: #FF9AC1;
 }
 
 code[class="language-css"] {
-  color: #7d9029;
+  color: #FFB86C;
 }
 
 code[class="language-scss"] {
-  color: #7d9029;
+  color: #FFB86C;
 }
 
 code[class="language-yaml"] {
-  color: #4070a0;
+  color: #19f9d8;
 }
 
 .language-scss .token.variable, .language-css .token.variable {
-  color: #19177c;
+  color: #FF9AC1;
 }
 
 .language-yaml {
-  color: #4070a0;
+  color: #19f9d8;
+}
+
+.language-yaml .token.key.atrule, .language-yaml .token.number {
+  color: #FFCC95;
 }

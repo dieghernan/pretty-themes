@@ -1,0 +1,69 @@
+/* panda Theme
+ *
+ * Based on https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda
+ * v. 1.4.0
+ * By siamak
+ *
+ * Adapted by Diego H <https://github.com/dieghernan/>
+ */
+
+// Top level colors
+$foreground: #E6E6E6;
+$background: #292A2B;
+
+$comment: #676B79;
+$comment_block: #FFCC95;
+$constant_character_escape: #45A9F9;
+$constant_language: #FFB86C;
+$constant_other_symbol: #19f9d8;
+$entity_name: #6FC1FF;
+$entity_name_tag: #6FC1FF;
+$entity_name_tag_css: #FF2C6D;
+$entity_name_type: #19f9d8;
+$entity_other_attribute-name: #FFB86C;
+$invalid: rgba(255, 44, 109, 0.62);
+$keyword_control: #FF75B5;
+$keyword_control_at-rule: #B084EB;
+$keyword_operator: #E6E6E6;
+$keyword_other_important: #FF4B82;
+$markup_heading: #19f9d8;
+$markup_bold: #FFB86C;
+$markup_italic: #FF9AC1;
+$markup_quote: #FFB86C;
+$markup_raw: #19f9d8;
+$string: #19f9d8;
+$string_regexp: #6FC1FF;
+$support: #FFCC95;
+$support_type_property-name: #FFCC95; 
+$storage_type: #FFB86C;
+$variable: #FF9AC1;
+
+// Styles, weights and others
+.highlight {
+  // Comments in italic
+  .c, .cp, .cpf, .cm, .c1, .cs, .ch  {font-style: italic;}
+  
+  // Nametype
+  .nn {font-style: italic;}
+}
+
+// But not in css/scss
+
+.language-css, .language-scss {
+  .highlight .nn {font-style: normal;}
+}
+
+.language-html .highlight {
+  .nt {color: #FF2C6D;}
+}
+
+.language-markdown .highlight{
+  .sb {font-style: italic;}
+}
+
+@import "./src/_tmtheme.scss";
+
+
+.language-yaml .highlight {
+  .na, .m {color: #FFCC95;}
+}

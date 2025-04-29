@@ -39,7 +39,7 @@
       {
         "label": "OKSolar Light",
         "uiTheme": "vs",
-        "path": "./dist/vscode/soksolar-light-theme.json"
+        "path": "./dist/vscode/oksolar-light-theme.json"
       },
       {
         "label": "CRAN",

@@ -61,6 +61,8 @@ code.hljs { padding: 3px 5px; }
 
 .hljs-selector-id { color: #70B433; }
 
+.hljs-quote { color: #B9B9B9; }
+
 .hljs-selector-class { color: #368AEB; }
 
 .hljs-selector-tag, .hljs-selector-attr, .hljs-selector-pseudo { color: #70B433; }

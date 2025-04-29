@@ -29,6 +29,7 @@ $constant_other_symbol: $constant_other !default; //
 
 // Entities: Part of the document, for example a chapter, class, function, or tag.
 $entity_name:                 $foreground !default; //Larger entity
+$entity_name_class:           $entity_name !default; //Class Name
 $entity_name_tag:             $entity_name !default; //Tag name.
 $entity_name_tag_css:         $entity_name_tag !default; //Tag name for CSS/SCSS.
 $entity_name_type:            $entity_name !default; //Type declaration or class.
@@ -81,7 +82,7 @@ $string_html:           $string !default; // Strings in html
 $support:           $foreground !default; //Things provided by a framework or library.
 $support_constant:  $support !default; //Constants (magic values) provided by the framework/library.
 $support_type:      $support !default; //Types provided by the framework/library,
-$support_type_property-name: $entity_name_tag_css !default; //Types provided by the framewor
+$support_type_property-name: $entity_name_tag_css !default; //REVIEW! Types provided by the framewor
 
 // Variable
 $variable:           $foreground !default; //Not all languages allow easy identification (and thus markup) of these.

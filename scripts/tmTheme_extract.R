@@ -1,4 +1,4 @@
-input <- "./dist/tmTheme/cran.tmTheme"
+input <- "./vendor/panda/Panda.tmTheme"
 
 # See also (Rstudio Only)
 # tm <- .rs.parseTmTheme(input)

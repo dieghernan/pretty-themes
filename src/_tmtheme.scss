@@ -105,7 +105,7 @@
 /* Entities */
 .highlight {
   // Scope: entity.name
-  .nc {color: $entity_name;} //Name.Class
+  .nc {color: $entity_name_class;} //Name.Class
   .nd {color: $entity_name;} //Name.Decorator
   .ne {color: $entity_name;} //Name.Entity
   .nf {color: $entity_name;} //Name.Function

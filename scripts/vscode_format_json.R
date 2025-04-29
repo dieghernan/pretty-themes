@@ -6,5 +6,5 @@ f <- js[1]
 
 for (f in js) {
   read_json(f) |>
-    write_json(path = "deleteme.json", auto_unbox = TRUE, pretty = TRUE)
+    write_json(path = f, auto_unbox = TRUE, pretty = TRUE)
 }

@@ -47,6 +47,7 @@ code.hljs {
 .hljs-strong {color: $markup_bold; font-weight: bold;}
 .hljs-emphasis {color: $markup_italic; font-style: italic;}
 .hljs-selector-id {color: $entity_other_attribute-name_id};
+.hljs-quote {color:$markup_quote;}
 .hljs-selector-class {color: $support_type_property-name;}
 .hljs-selector-tag, .hljs-selector-attr, .hljs-selector-pseudo {
   color: $entity_name_tag_css;
