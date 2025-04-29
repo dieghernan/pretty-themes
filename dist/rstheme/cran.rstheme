@@ -17,7 +17,7 @@
 }
 
 .ace_cursor {
-  color: #06287E;
+  color: #333333;
 }
 
 .ace_marker-layer .ace_selection {
@@ -166,11 +166,6 @@
 
 .ace_console_error {
   background-color: #E4E4E4;
-}
-
-.ace_heading {
-  color: #ba2121;
-  font-style: italic;
 }
 
 .terminal {
@@ -2366,4 +2361,17 @@
 
 .rstudio_rainbow_indent_fills .ace_line .ace_indent-guide:nth-child(7n+7) {
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
+}
+
+.ace_cursor {
+  color: #007020;
+}
+
+.ace_print-margin {
+  background: #DBDBDB;
+}
+
+.ace_heading {
+  color: #BA2121;
+  font-style: italic;
 }

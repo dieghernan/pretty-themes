@@ -10,28 +10,28 @@
 <plist version="1.0">
   <dict>
     <key>name</key>
-    <string>OkSolar Light</string>
+    <string>OKSolar Dark</string>
     <key>settings</key>
     <array>
       <dict>
         <key>settings</key>
         <dict>
           <key>background</key>
-          <string>#F1E9D2</string>
+          <string>#002D38</string>
           <key>caret</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
           <key>foreground</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
           <key>invisibles</key>
-          <string>#8FAAAB</string>
+          <string>#093946</string>
           <key>lineHighlight</key>
-          <string>#98A8A8</string>
+          <string>#5B7279</string>
           <key>selection</key>
-          <string>#98A8A8</string>
+          <string>#5B7279</string>
           <key>selectionBackground</key>
-          <string>#98A8A8</string>
+          <string>#5B7279</string>
           <key>guide</key>
-          <string>#98A8A8</string>
+          <string>#5B7279</string>
           <key>activeGuide</key>
           <string>#657377</string>
         </dict>
@@ -112,7 +112,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
         </dict>
       </dict>
       <dict>
@@ -178,7 +178,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
         </dict>
       </dict>
       <dict>
@@ -200,7 +200,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
         </dict>
       </dict>
       <dict>
@@ -277,7 +277,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
         </dict>
       </dict>
       <dict>
@@ -299,7 +299,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
         </dict>
       </dict>
       <dict>
@@ -310,7 +310,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
         </dict>
       </dict>
       <dict>
@@ -354,7 +354,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#5B7279</string>
+          <string>#98A8A8</string>
         </dict>
       </dict>
       <dict>
@@ -383,20 +383,9 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Other supports</string>
-        <key>scope</key>
-        <string>support.function</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#2B90D8</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Markup Code Blocks</string>
         <key>scope</key>
-        <string>markup.raw</string>
+        <string>support.function</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -451,10 +440,10 @@
     <key>colorSpaceName</key>
     <string>sRGB</string>
     <key>semanticClass</key>
-    <string>theme.light.oksolar_light</string>
+    <string>theme.dark.oksolar_dark</string>
     <key>author</key>
     <string>dieghernan</string>
     <key>comment</key>
-    <string>OkSolar Light theme</string>
+    <string>OKSolar Dark theme</string>
   </dict>
 </plist>

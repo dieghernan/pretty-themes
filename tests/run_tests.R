@@ -1,5 +1,5 @@
 
-theme_to_test <- "_night-owl"
+theme_to_test <- "_cran"
 
 test <- readLines(file.path("src", "styles", 
                             paste0(theme_to_test, "_pygments.scss")))

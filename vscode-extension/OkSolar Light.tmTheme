@@ -383,20 +383,9 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Other supports</string>
-        <key>scope</key>
-        <string>support.function</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#2B90D8</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Markup Code Blocks</string>
         <key>scope</key>
-        <string>markup.raw</string>
+        <string>support.function</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>

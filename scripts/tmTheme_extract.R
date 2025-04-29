@@ -1,4 +1,4 @@
-input <- "./dist/tmTheme/Selenized Dark.tmTheme"
+input <- "./dist/tmTheme/cran.tmTheme"
 
 # See also (Rstudio Only)
 # tm <- .rs.parseTmTheme(input)
@@ -118,6 +118,7 @@ read_tmtheme <- function(input) {
     value = vl
   )
 
+  x <- array[2][[1]]
   specs <- lapply(array[topl], function(x) {
     # No spec
     thisloop <- x
@@ -126,7 +127,15 @@ read_tmtheme <- function(input) {
     # Don't want dict
     no_spec <- thisloop[nms_no == "key"] |> unlist()
     no_spec <- no_spec[no_spec != "settings"]
-    vals_no_spec <- thisloop[nms_no == "string"] |> unlist()
+    vals_no_spec_init <- thisloop[nms_no == "string"]
+    vals_no_spec <- lapply(vals_no_spec_init, function(y) {
+      if (length(y) == 0) {
+        return("")
+      }
+
+      return(unlist(y))
+    }) |> unlist()
+
     names(vals_no_spec) <- no_spec
     df_top <- as_tibble_row(vals_no_spec)
 
@@ -144,7 +153,7 @@ read_tmtheme <- function(input) {
 
     # Spec df
     if (length(specs) == 0) {
-      df_spec <- tibble(foreground = "EMPTY")
+      df_spec <- tibble(foreground = "")
     } else {
       # Spec df
       nm <- names(specs)

@@ -1,0 +1,353 @@
+{
+	"tokenColors": [
+		{
+			"settings": {
+				"background": "#103C48",
+				"foreground": "#ADBCBC",
+				"selectionBackground": "#2D5B69",
+				"activeGuide": "#72898F"
+			}
+		},
+		{
+			"name": "Comment",
+			"scope": "comment",
+			"settings": {
+				"foreground": "#72898F"
+			}
+		},
+		{
+			"name": "Generic Keyword",
+			"scope": "keyword",
+			"settings": {
+				"foreground": "#75B938"
+			}
+		},
+		{
+			"name": "Quoted String",
+			"scope": "string.quoted.docstring",
+			"settings": {
+				"foreground": "#72898F"
+			}
+		},
+		{
+			"name": "Special elements in doc comments",
+			"scope": "storage.type.class.jsdoc",
+			"settings": {
+				"foreground": "#72898F",
+				"fontStyle": " bold"
+			}
+		},
+		{
+			"name": "String",
+			"scope": "string",
+			"settings": {
+				"foreground": "#41C7B9"
+			}
+		},
+		{
+			"name": "String interpolation and escaping",
+			"scope": [
+				"string.constant.character.escape",
+				"string.interpolated.dollar.shell",
+				"string.interpolated.backtick.shell",
+				"constant.character.format",
+				"constant.character.escape",
+				"punctuation.section.embedded",
+				"punctuation.definition.template-expression"
+			],
+			"settings": {
+				"foreground": "#FA5750"
+			}
+		},
+		{
+			"name": "Code embedded in string interpolation",
+			"scope": "meta.embedded",
+			"settings": {
+				"foreground": "#ADBCBC"
+			}
+		},
+		{
+			"name": "Constant",
+			"scope": [
+				"constant",
+				"variable.other.constant",
+				"constant.numeric",
+				"constant.language"
+			],
+			"settings": {
+				"foreground": "#41C7B9"
+			}
+		},
+		{
+			"name": "Keyword Operator",
+			"scope": "keyword.operator",
+			"settings": {
+				"foreground": "#75B938"
+			}
+		},
+		{
+			"name": "Generic Keywords",
+			"scope": [
+				"keyword.control",
+				"keyword.other"
+			],
+			"settings": {
+				"foreground": "#75B938"
+			}
+		},
+		{
+			"name": "Function and class defs",
+			"scope": [
+				"storage.type",
+				"storage.type.function",
+				"storage.type.class"
+			],
+			"settings": {
+				"foreground": "#75B938"
+			}
+		},
+		{
+			"name": "Imports",
+			"scope": [
+				"keyword.control.import",
+				"keyword.control.directive.include",
+				"keyword.other.import"
+			],
+			"settings": {
+				"foreground": "#ED8649"
+			}
+		},
+		{
+			"name": "Imported package and module names",
+			"scope": [
+				"storage.modifier",
+				"storage.modifier.import.java"
+			],
+			"settings": {
+				"foreground": "#ADBCBC"
+			}
+		},
+		{
+			"name": "Types and type modifiers",
+			"scope": [
+				"storage",
+				"support.class",
+				"support.type"
+			],
+			"settings": {
+				"foreground": "#DBB32D"
+			}
+		},
+		{
+			"name": "Keyword argument name in function call",
+			"scope": "variable.parameter.function-call",
+			"settings": {
+				"foreground": "#ADBCBC"
+			}
+		},
+		{
+			"name": "Reserved variables like this, super, self",
+			"scope": "variable.language",
+			"settings": {
+				"foreground": "#FA5750"
+			}
+		},
+		{
+			"name": "Built-ins, things from library and framework",
+			"scope": "support",
+			"settings": {
+				"foreground": "#4695F7"
+			}
+		},
+		{
+			"name": "Exceptions",
+			"scope": "support.type.exception",
+			"settings": {
+				"foreground": "#DBB32D"
+			}
+		},
+		{
+			"name": "Function decorator and similar elements",
+			"scope": [
+				"entity",
+				"entity.name.function.decorator",
+				"support.type.python"
+			],
+			"settings": {
+				"foreground": "#4695F7"
+			}
+		},
+		{
+			"name": "Name of the defined class",
+			"scope": [
+				"entity.name.class",
+				"entity.name.type.class"
+			],
+			"settings": {
+				"foreground": "#4695F7"
+			}
+		},
+		{
+			"name": "Name of the defined function",
+			"scope": [
+				"entity.name.function",
+				"entity.name.function.declaration"
+			],
+			"settings": {
+				"foreground": "#4695F7"
+			}
+		},
+		{
+			"name": "Function calls",
+			"scope": [
+				"meta",
+				"meta.function-call.generic"
+			],
+			"settings": {
+				"foreground": "#ADBCBC"
+			}
+		},
+		{
+			"name": "Function calls and defs use the same scope in JS",
+			"scope": "entity.name.function.js",
+			"settings": {
+				"foreground": "#4695F7"
+			}
+		},
+		{
+			"name": "Ordinary variables",
+			"scope": "variable",
+			"settings": {
+				"foreground": "#ADBCBC"
+			}
+		},
+		{
+			"name": "Parameter",
+			"scope": "variable.parameter",
+			"settings": {
+				"foreground": "#ADBCBC"
+			}
+		},
+		{
+			"name": "Shell builtins",
+			"scope": "support.function.builtin.shell",
+			"settings": {
+				"foreground": "#75B938"
+			}
+		},
+		{
+			"name": "Special shell syntax",
+			"scope": [
+				"punctuation.definition.logical-expression",
+				"variable.other.special.shell"
+			],
+			"settings": {
+				"foreground": "#FA5750"
+			}
+		},
+		{
+			"name": "Shell variable interpolation",
+			"scope": [
+				"variable.other.normal.shell",
+				"variable.other.bracket.shell",
+				"variable.other.positional.shell"
+			],
+			"settings": {
+				"foreground": "#ED8649"
+			}
+		},
+		{
+			"name": "Token separators",
+			"scope": [
+				"punctuation",
+				"punctuation.definition.block",
+				"punctuation.definition.parameters",
+				"punctuation.definition.arguments",
+				"punctuation.definition.list",
+				"punctuation.definition.dict",
+				"punctuation.definition.binding-pattern",
+				"punctuation.parenthesis",
+				"punctuation.separator",
+				"punctuation.accessor",
+				"punctuation.section"
+			],
+			"settings": {
+				"foreground": "#ADBCBC"
+			}
+		},
+		{
+			"name": "Invalid",
+			"scope": "invalid",
+			"settings": {
+				"foreground": "#FF665C",
+				"fontStyle": " bold"
+			}
+		},
+		{
+			"name": "Markup Heading",
+			"scope": [
+				"markup.heading",
+				"meta.tag"
+			],
+			"settings": {
+				"foreground": "#EBC13D"
+			}
+		},
+		{
+			"name": "Other supports",
+			"scope": "support.function",
+			"settings": {
+				"foreground": "#4695F7"
+			}
+		},
+		{
+			"name": "Markup Code Blocks",
+			"scope": "markup.raw",
+			"settings": {
+				"foreground": "#4695F7"
+			}
+		},
+		{
+			"name": "Markup Bold",
+			"scope": "markup.bold",
+			"settings": {
+				"fontStyle": " bold"
+			}
+		},
+		{
+			"name": "Markup Italic",
+			"scope": "markup.italic",
+			"settings": {
+				"fontStyle": " italic"
+			}
+		},
+		{
+			"name": "CSS selectors and ids",
+			"scope": [
+				"entity.name.tag.css",
+				"entity.other.attribute-name.id"
+			],
+			"settings": {
+				"foreground": "#75B938"
+			}
+		},
+		{
+			"name": "HTML attributes",
+			"scope": "entity.other.attribute-name.html",
+			"settings": {
+				"foreground": "#75B938"
+			}
+		}
+	],
+	"colors": {
+		"editor.background": "#103C48",
+		"editorCursor.foreground": "#ADBCBC",
+		"editor.foreground": "#ADBCBC",
+		"editorWhitespace.foreground": "#184956",
+		"editor.lineHighlightBackground": "#2D5B69",
+		"editor.selectionBackground": "#2D5B69",
+		"editorIndentGuide.background": "#2D5B69"
+	},
+	"name": "Selenized Dark",
+	"semanticHighlighting": false
+}
