@@ -2,7 +2,7 @@
 library(tidyverse)
 library(xml2)
 
-theme <- "skeletor"
+theme <- "panda"
 
 
 get_template <- read_xml("./src/templates/template.tmTheme") |> 
@@ -10,7 +10,7 @@ get_template <- read_xml("./src/templates/template.tmTheme") |>
 
 
 get_cols <- readLines(paste0("src/compiledcols/_", theme, "_colors.scss"))
-
+scopes_ddbb <- read_csv("dev/scopes_ddbb.csv")
 
 scopeandcols <- get_cols[get_cols != ""] %>%
   gsub(".", "", ., fixed = TRUE) %>%
@@ -68,7 +68,8 @@ scopes <- scopeandcols |>
 
 scopes <- scopes |> 
   mutate(foreground =ifelse(foreground == fg, NA, foreground),
-         fontStyle = NA)
+         fontStyle = NA) |> 
+  left_join(scopes_ddbb)
 
 
 scopes[scopes$scope == "markup.italic", "fontStyle"] <- "italic"
@@ -78,13 +79,15 @@ enddef <- scopes |>
   filter(!(is.na(foreground) & is.na(fontStyle)))
 
 ntot <- seq_len(nrow(enddef))
+
 for (i in ntot){
 one <- enddef[i,] 
+message(one$scope)
 
 onl <- list(
   dict = list(
     key = list("name"),
-    string = list(one$scope),
+    string = list(one$name),
     key = list("scope"),
     string = list(one$scope),
     key = list("settings"),
@@ -104,7 +107,8 @@ if(!is.na(one$fontStyle)){
 }
 
 onl$dict$dict <- dictt
-
+message(i)
+message(dput(onl))
 setting <- c(setting, onl)
 }
 
@@ -113,9 +117,12 @@ setting <- c(setting, onl)
 
 build <- get_template
 
-build$plist$dict$array <- list(c(setting, onl))
+build$plist$dict$array <- list(setting)
 
 out_f <- paste0("dev/test", theme, ".tmTheme")
 
 build |> xml2::as_xml_document() |> write_xml(out_f)
 
+source("scripts/tmTheme_extract.R")
+
+pp <- read_tmtheme(out_f)
