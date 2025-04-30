@@ -203,4 +203,4 @@ read_tmtheme <- function(input) {
 }
 parsed_theme <- read_tmtheme(input)
 
-clipr::write_clip(parsed_theme)
+# clipr::write_clip(parsed_theme)
