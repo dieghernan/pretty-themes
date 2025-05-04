@@ -13,18 +13,18 @@
       <dict>
         <key>settings</key>
         <dict>
-          <key>foreground</key>
-          <string>#d6deeb</string>
-          <key>caret</key>
-          <string>#80A4C2</string>
-          <key>selection</key>
-          <string>#1d3b53</string>
-          <key>lineHighlight</key>
-          <string>#28707D29</string>
           <key>background</key>
           <string>#011627</string>
+          <key>caret</key>
+          <string>#80A4C2</string>
+          <key>foreground</key>
+          <string>#d6deeb</string>
           <key>invisibles</key>
           <string>#022C4D</string>
+          <key>lineHighlight</key>
+          <string>#28707D29</string>
+          <key>selection</key>
+          <string>#1d3b53</string>
         </dict>
       </dict>
       <dict>
@@ -198,8 +198,6 @@
         <dict>
           <key>foreground</key>
           <string>#c792ea</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -2242,6 +2240,15 @@
           <key>fontStyle</key>
           <string>underline</string>
         </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>normalize font style of certain components</string>
+        <key>scope</key>
+        <string>meta.property-list.cssmeta.property-value.cssvariable.other.less, meta.property-list.scssvariable.scss, meta.property-list.sassvariable.sass, meta.brace, keyword.operator.operator, keyword.operator.or.regexp, keyword.operator.expression.in, keyword.operator.relational, keyword.operator.assignment, keyword.operator.comparison, keyword.operator.type, keyword.operator, keyword, punctuation.definintion.string, punctuation, variable.other.readwrite.js, storage.type, source.css, string.quoted</string>
+        <key>settings</key>
+        <dict>
+			</dict>
       </dict>
     </array>
     <key>colorSpaceName</key>

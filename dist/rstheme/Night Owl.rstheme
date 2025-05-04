@@ -60,7 +60,6 @@
 }
 
 .ace_keyword {
-  font-style: italic;
   color: #c792ea;
 }
 
