@@ -42,11 +42,31 @@ $variable: #c5e478;
 $variable_language: #7fdbca;
 $variable_other: #C5E478;
 
-.hljs-literal, .hljs-keyword,
+@import "./src/_hljs.scss";
+
+.hljs-literal, .hljs-keyword, .hljs-attr,
 .hljs-comment {font-style: italic;}
 
 .hljs-title.class_ {color:#FFCB8B;}
 .hljs-link {color: #FF869A;}
 
+.language-css.hljs {color:#FAD430 !important;} // Overall
+.language-css, .language-scss {
+  .hljs-attribute {color: #80CBC4;} // property
+  .hljs-selector-class {color:#C5E478;font-style: italic;}
+  .hljs-selector-id {font-style: italic;}
+  .hljs-number {color:#FF6363;}
+  .hljs-built_in {color: #C5E478;}
+}
 
-@import "./src/_hljs.scss";
+.language-yaml {
+  .hljs-type {color: #C792EA;}
+  .hljs-attr {color: #7FDBCA; font-style: normal;}
+}
+
+.language-json {
+  .hljs-string, .hljs-punctuation {color: #C792EA;}
+  .hljs-attr {color: #7FDBCA; font-style: normal;}
+}
+
+.hljs-bullet {color: #D9F5DD;}

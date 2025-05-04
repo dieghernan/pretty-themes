@@ -41,6 +41,7 @@ $variable: #c5e478;
 $variable_language: #7fdbca;
 $variable_other: #C5E478;
 
+@import "./src/_tmtheme.scss";
 
 .highlight {
   // $entity_other_attribute-name
@@ -65,6 +66,7 @@ $variable_other: #C5E478;
     .m {color: #FFEB95;}
     .nc {color: #C5E478 !important; font-style: italic;} // Name.Class
     .nn {color: #FAD430 !important; font-style: italic;}
+    .p {color: #FAD430;}
 
   }
 }
@@ -82,7 +84,6 @@ $variable_other: #C5E478;
 .language-json .highlight {
   .nl {color: #7FDBCA;}
   .mi {color: #F78C6C;}
-  .s, .sb, .s1, .s2, .sx {color: #C789D6;}
+  .s, .sb, .s1, .s2, .sx, .p {color: #C789D6;}
 }
 
-@import "./src/_tmtheme.scss";

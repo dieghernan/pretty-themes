@@ -29,9 +29,9 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>comment</string>
+        <string>Any comments</string>
         <key>scope</key>
-        <string>comment</string>
+        <string>comment, punctuation.definition.comment</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -40,9 +40,9 @@
       </dict>
       <dict>
         <key>name</key>
+        <string>Multi-line comments /* … */,&lt;- … --&gt;</string>
+        <key>scope</key>
         <string>comment.block</string>
-        <key>scope</key>
-        <string>comment.block</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -51,7 +51,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>comment.line</string>
+        <string>Line comments</string>
         <key>scope</key>
         <string>comment.line</string>
         <key>settings</key>
@@ -62,7 +62,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>comment.line.number-sign</string>
+        <string>Others</string>
         <key>scope</key>
         <string>comment.line.number-sign</string>
         <key>settings</key>
@@ -73,7 +73,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>constant.character.escape</string>
+        <string>Escape sequences</string>
         <key>scope</key>
         <string>constant.character.escape</string>
         <key>settings</key>
@@ -84,7 +84,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>constant.language</string>
+        <string>Special constants like true, false,nil</string>
         <key>scope</key>
         <string>constant.language</string>
         <key>settings</key>
@@ -95,7 +95,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>constant.numeric</string>
+        <string>Any number</string>
         <key>scope</key>
         <string>constant.numeric</string>
         <key>settings</key>
@@ -106,7 +106,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>constant.numeric.float</string>
+        <string>Floating number</string>
         <key>scope</key>
         <string>constant.numeric.float</string>
         <key>settings</key>
@@ -117,7 +117,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>constant.numeric.integer</string>
+        <string>Integers</string>
         <key>scope</key>
         <string>constant.numeric.integer</string>
         <key>settings</key>
@@ -128,7 +128,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>constant.other</string>
+        <string>Any other constants, e.g. colors in CSS</string>
         <key>scope</key>
         <string>constant.other</string>
         <key>settings</key>
@@ -139,7 +139,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>constant.other.symbol</string>
+        <string>Symbols</string>
         <key>scope</key>
         <string>constant.other.symbol</string>
         <key>settings</key>
@@ -150,9 +150,9 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>entity.name</string>
+        <string>Larger entity</string>
         <key>scope</key>
-        <string>entity.name</string>
+        <string>entity.name, punctuation.definition.entity</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -161,7 +161,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>entity.name.class</string>
+        <string>Class Name</string>
         <key>scope</key>
         <string>entity.name.class</string>
         <key>settings</key>
@@ -172,7 +172,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>entity.name.tag</string>
+        <string>Tag name</string>
         <key>scope</key>
         <string>entity.name.tag</string>
         <key>settings</key>
@@ -183,7 +183,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>entity.name.tag.css</string>
+        <string>Tag name for CSS/SCSS</string>
         <key>scope</key>
         <string>entity.name.tag.css</string>
         <key>settings</key>
@@ -194,7 +194,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>entity.name.type</string>
+        <string>Type declaration or class</string>
         <key>scope</key>
         <string>entity.name.type</string>
         <key>settings</key>
@@ -205,7 +205,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>entity.other.attribute-name</string>
+        <string>Name of an attribute (mainly in tags)</string>
         <key>scope</key>
         <string>entity.other.attribute-name</string>
         <key>settings</key>
@@ -216,7 +216,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>entity.other.attribute-name.id</string>
+        <string>ID of an attribute</string>
         <key>scope</key>
         <string>entity.other.attribute-name.id</string>
         <key>settings</key>
@@ -227,7 +227,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>entity.other.attribute-name.html</string>
+        <string>Name of an attribute (mainly in HTML)</string>
         <key>scope</key>
         <string>entity.other.attribute-name.html</string>
         <key>settings</key>
@@ -238,7 +238,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>invalid</string>
+        <string>Invalid</string>
         <key>scope</key>
         <string>invalid</string>
         <key>settings</key>
@@ -249,7 +249,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>keyword.control</string>
+        <string>Related to flow control</string>
         <key>scope</key>
         <string>keyword.control</string>
         <key>settings</key>
@@ -260,7 +260,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>keyword.control.at-rule</string>
+        <string>@media in css</string>
         <key>scope</key>
         <string>keyword.control.at-rule</string>
         <key>settings</key>
@@ -271,7 +271,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>keyword.control.import</string>
+        <string>Imports in some languages</string>
         <key>scope</key>
         <string>keyword.control.import</string>
         <key>settings</key>
@@ -282,7 +282,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>keyword.operator</string>
+        <string>Operators can be textual (e.g. or) or be characters</string>
         <key>scope</key>
         <string>keyword.operator</string>
         <key>settings</key>
@@ -293,7 +293,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>keyword.other.important</string>
+        <string>Important things</string>
         <key>scope</key>
         <string>keyword.other.important</string>
         <key>settings</key>
@@ -304,7 +304,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>keyword.other.directive</string>
+        <string>YANL directives</string>
         <key>scope</key>
         <string>keyword.other.directive</string>
         <key>settings</key>
@@ -315,7 +315,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>markup.bold</string>
+        <string>Bold text</string>
         <key>scope</key>
         <string>markup.bold</string>
         <key>settings</key>
@@ -326,7 +326,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>markup.heading</string>
+        <string>Section header</string>
         <key>scope</key>
         <string>markup.heading</string>
         <key>settings</key>
@@ -337,7 +337,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>markup.italic</string>
+        <string>Italic text</string>
         <key>scope</key>
         <string>markup.italic</string>
         <key>settings</key>
@@ -348,7 +348,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>markup.raw</string>
+        <string>Markup raw code</string>
         <key>scope</key>
         <string>markup.raw</string>
         <key>settings</key>
@@ -359,7 +359,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>meta.doctype</string>
+        <string>For DOCTYPE in HTML</string>
         <key>scope</key>
         <string>meta.doctype</string>
         <key>settings</key>
@@ -370,7 +370,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>punctuation.definition</string>
+        <string>Punctuations</string>
         <key>scope</key>
         <string>punctuation.definition</string>
         <key>settings</key>
@@ -381,7 +381,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>storage.type</string>
+        <string>Type of something, class, function, int, var, etc.</string>
         <key>scope</key>
         <string>storage.type</string>
         <key>settings</key>
@@ -392,7 +392,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>string</string>
+        <string>Strings</string>
         <key>scope</key>
         <string>string</string>
         <key>settings</key>
@@ -403,7 +403,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>string.interpolated</string>
+        <string>Strings which are "evaluated"</string>
         <key>scope</key>
         <string>string.interpolated</string>
         <key>settings</key>
@@ -414,7 +414,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>string.quoted</string>
+        <string>Quoted strings</string>
         <key>scope</key>
         <string>string.quoted</string>
         <key>settings</key>
@@ -425,7 +425,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>string.quoted.single</string>
+        <string>Single quoted strings</string>
         <key>scope</key>
         <string>string.quoted.single</string>
         <key>settings</key>
@@ -436,7 +436,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>string.quoted.double</string>
+        <string>Double quoted strings</string>
         <key>scope</key>
         <string>string.quoted.double</string>
         <key>settings</key>
@@ -447,7 +447,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>string.quoted.other</string>
+        <string>Other types of quoting</string>
         <key>scope</key>
         <string>string.quoted.other</string>
         <key>settings</key>
@@ -458,7 +458,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>string.regexp</string>
+        <string>Regular expressions</string>
         <key>scope</key>
         <string>string.regexp</string>
         <key>settings</key>
@@ -469,7 +469,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>string.html</string>
+        <string>Strings in html</string>
         <key>scope</key>
         <string>string.html</string>
         <key>settings</key>
@@ -480,7 +480,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>support.type</string>
+        <string>Types provided by the framework/library</string>
         <key>scope</key>
         <string>support.type</string>
         <key>settings</key>
@@ -491,25 +491,13 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>support.type.property-name</string>
+        <string>REVIEW! Types provided by the framework</string>
         <key>scope</key>
         <string>support.type.property-name</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
           <string>#bd93f9</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>support.type.property-name.css</string>
-        <key>scope</key>
-        <string>support.type.property-name.css,
-support.type.property-name.scss</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#93b4ff</string>
         </dict>
       </dict>
       <dict>
@@ -578,11 +566,33 @@ support.type.property-name.scss</string>
           <string>#93B4FF</string>
         </dict>
       </dict>
+      <dict>
+        <key>name</key>
+        <string>CSS properties</string>
+        <key>scope</key>
+        <string>support.type.property-name.css</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#93b4ff</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>CSS entities</string>
+        <key>scope</key>
+        <string>entity.other.attribute-name.class.css</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#bd93f9</string>
+        </dict>
+      </dict>
     </array>
     <key>colorSpaceName</key>
     <string>sRGB</string>
     <key>semanticClass</key>
-    <string>theme.dark.template_for_creating_tm_theme_files</string>
+    <string>theme.dark.skeletor</string>
     <key>author</key>
     <string>dieghernan</string>
     <key>comment</key>

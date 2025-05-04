@@ -1,32 +1,18 @@
-/* Night Owl Theme for prismjs
- * 
- * Based on https://github.com/sdras/night-owl-vscode-theme
- * Copyright 2020, 2025, All rights reserved
+/* Skeletor Syntax 0.3.0
+ *
+ * https://github.com/ramonmcros/skeletor-syntax
  *
  * Code licensed under the MIT license
- *
- * @author Diego H <https://github.com/dieghernan/>
  */
-.token.control-flow, .token.boolean,
-.token.keyword,
-.token.comment, .token.function {
-  font-style: italic;
-}
-
-.token.url {
-  color: #FF869A;
-}
-
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #d6deeb;
-  background: #011627;
-  text-shadow: none;
+  color: #dce7fd;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  word-wrap: normal;
   line-height: 1.5;
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -39,186 +25,213 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-  background: #011627;
-  border-radius: 0.5em;
   padding: 1em;
-  margin: 0.5em 0;
+  margin: .5em 0;
   overflow: auto;
-  height: auto;
+  border-radius: 0.3em;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #011627;
+  background: #2b2836;
 }
 
-.token.atrule {
-  color: #c792ea;
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #655e7f;
+}
+
+.token.punctuation {
+  color: #dce7fd;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.string,
+.token.attr-value,
+.token.property,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #93b4ff;
 }
 
 .token.attr-name {
-  color: #c5e478;
+  color: #bd93f9;
 }
 
-.token.attr-value {
-  color: #ecc48d;
+.token.boolean,
+.token.number {
+  color: #ff8adb;
 }
 
-.token.blockquote.punctuation {
-  color: #697098;
+.token.operator,
+.token.tag,
+.token.char,
+.token.atrule,
+.token.builtin,
+.token.inserted {
+  color: #f3e4a2;
 }
 
-.token.bold {
-  color: #c5e478;
-  font-weight: bold;
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #dce7fd;
 }
 
-.token.boolean {
-  color: #FF5874;
-}
-
-.token.builtin {
-  color: #82AAFF;
-}
-
-.token.cdata {
-  color: #637777;
-}
-
-.token.char {
-  color: #ecc48d;
-}
-
-.token.class-name {
-  color: #82AAFF;
-}
-
-.token.class {
-  color: #80CBC4;
-}
-
-.token.code, .token.code.keyword {
-  color: #C5E478;
-}
-
-.token.comment {
-  color: #637777;
-}
-
-.token.constant {
-  color: #FF5874;
-}
-
-.token.content {
-  color: #C5E478;
-}
-
-.token.directive {
-  color: #c792ea;
-}
-
-.token.doctype {
-  color: #637777;
-}
-
-.token.entity {
-  color: #ecc48d;
-}
-
+.token.selector,
 .token.function {
-  color: #82AAFF;
+  color: #bd93f9;
 }
 
-.token.id {
-  color: #FAD430;
+.token.keyword {
+  color: #bd93f9;
+}
+
+.token.regex {
+  color: #84fba2;
 }
 
 .token.important {
-  color: #c792ea;
+  color: #ff8adb;
+}
+
+.token.important,
+.token.bold {
   font-weight: bold;
 }
 
 .token.italic {
-  color: #c792ea;
   font-style: italic;
 }
 
-.token.keyword.null {
-  color: #FF5874;
+.token.entity {
+  cursor: help;
 }
 
-.token.keyword {
-  color: #c792ea;
+.language-javascript {
+  color: #dce7fd;
 }
 
-.token.namespace {
-  color: #5f7e97;
+.language-css .token.url {
+  color: #84fba2;
 }
 
-.token.number {
-  color: #F78C6C;
+.language-scss .token.string {
+  color: #dce7fd;
 }
 
-.token.operator {
-  color: #7fdbca;
+.language-scss .token.keyword {
+  color: #f3e4a2;
 }
 
-.token.prolog {
-  color: #637777;
+.language-scss .token.variable {
+  color: #84fba2;
 }
 
-.token.property {
-  color: #c5e478;
+.language-javascript .token.keyword {
+  color: #f3e4a2;
 }
 
-.token.punctuation {
-  color: #d6deeb;
+.language-javascript .token.class-name {
+  color: #93b4ff;
 }
 
-.token.regex {
-  color: #5ca7e4;
+.language-php .token.keyword {
+  color: #84fba2;
 }
 
-.token.selector {
-  color: #ff6363;
+.language-php .token.constant {
+  color: #ff8adb;
 }
 
-.token.string {
-  color: #ecc48d;
+.language-php .token.delimiter {
+  color: #7b94a5;
 }
 
-.token.tag {
-  color: #caece6;
+.language-yaml .token.scalar.string {
+  color: #93b4ff;
 }
 
-.token.title {
-  color: #82b1ff;
+.language-yaml .token.atrule {
+  color: #bd93f9;
 }
 
-.token.variable {
-  color: #c5e478;
+.language-yaml .token.important {
+  color: #84fba2;
 }
 
-code[class="language-css"] {
-  color: #c5e478;
+.language-markdown .token.title.important {
+  color: #bd93f9;
 }
 
-code[class="language-scss"] {
-  color: #c5e478;
+.language-markdown .token.code {
+  color: #84fba2;
 }
 
-code[class="language-yaml"] {
-  color: #ecc48d;
+.language-markdown .token.list.punctuation {
+  color: #93b4ff;
 }
 
-.language-scss .token.variable, .language-css .token.variable {
-  color: #C5E478;
+.language-markdown .token.url {
+  color: #93b4ff;
 }
 
-.language-yaml {
-  color: #ecc48d;
+.language-markdown .token.url .variable {
+  color: #f3e4a2;
 }
 
-.token.class-name {
-  color: #ffcb8b;
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
 }
+
+pre.line-numbers > code {
+  position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #655e7f;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #655e7f;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/*# sourceMappingURL=prism-skeletor.css.map */

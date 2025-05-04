@@ -17,32 +17,52 @@ rstudioapi::convertTheme(tm_path,
   force = TRUE
 )
 
-# Modify some elements ----
-cursor_col <- "#FFC600"
-
+source("dev/functions.R")
+cols <- read_tmtheme(tm_path)
 
 tm <- readLines(rtheme)
 
-curs_lin <- grep("ace_cursor", tm)
-tm[curs_lin + 1] <- paste0("color: ", cursor_col, ";")
+fg <- cols |>
+  filter(name == "foreground") |>
+  pull(value)
 
-# Add rules before terminal
-tem_lin <- grep("terminal", tm)[1] - 1
-partial1 <- tm[seq(1, tem_lin)]
-partial2 <- tm[seq(tem_lin + 1, length(tm))]
+margin_col <- cols |>
+  filter(name == "invisibles") |>
+  pull(value)
+
+head_col <- cols |>
+  filter(scope == "markup.heading") |>
+  pull(foreground)
+
+cursor_col <- cols |>
+  filter(str_detect(scope, "keyword|string|constant")) |>
+  group_by(foreground) |>
+  count(sort = TRUE) |>
+  filter(!is.na(foreground) & foreground != fg) |>
+  ungroup() |>
+  slice_head(n = 1) |>
+  pull(foreground)
+
+
+scales::show_col(c(cursor_col, margin_col, head_col))
 
 # Insert new rules
+crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
+
+margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")
 head_css <- paste0(
-  ".ace_heading {background-color: #001221; ",
-  "color: #ffc600; font-weight: bold;}"
+  ".ace_heading {color: ",
+  head_col, ";background-color: #001221;font-weight: bold;}"
 )
 
-str <- paste0(
+str_css <- paste0(
   ".ace_string {color: #9EFF80};"
 )
+# Re-generate css and write
+final_tm <- c(tm, crs_css, margin_css, head_css, str_css)
+
 
 # Re-generate css and write
-final_tm <- c(partial1, head_css, str, partial2)
 
 final_tm %>%
   sass::sass(output = rtheme)

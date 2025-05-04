@@ -137,7 +137,9 @@ for (f in bpath) {
   rs_bk <- rs
 
   for (i in ncols) {
-    rs_bk <- gsub(tb$dark_spec[i], tb$oksolar_dark_spec[i], rs_bk, ignore.case = TRUE)
+    rs_bk <- gsub(tb$dark_spec[i], tb$oksolar_dark_spec[i], rs_bk,
+      ignore.case = TRUE
+    )
   }
   rs_bk <- gsub("Selenized Dark", "OKSolar Dart", rs_bk)
   out_f <- gsub("selenized-dark", "oksolar-dark", f)
@@ -154,7 +156,9 @@ for (f in bpath) {
   rs_bk <- rs
 
   for (i in ncols) {
-    rs_bk <- gsub(tb$dark_spec[i], tb$oksolar_light_spec[i], rs_bk, ignore.case = TRUE)
+    rs_bk <- gsub(tb$dark_spec[i], tb$oksolar_light_spec[i], rs_bk,
+      ignore.case = TRUE
+    )
   }
   rs_bk <- gsub("Selenized Dark", "OKSolar Light", rs_bk)
   out_f <- gsub("selenized-dark", "oksolar-light", f)

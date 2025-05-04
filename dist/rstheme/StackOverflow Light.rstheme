@@ -75,14 +75,6 @@
   color: #b75501;
 }
 
-.ace_support.ace_constant {
-  color: #015692;
-}
-
-.ace_support.ace_class {
-  color: #b75501;
-}
-
 .ace_support.ace_type {
   color: #803378;
 }
@@ -113,6 +105,10 @@
 
 .ace_variable.ace_language {
   color: #54790d;
+}
+
+.ace_entity.ace_other.ace_attribute-name {
+  color: #015692;
 }
 
 .ace_entity.ace_name.ace_tag {
@@ -2360,13 +2356,17 @@
 }
 
 .ace_cursor {
-  color: #b75501;
+  color: #54790d;
 }
 
 .ace_print-margin {
-  background: #CECFD0;
+  background: #ECECEC;
 }
 
 .ace_heading {
   color: #015692;
+}
+
+.ace_support.ace_function {
+  color: #535a60;
 }

@@ -36,30 +36,6 @@ tb$oksolar_light_spec <- c(
 ) %>% toupper()
 
 
-#
-#
-# tb$black_spec <- c(
-#   "#181818", "#252525", "#3b3b3b", "#777777", "#b9b9b9", "#dedede", "#ed4a46",
-#   "#70b433", "#dbb32d", "#368aeb", "#eb6eb7", "#3fc5b7", "#e67f43", "#a580e2",
-#   "#ff5e56", "#83c746", "#efc541", "#4f9cfe", "#ff81ca", "#56d8c9", "#fa9153",
-#   "#b891f5"
-# ) %>% toupper()
-#
-# tb$light_spec <- c(
-#   "#fbf3db", "#ece3cc", "#d5cdb6", "#909995", "#53676d", "#3a4d53", "#d2212d",
-#   "#489100", "#ad8900", "#0072d4", "#ca4898", "#009c8f", "#c25d1e", "#8762c6",
-#   "#cc1729", "#428b00", "#a78300", "#006dce", "#c44392", "#00978a", "#bc5819",
-#   "#825dc0"
-# ) %>%
-#   toupper()
-#
-# tb$white_spec <- c(
-#   "#ffffff", "#ebebeb", "#cdcdcd", "#878787", "#474747", "#282828", "#d6000c",
-#   "#1d9700", "#c49700", "#0064e4", "#dd0f9d", "#00ad9c", "#d04a00", "#7f51d6",
-#   "#bf0000", "#008400", "#af8500", "#0054cf", "#c7008b", "#009a8a", "#ba3700",
-#   "#6b40c3"
-# ) %>% toupper()
-
 
 # OK Solar Dark ------
 bpath <- "./dist/tmTheme/Selenized Dark.tmTheme"

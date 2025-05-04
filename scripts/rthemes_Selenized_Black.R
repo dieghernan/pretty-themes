@@ -15,16 +15,36 @@ rstudioapi::convertTheme(tm_path,
   outputLocation = outdir,
   force = TRUE
 )
+source("dev/functions.R")
+cols <- read_tmtheme(tm_path)
 
 tm <- readLines(rtheme)
 
-# Insert new rules
-cursor_col <- "#EFC541"
-crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
-margin_col <- "#3B3B3B"
-margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")
+fg <- cols |>
+  filter(name == "foreground") |>
+  pull(value)
 
-head_col <- "#EFC541"
+margin_col <- cols |>
+  filter(name == "invisibles") |>
+  pull(value)
+
+head_col <- cols |>
+  filter(scope == "markup.heading") |>
+  pull(foreground)
+
+cursor_col <- cols |>
+  filter(str_detect(scope, "keyword|string|constant")) |>
+  group_by(foreground) |>
+  count(sort = TRUE) |>
+  filter(!is.na(foreground) & foreground != fg) |>
+  ungroup() |>
+  slice_head(n = 1) |>
+  pull(foreground)
+
+# Insert new rules
+crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
+
+margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")
 head_css <- paste0(
   ".ace_heading {color: ",
   head_col, ";}"

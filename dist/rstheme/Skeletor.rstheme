@@ -2380,7 +2380,7 @@
 }
 
 .ace_cursor {
-  color: #F3E4A2;
+  color: #93b4ff;
 }
 
 .ace_print-margin {

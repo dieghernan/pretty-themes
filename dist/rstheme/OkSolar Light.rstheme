@@ -2385,11 +2385,11 @@
 }
 
 .ace_cursor {
-  color: #AC8300;
+  color: #259D94;
 }
 
 .ace_print-margin {
-  background: #98A8A8;
+  background: #8FAAAB;
 }
 
 .ace_heading {

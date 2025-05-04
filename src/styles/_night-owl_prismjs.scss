@@ -42,6 +42,8 @@ $variable: #c5e478;
 $variable_language: #7fdbca;
 $variable_other: #C5E478;
 
+@import "./src/_prismjs.scss";
+
 .token.control-flow, .token.boolean,
 .token.keyword,
 .token.comment, .token.function {
@@ -49,6 +51,34 @@ $variable_other: #C5E478;
 }
 
 .token.url {color: #FF869A;}
-@import "./src/_prismjs.scss";
+
+.language-css, .language-scss {
+  color:#FAD430 !important;
+  .token.property {color: #80CBC4;} // property
+  .token.punctuation {color:#FAD430;}
+  .token.class {color:#C5E478;font-style: italic;}
+  .token.id {font-style: italic;}
+  .token.number {color:#FF6363;}
+  .token.function {color: #C5E478; font-style: normal;}
+}
+.language-scss {
+  .token.selector {color:#C5E478; font-style: italic;}
+}
+
+.language-html {
+  .token.doctype-tag {color: #caece6;}
+  .token.attr-name {font-style: italic;}
+}
+
+.language-yaml {
+  .token.tag {color: #C792EA;}
+  .token.atrule {color: #7FDBCA; font-style: normal;}
+}
+
+.language-json {
+  .token.string, .token.punctuation {color: #C792EA;}
+  .token.property {color: #7FDBCA; font-style: normal;}
+}
 
 .token.class-name{color: $entity_name_class;}
+.token.list {color: #D9F5DD;}

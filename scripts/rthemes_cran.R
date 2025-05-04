@@ -16,15 +16,39 @@ rstudioapi::convertTheme(tm_path,
   force = TRUE
 )
 
+source("dev/functions.R")
+cols <- read_tmtheme(tm_path)
+
 tm <- readLines(rtheme)
 
+fg <- cols |>
+  filter(name == "foreground") |>
+  pull(value)
+
+margin_col <- cols |>
+  filter(name == "invisibles") |>
+  pull(value)
+
+head_col <- cols |>
+  filter(scope == "markup.heading") |>
+  pull(foreground)
+
+cursor_col <- cols |>
+  filter(str_detect(scope, "keyword|string|constant")) |>
+  group_by(foreground) |>
+  count(sort = TRUE) |>
+  filter(!is.na(foreground) & foreground != fg) |>
+  ungroup() |>
+  slice_head(n = 1) |>
+  pull(foreground)
+
+
+scales::show_col(c(cursor_col, margin_col, head_col))
+
 # Insert new rules
-cursor_col <- "#007020"
 crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
-margin_col <- "#DBDBDB"
 margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")
 
-head_col <- "#BA2121"
 head_css <- paste0(
   ".ace_heading {color: ",
   head_col, "; font-style: italic;}"

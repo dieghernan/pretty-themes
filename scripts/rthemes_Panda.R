@@ -1,6 +1,6 @@
 library(tidyverse)
 
-tm_path <- "./dist/tmTheme/Selenized Dark.tmTheme"
+tm_path <- "./dist/tmTheme/Panda Theme.tmTheme"
 outdir <- "./dist/rstheme"
 rtheme <- tools::file_path_sans_ext(tm_path) |>
   basename() |>
@@ -15,6 +15,7 @@ rstudioapi::convertTheme(tm_path,
   outputLocation = outdir,
   force = TRUE
 )
+
 source("dev/functions.R")
 cols <- read_tmtheme(tm_path)
 
@@ -41,18 +42,18 @@ cursor_col <- cols |>
   slice_head(n = 1) |>
   pull(foreground)
 
+
+scales::show_col(c(cursor_col, margin_col, head_col))
+
 # Insert new rules
 crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
-
 margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")
-head_css <- paste0(
-  ".ace_heading {color: ",
-  head_col, ";}"
-)
+head_css <- paste0(".ace_heading {color: ", head_col, ";}")
 
+sup_css <- ".ace_support.ace_function {color: #19f9d8; font-style: italic;}"
 
 # Re-generate css and write
-final_tm <- c(tm, crs_css, margin_css, head_css)
+final_tm <- c(tm, crs_css, margin_css, head_css, sup_css)
 
 final_tm %>%
   sass::sass(output = rtheme)

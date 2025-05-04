@@ -60,15 +60,6 @@ thecols <- c(rs, sf) %>%
 
 thecols[!thecols %in% tb$dark_spec] %>% unique()
 
-
-# library(farver)
-# r <- decode_colour("#4494F6")
-# h <- decode_colour(tb$dark_spec)
-#
-# res <- compare_colour(r,h, from_space = "rgb") %>% as.vector()
-# min(res)
-# tb$dark_spec[min(res) == res]
-
 source(spath)
 
 # OK
