@@ -9,101 +9,80 @@
  */
 
 
-// Top level colors
-$foreground:  #d6deeb;
-$background:  #011627;
+$foreground: #d6deeb;
+$background: #011627;
+$comment: #637777;
+$constant_character_escape: #F78C6C;
+$constant_language: #FF5874;
+$constant_numeric: #F78C6C;
+$constant_other: #82AAFF;
+$entity_name: #82AAFF;
+$entity_name_class: #ffcb8b;
+$entity_name_tag: #caece6;
+$entity_name_tag_css: #ff6363;
+$entity_name_type: #5f7e97;
+$entity_other_attribute-name: #c5e478;
+$entity_other_attribute-name_id: #FAD430;
+$invalid: #ffffff;
+$keyword_control: #c792ea;
+$keyword_operator: #7fdbca;
+$markup_bold: #c5e478;
+$markup_heading: #82b1ff;
+$markup_italic: #c792ea;
+$markup_quote: #697098;
+$markup_raw: #C5E478;
+$storage_type: #c792ea;
+$string: #ecc48d;
+$string_regexp: #5ca7e4;
+$support_constant: #82AAFF;
+$support_type: #c5e478;
+$support_type_property-name: #80CBC4;
+$variable: #c5e478;
+$variable_language: #7fdbca;
+$variable_other: #C5E478;
 
-// Comments
-$comment:                  #637777 !default; //Any comments
-$comment_block:            $comment !default; //Multi-line comments /* … */,<- … -->.
-$comment_line:             $comment !default; //Line comments
-$comment_line_number-sign: $comment_line !default; // # comment
-
-// Constants
-$constant_character_escape: #F78C6C !default; //Escape sequences.
-$constant_language:         #FF5874 !default; //Special constants like true, false,nil
-
-// Constant: Numbers
-$constant_numeric:          #F78C6C !default; //Any number
-$constant_numeric_float:    $constant_numeric !default; // Floating number
-$constant_numeric_integer:  $constant_numeric !default; //Integers
-
-// Other constants
-$constant_other:        #82AAFF !default; //Any other constants, e.g. colors in CSS.
-$constant_other_symbol: $constant_other !default; //
-
-// Entities: Part of the document, for example a chapter, class, function, or tag.
-$entity_name:                 $foreground !default; //Larger entity
-$entity_name_tag:             #caece6 !default; //Tag name.
-$entity_name_tag_css:         #ff6363 !default; //Tag name for CSS/SCSS.
-$entity_name_type:            $entity_name !default; //Type declaration or class.
-$entity_other_attribute-name: #c5e478 !default; //Name of an attribute (mainly in tags).
-$entity_other_attribute-name_id: #FAD430 !default; //ID of an attribute.
-$entity_other_attribute-name_html: #ffffff !default; //Name of an attribute (mainly in HTML).
-
-// Invalid: Stuff that is invalid, illegal or deprecated
-// Mapped to errors in Pygments
-$invalid: #ff2c83 !default;
-
-// Keywords
-$keyword_control:         #0c969b !default; //Related to flow control: continue, while, return, etc.
-$keyword_control_at-rule: $keyword_control !default; //@media in css.
-$keyword_control_import:  $keyword_control !default;
-$keyword_operator:        $foreground !default; //Operators can be textual (e.g. or) or be characters.
-$keyword_other_important: $keyword_control !default; // Important things
-$keyword_other_directive: $keyword_other_important !default; // YANL directives
-
-// Markup: For markup languages and generally applies to larger subsets of the text
-$markup_bold:             $foreground !default; //Bold text.
-$markup_heading:          $foreground !default; //Section header.
-$markup_italic:           $foreground !default; //Italic text
-$markup_quote:            $foreground !default; // Markup quotations
-$markup_raw:              $keyword_control !default; // Markup raw code
-
-// Meta: markup languages
-$meta_doctype: $comment !default; // For DOCTYPE in HTML
-
-// Punctuation
-// Specific of SublimeText, see:
-// https://www.sublimetext.com/docs/scope_naming.html#alphabetical-reference
-$punctuation_definition: $foreground !default;
-
-// Storage: These are keywords in Pygments
-$storage_type: $foreground !default; //Type of something, class, function, int, var, etc.
-
-
-// Strings
-$string:                #4876d6 !default; //Strings
-$string_interpolated:   $string !default; //Strings which are "evaluated": `date`, $(pwd).
-$string_quoted:         #c96765 !default; //Quoted strings
-$string_quoted_single:  $string_quoted !default; //Single quoted strings: 'foo'.
-$string_quoted_double:  $string_quoted !default; //Double quoted strings: "foo".
-$string_quoted_other:   $string_quoted !default; //Other types of quoting: $'shell', %s{...}.
-$string_regexp:         $string !default; //Regular expressions: /(\w+)/.
-$string_html:           $string !default; // Strings in html
-
-// Support: Built-in things
-$support:           $foreground !default; //Things provided by a framework or library.
-$support_constant:  $support !default; //Constants (magic values) provided by the framework/library.
-$support_type:      $support !default; //Types provided by the framework/library,
-$support_type_property-name: $entity_name_tag_css !default; //Types provided by the framewor
-
-// Variable
-$variable:           $foreground !default; //Not all languages allow easy identification (and thus markup) of these.
-$variable_language:  $variable !default; //Reserved language variables like this,super,self, etc.
-$variable_other:     $variable !default; //Other variables
 
 .highlight {
-  // Comments in italic
-  .c, .cp, .cpf, .cm, .c1, .cs, .ch,
   // $entity_other_attribute-name
   .na,
-  // $constant_language
-  .kc {
+  // Function
+  .nf,
+  .kc,
+  .gt,
+  // Keyword
+  .k, .kn,
+  // Comments in italic
+  .c, .cp, .cpf, .cm, .c1, .cs, .ch,{
     font-style: italic;
   }
-  
-  
+  .err, .gr, .ne {background-color: #ff2c83;} 
+}
+
+// Language specifics
+.language-css, .language-scss {
+  .highlight {
+    .nl {color: #80CBC4;}
+    .m {color: #FFEB95;}
+    .nc {color: #C5E478 !important; font-style: italic;} // Name.Class
+    .nn {color: #FAD430 !important; font-style: italic;}
+
+  }
+}
+
+.language-scss .highlight {
+  .n {color: #80CBC4 !important;}
+  .nv {color: #C5E478;}
+}
+
+.language-yaml .highlight {
+  .kt {color: #C792EA !important;}
+  .na {color: #7FDBCA !important; font-style: normal;}
+}
+
+.language-json .highlight {
+  .nl {color: #7FDBCA;}
+  .mi {color: #F78C6C;}
+  .s, .sb, .s1, .s2, .sx {color: #C789D6;}
 }
 
 @import "./src/_tmtheme.scss";

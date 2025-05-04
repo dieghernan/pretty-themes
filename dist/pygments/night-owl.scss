@@ -1,5 +1,29 @@
 /* Night Owl Theme for pygments/Jekyll Based on https://github.com/sdras/night-owl-vscode-theme Copyright 2020, 2025, All rights reserved Code licensed under the MIT license @author Diego H <https://github.com/dieghernan/> */
-.highlight .c, .highlight .cp, .highlight .cpf, .highlight .cm, .highlight .c1, .highlight .cs, .highlight .ch, .highlight .na, .highlight .kc { font-style: italic; }
+.highlight .na, .highlight .nf, .highlight .kc, .highlight .gt, .highlight .k, .highlight .kn, .highlight .c, .highlight .cp, .highlight .cpf, .highlight .cm, .highlight .c1, .highlight .cs, .highlight .ch { font-style: italic; }
+
+.highlight .err, .highlight .gr, .highlight .ne { background-color: #ff2c83; }
+
+.language-css .highlight .nl, .language-scss .highlight .nl { color: #80CBC4; }
+
+.language-css .highlight .m, .language-scss .highlight .m { color: #FFEB95; }
+
+.language-css .highlight .nc, .language-scss .highlight .nc { color: #C5E478 !important; font-style: italic; }
+
+.language-css .highlight .nn, .language-scss .highlight .nn { color: #FAD430 !important; font-style: italic; }
+
+.language-scss .highlight .n { color: #80CBC4 !important; }
+
+.language-scss .highlight .nv { color: #C5E478; }
+
+.language-yaml .highlight .kt { color: #C792EA !important; }
+
+.language-yaml .highlight .na { color: #7FDBCA !important; font-style: normal; }
+
+.language-json .highlight .nl { color: #7FDBCA; }
+
+.language-json .highlight .mi { color: #F78C6C; }
+
+.language-json .highlight .s, .language-json .highlight .sb, .language-json .highlight .s1, .language-json .highlight .s2, .language-json .highlight .sx { color: #C789D6; }
 
 /* SASS Template for converting tmThemes to Rouge / Pygments (css)     */
 /* by Diego H <https://github.com/dieghernan/   */
@@ -50,19 +74,19 @@
 .highlight .il { color: #F78C6C; }
 
 /* Entities */
-.highlight .nc { color: #d6deeb; }
+.highlight .nc { color: #ffcb8b; }
 
-.highlight .nd { color: #d6deeb; }
+.highlight .nd { color: #82AAFF; }
 
-.highlight .ne { color: #d6deeb; }
+.highlight .ne { color: #82AAFF; }
 
-.highlight .nf { color: #d6deeb; }
+.highlight .nf { color: #82AAFF; }
 
-.highlight .py { color: #d6deeb; }
+.highlight .py { color: #82AAFF; }
 
 .highlight .nt { color: #caece6; }
 
-.highlight .nn { color: #d6deeb; }
+.highlight .nn { color: #5f7e97; }
 
 .highlight .na { color: #c5e478; }
 
@@ -74,46 +98,46 @@
 
 .language-css .highlight .n, .language-scss .highlight .n { color: #c5e478; }
 
-.language-html .highlight .na { color: #ffffff; }
+.language-html .highlight .na { color: #c5e478; }
 
 /* Invalid */
-.highlight .err { color: #ff2c83; }
+.highlight .err { color: #ffffff; }
 
-.highlight .gr { color: #ff2c83; }
+.highlight .gr { color: #ffffff; }
 
-.highlight .ne { color: #ff2c83; }
+.highlight .ne { color: #ffffff; }
 
 /* Keywords */
-.highlight .k { color: #0c969b; }
+.highlight .k { color: #c792ea; }
 
-.highlight .kn { color: #0c969b; }
+.highlight .kn { color: #c792ea; }
 
-.highlight .o { color: #d6deeb; }
+.highlight .o { color: #7fdbca; }
 
-.highlight .ow { color: #d6deeb; }
+.highlight .ow { color: #7fdbca; }
 
-.language-markdown .highlight .sb { color: #0c969b; }
+.language-markdown .highlight .sb { color: #C5E478; }
 
-.language-css .highlight .k, .language-scss .highlight .k { color: #0c969b; }
+.language-css .highlight .k, .language-scss .highlight .k { color: #c792ea; }
 
-.language-css .highlight .cp, .language-scss .highlight .cp { color: #0c969b; font-weight: bold; font-style: normal; }
+.language-css .highlight .cp, .language-scss .highlight .cp { color: #c792ea; font-weight: bold; font-style: normal; }
 
-.language-yaml .highlight .nt { color: #0c969b; font-weight: bold; font-style: normal; }
+.language-yaml .highlight .nt { color: #c792ea; font-weight: bold; font-style: normal; }
 
-.language-yaml .highlight .na { color: #0c969b; }
+.language-yaml .highlight .na { color: #c792ea; }
 
 /* Markup */
-.highlight .gs { color: #d6deeb; font-weight: bold; }
+.highlight .gs { color: #c5e478; font-weight: bold; }
 
-.highlight .gh { color: #d6deeb; }
+.highlight .gh { color: #82b1ff; }
 
-.highlight .gu { color: #d6deeb; }
+.highlight .gu { color: #82b1ff; }
 
-.highlight .ge { color: #d6deeb; font-style: italic; }
+.highlight .ge { color: #c792ea; font-style: italic; }
 
 .highlight .ges { font-weight: bold; font-style: italic; }
 
-.highlight .gt { color: #d6deeb; }
+.highlight .gt { color: #697098; }
 
 /* Meta */
 .language-html .highlight .cp { color: #637777; font-style: normal; }
@@ -128,47 +152,47 @@
 .highlight .sh { color: #d6deeb; }
 
 /* Storage */
-.highlight .kd { color: #d6deeb; }
+.highlight .kd { color: #c792ea; }
 
-.highlight .kt { color: #d6deeb; }
+.highlight .kt { color: #c792ea; }
 
 /* String */
-.highlight .s { color: #4876d6; }
+.highlight .s { color: #ecc48d; }
 
-.highlight .sb { color: #c96765; }
+.highlight .sb { color: #ecc48d; }
 
-.highlight .s1 { color: #c96765; }
+.highlight .s1 { color: #ecc48d; }
 
-.highlight .s2 { color: #c96765; }
+.highlight .s2 { color: #ecc48d; }
 
-.highlight .sx { color: #c96765; }
+.highlight .sx { color: #ecc48d; }
 
-.highlight .si { color: #4876d6; }
+.highlight .si { color: #ecc48d; }
 
-.highlight .sr { color: #4876d6; }
+.highlight .sr { color: #5ca7e4; }
 
-.language-html .highlight .s { color: #4876d6; }
+.language-html .highlight .s { color: #ecc48d; }
 
 /* Support */
 .highlight .nb { color: #d6deeb; }
 
 .highlight .bp { color: #d6deeb; }
 
-.highlight .fm { color: #d6deeb; }
+.highlight .fm { color: #82AAFF; }
 
-.highlight .vm { color: #d6deeb; }
+.highlight .vm { color: #82AAFF; }
 
-.highlight .nl { color: #d6deeb; }
+.highlight .nl { color: #c5e478; }
 
-.language-css .highlight .nc, .language-css .highlight .nn, .language-scss .highlight .nc, .language-scss .highlight .nn { color: #ff6363; }
+.language-css .highlight .nc, .language-css .highlight .nn, .language-scss .highlight .nc, .language-scss .highlight .nn { color: #80CBC4; }
 
 /* Variable */
-.highlight .vi { color: #d6deeb; }
+.highlight .vi { color: #c5e478; }
 
-.highlight .kp { color: #d6deeb; }
+.highlight .kp { color: #7fdbca; }
 
-.highlight .nv { color: #d6deeb; }
+.highlight .nv { color: #C5E478; }
 
-.highlight .vc { color: #d6deeb; }
+.highlight .vc { color: #C5E478; }
 
-.highlight .vg { color: #d6deeb; }
+.highlight .vg { color: #C5E478; }

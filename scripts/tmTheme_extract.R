@@ -1,4 +1,4 @@
-input <- "./vendor/panda/Panda.tmTheme"
+input <- "./vendor/night-owl/notest.tmTheme"
 
 # See also (Rstudio Only)
 # tm <- .rs.parseTmTheme(input)
@@ -203,4 +203,4 @@ read_tmtheme <- function(input) {
 }
 parsed_theme <- read_tmtheme(input)
 
-# clipr::write_clip(parsed_theme)
+clipr::write_clip(parsed_theme)

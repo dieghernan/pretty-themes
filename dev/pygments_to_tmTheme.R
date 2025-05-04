@@ -11,6 +11,7 @@ get_template <- read_xml("./src/templates/template.tmTheme") |>
 
 get_cols <- readLines(paste0("src/compiledcols/_", theme, "_colors.scss"))
 scopes_ddbb <- read_csv("dev/scopes_ddbb.csv")
+# clipr::write_clip(scopes_ddbb)
 
 scopeandcols <- get_cols[get_cols != ""] %>%
   gsub(".", "", ., fixed = TRUE) %>%
