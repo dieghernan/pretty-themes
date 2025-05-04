@@ -1,4 +1,4 @@
-theme_to_test <- "_skeletor"
+theme_to_test <- "_panda"
 
 test <- readLines(file.path(
   "src", "styles",

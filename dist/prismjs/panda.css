@@ -1,18 +1,6 @@
 /* panda Theme Based on https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda v. 1.4.0 By siamak Adapted by Diego H <https://github.com/dieghernan/> */
 .token.comment, .token.namespace { font-style: italic; }
 
-.language-css .token.property, .language-scss .token.property { color: #E6E6E6; }
-
-.language-css .token.keyword, .language-scss .token.keyword { color: #B084EB; }
-
-.language-css .token.selector, .language-scss .token.selector { color: #FFCC95; }
-
-.language-java .token.keyword { color: #FFB86C; }
-
-.language-html .token.tag { color: #FF2C6D; }
-
-.language-markdown .token.code { font-style: italic; }
-
 code[class*="language-"], pre[class*="language-"] { color: #E6E6E6; background: #292A2B; text-shadow: none; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-hyphens: none; -moz-hyphens: none; -ms-hyphens: none; hyphens: none; }
 
 /* Code blocks */
@@ -102,4 +90,26 @@ code[class="language-yaml"] { color: #19f9d8; }
 
 .language-yaml { color: #19f9d8; }
 
+.language-css .token.property, .language-scss .token.property { color: #E6E6E6; }
+
+.language-css .token.keyword, .language-scss .token.keyword { color: #B084EB; }
+
+.language-css .token.selector, .language-scss .token.selector { color: #FF2C6D; }
+
+.language-css .token.class, .language-scss .token.class { color: #FFB86C; }
+
+.language-css .token.number, .language-scss .token.number { color: #FFB86C; }
+
+.language-scss .token.property { color: #FFCC95; }
+
+.language-scss .token.selector { color: #FFB86C; }
+
+.language-java .token.keyword { color: #FFB86C; }
+
+.language-html .token.tag { color: #FF2C6D; }
+
+.language-markdown .token.code { font-style: italic; }
+
 .language-yaml .token.key.atrule, .language-yaml .token.number { color: #FFCC95; }
+
+.token.class-name { color: #19F9D8; font-style: italic; }

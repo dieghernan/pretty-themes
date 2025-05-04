@@ -1,8 +1,8 @@
-@charset "UTF-8";
-/* skeletor Theme for highlight.js
+/* panda Theme
  *
- * Based on https://ramonmcros.com/skeletor-syntax/ prismjs theme
- * Created by Ramón M. Cros, MIT License Copyright (c) 2017 ramonmcros
+ * Based on https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda
+ * v. 1.4.0
+ * By siamak
  *
  * Adapted by Diego H <https://github.com/dieghernan/>
  */
@@ -20,209 +20,214 @@ code.hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  color: #ffffff;
-  background: #2b2836;
+  color: #E6E6E6;
+  background: #292A2B;
 }
 
 .hljs-keyword {
-  color: #bd93f9;
+  color: #FF75B5;
 }
 
 .hljs-built_in {
-  color: #bd93f9;
+  color: #6FC1FF;
 }
 
 .hljs-type {
-  color: #bd93f9;
+  color: #6FC1FF;
 }
 
 .hljs-literal {
-  color: #ff8adb;
+  color: #FFB86C;
 }
 
 .hljs-number {
-  color: #ff8adb;
+  color: #E6E6E6;
 }
 
 .hljs-operator {
-  color: #f3e4a2;
+  color: #E6E6E6;
 }
 
 .hljs-punctuation {
-  color: #dce7fd;
+  color: #E6E6E6;
 }
 
 .hljs-property {
-  color: #ffffff;
+  color: #FFCC95;
 }
 
 .hljs-regexp {
-  color: #84fba2;
+  color: #6FC1FF;
 }
 
 .hljs-string {
-  color: #93b4ff;
+  color: #19f9d8;
 }
 
 .hljs-char.escape_ {
-  color: #93b4ff;
+  color: #45A9F9;
 }
 
 .hljs-subst {
-  color: #ffffff;
+  color: #E6E6E6;
 }
 
 .hljs-symbol {
-  color: #f3e4a2;
+  color: #19f9d8;
 }
 
 .hljs-class {
-  color: #bd93f9;
+  color: #6FC1FF;
 }
 
 .hljs-variable {
-  color: #ffffff;
+  color: #FF9AC1;
 }
 
 .hljs-variable.language_ {
-  color: #ffffff;
+  color: #FF9AC1;
 }
 
 .hljs-variable.constant_ {
-  color: #ffffff;
+  color: #FF9AC1;
 }
 
 .hljs-title {
-  color: #bd93f9;
+  color: #6FC1FF;
 }
 
 .hljs-comment {
-  color: #655e7f;
+  color: #676B79;
 }
 
 .hljs-meta {
-  color: #ff8adb;
+  color: #FF4B82;
   font-weight: bold;
 }
 
 .hljs-section {
-  color: #bd93f9;
+  color: #19f9d8;
 }
 
 .hljs-name {
-  color: #f3e4a2;
+  color: #6FC1FF;
 }
 
 .hljs-attr {
-  color: #bd93f9;
+  color: #FFB86C;
 }
 
 .hljs-attribute {
-  color: #93b4ff;
+  color: #FFCC95;
 }
 
 .hljs-code {
-  color: #84fba2;
+  color: #19f9d8;
 }
 
 .hljs-strong {
-  color: #ffffff;
+  color: #FFB86C;
   font-weight: bold;
 }
 
 .hljs-emphasis {
-  color: #ffffff;
+  color: #FF9AC1;
   font-style: italic;
 }
 
 .hljs-selector-id {
-  color: #bd93f9;
+  color: #FFB86C;
 }
 
 .hljs-quote {
-  color: #ffffff;
+  color: #FFB86C;
 }
 
 .hljs-selector-class {
-  color: #bd93f9;
+  color: #FFCC95;
 }
 
 .hljs-selector-tag, .hljs-selector-attr, .hljs-selector-pseudo {
-  color: #bd93f9;
+  color: #FF2C6D;
 }
 
 .hljs-deletion {
-  color: #f36a66;
+  color: rgba(255, 44, 109, 0.62);
 }
 
 .language-html .hljs-string {
-  color: #93b4ff;
+  color: #19f9d8;
 }
 
 .language-css.hljs, .language-scss.hljs {
-  color: #ff8adb;
+  color: #FFB86C;
 }
 
 .language-scss .hljs-variable, .language-css .hljs-variable {
-  color: #ffffff;
+  color: #FF9AC1;
 }
 
 .language-scss .hljs-keyword, .language-css .hljs-keyword {
-  color: #f3e4a2;
+  color: #B084EB;
 }
 
 .language-yaml .hljs-attr {
-  color: #f3e4a2;
+  color: #B084EB;
 }
 
 .language-yaml .hljs-type {
-  color: #f3e4a2;
+  color: #6FC1FF;
 }
 
 .language-yaml .hljs-attr {
-  color: #f3e4a2;
+  color: #B084EB;
 }
 
 .language-yaml .hljs-type {
-  color: #f3e4a2;
+  color: #6FC1FF;
 }
 
 .language-json .hljs-attr {
-  color: #93b4ff;
+  color: #FFCC95;
 }
 
-.language-javascript .hljs-keyword {
-  color: #f3e4a2;
+.hljs-comment, .token.namespace {
+  font-style: italic;
 }
 
-.language-scss .hljs-string {
-  color: #dce7fd;
+.hljs-title.class_ {
+  color: #19F9D8;
+  font-style: italic;
 }
 
-.language-scss .hljs-variable {
-  color: #84fba2;
+.language-css .hljs-attribute, .language-scss .hljs-attribute {
+  color: #E6E6E6;
 }
 
-.language-php .hljs-keyword {
-  color: #84fba2;
+.language-css .hljs-selector-class, .language-scss .hljs-selector-class {
+  color: #FFB86C;
 }
 
-.language-php .hljs-variable.constant_ {
-  color: #93b4ff;
+.language-css .hljs-number, .language-scss .hljs-number {
+  color: #FFB86C;
 }
 
-.language-markdown .hljs-bullet {
-  color: #93b4ff;
+.language-scss.hljs .hljs-attribute {
+  color: #FFCC95;
 }
 
-.language-yaml .hljs-attr {
-  color: #bd93f9;
+.language-java .hljs-keyword {
+  color: #FFB86C;
 }
 
-.language-yaml .hljs-meta {
-  color: #84fba2;
+.language-html .hljs-name {
+  color: #FF2C6D;
 }
 
-.language-yaml .hljs-string {
-  color: #ffffff;
+.language-markdown .hljs-code {
+  font-style: italic;
+}
+
+.language-yaml .hljs-attr, .language-yaml .hljs-number {
+  color: #FFCC95;
 }

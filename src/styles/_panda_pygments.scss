@@ -17,6 +17,7 @@ $constant_character_escape: #45A9F9;
 $constant_language: #FFB86C;
 $constant_other_symbol: #19f9d8;
 $entity_name: #6FC1FF;
+$entity_name_class: #19F9D8;
 $entity_name_tag: #6FC1FF;
 $entity_name_tag_css: #FF2C6D;
 $entity_name_type: #19f9d8;
@@ -38,20 +39,32 @@ $support_type_property-name: #FFCC95;
 $storage_type: #FFB86C;
 $variable: #FF9AC1;
 
+@import "./src/_tmtheme.scss";
+
+
 // Styles, weights and others
 .highlight {
   // Comments in italic
   .c, .cp, .cpf, .cm, .c1, .cs, .ch  {font-style: italic;}
   
   // Nametype
-  .nn {font-style: italic;}
+  .nn, .nc {font-style: italic;}
 }
 
 // But not in css/scss
 
 .language-css, .language-scss {
-  .highlight .nn {font-style: normal;}
+  .highlight {
+    .nn, .nc {font-style: normal;}
+    .nc {color: #FFB86C;}
+    .nl {color: #E6E6E6;}
+    .n {color: #6FC1FF;}
+    .m {color: #FFB86C;}
+
+  }
 }
+
+.language-scss .highlight .n {color: #FFCC95;}
 
 .language-html .highlight {
   .nt {color: #FF2C6D;}
@@ -60,9 +73,6 @@ $variable: #FF9AC1;
 .language-markdown .highlight{
   .sb {font-style: italic;}
 }
-
-@import "./src/_tmtheme.scss";
-
 
 .language-yaml .highlight {
   .na, .m {color: #FFCC95;}

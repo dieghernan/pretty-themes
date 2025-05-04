@@ -17,6 +17,7 @@ $constant_character_escape: #45A9F9;
 $constant_language: #FFB86C;
 $constant_other_symbol: #19f9d8;
 $entity_name: #6FC1FF;
+$entity_name_class: #19F9D8;
 $entity_name_tag: #6FC1FF;
 $entity_name_tag_css: #FF2C6D;
 $entity_name_type: #19f9d8;
@@ -38,13 +39,23 @@ $support_type_property-name: #FFCC95;
 $storage_type: #FFB86C;
 $variable: #FF9AC1;
 
+@import "./src/_hljs.scss";
+
+
 // Styles, weights and others
 // Comments in italic
 .hljs-comment, .token.namespace {font-style: italic;}
   
+.hljs-title.class_ {color: #19F9D8; font-style: italic;}
 
 .language-css, .language-scss {
   .hljs-attribute {color: #E6E6E6;}
+  .hljs-selector-class {color: #FFB86C;}
+  .hljs-number {color: #FFB86C;}
+}
+
+ .language-scss.hljs {
+    .hljs-attribute {color: #FFCC95;}
 }
 
 .language-java {
@@ -58,9 +69,6 @@ $variable: #FF9AC1;
 .language-markdown {
   .hljs-code {font-style: italic;}
 }
-
-@import "./src/_hljs.scss";
-
 
 .language-yaml {
   .hljs-attr, .hljs-number {color: #FFCC95;}

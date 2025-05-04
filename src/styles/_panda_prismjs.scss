@@ -17,6 +17,7 @@ $constant_character_escape: #45A9F9;
 $constant_language: #FFB86C;
 $constant_other_symbol: #19f9d8;
 $entity_name: #6FC1FF;
+$entity_name_class: #19F9D8;
 $entity_name_tag: #6FC1FF;
 $entity_name_tag_css: #FF2C6D;
 $entity_name_type: #19f9d8;
@@ -42,12 +43,20 @@ $variable: #FF9AC1;
 // Comments in italic
 .token.comment, .token.namespace {font-style: italic;}
   
+@import "./src/_prismjs.scss";
+
 
 .language-css, .language-scss {
   .token.property {color: #E6E6E6;}
   .token.keyword {color: $keyword_control_at-rule;}
-  .token.selector {color: #FFCC95};
-  
+  .token.selector {color: #FF2C6D};
+  .token.class {color: #FFB86C; }
+  .token.number {color: #FFB86C;}
+}
+
+.language-scss {
+  .token.property {color: #FFCC95;}
+  .token.selector {color: #FFB86C};
 }
 
 .language-java {
@@ -62,9 +71,9 @@ $variable: #FF9AC1;
   .token.code {font-style: italic;}
 }
 
-@import "./src/_prismjs.scss";
-
-
 .language-yaml {
   .token.key.atrule, .token.number {color: #FFCC95;}
 }
+
+.token.class-name {color: #19F9D8; font-style: italic;}
+

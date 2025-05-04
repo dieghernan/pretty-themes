@@ -1,14 +1,4 @@
 /* panda Theme Based on https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda v. 1.4.0 By siamak Adapted by Diego H <https://github.com/dieghernan/> */
-.hljs-comment, .token.namespace { font-style: italic; }
-
-.language-css .hljs-attribute, .language-scss .hljs-attribute { color: #E6E6E6; }
-
-.language-java .hljs-keyword { color: #FFB86C; }
-
-.language-html .hljs-name { color: #FF2C6D; }
-
-.language-markdown .hljs-code { font-style: italic; }
-
 pre code.hljs { display: block; overflow-x: auto; padding: 1em; }
 
 code.hljs { padding: 3px 5px; }
@@ -96,5 +86,23 @@ code.hljs { padding: 3px 5px; }
 .language-yaml .hljs-type { color: #6FC1FF; }
 
 .language-json .hljs-attr { color: #FFCC95; }
+
+.hljs-comment, .token.namespace { font-style: italic; }
+
+.hljs-title.class_ { color: #19F9D8; font-style: italic; }
+
+.language-css .hljs-attribute, .language-scss .hljs-attribute { color: #E6E6E6; }
+
+.language-css .hljs-selector-class, .language-scss .hljs-selector-class { color: #FFB86C; }
+
+.language-css .hljs-number, .language-scss .hljs-number { color: #FFB86C; }
+
+.language-scss.hljs .hljs-attribute { color: #FFCC95; }
+
+.language-java .hljs-keyword { color: #FFB86C; }
+
+.language-html .hljs-name { color: #FF2C6D; }
+
+.language-markdown .hljs-code { font-style: italic; }
 
 .language-yaml .hljs-attr, .language-yaml .hljs-number { color: #FFCC95; }
