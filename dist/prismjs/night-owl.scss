@@ -1,44 +1,95 @@
-code[class*="language-"], pre[class*="language-"] { color: #d6deeb; font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-hyphens: none; -moz-hyphens: none; -ms-hyphens: none; hyphens: none; }
+/* Night Owl Theme for prismjs Based on https://github.com/sdras/night-owl-vscode-theme Copyright 2020, 2025, All rights reserved Code licensed under the MIT license @author Diego H <https://github.com/dieghernan/> */
+.token.control-flow, .token.boolean, .token.keyword, .token.comment, .token.function { font-style: italic; }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection, code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection { text-shadow: none; background: rgba(29, 59, 83, 0.99); }
+.token.url { color: #FF869A; }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[class*="language-"]::selection, code[class*="language-"] ::selection { text-shadow: none; background: rgba(29, 59, 83, 0.99); }
-
-@media print { code[class*="language-"], pre[class*="language-"] { text-shadow: none; } }
+code[class*="language-"], pre[class*="language-"] { color: #d6deeb; background: #011627; text-shadow: none; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-hyphens: none; -moz-hyphens: none; -ms-hyphens: none; hyphens: none; }
 
 /* Code blocks */
-pre[class*="language-"] { padding: 1em; margin: 0.5em 0; overflow: auto; }
+pre[class*="language-"] { background: #011627; border-radius: 0.5em; padding: 1em; margin: 0.5em 0; overflow: auto; height: auto; }
 
-:not(pre) > code[class*="language-"], pre[class*="language-"] { color: white; background: #011627; }
+:not(pre) > code[class*="language-"], pre[class*="language-"] { background: #011627; }
 
-:not(pre) > code[class*="language-"] { padding: 0.1em; border-radius: 0.3em; white-space: normal; }
+.token.atrule { color: #c792ea; }
 
-.token.comment, .token.prolog, .token.cdata { color: #637777; }
+.token.attr-name { color: #c5e478; }
 
-.token.punctuation { color: #c792ea; }
+.token.attr-value { color: #ecc48d; }
 
-.namespace { color: #b2ccd6; }
+.token.blockquote.punctuation { color: #697098; }
 
-.token.deleted { color: rgba(239, 83, 80, 0.56); }
+.token.bold { color: #c5e478; font-weight: bold; }
 
-.token.symbol, .token.property { color: #80cbc4; }
+.token.boolean { color: #FF5874; }
 
-.token.tag, .token.operator, .token.keyword { color: #7fdbca; }
+.token.builtin { color: #82AAFF; }
 
-.token.boolean { color: #ff5874; }
+.token.cdata { color: #637777; }
 
-.token.number { color: #f78c6c; }
+.token.char { color: #ecc48d; }
 
-.token.constant, .token.function, .token.builtin, .token.char { color: #82aaff; }
+.token.class-name { color: #82AAFF; }
 
-.token.selector, .token.doctype { color: #c792ea; }
+.token.class { color: #80CBC4; }
 
-.token.attr-name, .token.inserted { color: #addb67; }
+.token.code, .token.code.keyword { color: #C5E478; }
 
-.token.string, .token.url, .token.entity, .language-css .token.string, .style .token.string { color: #addb67; }
+.token.comment { color: #637777; }
 
-.token.class-name, .token.atrule, .token.attr-value { color: #ffcb8b; }
+.token.constant { color: #FF5874; }
 
-.token.regex, .token.important, .token.variable { color: #d6deeb; }
+.token.content { color: #C5E478; }
 
-.token.important, .token.bold { font-weight: bold; }
+.token.directive { color: #c792ea; }
+
+.token.doctype { color: #637777; }
+
+.token.entity { color: #ecc48d; }
+
+.token.function { color: #82AAFF; }
+
+.token.id { color: #FAD430; }
+
+.token.important { color: #c792ea; font-weight: bold; }
+
+.token.italic { color: #c792ea; font-style: italic; }
+
+.token.keyword.null { color: #FF5874; }
+
+.token.keyword { color: #c792ea; }
+
+.token.namespace { color: #5f7e97; }
+
+.token.number { color: #F78C6C; }
+
+.token.operator { color: #7fdbca; }
+
+.token.prolog { color: #637777; }
+
+.token.property { color: #c5e478; }
+
+.token.punctuation { color: #d6deeb; }
+
+.token.regex { color: #5ca7e4; }
+
+.token.selector { color: #ff6363; }
+
+.token.string { color: #ecc48d; }
+
+.token.tag { color: #caece6; }
+
+.token.title { color: #82b1ff; }
+
+.token.variable { color: #c5e478; }
+
+code[class="language-css"] { color: #c5e478; }
+
+code[class="language-scss"] { color: #c5e478; }
+
+code[class="language-yaml"] { color: #ecc48d; }
+
+.language-scss .token.variable, .language-css .token.variable { color: #C5E478; }
+
+.language-yaml { color: #ecc48d; }
+
+.token.class-name { color: #ffcb8b; }

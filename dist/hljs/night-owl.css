@@ -1,88 +1,94 @@
 /* Night Owl Theme for highlightjs Based on https://github.com/sdras/night-owl-vscode-theme Copyright 2020, 2025, All rights reserved Code licensed under the MIT license @author Diego H <https://github.com/dieghernan/> */
+.hljs-literal, .hljs-keyword, .hljs-comment { font-style: italic; }
+
+.hljs-title.class_ { color: #FFCB8B; }
+
+.hljs-link { color: #FF869A; }
+
 pre code.hljs { display: block; overflow-x: auto; padding: 1em; }
 
 code.hljs { padding: 3px 5px; }
 
-.hljs { display: block; overflow-x: auto; padding: 0.5em; color: #333; background: #f7f7f7; }
+.hljs { display: block; overflow-x: auto; padding: 0.5em; color: #d6deeb; background: #011627; }
 
-.hljs-keyword { color: #333; }
+.hljs-keyword { color: #c792ea; }
 
-.hljs-built_in { color: #333; }
+.hljs-built_in { color: #82AAFF; }
 
-.hljs-type { color: #333; }
+.hljs-type { color: #82AAFF; }
 
-.hljs-literal { color: #333; }
+.hljs-literal { color: #FF5874; }
 
-.hljs-number { color: #333; }
+.hljs-number { color: #F78C6C; }
 
-.hljs-operator { color: #333; }
+.hljs-operator { color: #7fdbca; }
 
-.hljs-punctuation { color: #333; }
+.hljs-punctuation { color: #d6deeb; }
 
-.hljs-property { color: #333; }
+.hljs-property { color: #82AAFF; }
 
-.hljs-regexp { color: #333; }
+.hljs-regexp { color: #5ca7e4; }
 
-.hljs-string { color: #333; }
+.hljs-string { color: #ecc48d; }
 
-.hljs-char.escape_ { color: #333; }
+.hljs-char.escape_ { color: #F78C6C; }
 
-.hljs-subst { color: #333; }
+.hljs-subst { color: #d6deeb; }
 
-.hljs-symbol { color: #333; }
+.hljs-symbol { color: #82AAFF; }
 
-.hljs-class { color: #333; }
+.hljs-class { color: #82AAFF; }
 
-.hljs-variable { color: #333; }
+.hljs-variable { color: #c5e478; }
 
-.hljs-variable.language_ { color: #333; }
+.hljs-variable.language_ { color: #7fdbca; }
 
-.hljs-variable.constant_ { color: #333; }
+.hljs-variable.constant_ { color: #7fdbca; }
 
-.hljs-title { color: #333; }
+.hljs-title { color: #82AAFF; }
 
-.hljs-comment { color: #333; }
+.hljs-comment { color: #637777; }
 
-.hljs-meta { color: #333; font-weight: bold; }
+.hljs-meta { color: #c792ea; font-weight: bold; }
 
-.hljs-section { color: #333; }
+.hljs-section { color: #82b1ff; }
 
-.hljs-name { color: #333; }
+.hljs-name { color: #caece6; }
 
-.hljs-attr { color: #333; }
+.hljs-attr { color: #c5e478; }
 
-.hljs-attribute { color: #333; }
+.hljs-attribute { color: #c5e478; }
 
-.hljs-code { color: #333; }
+.hljs-code { color: #C5E478; }
 
-.hljs-strong { color: #333; font-weight: bold; }
+.hljs-strong { color: #c5e478; font-weight: bold; }
 
-.hljs-emphasis { color: #333; font-style: italic; }
+.hljs-emphasis { color: #c792ea; font-style: italic; }
 
-.hljs-selector-id { color: #333; }
+.hljs-selector-id { color: #FAD430; }
 
-.hljs-quote { color: #333; }
+.hljs-quote { color: #697098; }
 
-.hljs-selector-class { color: #333; }
+.hljs-selector-class { color: #80CBC4; }
 
-.hljs-selector-tag, .hljs-selector-attr, .hljs-selector-pseudo { color: #333; }
+.hljs-selector-tag, .hljs-selector-attr, .hljs-selector-pseudo { color: #ff6363; }
 
-.hljs-deletion { color: #333; }
+.hljs-deletion { color: #ffffff; }
 
-.language-html .hljs-string { color: #333; }
+.language-html .hljs-string { color: #ecc48d; }
 
-.language-css.hljs, .language-scss.hljs { color: #333; }
+.language-css.hljs, .language-scss.hljs { color: #c5e478; }
 
-.language-scss .hljs-variable, .language-css .hljs-variable { color: #333; }
+.language-scss .hljs-variable, .language-css .hljs-variable { color: #C5E478; }
 
-.language-scss .hljs-keyword, .language-css .hljs-keyword { color: #333; }
+.language-scss .hljs-keyword, .language-css .hljs-keyword { color: #c792ea; }
 
-.language-yaml .hljs-attr { color: #333; }
+.language-yaml .hljs-attr { color: #c792ea; }
 
-.language-yaml .hljs-type { color: #333; }
+.language-yaml .hljs-type { color: #caece6; }
 
-.language-yaml .hljs-attr { color: #333; }
+.language-yaml .hljs-attr { color: #c792ea; }
 
-.language-yaml .hljs-type { color: #333; }
+.language-yaml .hljs-type { color: #caece6; }
 
-.language-json .hljs-attr { color: #333; }
+.language-json .hljs-attr { color: #c5e478; }

@@ -21,7 +21,7 @@
 }
 
 .ace_marker-layer .ace_selection {
-  background: #1d3b53;
+  background: #1D3B53;
 }
 
 .ace_selection.ace_start {
@@ -47,7 +47,7 @@
 }
 
 .ace_marker-layer .ace_selected-word {
-  border: 1px solid #1d3b53;
+  border: 1px solid #1D3B53;
 }
 
 .ace_fold {
@@ -165,7 +165,6 @@
 }
 
 .ace_meta.ace_selector {
-  font-style: italic;
   color: #c792ea;
 }
 
@@ -2436,7 +2435,7 @@
 }
 
 .ace_cursor {
-  color: #c792ea;
+  color: #80a4c2;
 }
 
 .ace_print-margin {

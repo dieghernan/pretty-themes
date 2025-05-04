@@ -24,7 +24,19 @@
           <key>lineHighlight</key>
           <string>#28707D29</string>
           <key>selection</key>
-          <string>#1d3b53</string>
+          <string>#1D3B53</string>
+          <key>gutter</key>
+          <string>#011627</string>
+          <key>gutterForeground</key>
+          <string>#4B6479</string>
+          <key>findHighlight</key>
+          <string>#5f7e9779</string>
+          <key>guide</key>
+          <string>#5e81ce52</string>
+          <key>inactiveSelection</key>
+          <string>#7e57c25a</string>
+          <key>selectionBackground</key>
+          <string>#4373C2</string>
         </dict>
       </dict>
       <dict>
@@ -265,7 +277,7 @@
           <key>foreground</key>
           <string>#c792ea</string>
           <key>fontStyle</key>
-          <string>italic</string>
+          <string> italic</string>
         </dict>
       </dict>
       <dict>
@@ -299,10 +311,10 @@
         <string>entity.other.attribute-name</string>
         <key>settings</key>
         <dict>
-          <key>fontStyle</key>
-          <string>italic</string>
           <key>foreground</key>
           <string>#c5e478</string>
+          <key>fontStyle</key>
+          <string> italic</string>
         </dict>
       </dict>
       <dict>
@@ -498,6 +510,8 @@
         <dict>
           <key>foreground</key>
           <string>#ff5874</string>
+          <key>fontStyle</key>
+          <string> italic</string>
         </dict>
       </dict>
       <dict>
@@ -555,6 +569,8 @@
         <dict>
           <key>foreground</key>
           <string>#ff5874</string>
+          <key>fontStyle</key>
+          <string> italic</string>
         </dict>
       </dict>
       <dict>
@@ -647,8 +663,6 @@
         <dict>
           <key>foreground</key>
           <string>#c792ea</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1172,8 +1186,6 @@
         <dict>
           <key>foreground</key>
           <string>#ff6363</string>
-          <key>fontStyle</key>
-          <string/>
         </dict>
       </dict>
       <dict>

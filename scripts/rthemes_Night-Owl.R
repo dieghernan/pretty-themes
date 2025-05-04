@@ -19,7 +19,7 @@ rstudioapi::convertTheme(tm_path,
 tm <- readLines(rtheme)
 
 # Insert new rules
-cursor_col <- "#c792ea"
+cursor_col <- "#80a4c2"
 crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
 margin_col <- "#022C4D"
 margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")

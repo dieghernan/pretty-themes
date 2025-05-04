@@ -1,144 +1,54 @@
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #d6deeb;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
+ /* Night Owl Theme for prismjs
+ * 
+ * Based on https://github.com/sdras/night-owl-vscode-theme
+ * Copyright 2020, 2025, All rights reserved
+ *
+ * Code licensed under the MIT license
+ *
+ * @author Diego H <https://github.com/dieghernan/>
+ */
 
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
 
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+$foreground: #d6deeb;
+$background: #011627;
+
+$comment: #637777;
+$constant_character_escape: #F78C6C;
+$constant_language: #FF5874;
+$constant_numeric: #F78C6C;
+$constant_other: #82AAFF;
+$entity_name: #82AAFF;
+$entity_name_class: #ffcb8b;
+$entity_name_tag: #caece6;
+$entity_name_tag_css: #ff6363;
+$entity_name_type: #5f7e97;
+$entity_other_attribute-name: #c5e478;
+$entity_other_attribute-name_id: #FAD430;
+$invalid: #ffffff;
+$keyword_control: #c792ea;
+$keyword_operator: #7fdbca;
+$markup_bold: #c5e478;
+$markup_heading: #82b1ff;
+$markup_italic: #c792ea;
+$markup_quote: #697098;
+$markup_raw: #C5E478;
+$storage_type: #c792ea;
+$string: #ecc48d;
+$string_regexp: #5ca7e4;
+$support_constant: #82AAFF;
+$support_type: #c5e478;
+$support_type_property-name: #80CBC4;
+$variable: #c5e478;
+$variable_language: #7fdbca;
+$variable_other: #C5E478;
+
+.token.control-flow, .token.boolean,
+.token.keyword,
+.token.comment, .token.function {
+  font-style: italic;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: rgba(29, 59, 83, 0.99);
-}
+.token.url {color: #FF869A;}
+@import "./src/_prismjs.scss";
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-  text-shadow: none;
-  background: rgba(29, 59, 83, 0.99);
-}
-
-@media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none;
-  }
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  color: white;
-  background: #011627;
-}
-
-:not(pre) > code[class*="language-"] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.cdata {
-  color: rgb(99, 119, 119);
-}
-
-.token.punctuation {
-  color: rgb(199, 146, 234);
-}
-
-.namespace {
-  color: rgb(178, 204, 214);
-}
-
-.token.deleted {
-  color: rgba(239, 83, 80, 0.56);
-}
-
-.token.symbol,
-.token.property {
-  color: rgb(128, 203, 196);
-}
-
-.token.tag,
-.token.operator,
-.token.keyword {
-  color: rgb(127, 219, 202);
-}
-
-.token.boolean {
-  color: rgb(255, 88, 116);
-}
-
-.token.number {
-  color: rgb(247, 140, 108);
-}
-
-.token.constant,
-.token.function,
-.token.builtin,
-.token.char {
-  color: rgb(130, 170, 255);
-}
-
-.token.selector,
-.token.doctype {
-  color: rgb(199, 146, 234);
-}
-
-.token.attr-name,
-.token.inserted {
-  color: rgb(173, 219, 103);
-}
-
-.token.string,
-.token.url,
-.token.entity,
-.language-css .token.string,
-.style .token.string {
-  color: rgb(173, 219, 103);
-}
-
-.token.class-name,
-.token.atrule,
-.token.attr-value {
-  color: rgb(255, 203, 139);
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-  color: rgb(214, 222, 235);
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-}
+.token.class-name{color: $entity_name_class;}

@@ -9,8 +9,44 @@
  */
 
 
-// Top level colors
-$foreground:  #333;
-$background:  #f7f7f7;
+$foreground: #d6deeb;
+$background: #011627;
+
+$comment: #637777;
+$constant_character_escape: #F78C6C;
+$constant_language: #FF5874;
+$constant_numeric: #F78C6C;
+$constant_other: #82AAFF;
+$entity_name: #82AAFF;
+$entity_name_class: #ffcb8b;
+$entity_name_tag: #caece6;
+$entity_name_tag_css: #ff6363;
+$entity_name_type: #5f7e97;
+$entity_other_attribute-name: #c5e478;
+$entity_other_attribute-name_id: #FAD430;
+$invalid: #ffffff;
+$keyword_control: #c792ea;
+$keyword_operator: #7fdbca;
+$markup_bold: #c5e478;
+$markup_heading: #82b1ff;
+$markup_italic: #c792ea;
+$markup_quote: #697098;
+$markup_raw: #C5E478;
+$storage_type: #c792ea;
+$string: #ecc48d;
+$string_regexp: #5ca7e4;
+$support_constant: #82AAFF;
+$support_type: #c5e478;
+$support_type_property-name: #80CBC4;
+$variable: #c5e478;
+$variable_language: #7fdbca;
+$variable_other: #C5E478;
+
+.hljs-literal, .hljs-keyword,
+.hljs-comment {font-style: italic;}
+
+.hljs-title.class_ {color:#FFCB8B;}
+.hljs-link {color: #FF869A;}
+
 
 @import "./src/_hljs.scss";
