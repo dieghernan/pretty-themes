@@ -1,11 +1,3 @@
-/* panda Theme
- *
- * Based on https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda
- * v. 1.4.0
- * By siamak
- *
- * Adapted by Diego H <https://github.com/dieghernan/>
- */
 pre code.hljs {
   display: block;
   overflow-x: auto;
@@ -16,218 +8,128 @@ code.hljs {
   padding: 3px 5px;
 }
 
+/*!
+  Theme: StackOverflow Dark
+  Description: Dark theme as used on stackoverflow.com
+  Author: stackoverflow.com
+  Maintainer: @Hirse
+  Website: https://github.com/StackExchange/Stacks
+  License: MIT
+  Updated: 2021-05-15
+
+  Updated for @stackoverflow/stacks v0.64.0
+  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
+  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
+*/
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #E6E6E6;
-  background: #292A2B;
-}
-
-.hljs-keyword {
-  color: #FF75B5;
-}
-
-.hljs-built_in {
-  color: #6FC1FF;
-}
-
-.hljs-type {
-  color: #6FC1FF;
-}
-
-.hljs-literal {
-  color: #FFB86C;
-}
-
-.hljs-number {
-  color: #E6E6E6;
-}
-
-.hljs-operator {
-  color: #E6E6E6;
-}
-
-.hljs-punctuation {
-  color: #E6E6E6;
-}
-
-.hljs-property {
-  color: #FFCC95;
-}
-
-.hljs-regexp {
-  color: #6FC1FF;
-}
-
-.hljs-string {
-  color: #19f9d8;
-}
-
-.hljs-char.escape_ {
-  color: #45A9F9;
+  /* var(--highlight-color) */
+  color: #ffffff;
+  /* var(--highlight-bg) */
+  background: #1c1b1b;
 }
 
 .hljs-subst {
-  color: #E6E6E6;
-}
-
-.hljs-symbol {
-  color: #19f9d8;
-}
-
-.hljs-class {
-  color: #6FC1FF;
-}
-
-.hljs-variable {
-  color: #FF9AC1;
-}
-
-.hljs-variable.language_ {
-  color: #FF9AC1;
-}
-
-.hljs-variable.constant_ {
-  color: #FF9AC1;
-}
-
-.hljs-title {
-  color: #6FC1FF;
+  /* var(--highlight-color) */
+  color: #ffffff;
 }
 
 .hljs-comment {
-  color: #676B79;
+  /* var(--highlight-comment) */
+  color: #999999;
 }
 
-.hljs-meta {
-  color: #FF4B82;
-  font-weight: bold;
-}
-
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-meta .hljs-keyword,
+.hljs-doctag,
 .hljs-section {
-  color: #19f9d8;
-}
-
-.hljs-name {
-  color: #6FC1FF;
+  /* var(--highlight-keyword) */
+  color: #88aece;
 }
 
 .hljs-attr {
-  color: #FFB86C;
+  /* var(--highlight-attribute); */
+  color: #88aece;
 }
 
 .hljs-attribute {
-  color: #FFCC95;
+  /* var(--highlight-symbol) */
+  color: #c59bc1;
 }
 
-.hljs-code {
-  color: #19f9d8;
-}
-
-.hljs-strong {
-  color: #FFB86C;
-  font-weight: bold;
-}
-
-.hljs-emphasis {
-  color: #FF9AC1;
-  font-style: italic;
-}
-
-.hljs-selector-id {
-  color: #FFB86C;
-}
-
-.hljs-quote {
-  color: #FFB86C;
+.hljs-name,
+.hljs-type,
+.hljs-number,
+.hljs-selector-id,
+.hljs-quote,
+.hljs-template-tag {
+  /* var(--highlight-namespace) */
+  color: #f08d49;
 }
 
 .hljs-selector-class {
-  color: #FFCC95;
+  /* var(--highlight-keyword) */
+  color: #88aece;
 }
 
-.hljs-selector-tag, .hljs-selector-attr, .hljs-selector-pseudo {
-  color: #FF2C6D;
+.hljs-string,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr {
+  /* var(--highlight-variable) */
+  color: #b5bd68;
+}
+
+.hljs-meta,
+.hljs-selector-pseudo {
+  /* var(--highlight-keyword) */
+  color: #88aece;
+}
+
+.hljs-built_in,
+.hljs-title,
+.hljs-literal {
+  /* var(--highlight-literal) */
+  color: #f08d49;
+}
+
+.hljs-bullet,
+.hljs-code {
+  /* var(--highlight-punctuation) */
+  color: #cccccc;
+}
+
+.hljs-meta .hljs-string {
+  /* var(--highlight-variable) */
+  color: #b5bd68;
 }
 
 .hljs-deletion {
-  color: rgba(255, 44, 109, 0.62);
+  /* var(--highlight-deletion) */
+  color: #de7176;
 }
 
-.language-html .hljs-string {
-  color: #19f9d8;
+.hljs-addition {
+  /* var(--highlight-addition) */
+  color: #76c490;
 }
 
-.language-css.hljs, .language-scss.hljs {
-  color: #FFB86C;
-}
-
-.language-scss .hljs-variable, .language-css .hljs-variable {
-  color: #FF9AC1;
-}
-
-.language-scss .hljs-keyword, .language-css .hljs-keyword {
-  color: #B084EB;
-}
-
-.language-yaml .hljs-attr {
-  color: #B084EB;
-}
-
-.language-yaml .hljs-type {
-  color: #6FC1FF;
-}
-
-.language-yaml .hljs-attr {
-  color: #B084EB;
-}
-
-.language-yaml .hljs-type {
-  color: #6FC1FF;
-}
-
-.language-json .hljs-attr {
-  color: #FFCC95;
-}
-
-.hljs-comment, .token.namespace {
+.hljs-emphasis {
   font-style: italic;
 }
 
-.hljs-title.class_ {
-  color: #19F9D8;
-  font-style: italic;
+.hljs-strong {
+  font-weight: bold;
 }
 
-.language-css .hljs-attribute, .language-scss .hljs-attribute {
-  color: #E6E6E6;
-}
-
-.language-css .hljs-selector-class, .language-scss .hljs-selector-class {
-  color: #FFB86C;
-}
-
-.language-css .hljs-number, .language-scss .hljs-number {
-  color: #FFB86C;
-}
-
-.language-scss.hljs .hljs-attribute {
-  color: #FFCC95;
-}
-
-.language-java .hljs-keyword {
-  color: #FFB86C;
-}
-
-.language-html .hljs-name {
-  color: #FF2C6D;
-}
-
-.language-markdown .hljs-code {
-  font-style: italic;
-}
-
-.language-yaml .hljs-attr, .language-yaml .hljs-number {
-  color: #FFCC95;
+.hljs-formula,
+.hljs-operator,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
 }

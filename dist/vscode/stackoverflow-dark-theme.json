@@ -1,0 +1,342 @@
+{
+  "tokenColors": [
+    {
+      "settings": {
+        "background": "#1c1b1b",
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "name": "Any comments",
+      "scope": "comment",
+      "settings": {
+        "foreground": "#999999"
+      }
+    },
+    {
+      "name": "Multi-line comments /* … */,<- … -->",
+      "scope": "comment.block",
+      "settings": {
+        "foreground": "#999999"
+      }
+    },
+    {
+      "name": "Line comments",
+      "scope": "comment.line",
+      "settings": {
+        "foreground": "#999999"
+      }
+    },
+    {
+      "name": "Others",
+      "scope": "comment.line.number-sign",
+      "settings": {
+        "foreground": "#999999"
+      }
+    },
+    {
+      "name": "Special constants like true, false,nil",
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    },
+    {
+      "name": "Any number",
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    },
+    {
+      "name": "Floating number",
+      "scope": "constant.numeric.float",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    },
+    {
+      "name": "Integers",
+      "scope": "constant.numeric.integer",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    },
+    {
+      "name": "Symbols",
+      "scope": "constant.other.symbol",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Tag name",
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    },
+    {
+      "name": "Tag name for CSS/SCSS",
+      "scope": "entity.name.tag.css",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "ID of an attribute",
+      "scope": "entity.other.attribute-name.id",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    },
+    {
+      "name": "Name of an attribute (mainly in HTML)",
+      "scope": "entity.other.attribute-name.html",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid",
+      "settings": {
+        "foreground": "#de7176"
+      }
+    },
+    {
+      "name": "Related to flow control",
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "@media in css",
+      "scope": "keyword.control.at-rule",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "Imports in some languages",
+      "scope": "keyword.control.import",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "Important things",
+      "scope": "keyword.other.important",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "YANL directives",
+      "scope": "keyword.other.directive",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "Bold text",
+      "scope": "markup.bold",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Section header",
+      "scope": "markup.heading",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "Italic text",
+      "scope": "markup.italic",
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Markup quotations",
+      "scope": "markup.quote",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    },
+    {
+      "name": "Markup raw code",
+      "scope": "markup.raw, markup.inline.raw",
+      "settings": {
+        "foreground": "#cccccc"
+      }
+    },
+    {
+      "name": "For DOCTYPE in HTML",
+      "scope": "meta.doctype",
+      "settings": {
+        "foreground": "#999999"
+      }
+    },
+    {
+      "name": "Type of something, class, function, int, var, etc.",
+      "scope": "storage.type",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": "string",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Strings which are \"evaluated\"",
+      "scope": "string.interpolated",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Quoted strings",
+      "scope": "string.quoted",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Single quoted strings",
+      "scope": "string.quoted.single",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Double quoted strings",
+      "scope": "string.quoted.double",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Other types of quoting",
+      "scope": "string.quoted.other",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Regular expressions",
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Strings in html",
+      "scope": "string.html",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Types provided by the framework/library",
+      "scope": "support.type",
+      "settings": {
+        "foreground": "#c59bc1"
+      }
+    },
+    {
+      "name": "REVIEW! Types provided by the framework",
+      "scope": "support.type.property-name",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "Variables",
+      "scope": "variable",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Reserved language variables like this,super,self, etc.",
+      "scope": "variable.language",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Other variables",
+      "scope": "variable.other",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "CSS Types",
+      "scope": "support.type.property-name.css",
+      "settings": {
+        "foreground": "#c59bc1"
+      }
+    },
+    {
+      "name": "Attributes",
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "#88AECE"
+      }
+    },
+    {
+      "name": "Classes",
+      "scope": "entity.name.type.class.php",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    },
+    {
+      "name": "Markup Link",
+      "scope": "markup.link, meta.link",
+      "settings": {
+        "foreground": "#b5bd68"
+      }
+    },
+    {
+      "name": "Markup Lists",
+      "scope": "punctuation.definition.list",
+      "settings": {
+        "foreground": "#cccccc"
+      }
+    },
+    {
+      "name": "YAML rules",
+      "scope": "entity.name.tag.yaml",
+      "settings": {
+        "foreground": "#88aece"
+      }
+    },
+    {
+      "name": "YAML directive",
+      "scope": "storage.type.tag.verbatim.yaml",
+      "settings": {
+        "foreground": "#f08d49"
+      }
+    }
+  ],
+  "colors": {
+    "editor.background": "#1c1b1b",
+    "editorCursor.foreground": "#f08d49",
+    "editor.foreground": "#ffffff",
+    "editorWhitespace.foreground": "#272626",
+    "editor.lineHighlightBackground": "#494949",
+    "editor.selectionBackground": "#494949"
+  },
+  "name": "StackOverflow Dark",
+  "author": "dieghernan"
+}

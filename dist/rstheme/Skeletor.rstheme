@@ -17,7 +17,7 @@
 }
 
 .ace_cursor {
-  color: #ffffff;
+  color: #F3E4A2;
 }
 
 .ace_marker-layer .ace_selection {
@@ -222,7 +222,7 @@
 }
 
 .xtermBlur {
-  filter: blur(1px);
+  filter: brightness(75%);
 }
 
 .xtermUnderline {
@@ -2380,7 +2380,7 @@
 }
 
 .ace_cursor {
-  color: #93b4ff;
+  color: #F3E4A2;
 }
 
 .ace_print-margin {

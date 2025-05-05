@@ -16,7 +16,7 @@
           <key>background</key>
           <string>#F7F7F7</string>
           <key>caret</key>
-          <string>#333333</string>
+          <string>#06287e</string>
           <key>foreground</key>
           <string>#333333</string>
           <key>invisibles</key>
@@ -162,7 +162,7 @@
         <key>name</key>
         <string/>
         <key>scope</key>
-        <string>markup.heading</string>
+        <string>markup.heading, entity.name.section.markdown</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -197,7 +197,7 @@
         <key>name</key>
         <string/>
         <key>scope</key>
-        <string>markup.raw</string>
+        <string>markup.raw, markup.inline.raw</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>

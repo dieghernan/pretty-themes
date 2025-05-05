@@ -12,24 +12,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Selenized Dark",
-        "uiTheme": "vs-dark",
-        "path": "./dist/vscode/selenized-dark-theme.json"
-      },
-      {
-        "label": "Selenized Black",
-        "uiTheme": "vs-dark",
-        "path": "./dist/vscode/selenized-black-theme.json"
-      },
-      {
-        "label": "Selenized Light",
+        "label": "CRAN",
         "uiTheme": "vs",
-        "path": "./dist/vscode/selenized-light-theme.json"
-      },
-      {
-        "label": "Selenized White",
-        "uiTheme": "vs",
-        "path": "./dist/vscode/selenized-white-theme.json"
+        "path": "./dist/vscode/cran-theme.json"
       },
       {
         "label": "OKSolar Dark",
@@ -42,9 +27,34 @@
         "path": "./dist/vscode/oksolar-light-theme.json"
       },
       {
-        "label": "CRAN",
+        "label": "Selenized Black",
+        "uiTheme": "vs-dark",
+        "path": "./dist/vscode/selenized-black-theme.json"
+      },
+      {
+        "label": "Selenized Dark",
+        "uiTheme": "vs-dark",
+        "path": "./dist/vscode/selenized-dark-theme.json"
+      },
+      {
+        "label": "Selenized Light",
         "uiTheme": "vs",
-        "path": "./dist/vscode/cran-theme.json"
+        "path": "./dist/vscode/selenized-light-theme.json"
+      },
+      {
+        "label": "Selenized White",
+        "uiTheme": "vs",
+        "path": "./dist/vscode/selenized-white-theme.json"
+      },
+      {
+        "label": "Skeletor",
+        "uiTheme": "vs-dark",
+        "path": "./dist/vscode/skeletor-theme.json"
+      },
+      {
+        "label": "StackOverflow Dark",
+        "uiTheme": "vs-dark",
+        "path": "./dist/vscode/stackoverflow-dark-theme.json"
       }
     ]
   }

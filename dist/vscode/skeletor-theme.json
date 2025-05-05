@@ -1,0 +1,405 @@
+{
+  "tokenColors": [
+    {
+      "settings": {
+        "background": "#2b2836",
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "name": "Any comments",
+      "scope": "comment, punctuation.definition.comment",
+      "settings": {
+        "foreground": "#655e7f"
+      }
+    },
+    {
+      "name": "Multi-line comments /* … */,<- … -->",
+      "scope": "comment.block",
+      "settings": {
+        "foreground": "#655e7f"
+      }
+    },
+    {
+      "name": "Line comments",
+      "scope": "comment.line",
+      "settings": {
+        "foreground": "#655e7f"
+      }
+    },
+    {
+      "name": "Others",
+      "scope": "comment.line.number-sign",
+      "settings": {
+        "foreground": "#655e7f"
+      }
+    },
+    {
+      "name": "Escape sequences",
+      "scope": "constant.character.escape",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Special constants like true, false,nil",
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#ff8adb"
+      }
+    },
+    {
+      "name": "Any number",
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#ff8adb"
+      }
+    },
+    {
+      "name": "Floating number",
+      "scope": "constant.numeric.float",
+      "settings": {
+        "foreground": "#ff8adb"
+      }
+    },
+    {
+      "name": "Integers",
+      "scope": "constant.numeric.integer",
+      "settings": {
+        "foreground": "#ff8adb"
+      }
+    },
+    {
+      "name": "Any other constants, e.g. colors in CSS",
+      "scope": "constant.other",
+      "settings": {
+        "foreground": "#f3e4a2"
+      }
+    },
+    {
+      "name": "Symbols",
+      "scope": "constant.other.symbol",
+      "settings": {
+        "foreground": "#f3e4a2"
+      }
+    },
+    {
+      "name": "Larger entity",
+      "scope": "entity.name, punctuation.definition.entity",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "Class Name",
+      "scope": "entity.name.class",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "Tag name",
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "#f3e4a2"
+      }
+    },
+    {
+      "name": "Tag name for CSS/SCSS",
+      "scope": "entity.name.tag.css",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "Type declaration or class",
+      "scope": "entity.name.type",
+      "settings": {
+        "foreground": "#a7aec2"
+      }
+    },
+    {
+      "name": "Name of an attribute (mainly in tags)",
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "#ff8adb"
+      }
+    },
+    {
+      "name": "ID of an attribute",
+      "scope": "entity.other.attribute-name.id",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "Name of an attribute (mainly in HTML)",
+      "scope": "entity.other.attribute-name.html",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid",
+      "settings": {
+        "foreground": "#f36a66"
+      }
+    },
+    {
+      "name": "Related to flow control",
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "@media in css",
+      "scope": "keyword.control.at-rule, keyword.control.at-rule.css, keyword.control.at-rule.scss, punctuation.definition.keyword.scss, punctuation.definition.keyword.css",
+      "settings": {
+        "foreground": "#f3e4a2"
+      }
+    },
+    {
+      "name": "Imports in some languages",
+      "scope": "keyword.control.import",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "Operators can be textual (e.g. or) or be characters",
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "#f3e4a2"
+      }
+    },
+    {
+      "name": "Important things",
+      "scope": "keyword.other.important",
+      "settings": {
+        "foreground": "#ff8adb"
+      }
+    },
+    {
+      "name": "YAML directives",
+      "scope": "keyword.other.directive",
+      "settings": {
+        "foreground": "#84fba2"
+      }
+    },
+    {
+      "name": "Bold text",
+      "scope": "markup.bold",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Section header",
+      "scope": "markup.heading",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "Italic text",
+      "scope": "markup.italic",
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Markup raw code",
+      "scope": "markup.raw, markup.inline.raw",
+      "settings": {
+        "foreground": "#84fba2"
+      }
+    },
+    {
+      "name": "Markup Link",
+      "scope": "markup.link, meta.link",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Markup Lists",
+      "scope": "punctuation.definition.list",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "For DOCTYPE in HTML",
+      "scope": "meta.doctype",
+      "settings": {
+        "foreground": "#655e7f"
+      }
+    },
+    {
+      "name": "Punctuations",
+      "scope": "punctuation.definition",
+      "settings": {
+        "foreground": "#dce7fd"
+      }
+    },
+    {
+      "name": "Type of something, class, function, int, var, etc.",
+      "scope": "storage.type",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": "string",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Strings which are \"evaluated\"",
+      "scope": "string.interpolated",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Quoted strings",
+      "scope": "string.quoted",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Single quoted strings",
+      "scope": "string.quoted.single",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Double quoted strings",
+      "scope": "string.quoted.double",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Other types of quoting",
+      "scope": "string.quoted.other",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Regular expressions",
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "#84fba2"
+      }
+    },
+    {
+      "name": "Strings in html",
+      "scope": "string.html",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "Types provided by the framework/library",
+      "scope": "support.type",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "REVIEW! Types provided by the framework",
+      "scope": "support.type.property-name",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "JS Skeletor Keyword",
+      "scope": "storage.type.js, keyword.control.js, constant.language.null.js",
+      "settings": {
+        "foreground": "#f3e4a2"
+      }
+    },
+    {
+      "name": "JS Skeletor class-name",
+      "scope": "entity.name.type.instance.js, support.class",
+      "settings": {
+        "foreground": "#93B4FF"
+      }
+    },
+    {
+      "name": "PHP Skeletor Keyword",
+      "scope": "storage.type.php, variable.other.php, punctuation.definition.variable.php",
+      "settings": {
+        "foreground": "#84fba2"
+      }
+    },
+    {
+      "name": "PHP Skeletor Constant",
+      "scope": "constant.language.php",
+      "settings": {
+        "foreground": "#ff8adb"
+      }
+    },
+    {
+      "name": "PHP Skeletor Property",
+      "scope": "variable.other.property.php",
+      "settings": {
+        "foreground": "#93B4FF"
+      }
+    },
+    {
+      "name": "CSS properties",
+      "scope": "support.type.property-name.css",
+      "settings": {
+        "foreground": "#93b4ff"
+      }
+    },
+    {
+      "name": "CSS entities",
+      "scope": "entity.other.attribute-name.class.css",
+      "settings": {
+        "foreground": "#bd93f9"
+      }
+    },
+    {
+      "name": "SCSS strings",
+      "scope": "string.quoted.double.scss",
+      "settings": {
+        "foreground": "#dce7fd"
+      }
+    },
+    {
+      "name": "SCSS keywords",
+      "scope": "keyword.control.scss, meta.at-rule.scss, keyword.scss, keyword.control.for.scss, meta.at-rule.for.scss, keyword.control.operator",
+      "settings": {
+        "foreground": "#f3e4a2"
+      }
+    },
+    {
+      "name": "SCSS variables",
+      "scope": "variable.scss",
+      "settings": {
+        "foreground": "#84fba2"
+      }
+    }
+  ],
+  "colors": {
+    "editor.background": "#2b2836",
+    "editorCursor.foreground": "#F3E4A2",
+    "editor.foreground": "#ffffff",
+    "editorWhitespace.foreground": "#363340",
+    "editor.lineHighlightBackground": "#55535E",
+    "editor.selectionBackground": "#55535E"
+  },
+  "name": "Skeletor",
+  "author": "dieghernan"
+}

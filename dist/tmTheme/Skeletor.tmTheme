@@ -16,7 +16,7 @@
           <key>background</key>
           <string>#2b2836</string>
           <key>caret</key>
-          <string>#ffffff</string>
+          <string>#F3E4A2</string>
           <key>foreground</key>
           <string>#ffffff</string>
           <key>invisibles</key>
@@ -262,7 +262,7 @@
         <key>name</key>
         <string>@media in css</string>
         <key>scope</key>
-        <string>keyword.control.at-rule</string>
+        <string>keyword.control.at-rule, keyword.control.at-rule.css, keyword.control.at-rule.scss, punctuation.definition.keyword.scss, punctuation.definition.keyword.css</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -304,7 +304,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>YANL directives</string>
+        <string>YAML directives</string>
         <key>scope</key>
         <string>keyword.other.directive</string>
         <key>settings</key>
@@ -350,11 +350,33 @@
         <key>name</key>
         <string>Markup raw code</string>
         <key>scope</key>
-        <string>markup.raw</string>
+        <string>markup.raw, markup.inline.raw</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
           <string>#84fba2</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Markup Link</string>
+        <key>scope</key>
+        <string>markup.link, meta.link</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#93b4ff</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Markup Lists</string>
+        <key>scope</key>
+        <string>punctuation.definition.list</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#93b4ff</string>
         </dict>
       </dict>
       <dict>
@@ -586,6 +608,40 @@
         <dict>
           <key>foreground</key>
           <string>#bd93f9</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>SCSS strings</string>
+        <key>scope</key>
+        <string>string.quoted.double.scss</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#dce7fd</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>SCSS keywords</string>
+        <key>scope</key>
+        <string>keyword.control.scss, meta.at-rule.scss, keyword.scss, keyword.control.for.scss, meta.at-rule.for.scss keyword.control.operator
+</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#f3e4a2</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>SCSS variables</string>
+        <key>scope</key>
+        <string>variable.scss</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#84fba2</string>
         </dict>
       </dict>
     </array>

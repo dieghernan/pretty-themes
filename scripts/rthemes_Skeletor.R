@@ -34,13 +34,8 @@ head_col <- cols |>
   pull(foreground)
 
 cursor_col <- cols |>
-  filter(str_detect(scope, "keyword|string|constant")) |>
-  group_by(foreground) |>
-  count(sort = TRUE) |>
-  filter(!is.na(foreground) & foreground != fg) |>
-  ungroup() |>
-  slice_head(n = 1) |>
-  pull(foreground)
+  filter(name == "caret") |>
+  pull(value)
 
 
 scales::show_col(c(cursor_col, margin_col, head_col))

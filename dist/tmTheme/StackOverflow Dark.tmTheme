@@ -16,7 +16,7 @@
           <key>background</key>
           <string>#1c1b1b</string>
           <key>caret</key>
-          <string>#ffffff</string>
+          <string>#f08d49</string>
           <key>foreground</key>
           <string>#ffffff</string>
           <key>invisibles</key>
@@ -284,7 +284,7 @@
         <key>name</key>
         <string>Markup raw code</string>
         <key>scope</key>
-        <string>markup.raw</string>
+        <string>markup.raw, markup.inline.raw</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -483,6 +483,51 @@
         <string>Classes</string>
         <key>scope</key>
         <string>entity.name.type.class.php</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#f08d49</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Markup Link</string>
+        <key>scope</key>
+        <string>markup.link, meta.link</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#b5bd68</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Markup Lists</string>
+        <key>scope</key>
+        <string>punctuation.definition.list</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#cccccc</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>YAML rules</string>
+        <key>scope</key>
+        <string>entity.name.tag.yaml</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#88aece</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>YAML directive</string>
+        <key>scope</key>
+        <string>storage.type.tag.verbatim.yaml
+</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>

@@ -133,3 +133,80 @@ read_tmtheme <- function(input) {
 
   end
 }
+
+
+tmtheme2vscode <- function(tminput, output){
+  
+  # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
+  mapping <- read_csv("dev/mapping_themes.csv")
+  
+  get_tmTheme <- read_tmtheme(tminput)
+  
+  nm <- get_tmTheme |> filter(name == "name") |> pull(value)
+  au <- get_tmTheme |> filter(name == "author") |> pull(value)
+  thejson <- list(name = nm, author = au)
+  
+  colorss <- get_tmTheme |> 
+    filter(section == "Top-level config") |> 
+    select(tm = name, color = value) |> 
+    inner_join(mapping) |> 
+    select(name = vscode, color)
+  
+  col_l <- colorss$color |> unlist()
+  names(col_l) <- colorss$name |>  unlist()
+  col_l <- as.list(col_l)
+  
+  fg <- col_l$editor.foreground |> unlist() |> tolower()
+  tokencols <- get_tmTheme |> 
+    filter(section == "Scopes") |> 
+    mutate(foreground = ifelse(tolower(foreground) == fg, NA, foreground)) |> 
+    select(name, scope, foreground, background, fontStyle) 
+  
+  tokencols$index <- seq_len(nrow(tokencols))
+  tok_g <- tokencols |> 
+    group_by(name, foreground, background, fontStyle) |> 
+    summarise(sc = paste0(scope, collapse = ", "), minr = min(index)) |> 
+    arrange(minr)
+  
+  
+  tok <- list()
+  # Create list for tokens
+  tok[[1]] <- list(settings = list(background = col_l$editor.background,
+                                   foreground = col_l$editor.foreground))
+  toJSON(tok,  auto_unbox = TRUE, pretty = TRUE)
+  
+  ntok <- seq_len(nrow(tok_g))
+  
+  i <- 1
+  for (i in ntok) {
+    thiscope <- tok_g[i,]
+    thistok <- list(name = thiscope$name, 
+                    scope = thiscope$sc,
+                    settings = list())
+    
+    
+    dictt <- list()
+    fg <- thiscope$foreground |>  unlist()
+    bg <- thiscope$background |>  unlist()
+    fnt <- thiscope$fontStyle |>  unlist()
+    if(!is.na(fg)){
+      dictt <- c(dictt, list(foreground = fg))
+    }
+    if(!is.na(bg)){
+      dictt <- c(dictt, list(background = bg))
+    }
+    if(!is.na(fnt)){
+      dictt <- c(dictt, list(fontStyle = fnt))
+    }
+    if(length(dictt) > 0){
+      thistok$settings <- dictt 
+      tok [[i+1]] <- thistok
+    }
+  }
+  toJSON(tok, pretty = TRUE)
+  
+  vs_l <- c(list(tokenColors = tok),list(colors = col_l), thejson)
+  
+  write_json(vs_l, path = output, auto_unbox = TRUE, pretty = TRUE)
+  return(invisible(NULL))
+}

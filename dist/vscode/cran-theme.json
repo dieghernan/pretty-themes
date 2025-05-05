@@ -11,7 +11,7 @@
       "scope": "comment",
       "settings": {
         "foreground": "#60A0B0",
-        "fontStyle": " italic"
+        "fontStyle": "italic"
       }
     },
     {
@@ -23,25 +23,14 @@
     },
     {
       "name": "",
-      "scope": "constant.numeric",
+      "scope": "constant.numeric, constant.numeric.float",
       "settings": {
         "foreground": "#40a070"
       }
     },
     {
       "name": "",
-      "scope": "constant.numeric.float",
-      "settings": {
-        "foreground": "#40a070"
-      }
-    },
-    {
-      "name": "",
-      "scope": [
-        "entity.name",
-        "entity.name.tag.css",
-        "entity.other.attribute-name.class"
-      ],
+      "scope": "entity.name, entity.name.tag.css, entity.other.attribute-name.class",
       "settings": {
         "foreground": "#06287e"
       }
@@ -58,23 +47,15 @@
       "scope": "invalid",
       "settings": {
         "foreground": "#ff0000",
-        "fontStyle": " bold"
+        "fontStyle": "bold"
       }
     },
     {
       "name": "",
-      "scope": "keyword",
+      "scope": "keyword, keyword.control",
       "settings": {
         "foreground": "#007020",
-        "fontStyle": " bold"
-      }
-    },
-    {
-      "name": "",
-      "scope": "keyword.control",
-      "settings": {
-        "foreground": "#007020",
-        "fontStyle": " bold"
+        "fontStyle": "bold"
       }
     },
     {
@@ -82,22 +63,22 @@
       "scope": "keyword.control.import",
       "settings": {
         "foreground": "#008000",
-        "fontStyle": " bold"
+        "fontStyle": "bold"
       }
     },
     {
       "name": "",
-      "scope": "keyword.operator",
+      "scope": "keyword.operator, string",
       "settings": {
         "foreground": "#4070a0"
       }
     },
     {
       "name": "",
-      "scope": "markup.heading",
+      "scope": "markup.heading, entity.name.section.markdown",
       "settings": {
         "foreground": "#ba2121",
-        "fontStyle": " italic"
+        "fontStyle": "italic"
       }
     },
     {
@@ -116,7 +97,7 @@
     },
     {
       "name": "",
-      "scope": "markup.raw",
+      "scope": "markup.raw, markup.inline.raw",
       "settings": {
         "foreground": "#007020"
       }
@@ -126,13 +107,6 @@
       "scope": "storage.type",
       "settings": {
         "foreground": "#902000"
-      }
-    },
-    {
-      "name": "",
-      "scope": "string",
-      "settings": {
-        "foreground": "#4070a0"
       }
     },
     {
@@ -158,11 +132,7 @@
     },
     {
       "name": "",
-      "scope": [
-        "meta.doctype",
-        "meta.tag.sgml.doctype",
-        "entity.name.tag.doctype.html"
-      ],
+      "scope": "meta.doctype, meta.tag.sgml.doctype, entity.name.tag.doctype.html",
       "settings": {
         "foreground": "#60A0B0"
       }
@@ -170,11 +140,12 @@
   ],
   "colors": {
     "editor.background": "#F7F7F7",
-    "editorCursor.foreground": "#333333",
+    "editorCursor.foreground": "#06287e",
     "editor.foreground": "#333333",
     "editorWhitespace.foreground": "#DBDBDB",
     "editor.lineHighlightBackground": "#DBDBDB",
     "editor.selectionBackground": "#DBDBDB"
   },
-  "name": "CRAN"
+  "name": "CRAN",
+  "author": "dieghernan"
 }
