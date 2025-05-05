@@ -1,138 +1,168 @@
 library(tidyverse)
 library(xml2)
+library(jsonlite)
 
-theme <- "panda"
-
+vsinput <- "vendor/panda/Panda.json"
+output <- "dev/devpanda.tmTheme"
+# Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
+mapping <- read_csv("dev/mapping_themes.csv")
 
 get_template <- read_xml("./src/templates/template.tmTheme") |>
   as_list()
 
+# 1. Read vscode and prepare
 
-get_cols <- readLines(paste0("src/compiledcols/_", theme, "_colors.scss"))
-scopes_ddbb <- read_csv("dev/scopes_ddbb.csv")
+vs <- read_json(vsinput)
 
-scopeandcols <- get_cols[get_cols != ""] %>%
-  gsub(".", "", ., fixed = TRUE) %>%
-  gsub("_", ".", ., fixed = TRUE) %>%
-  lapply(., function(x) {
-    scope <- str_split_i(x, "\\{", 1) |> trimws()
-    col <- str_split_i(x, "\\{", 2) |>
-      trimws() |>
-      str_remove_all("color: ") |>
-      str_remove_all(fixed("; }")) |>
-      trimws()
+# Convert settings to tmTheme
+settings <- vs$colors
 
-    tibble(
-      scope = scope,
-      color = col
-    )
-  }) |>
-  bind_rows()
+it <- seq_len(length(settings))
 
-# Remove those that are like foreground
-fg <- scopeandcols |>
-  filter(scope == "foreground") |>
-  pull(color)
+settings_df <- lapply(it, function(i){
+  x <- settings[i]
+  val <- unlist(x)
+  if(length(val) < 1) val <- NA
+  tibble(vscode= names(x),
+         color = unname(val))
+  
+}) |> bind_rows()
 
-bg <- scopeandcols |>
-  filter(scope == "background") |>
-  pull(color)
+# Match
+end <- mapping |> 
+  left_join(settings_df) |> 
+  filter(!is.na(color)) |> 
+  select(tm, color) |>  distinct()
 
+
+
+# As a bare minimum we should have background, caret, foreground, invisibles
+# lineHighlight, selection. If not assing colors
+
+fg <- end |>  filter(tm == "foreground") |>  pull(color)
+bg <- end |>  filter(tm == "background") |>  pull(color)
 # Suggestion for selection
 sel <- colorspace::mixcolor(0.8, colorspace::hex2RGB(fg), colorspace::hex2RGB(bg)) |>
   colorspace::hex()
 inv <- colorspace::mixcolor(0.95, colorspace::hex2RGB(fg), colorspace::hex2RGB(bg)) |>
   colorspace::hex()
 
+
+if(!"caret" %in% end$tm ){
+  
+  df <- tibble(tm="caret", color = fg)
+  
+  end <- bind_rows(end, df)
+  
+}
+if(!"invisibles" %in% end$tm ){
+  df <- tibble(tm="invisibles", color = inv)
+  
+  end <- bind_rows(end, df)
+  
+}
+if(!"lineHighlight" %in% end$tm ){
+  df <- tibble(tm="lineHighlight", color = sel)
+  
+  end <- bind_rows(end, df)
+  
+}
+if(!"selection" %in% end$tm ){
+  df <- tibble(tm="selection", color = sel)
+  
+  end <- bind_rows(end, df)
+  
+}
+
+themename <- vs$name |>  as.character() |>  unname()
+
+# Create settings
+ll <- NULL
+for(i in seq_len(nrow(end))){
+  this <- end[i, ]
+  tm <- this$tm |>  as.character()
+  col <- this$color |> as.character()
+  ll <- c(ll, list(key = list(tm), string = list(col)))
+  
+}
+
 # Fill the template
 setting <- list(
   dict = list(
     key = list("settings"),
-    dict = list(
-      key = list("background"),
-      string = list(bg),
-      key = list("caret"),
-      string = list(fg),
-      key = list("foreground"),
-      string = (list(fg)),
-      key = list("invisibles"),
-      string = list(inv),
-      key = list("lineHighlight"),
-      string = list(sel),
-      key = list("selection"),
-      string = list(sel)
-    )
-  )
+    dict = ll)
 )
 
-# Scope and cols
-scopes <- scopeandcols |>
-  filter(!scope %in% c("foreground", "background")) |>
-  select(scope, foreground = color)
 
-scopes <- scopes |>
-  mutate(
-    foreground = ifelse(foreground == fg, NA, foreground),
-    fontStyle = NA
-  ) |>
-  left_join(scopes_ddbb)
+# Now get the rest of params (token colors)
+tokens <- vs$tokenColors
+ntok <- seq_len(length(tokens))
 
+i <- 16
 
-scopes[scopes$scope == "markup.italic", "fontStyle"] <- "italic"
-scopes[scopes$scope == "markup.bold", "fontStyle"] <- "bold"
-
-enddef <- scopes |>
-  filter(!(is.na(foreground) & is.na(fontStyle)))
-
-ntot <- seq_len(nrow(enddef))
-
-for (i in ntot) {
-  one <- enddef[i, ]
-  message(one$scope)
-
+for(i in ntok){
+  this <- tokens[i][[1]]
+  name <- unlist(this$name)
+  if(length(name) == 0){
+    name <- ""
+  }
+  scope <- this$scope |>  unlist() |> paste0(collapse = ", ")
+  message(i, " is ", scope)
+  # Settings are ok
+  sett <- this$settings
+  
   onl <- list(
     dict = list(
       key = list("name"),
-      string = list(one$name),
+      string = list(name),
       key = list("scope"),
-      string = list(one$scope),
+      string = list(scope),
       key = list("settings"),
       dict = list()
     )
   )
+  
   dictt <- NULL
-  if (!is.na(one$foreground)) {
+  settts <- unlist(sett)
+  if ("foreground" %in% names(settts)) {
     dictt <- c(dictt, list(
       key = list("foreground"),
-      string = list(one$foreground)
+      string = settts["foreground"] |>  unname() |>  paste0(collapse = " ") |> list()
     ))
   }
-  if (!is.na(one$fontStyle)) {
+  if ("background" %in% names(settts)) {
+    dictt <- c(dictt, list(
+      key = list("background"),
+      string = settts["background"] |>  unname() |>  paste0(collapse = " ") |>  list()
+    ))
+  }
+  if ("fontStyle" %in% names(settts)) {
     dictt <- c(dictt, list(
       key = list("fontStyle"),
-      string = list(one$fontStyle)
+      string = settts["fontStyle"] |>  unname() |>  paste0(collapse = " ") |> list()
     ))
   }
-
+  
+  if(!is.null(dictt)){
   onl$dict$dict <- dictt
-  message(i)
-  message(dput(onl))
+  
   setting <- c(setting, onl)
+  }
+  
+  
+  
 }
 
 
-
-
 build <- get_template
+build$plist$dict[[2]][[1]] <- themename
+
 
 build$plist$dict$array <- list(setting)
 
-out_f <- paste0("dev/test", theme, ".tmTheme")
-
 build |>
   xml2::as_xml_document() |>
-  write_xml(out_f)
+  write_xml(output)
 
-source("scripts/tmTheme_extract.R")
 
-pp <- read_tmtheme(out_f)
+

@@ -13,18 +13,60 @@
       <dict>
         <key>settings</key>
         <dict>
-          <key>caret</key>
-          <string>#FF4B82</string>
-          <key>selection</key>
-          <string>#FFB86C40</string>
-          <key>lineHighlight</key>
-          <string>#31353a</string>
-          <key>foreground</key>
-          <string>#E6E6E6</string>
           <key>background</key>
           <string>#292A2B</string>
+          <key>foreground</key>
+          <string>#E6E6E6</string>
+          <key>selection</key>
+          <string>#FFB86C40</string>
+          <key>inactiveSelection</key>
+          <string>#FFB86C40</string>
+          <key>selectionHighlightColor</key>
+          <string>#FFB86C40</string>
+          <key>wordHighlight</key>
+          <string>#FFCC9560</string>
+          <key>wordHighlightStrong</key>
+          <string>#FF9AC170</string>
+          <key>findMatchHighlight</key>
+          <string>#FFB86C40</string>
+          <key>currentFindMatchHighlight</key>
+          <string>#B084EB90</string>
+          <key>lineHighlight</key>
+          <string>#31353a</string>
+          <key>caret</key>
+          <string>#FF4B82</string>
           <key>invisibles</key>
           <string>#3E4250</string>
+          <key>ansiRed</key>
+          <string>#FF2C6D</string>
+          <key>ansiGreen</key>
+          <string>#19f9d8</string>
+          <key>ansiYellow</key>
+          <string>#FFB86C</string>
+          <key>ansiBlue</key>
+          <string>#45A9F9</string>
+          <key>ansiMagenta</key>
+          <string>#FF75B5</string>
+          <key>ansiCyan</key>
+          <string>#B084EB</string>
+          <key>ansiWhite</key>
+          <string>#CDCDCD</string>
+          <key>ansiBrightBlack</key>
+          <string>#757575</string>
+          <key>ansiBrightRed</key>
+          <string>#FF2C6D</string>
+          <key>ansiBrightGreen</key>
+          <string>#19f9d8</string>
+          <key>ansiBrightYellow</key>
+          <string>#FFCC95</string>
+          <key>ansiBrightBlue</key>
+          <string>#6FC1FF</string>
+          <key>ansiBrightMagenta</key>
+          <string>#FF9AC1</string>
+          <key>ansiBrightCyan</key>
+          <string>#BCAAFE</string>
+          <key>ansiBrightWhite</key>
+          <string>#E6E6E6</string>
         </dict>
       </dict>
       <dict>
@@ -390,10 +432,10 @@
         <string>punctuation.definition.expression, punctuation.definition.subexpression, punctuation.definition.block.unescaped, punctuation.definition.tag</string>
         <key>settings</key>
         <dict>
-          <key>fontStyle</key>
-          <string>italic</string>
           <key>foreground</key>
           <string>#FFCC95</string>
+          <key>fontStyle</key>
+          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -528,7 +570,7 @@
         <dict>
           <key>foreground</key>
           <string>#FFB86C</string>
-          <key>font-weight</key>
+          <key>fontStyle</key>
           <string>bold</string>
         </dict>
       </dict>
@@ -541,7 +583,7 @@
         <dict>
           <key>foreground</key>
           <string>#FFCC95</string>
-          <key>font-weight</key>
+          <key>fontStyle</key>
           <string>bold</string>
         </dict>
       </dict>

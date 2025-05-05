@@ -17,11 +17,11 @@
 }
 
 .ace_cursor {
-  color: #80A4C2;
+  color: #80a4c2;
 }
 
 .ace_marker-layer .ace_selection {
-  background: #1D3B53;
+  background: #1d3b53;
 }
 
 .ace_selection.ace_start {
@@ -35,7 +35,7 @@
 
 .ace_marker-layer .ace_bracket {
   margin: -1px 0 0 -1px;
-  border: 1px solid #022C4D;
+  border: 1px solid #0C2031;
 }
 
 .ace_marker-layer .ace_active-line {
@@ -47,7 +47,7 @@
 }
 
 .ace_marker-layer .ace_selected-word {
-  border: 1px solid #1D3B53;
+  border: 1px solid #1d3b53;
 }
 
 .ace_fold {
@@ -56,7 +56,7 @@
 }
 
 .ace_invisible {
-  color: #022C4D;
+  color: #0C2031;
 }
 
 .ace_keyword {
@@ -277,7 +277,7 @@
 }
 
 .xtermBlur {
-  filter: brightness(75%);
+  filter: blur(1px);
 }
 
 .xtermUnderline {
