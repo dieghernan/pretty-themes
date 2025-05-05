@@ -2,6 +2,15 @@ library(tidyverse)
 
 tm_path <- "./dist/tmTheme/Skeletor.tmTheme"
 outdir <- "./dist/rstheme"
+
+# Create vscode here first
+source("dev/functions.R")
+
+
+out_vs <- "./dist/vscode/skeletor-theme.json"
+
+tmtheme2vscode(tm_path, out_vs)
+
 rtheme <- tools::file_path_sans_ext(tm_path) |>
   basename() |>
   paste0(".rstheme") %>%

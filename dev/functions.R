@@ -136,27 +136,68 @@ read_tmtheme <- function(input) {
 
 
 tmtheme2vscode <- function(tminput, output){
-  
-  # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
+  require(xml2)
+  require(tidyverse)
+  require(jsonlite)
+
+    # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
   mapping <- read_csv("dev/mapping_themes.csv")
   
   get_tmTheme <- read_tmtheme(tminput)
   
+  # Dark?
+  ss <- get_tmTheme |> 
+    filter(name == "semanticClass") |> 
+    pull(value)
+  
+  typ <- ifelse(grepl("dark", ss), "dark", "light")
   nm <- get_tmTheme |> filter(name == "name") |> pull(value)
   au <- get_tmTheme |> filter(name == "author") |> pull(value)
-  thejson <- list(name = nm, author = au)
+  thejson <- list(name = nm, author = au, semanticHighlighting = TRUE,
+                  type = typ
+)
   
+  
+  # get initial cols
+  comm <- get_tmTheme |> 
+    filter(scope == "comment") |> 
+    pull(foreground)
+  fg <- get_tmTheme |> 
+    filter(name == "foreground") |> 
+    pull(value)
+  bg <- get_tmTheme |> 
+    filter(name == "background") |> 
+    pull(value)
+  sel <- get_tmTheme |> 
+    filter(name == "selection") |> 
+    pull(value)
+  accent <- get_tmTheme |> 
+    filter(name == "caret") |> 
+    pull(value)
+  bgalt <- colorspace::mixcolor(0.98, colorspace::hex2RGB(accent), 
+                                 colorspace::hex2RGB(bg)) |>
+    colorspace::hex()
+  
+  init <- additional_cols(bg, fg, comm, sel, accent, bgalt)
+  
+  # Add mapping
   colorss <- get_tmTheme |> 
     filter(section == "Top-level config") |> 
     select(tm = name, color = value) |> 
     inner_join(mapping) |> 
     select(name = vscode, color)
   
+
+  
   col_l <- colorss$color |> unlist()
   names(col_l) <- colorss$name |>  unlist()
   col_l <- as.list(col_l)
+
+    # Blend and sort
+  col_end <- modifyList(init, col_l)
+
+  col_end <- col_end[sort(names(col_end))]
   
-  fg <- col_l$editor.foreground |> unlist() |> tolower()
   tokencols <- get_tmTheme |> 
     filter(section == "Scopes") |> 
     mutate(foreground = ifelse(tolower(foreground) == fg, NA, foreground)) |> 
@@ -205,8 +246,48 @@ tmtheme2vscode <- function(tminput, output){
   }
   toJSON(tok, pretty = TRUE)
   
-  vs_l <- c(list(tokenColors = tok),list(colors = col_l), thejson)
+  vs_l <- c(thejson, list(tokenColors = tok),list(colors = col_end))
   
   write_json(vs_l, path = output, auto_unbox = TRUE, pretty = TRUE)
   return(invisible(NULL))
+}
+
+additional_cols <- function(bg, fg, comment, selection, accent, bgalt){
+  #  Based 
+  
+  # Cols with bg
+  bg_keys <- c("breadcrumb.background", "button.secondaryBackground", "editor.background", "editor.snippetFinalTabstopHighlightBackground", "editor.snippetTabstopHighlightBackground", "editorHoverWidget.background", "input.background", "panel.background", "peekViewEditor.background", "sideBarSectionHeader.background", "statusBarItem.remoteForeground", "tab.activeBackground", "terminal.background", "activityBarBadge.foreground",
+               "button.foreground")
+
+  
+  bgs <- rep(bg, length(bg_keys))
+names(bgs) <- bg_keys
+fg_keys <- c("badge.foreground", "breadcrumb.activeSelectionForeground", "breadcrumb.focusForeground",  "button.secondaryForeground", "dropdown.foreground", "editor.foreground", "editorBracketHighlight.foreground1", "editorSuggestWidget.foreground", "extensionButton.prominentForeground", "foreground", "input.foreground", "list.activeSelectionForeground", "panelTitle.activeForeground", "peekViewResult.fileForeground", "peekViewResult.lineForeground", "peekViewResult.selectionForeground", "peekViewTitleLabel.foreground", "settings.checkboxForeground", "settings.dropdownForeground", "settings.headerForeground", "settings.numberInputForeground", "settings.textInputForeground", "sideBarTitle.foreground", "statusBar.noFolderForeground", "tab.activeForeground", "terminal.foreground", "titleBar.activeForeground","activityBar.foreground", "statusBar.foreground")
+
+fgs <- rep(fg, length(fg_keys))
+names(fgs) <- fg_keys
+
+comm_keys <- c("activityBar.inactiveForeground", "breadcrumb.foreground", "editor.snippetTabstopHighlightBorder", "editorCodeLens.foreground", "editorHoverWidget.border", "editorLineNumber.foreground", "focusBorder", "gitDecoration.ignoredResourceForeground", "input.placeholderForeground", "panelTitle.inactiveForeground", "peekViewTitleDescription.foreground", "tab.inactiveForeground", "titleBar.inactiveForeground", "activityBar.activeBackground")
+
+
+cm <- rep(comment, length(comm_keys))
+names(cm) <- comm_keys
+
+sel_keys <- c("badge.background", "editor.lineHighlightBorder", "editor.selectionBackground", "editorSuggestWidget.selectedBackground", "list.activeSelectionBackground", "list.dropBackground", "peekView.border", "peekViewResult.selectionBackground")
+
+sel <- rep(selection, length(sel_keys))
+names(sel) <- sel_keys
+acc_keys <- c("activityBarBadge.background", "button.background")
+
+acc <- rep(accent, length(acc_keys))
+names(acc) <- acc_keys
+
+bgalt_keys <- c( "statusBar.background", "activityBar.background", "focusBorder")
+bgalt_n <- rep(bgalt, rep(length(bgalt_keys)))
+names(bgalt_n) <- bgalt_keys
+
+fin <- c(fgs, bgs, sel, cm, acc, bgalt_n)
+finsort <- fin[sort(names(fin))]
+  
+as.list(finsort)
 }

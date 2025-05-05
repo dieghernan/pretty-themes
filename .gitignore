@@ -34,3 +34,5 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 syntaxhighlight.Rproj
+*.sass_cache*
+src/compiledcols/*.sass_cache_keys

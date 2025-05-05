@@ -2,6 +2,8 @@
   "name": "pretty-themes",
   "displayName": "Pretty Themes for VS Code",
   "description": "Ports of several syntax highlighting themes to VS Code",
+  "publisher": "dieghernan",
+  "license": "MIT",
   "version": "0.0.1-dev",
   "engines": {
     "vscode": "^1.99.0"
