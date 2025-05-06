@@ -16,7 +16,7 @@
           <key>background</key>
           <string>#f6f6f6</string>
           <key>caret</key>
-          <string>#2f3337</string>
+          <string>#b75501</string>
           <key>foreground</key>
           <string>#2f3337</string>
           <key>invisibles</key>
@@ -284,7 +284,7 @@
         <key>name</key>
         <string>Markup raw code</string>
         <key>scope</key>
-        <string>markup.raw</string>
+        <string>markup.raw, markup.inline.raw</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>

@@ -62,10 +62,42 @@ head_css <- paste0(
 )
 
 
+
+
 # Re-generate css and write
 final_tm <- c(tm, crs_css, margin_css, head_css)
 
-final_tm %>%
+# UI fixtures
+
+
+fg <- cols |>
+  filter(name == "foreground") |>
+  pull(value) %>%
+  paste0("$ui_foreground: ", ., ";")
+
+bg <- cols |>
+  filter(name == "background") |>
+  pull(value) %>%
+  paste0("$ui_background: ", ., ";")
+
+sel <- cols |>
+  filter(name == "selection") |>
+  pull(value) %>%
+  paste0("$ui_selection: ", ., ";")
+
+cur <- cols |>
+  filter(name == "caret") |>
+  pull(value) %>%
+  paste0("$ui_cursor: ", ., ";")
+
+
+rstudio_temp <- readLines("src/_light_rstheme.scss")
+
+
+
+c(final_tm, fg, bg, sel, cur, rstudio_temp) %>%
   sass::sass(output = rtheme)
+
+
 
 rstudioapi::addTheme(rtheme, apply = TRUE, force = TRUE)

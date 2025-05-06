@@ -277,7 +277,7 @@
 }
 
 .xtermBlur {
-  filter: brightness(75%);
+  filter: blur(1px);
 }
 
 .xtermUnderline {
