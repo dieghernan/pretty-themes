@@ -19,7 +19,7 @@
           <key>background</key>
           <string>#FFFFFF</string>
           <key>caret</key>
-          <string>#474747</string>
+          <string>#1D9700</string>
           <key>foreground</key>
           <string>#474747</string>
           <key>invisibles</key>
@@ -348,17 +348,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Token separators</string>
-        <key>scope</key>
-        <string>punctuation, punctuation.definition.block, punctuation.definition.parameters, punctuation.definition.arguments, punctuation.definition.list, punctuation.definition.dict, punctuation.definition.binding-pattern, punctuation.parenthesis, punctuation.separator, punctuation.accessor, punctuation.section</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#474747</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Invalid</string>
         <key>scope</key>
         <string>invalid</string>
@@ -372,9 +361,20 @@
       </dict>
       <dict>
         <key>name</key>
+        <string>Markup Link</string>
+        <key>scope</key>
+        <string>markup.link, meta.link</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#00AD9C</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
         <string>Markup Heading</string>
         <key>scope</key>
-        <string>markup.heading, meta.tag</string>
+        <string>markup.heading, meta.tag, entity.name.section.markdown</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -396,7 +396,7 @@
         <key>name</key>
         <string>Markup Code Blocks</string>
         <key>scope</key>
-        <string>markup.raw</string>
+        <string>markup.raw, markup.inline.raw</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -445,6 +445,28 @@
         <dict>
           <key>foreground</key>
           <string>#1D9700</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>YAML rules</string>
+        <key>scope</key>
+        <string>entity.name.tag.yaml</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#1D9700</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>YAML directive</string>
+        <key>scope</key>
+        <string>storage.type.tag.verbatim.yaml</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#0064E4</string>
         </dict>
       </dict>
     </array>

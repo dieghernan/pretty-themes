@@ -526,8 +526,7 @@
         <key>name</key>
         <string>YAML directive</string>
         <key>scope</key>
-        <string>storage.type.tag.verbatim.yaml
-</string>
+        <string>storage.type.tag.verbatim.yaml</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>

@@ -1,3 +1,7 @@
+/* 
+ * selenized.dark theme
+ * author Diego H <https://github.com/dieghernan/>
+ */
 pre code.hljs {
   display: block;
   overflow-x: auto;
@@ -8,128 +12,177 @@ code.hljs {
   padding: 3px 5px;
 }
 
-/*!
-  Theme: StackOverflow Dark
-  Description: Dark theme as used on stackoverflow.com
-  Author: stackoverflow.com
-  Maintainer: @Hirse
-  Website: https://github.com/StackExchange/Stacks
-  License: MIT
-  Updated: 2021-05-15
-
-  Updated for @stackoverflow/stacks v0.64.0
-  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
-  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
-*/
 .hljs {
-  /* var(--highlight-color) */
-  color: #ffffff;
-  /* var(--highlight-bg) */
-  background: #1c1b1b;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #ADBCBC;
+  background: #103C48;
+}
+
+.hljs-keyword {
+  color: #75B938;
+}
+
+.hljs-built_in {
+  color: #4695F7;
+}
+
+.hljs-type {
+  color: #4695F7;
+}
+
+.hljs-literal {
+  color: #41C7B9;
+}
+
+.hljs-number {
+  color: #41C7B9;
+}
+
+.hljs-operator {
+  color: #75B938;
+}
+
+.hljs-punctuation {
+  color: #ADBCBC;
+}
+
+.hljs-property {
+  color: #4695F7;
+}
+
+.hljs-regexp {
+  color: #41C7B9;
+}
+
+.hljs-string {
+  color: #41C7B9;
+}
+
+.hljs-char.escape_ {
+  color: #FA5750;
 }
 
 .hljs-subst {
-  /* var(--highlight-color) */
-  color: #ffffff;
+  color: #ADBCBC;
+}
+
+.hljs-symbol {
+  color: #ADBCBC;
+}
+
+.hljs-class {
+  color: #4695F7;
+}
+
+.hljs-variable {
+  color: #ADBCBC;
+}
+
+.hljs-variable.language_ {
+  color: #FA5750;
+}
+
+.hljs-variable.constant_ {
+  color: #FA5750;
+}
+
+.hljs-title {
+  color: #4695F7;
 }
 
 .hljs-comment {
-  /* var(--highlight-comment) */
-  color: #999999;
+  color: #72898F;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-meta .hljs-keyword,
-.hljs-doctag,
-.hljs-section {
-  /* var(--highlight-keyword) */
-  color: #88aece;
-}
-
-.hljs-attr {
-  /* var(--highlight-attribute); */
-  color: #88aece;
-}
-
-.hljs-attribute {
-  /* var(--highlight-symbol) */
-  color: #c59bc1;
-}
-
-.hljs-name,
-.hljs-type,
-.hljs-number,
-.hljs-selector-id,
-.hljs-quote,
-.hljs-template-tag {
-  /* var(--highlight-namespace) */
-  color: #f08d49;
-}
-
-.hljs-selector-class {
-  /* var(--highlight-keyword) */
-  color: #88aece;
-}
-
-.hljs-string,
-.hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr {
-  /* var(--highlight-variable) */
-  color: #b5bd68;
-}
-
-.hljs-meta,
-.hljs-selector-pseudo {
-  /* var(--highlight-keyword) */
-  color: #88aece;
-}
-
-.hljs-built_in,
-.hljs-title,
-.hljs-literal {
-  /* var(--highlight-literal) */
-  color: #f08d49;
-}
-
-.hljs-bullet,
-.hljs-code {
-  /* var(--highlight-punctuation) */
-  color: #cccccc;
-}
-
-.hljs-meta .hljs-string {
-  /* var(--highlight-variable) */
-  color: #b5bd68;
-}
-
-.hljs-deletion {
-  /* var(--highlight-deletion) */
-  color: #de7176;
-}
-
-.hljs-addition {
-  /* var(--highlight-addition) */
-  color: #76c490;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
+.hljs-meta {
+  color: #75B938;
   font-weight: bold;
 }
 
-.hljs-formula,
-.hljs-operator,
-.hljs-params,
-.hljs-property,
-.hljs-punctuation,
-.hljs-tag {
-  /* purposely ignored */
+.hljs-section {
+  color: #EBC13D;
+}
+
+.hljs-name {
+  color: #4695F7;
+}
+
+.hljs-attr {
+  color: #75B938;
+}
+
+.hljs-attribute {
+  color: #DBB32D;
+}
+
+.hljs-code {
+  color: #4695F7;
+}
+
+.hljs-strong {
+  color: #ADBCBC;
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  color: #ADBCBC;
+  font-style: italic;
+}
+
+.hljs-selector-id {
+  color: #75B938;
+}
+
+.hljs-quote {
+  color: #ADBCBC;
+}
+
+.hljs-selector-class {
+  color: #4695F7;
+}
+
+.hljs-selector-tag, .hljs-selector-attr, .hljs-selector-pseudo {
+  color: #75B938;
+}
+
+.hljs-deletion {
+  color: #FF665C;
+}
+
+.language-html .hljs-string {
+  color: #41C7B9;
+}
+
+.language-css.hljs, .language-scss.hljs {
+  color: #4695F7;
+}
+
+.language-scss .hljs-variable, .language-css .hljs-variable {
+  color: #ED8649;
+}
+
+.language-scss .hljs-keyword, .language-css .hljs-keyword {
+  color: #75B938;
+}
+
+.language-yaml .hljs-attr {
+  color: #75B938;
+}
+
+.language-yaml .hljs-type {
+  color: #4695F7;
+}
+
+.language-yaml .hljs-attr {
+  color: #75B938;
+}
+
+.language-yaml .hljs-type {
+  color: #4695F7;
+}
+
+.language-json .hljs-attr {
+  color: #DBB32D;
 }

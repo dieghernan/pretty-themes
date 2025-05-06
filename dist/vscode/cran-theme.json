@@ -27,14 +27,14 @@
     },
     {
       "name": "",
-      "scope": "constant.numeric, constant.numeric.float",
+      "scope": ["constant.numeric", "constant.numeric.float"],
       "settings": {
         "foreground": "#40a070"
       }
     },
     {
       "name": "",
-      "scope": "entity.name, entity.name.tag.css, entity.other.attribute-name.class",
+      "scope": ["entity.name", "entity.name.tag.css", "entity.other.attribute-name.class"],
       "settings": {
         "foreground": "#06287e"
       }
@@ -56,7 +56,7 @@
     },
     {
       "name": "",
-      "scope": "keyword, keyword.control",
+      "scope": ["keyword", "keyword.control"],
       "settings": {
         "foreground": "#007020",
         "fontStyle": "bold"
@@ -72,14 +72,14 @@
     },
     {
       "name": "",
-      "scope": "keyword.operator, string",
+      "scope": ["keyword.operator", "string"],
       "settings": {
         "foreground": "#4070a0"
       }
     },
     {
       "name": "",
-      "scope": "markup.heading, entity.name.section.markdown",
+      "scope": ["markup.heading", "entity.name.section.markdown"],
       "settings": {
         "foreground": "#ba2121",
         "fontStyle": "italic"
@@ -101,7 +101,7 @@
     },
     {
       "name": "",
-      "scope": "markup.raw, markup.inline.raw",
+      "scope": ["markup.raw", "markup.inline.raw"],
       "settings": {
         "foreground": "#007020"
       }
@@ -136,16 +136,16 @@
     },
     {
       "name": "",
-      "scope": "meta.doctype, meta.tag.sgml.doctype, entity.name.tag.doctype.html",
+      "scope": ["meta.doctype", "meta.tag.sgml.doctype", "entity.name.tag.doctype.html"],
       "settings": {
         "foreground": "#60A0B0"
       }
     }
   ],
   "colors": {
-    "activityBar.activeBackground": "#60A0B0",
+    "activityBar.activeBackground": "#DBDBDB",
     "activityBar.background": "#F2F3F5",
-    "activityBar.foreground": "#333333",
+    "activityBar.foreground": "#06287e",
     "activityBar.inactiveForeground": "#60A0B0",
     "activityBarBadge.background": "#06287e",
     "activityBarBadge.foreground": "#F7F7F7",

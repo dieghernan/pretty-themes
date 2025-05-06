@@ -12,7 +12,7 @@
     },
     {
       "name": "Any comments",
-      "scope": "comment, punctuation.definition.comment",
+      "scope": ["comment", "punctuation.definition.comment"],
       "settings": {
         "foreground": "#655e7f"
       }
@@ -89,7 +89,7 @@
     },
     {
       "name": "Larger entity",
-      "scope": "entity.name, punctuation.definition.entity",
+      "scope": ["entity.name", "punctuation.definition.entity"],
       "settings": {
         "foreground": "#bd93f9"
       }
@@ -159,7 +159,7 @@
     },
     {
       "name": "@media in css",
-      "scope": "keyword.control.at-rule, keyword.control.at-rule.css, keyword.control.at-rule.scss, punctuation.definition.keyword.scss, punctuation.definition.keyword.css",
+      "scope": ["keyword.control.at-rule", "keyword.control.at-rule.css", "keyword.control.at-rule.scss", "punctuation.definition.keyword.scss", "punctuation.definition.keyword.css"],
       "settings": {
         "foreground": "#f3e4a2"
       }
@@ -215,14 +215,14 @@
     },
     {
       "name": "Markup raw code",
-      "scope": "markup.raw, markup.inline.raw",
+      "scope": ["markup.raw", "markup.inline.raw"],
       "settings": {
         "foreground": "#84fba2"
       }
     },
     {
       "name": "Markup Link",
-      "scope": "markup.link, meta.link",
+      "scope": ["markup.link", "meta.link"],
       "settings": {
         "foreground": "#93b4ff"
       }
@@ -327,21 +327,21 @@
     },
     {
       "name": "JS Skeletor Keyword",
-      "scope": "storage.type.js, keyword.control.js, constant.language.null.js",
+      "scope": ["storage.type.js", "keyword.control.js", "constant.language.null.js"],
       "settings": {
         "foreground": "#f3e4a2"
       }
     },
     {
       "name": "JS Skeletor class-name",
-      "scope": "entity.name.type.instance.js, support.class",
+      "scope": ["entity.name.type.instance.js", "support.class"],
       "settings": {
         "foreground": "#93B4FF"
       }
     },
     {
       "name": "PHP Skeletor Keyword",
-      "scope": "storage.type.php, variable.other.php, punctuation.definition.variable.php",
+      "scope": ["storage.type.php", "variable.other.php", "punctuation.definition.variable.php"],
       "settings": {
         "foreground": "#84fba2"
       }
@@ -383,7 +383,7 @@
     },
     {
       "name": "SCSS keywords",
-      "scope": "keyword.control.scss, meta.at-rule.scss, keyword.scss, keyword.control.for.scss, meta.at-rule.for.scss, keyword.control.operator",
+      "scope": ["keyword.control.scss", "meta.at-rule.scss", "keyword.scss", "keyword.control.for.scss", "meta.at-rule.for.scss", "keyword.control.operator"],
       "settings": {
         "foreground": "#f3e4a2"
       }
@@ -397,9 +397,9 @@
     }
   ],
   "colors": {
-    "activityBar.activeBackground": "#655e7f",
+    "activityBar.activeBackground": "#55535E",
     "activityBar.background": "#2F2C38",
-    "activityBar.foreground": "#ffffff",
+    "activityBar.foreground": "#F3E4A2",
     "activityBar.inactiveForeground": "#655e7f",
     "activityBarBadge.background": "#F3E4A2",
     "activityBarBadge.foreground": "#2b2836",

@@ -1,4 +1,4 @@
-theme_to_test <- "_stackoverflow.dark"
+theme_to_test <- "_selenized.dark"
 
 test <- readLines(file.path(
   "src", "styles",

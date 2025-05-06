@@ -57,6 +57,11 @@
         "label": "StackOverflow Dark",
         "uiTheme": "vs-dark",
         "path": "./dist/vscode/stackoverflow-dark-theme.json"
+      },
+      {
+        "label": "StackOverflow Light",
+        "uiTheme": "vs",
+        "path": "./dist/vscode/stackoverflow-light-theme.json"
       }
     ]
   }

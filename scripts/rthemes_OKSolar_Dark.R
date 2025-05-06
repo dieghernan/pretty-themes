@@ -2,6 +2,20 @@ library(tidyverse)
 
 tm_path <- "./dist/tmTheme/OKSolar Dark.tmTheme"
 outdir <- "./dist/rstheme"
+
+# Create vscode here first
+source("dev/functions.R")
+
+out_vs <- tools::file_path_sans_ext(tm_path) |>
+  basename() |>
+  tolower() |>
+  str_replace_all(" ", "-") %>%
+  paste0("-theme.json") %>%
+  file.path("./dist/vscode", .)
+
+tmtheme2vscode(tm_path, out_vs)
+
+
 rtheme <- tools::file_path_sans_ext(tm_path) |>
   basename() |>
   paste0(".rstheme") %>%
@@ -15,6 +29,7 @@ rstudioapi::convertTheme(tm_path,
   outputLocation = outdir,
   force = TRUE
 )
+
 source("dev/functions.R")
 cols <- read_tmtheme(tm_path)
 
@@ -33,22 +48,22 @@ head_col <- cols |>
   pull(foreground)
 
 cursor_col <- cols |>
-  filter(str_detect(scope, "keyword|string|constant")) |>
-  group_by(foreground) |>
-  count(sort = TRUE) |>
-  filter(!is.na(foreground) & foreground != fg) |>
-  ungroup() |>
-  slice_head(n = 1) |>
-  pull(foreground)
+  filter(name == "caret") |>
+  pull(value)
+
+
+scales::show_col(c(cursor_col, margin_col, head_col))
 
 # Insert new rules
 crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
-
 margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")
+
 head_css <- paste0(
   ".ace_heading {color: ",
-  head_col, ";}"
+  head_col, "; font-style: italic;}"
 )
+
+
 
 
 # Re-generate css and write

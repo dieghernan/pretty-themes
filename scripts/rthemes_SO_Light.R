@@ -2,6 +2,15 @@ library(tidyverse)
 
 tm_path <- "./dist/tmTheme/StackOverflow Light.tmTheme"
 outdir <- "./dist/rstheme"
+# Create vscode here first
+source("dev/functions.R")
+
+
+out_vs <- "./dist/vscode/stackoverflow-light-theme.json"
+
+tmtheme2vscode(tm_path, out_vs)
+
+
 rtheme <- tools::file_path_sans_ext(tm_path) |>
   basename() |>
   paste0(".rstheme") %>%
@@ -34,13 +43,8 @@ head_col <- cols |>
   pull(foreground)
 
 cursor_col <- cols |>
-  filter(str_detect(scope, "keyword|string|constant")) |>
-  group_by(foreground) |>
-  count(sort = TRUE) |>
-  filter(!is.na(foreground) & foreground != fg) |>
-  ungroup() |>
-  slice_head(n = 1) |>
-  pull(foreground)
+  filter(name == "caret") |>
+  pull(value)
 
 
 scales::show_col(c(cursor_col, margin_col, head_col))
@@ -48,17 +52,17 @@ scales::show_col(c(cursor_col, margin_col, head_col))
 # Insert new rules
 crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
 margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")
+
 head_css <- paste0(
   ".ace_heading {color: ",
-  head_col, ";}"
+  head_col, "; font-style: italic;}"
 )
 
 
-sup_css <- ".ace_support.ace_function {color: #535a60;}"
 
 
 # Re-generate css and write
-final_tm <- c(tm, crs_css, margin_css, head_css, sup_css)
+final_tm <- c(tm, crs_css, margin_css, head_css)
 
 # UI fixtures
 

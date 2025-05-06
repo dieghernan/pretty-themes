@@ -16,15 +16,15 @@
           <key>background</key>
           <string>#f6f6f6</string>
           <key>caret</key>
-          <string>#b75501</string>
+          <string>#B75501</string>
           <key>foreground</key>
           <string>#2f3337</string>
           <key>invisibles</key>
           <string>#ECECEC</string>
           <key>lineHighlight</key>
-          <string>#CECFD0</string>
+          <string>#DADADA</string>
           <key>selection</key>
-          <string>#CECFD0</string>
+          <string>#DADADA</string>
         </dict>
       </dict>
       <dict>
@@ -487,6 +487,50 @@
         <dict>
           <key>foreground</key>
           <string>#B75501</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Markup Link</string>
+        <key>scope</key>
+        <string>markup.link, meta.link</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#54790d</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Markup Lists</string>
+        <key>scope</key>
+        <string>punctuation.definition.list</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#535a60</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>YAML rules</string>
+        <key>scope</key>
+        <string>entity.name.tag.yaml</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#015692</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>YAML directive</string>
+        <key>scope</key>
+        <string>storage.type.tag.verbatim.yaml</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#b75501</string>
         </dict>
       </dict>
     </array>

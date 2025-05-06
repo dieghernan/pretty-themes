@@ -1,6 +1,4 @@
-/*! Theme: StackOverflow Dark Description: Dark theme as used on stackoverflow.com Author: stackoverflow.com Maintainer: @Hirse Website: https://github.com/StackExchange/Stacks License: MIT Updated: 2021-05-15 Updated for @stackoverflow/stacks v0.64.0 Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less Adapted by Diego H <https://github.com/dieghernan/> for pygments based in https://github.com/highlightjs/highlight.js/blob/main/src/styles/stackoverflow-dark.css BSD 3-Clause License Copyright (c) 2006, Ivan Sagalaev. All rights reserved. */
-.language-json .highlight .nl { color: #88aece; }
-
+/*  selenized.dark theme author Diego H <https://github.com/dieghernan/> */
 /* SASS Template for converting tmThemes to Rouge / Pygments (css)     */
 /* by Diego H <https://github.com/dieghernan/   */
 /* Overall */
@@ -8,167 +6,169 @@
 
 .highlight table pre { margin: 0; }
 
-.highlight pre { background: #1c1b1b; color: #ffffff; }
+.highlight pre { background: #103C48; color: #ADBCBC; }
 
 /* Comments */
-.highlight .c { color: #999999; }
+.highlight .c { color: #72898F; }
 
-.highlight .cp { color: #999999; }
+.highlight .cp { color: #72898F; }
 
-.highlight .cpf { color: #999999; }
+.highlight .cpf { color: #72898F; }
 
-.highlight .cm { color: #999999; }
+.highlight .cm { color: #72898F; }
 
-.highlight .c1 { color: #999999; }
+.highlight .c1 { color: #72898F; }
 
-.highlight .cs { color: #999999; }
+.highlight .cs { color: #72898F; }
 
-.highlight .ch { color: #999999; }
+.highlight .ch { color: #72898F; }
 
 /* Constants */
-.highlight .se { color: #ffffff; }
+.highlight .se { color: #FA5750; }
 
-.highlight .kc { color: #f08d49; }
+.highlight .kc { color: #41C7B9; }
 
-.highlight .no { color: #ffffff; }
+.highlight .no { color: #ADBCBC; }
 
-.highlight .ss { color: #b5bd68; }
+.highlight .ss { color: #ADBCBC; }
 
 /* Numbers */
-.highlight .m { color: #f08d49; }
+.highlight .m { color: #41C7B9; }
 
-.highlight .mb { color: #f08d49; }
+.highlight .mb { color: #41C7B9; }
 
-.highlight .mh { color: #f08d49; }
+.highlight .mh { color: #41C7B9; }
 
-.highlight .mo { color: #f08d49; }
+.highlight .mo { color: #41C7B9; }
 
-.highlight .mf { color: #f08d49; }
+.highlight .mf { color: #41C7B9; }
 
-.highlight .mi { color: #f08d49; }
+.highlight .mi { color: #41C7B9; }
 
-.highlight .il { color: #f08d49; }
+.highlight .il { color: #41C7B9; }
 
 /* Entities */
-.highlight .nc { color: #ffffff; }
+.highlight .nc { color: #4695F7; }
 
-.highlight .nd { color: #ffffff; }
+.highlight .nd { color: #4695F7; }
 
-.highlight .ne { color: #ffffff; }
+.highlight .ne { color: #4695F7; }
 
-.highlight .nf { color: #ffffff; }
+.highlight .nf { color: #4695F7; }
 
-.highlight .py { color: #ffffff; }
+.highlight .py { color: #4695F7; }
 
-.highlight .nt { color: #f08d49; }
+.highlight .nt { color: #4695F7; }
 
-.highlight .nn { color: #ffffff; }
+.highlight .nn { color: #4695F7; }
 
-.highlight .na { color: #ffffff; }
+.highlight .na { color: #4695F7; }
 
-.language-yaml .highlight .kt { color: #f08d49; }
+.language-yaml .highlight .kt { color: #4695F7; }
 
-.language-css .highlight .nt, .language-css .highlight .nd, .language-scss .highlight .nt, .language-scss .highlight .nd { color: #88aece; }
+.language-css .highlight .nt, .language-css .highlight .nd, .language-scss .highlight .nt, .language-scss .highlight .nd { color: #75B938; }
 
-.language-css .highlight .nf, .language-scss .highlight .nf { color: #f08d49; }
+.language-css .highlight .nf, .language-scss .highlight .nf { color: #75B938; }
 
-.language-css .highlight .n, .language-scss .highlight .n { color: #ffffff; }
+.language-css .highlight .n, .language-scss .highlight .n { color: #4695F7; }
 
-.language-html .highlight .na { color: #88aece; }
+.language-html .highlight .na { color: #75B938; }
 
 /* Invalid */
-.highlight .err { color: #de7176; }
+.highlight .err { color: #FF665C; }
 
-.highlight .gr { color: #de7176; }
+.highlight .gr { color: #FF665C; }
 
-.highlight .ne { color: #de7176; }
+.highlight .ne { color: #FF665C; }
 
 /* Keywords */
-.highlight .k { color: #88aece; }
+.highlight .k { color: #75B938; }
 
-.highlight .kn { color: #88aece; }
+.highlight .kn { color: #ED8649; }
 
-.highlight .o { color: #ffffff; }
+.highlight .o { color: #75B938; }
 
-.highlight .ow { color: #ffffff; }
+.highlight .ow { color: #75B938; }
 
-.language-markdown .highlight .sb { color: #cccccc; }
+.language-markdown .highlight .sb { color: #4695F7; }
 
-.language-css .highlight .k, .language-scss .highlight .k { color: #88aece; }
+.language-css .highlight .k, .language-scss .highlight .k { color: #75B938; }
 
-.language-css .highlight .cp, .language-scss .highlight .cp { color: #88aece; font-weight: bold; font-style: normal; }
+.language-css .highlight .cp, .language-scss .highlight .cp { color: #75B938; font-weight: bold; font-style: normal; }
 
-.language-yaml .highlight .nt { color: #88aece; font-weight: bold; font-style: normal; }
+.language-yaml .highlight .nt { color: #75B938; font-weight: bold; font-style: normal; }
 
-.language-yaml .highlight .na { color: #88aece; }
+.language-yaml .highlight .na { color: #75B938; }
 
 /* Markup */
-.highlight .gs { color: #ffffff; font-weight: bold; }
+.highlight .gs { color: #ADBCBC; font-weight: bold; }
 
-.highlight .gh { color: #88aece; }
+.highlight .gh { color: #EBC13D; }
 
-.highlight .gu { color: #88aece; }
+.highlight .gu { color: #EBC13D; }
 
-.highlight .ge { color: #ffffff; font-style: italic; }
+.highlight .ge { color: #ADBCBC; font-style: italic; }
 
 .highlight .ges { font-weight: bold; font-style: italic; }
 
-.highlight .gt { color: #f08d49; }
+.highlight .gt { color: #ADBCBC; }
 
 /* Meta */
-.language-html .highlight .cp { color: #999999; font-style: normal; }
+.language-html .highlight .cp { color: #72898F; font-style: normal; }
 
 /* Punctuation */
-.highlight .p { color: #ffffff; }
+.highlight .p { color: #ADBCBC; }
 
-.highlight .pm { color: #ffffff; }
+.highlight .pm { color: #ADBCBC; }
 
-.highlight .dl { color: #ffffff; }
+.highlight .dl { color: #ADBCBC; }
 
-.highlight .sh { color: #ffffff; }
+.highlight .sh { color: #ADBCBC; }
 
 /* Storage */
-.highlight .kd { color: #88aece; }
+.highlight .kd { color: #75B938; }
 
-.highlight .kt { color: #88aece; }
+.highlight .kt { color: #75B938; }
 
 /* String */
-.highlight .s { color: #b5bd68; }
+.highlight .s { color: #41C7B9; }
 
-.highlight .sb { color: #b5bd68; }
+.highlight .sb { color: #41C7B9; }
 
-.highlight .s1 { color: #b5bd68; }
+.highlight .s1 { color: #41C7B9; }
 
-.highlight .s2 { color: #b5bd68; }
+.highlight .s2 { color: #41C7B9; }
 
-.highlight .sx { color: #b5bd68; }
+.highlight .sx { color: #41C7B9; }
 
-.highlight .si { color: #b5bd68; }
+.highlight .si { color: #41C7B9; }
 
-.highlight .sr { color: #b5bd68; }
+.highlight .sr { color: #41C7B9; }
 
-.language-html .highlight .s { color: #b5bd68; }
+.language-html .highlight .s { color: #41C7B9; }
 
 /* Support */
-.highlight .nb { color: #ffffff; }
+.highlight .nb { color: #4695F7; }
 
-.highlight .bp { color: #ffffff; }
+.highlight .bp { color: #4695F7; }
 
-.highlight .fm { color: #ffffff; }
+.highlight .fm { color: #4695F7; }
 
-.highlight .vm { color: #ffffff; }
+.highlight .vm { color: #4695F7; }
 
-.highlight .nl { color: #c59bc1; }
+.highlight .nl { color: #DBB32D; }
 
-.language-css .highlight .nc, .language-css .highlight .nn, .language-scss .highlight .nc, .language-scss .highlight .nn { color: #88aece; }
+.language-css .highlight .nc, .language-css .highlight .nn, .language-scss .highlight .nc, .language-scss .highlight .nn { color: #4695F7; }
 
 /* Variable */
-.highlight .vi { color: #b5bd68; }
+.highlight .vi { color: #ADBCBC; }
 
-.highlight .kp { color: #b5bd68; }
+.highlight .kp { color: #FA5750; }
 
-.highlight .nv { color: #b5bd68; }
+.highlight .nv { color: #ED8649; }
 
-.highlight .vc { color: #b5bd68; }
+.highlight .vc { color: #ED8649; }
 
-.highlight .vg { color: #b5bd68; }
+.highlight .vg { color: #ED8649; }
+
+.highlight .err, .highlight .gr, .highlight .gt, .highlight .ne { font-weight: bold; }

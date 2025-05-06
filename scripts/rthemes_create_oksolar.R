@@ -98,12 +98,12 @@ for (i in ncols) {
   rs_bk <- gsub(tb$dark_spec[i], tb$oksolar_light_spec[i], rs_bk, ignore.case = TRUE)
 }
 
-rs_bk <- gsub("Selenized Dark", "OkSolar Light", rs_bk)
+rs_bk <- gsub("Selenized Dark", "OKSolar Light", rs_bk)
 rs_bk <- gsub("selenized_dark", "oksolar_light", rs_bk)
 rs_bk <- gsub("theme.dark", "theme.light", rs_bk)
 rs_bk == rs
 rs_bk %>%
-  writeLines(gsub("Selenized Dark", "OkSolar Light", bpath))
+  writeLines(gsub("Selenized Dark", "OKSolar Light", bpath))
 
 # Same with the script
 sf_bk <- sf
@@ -112,18 +112,18 @@ for (i in ncols) {
   sf_bk <- gsub(tb$dark_spec[i], tb$oksolar_light_spec[i], sf_bk, ignore.case = TRUE)
 }
 
-sf_bk <- gsub("Selenized Dark", "OkSolar Light", sf_bk)
+sf_bk <- gsub("Selenized Dark", "OKSolar Light", sf_bk)
 sf_bk <- gsub("selenized_dark", "oksolar_light", sf_bk)
 sf_bk == sf
 sf_bk %>%
-  writeLines(gsub("Selenized_Dark", "OkSolar_Light", spath))
+  writeLines(gsub("Selenized_Dark", "OKSolar_Light", spath))
 
 
 # Check
 
-bkcols <- gsub("Selenized Dark", "OkSolar Light", bpath) %>%
+bkcols <- gsub("Selenized Dark", "OKSolar Light", bpath) %>%
   readLines() %>%
-  c(readLines(gsub("Selenized_Dark", "OkSolar_Light", spath))) %>%
+  c(readLines(gsub("Selenized_Dark", "OKSolar_Light", spath))) %>%
   paste(collapse = "") %>%
   str_split("#") %>%
   map(str_sub, end = 6) %>%
@@ -132,7 +132,7 @@ bkcols <- gsub("Selenized Dark", "OkSolar Light", bpath) %>%
 
 bkcols[!bkcols %in% tb$oksolar_light_spec]
 
-gsub("Selenized_Dark", "OkSolar_Light", spath) %>% source()
+gsub("Selenized_Dark", "OKSolar_Light", spath) %>% source()
 
 
 

@@ -151,6 +151,7 @@ tmtheme2vscode <- function(tminput, output){
     pull(value)
   
   typ <- ifelse(grepl("dark", ss), "dark", "light")
+  message("This is ", typ)
   nm <- get_tmTheme |> filter(name == "name") |> pull(value)
   au <- get_tmTheme |> filter(name == "author") |> pull(value)
   thejson <- list(name = nm, author = au, semanticHighlighting = TRUE,
@@ -200,7 +201,8 @@ tmtheme2vscode <- function(tminput, output){
   
   tokencols <- get_tmTheme |> 
     filter(section == "Scopes") |> 
-    mutate(foreground = ifelse(tolower(foreground) == fg, NA, foreground)) |> 
+    mutate(foreground = ifelse(tolower(foreground) == fg, NA, 
+                               foreground)) |> 
     select(name, scope, foreground, background, fontStyle) 
   
   tokencols$index <- seq_len(nrow(tokencols))
@@ -218,11 +220,13 @@ tmtheme2vscode <- function(tminput, output){
   
   ntok <- seq_len(nrow(tok_g))
   
-  i <- 1
+  i <- 6
   for (i in ntok) {
     thiscope <- tok_g[i,]
+    scp <- thiscope$sc |> as.character() |> strsplit(",") |> unlist() |> 
+      trimws()
     thistok <- list(name = thiscope$name, 
-                    scope = thiscope$sc,
+                    scope = scp,
                     settings = list())
     
     
@@ -240,7 +244,10 @@ tmtheme2vscode <- function(tminput, output){
       dictt <- c(dictt, list(fontStyle = fnt))
     }
     if(length(dictt) > 0){
+      
       thistok$settings <- dictt 
+      toJSON(thistok, pretty = TRUE)
+      
       tok [[i+1]] <- thistok
     }
   }
@@ -262,22 +269,22 @@ additional_cols <- function(bg, fg, comment, selection, accent, bgalt){
   
   bgs <- rep(bg, length(bg_keys))
 names(bgs) <- bg_keys
-fg_keys <- c("badge.foreground", "breadcrumb.activeSelectionForeground", "breadcrumb.focusForeground",  "button.secondaryForeground", "dropdown.foreground", "editor.foreground", "editorBracketHighlight.foreground1", "editorSuggestWidget.foreground", "extensionButton.prominentForeground", "foreground", "input.foreground", "list.activeSelectionForeground", "panelTitle.activeForeground", "peekViewResult.fileForeground", "peekViewResult.lineForeground", "peekViewResult.selectionForeground", "peekViewTitleLabel.foreground", "settings.checkboxForeground", "settings.dropdownForeground", "settings.headerForeground", "settings.numberInputForeground", "settings.textInputForeground", "sideBarTitle.foreground", "statusBar.noFolderForeground", "tab.activeForeground", "terminal.foreground", "titleBar.activeForeground","activityBar.foreground", "statusBar.foreground")
+fg_keys <- c("badge.foreground", "breadcrumb.activeSelectionForeground", "breadcrumb.focusForeground",  "button.secondaryForeground", "dropdown.foreground", "editor.foreground", "editorBracketHighlight.foreground1", "editorSuggestWidget.foreground", "extensionButton.prominentForeground", "foreground", "input.foreground", "list.activeSelectionForeground", "panelTitle.activeForeground", "peekViewResult.fileForeground", "peekViewResult.lineForeground", "peekViewResult.selectionForeground", "peekViewTitleLabel.foreground", "settings.checkboxForeground", "settings.dropdownForeground", "settings.headerForeground", "settings.numberInputForeground", "settings.textInputForeground", "sideBarTitle.foreground", "statusBar.noFolderForeground", "tab.activeForeground", "terminal.foreground", "titleBar.activeForeground", "statusBar.foreground")
 
 fgs <- rep(fg, length(fg_keys))
 names(fgs) <- fg_keys
 
-comm_keys <- c("activityBar.inactiveForeground", "breadcrumb.foreground", "editor.snippetTabstopHighlightBorder", "editorCodeLens.foreground", "editorHoverWidget.border", "editorLineNumber.foreground", "focusBorder", "gitDecoration.ignoredResourceForeground", "input.placeholderForeground", "panelTitle.inactiveForeground", "peekViewTitleDescription.foreground", "tab.inactiveForeground", "titleBar.inactiveForeground", "activityBar.activeBackground")
+comm_keys <- c( "breadcrumb.foreground", "editor.snippetTabstopHighlightBorder", "editorCodeLens.foreground", "editorHoverWidget.border", "editorLineNumber.foreground", "focusBorder", "gitDecoration.ignoredResourceForeground", "input.placeholderForeground", "panelTitle.inactiveForeground", "peekViewTitleDescription.foreground", "tab.inactiveForeground", "titleBar.inactiveForeground", "activityBar.inactiveForeground")
 
 
 cm <- rep(comment, length(comm_keys))
 names(cm) <- comm_keys
 
-sel_keys <- c("badge.background", "editor.lineHighlightBorder", "editor.selectionBackground", "editorSuggestWidget.selectedBackground", "list.activeSelectionBackground", "list.dropBackground", "peekView.border", "peekViewResult.selectionBackground")
+sel_keys <- c("badge.background", "editor.lineHighlightBorder", "editor.selectionBackground", "editorSuggestWidget.selectedBackground", "list.activeSelectionBackground", "list.dropBackground", "peekView.border", "peekViewResult.selectionBackground", "activityBar.activeBackground")
 
 sel <- rep(selection, length(sel_keys))
 names(sel) <- sel_keys
-acc_keys <- c("activityBarBadge.background", "button.background")
+acc_keys <- c("activityBarBadge.background", "button.background", "activityBar.foreground")
 
 acc <- rep(accent, length(acc_keys))
 names(acc) <- acc_keys
