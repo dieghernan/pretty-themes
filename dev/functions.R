@@ -139,9 +139,10 @@ tmtheme2vscode <- function(tminput, output){
   require(xml2)
   require(tidyverse)
   require(jsonlite)
-
+  options(dplyr.summarise.inform = FALSE)
+  
     # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
-  mapping <- read_csv("dev/mapping_themes.csv")
+  mapping <- read_csv("dev/mapping_themes.csv", show_col_types = FALSE)
   
   get_tmTheme <- read_tmtheme(tminput)
   
@@ -151,7 +152,7 @@ tmtheme2vscode <- function(tminput, output){
     pull(value)
   
   typ <- ifelse(grepl("dark", ss), "dark", "light")
-  message("This is ", typ)
+  # message("This is ", typ)
   nm <- get_tmTheme |> filter(name == "name") |> pull(value)
   au <- get_tmTheme |> filter(name == "author") |> pull(value)
   thejson <- list(name = nm, author = au, semanticHighlighting = TRUE,
@@ -185,7 +186,7 @@ tmtheme2vscode <- function(tminput, output){
   colorss <- get_tmTheme |> 
     filter(section == "Top-level config") |> 
     select(tm = name, color = value) |> 
-    inner_join(mapping) |> 
+    inner_join(mapping, by = join_by(tm)) |> 
     select(name = vscode, color)
   
 
