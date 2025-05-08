@@ -8,6 +8,13 @@
   "maintainers": [
     "dieghernan"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dieghernan/pretty-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dieghernan/pretty-themes/issues"
+  },
   "engines": {
     "vscode": "^1.99.0"
   },

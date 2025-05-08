@@ -497,10 +497,16 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
 
   # Read the lines of the auto-generated rstheme (is a css)
   # and add new css rules and extra cols
+  v <- rstudioapi::versionInfo()
+
+  vtext <- paste0(
+    "/* Generated and tested in RStudio ", v$long_version,
+    ' ("', v$release_name, '") */'
+  )
 
   readLines(rtheme_out) %>%
     # New rules
-    c(new_css) %>%
+    c(vtext, "", new_css) %>%
     # Compilers
     c(fg_col, bg_col, accent_col, sel_col, com_col, compiler) |>
     # Compile and write

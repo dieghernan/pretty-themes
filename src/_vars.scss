@@ -4,6 +4,8 @@
 $foreground:  #F8F8F2 !default; // Base color: usually on Settings > Foreground
 $background:    #282A36 !default; // Background color: usually on Settings > Background
 
+$highlight: mix($background, $foreground, 90%) !default;
+
 // tmTheme scopes as SASS variables
 // Naming convention: scope_without_dots
 // See more in: https://macromates.com/manual/en/language_grammars

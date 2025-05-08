@@ -1,6 +1,7 @@
 scope,name
 foreground,Base color
 background,Background color
+lineHighlight,Line Highlight on GUI
 comment,Any comments
 comment.block,"Multi-line comments /* … */,<- … -->"
 comment.line,Line comments

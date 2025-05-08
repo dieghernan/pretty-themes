@@ -2378,6 +2378,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
+/* Generated and tested in RStudio 2024.12.1+563 ("Kousa Dogwood") */
 /* Rules from tmTheme */
 .ace_print-margin {
   background: #959da5;
