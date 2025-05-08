@@ -1,7 +1,7 @@
 # Create vscode (json) and RStudio (rstheme) variants using tmTheme as base
 
 library(tidyverse)
-tminput <- "./dist/tmTheme/cran.tmTheme"
+tminput <- "./dist/tmTheme/Selenized Light.tmTheme"
 
 source("dev/functions.R")
 
@@ -93,8 +93,7 @@ ui_cursor <- paste0("$ui_cursor: ", cursor_col, ";")
 # Other rules
 crs_css <- paste0(".ace_cursor {color: ", cursor_col, ";}")
 margin_css <- paste0(".ace_print-margin {background: ", margin_col, ";}")
-
-head_css <- paste0(".ace_heading {color: ", head_col, "; font-style: italic;}")
+head_css <- paste0(".ace_heading {color: ", head_col, ";}")
 
 # Compiler based in theme settings
 

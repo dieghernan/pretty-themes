@@ -36,7 +36,7 @@ $ui_rstudio_job_progress_bar: opacify($ui_selection, 1) !default;
 
 /* ---- RStudio Theme ---- */
 /* background */
-.rstudio-themes-flat .rstudio-themes-alternate {
+.rstudio-themes-flat .rstudio-themes-default {
   background: $ui_rstudio_background;
   color: $ui_rstudio_foreground;
   .rstudio-themes-background {
@@ -56,8 +56,8 @@ $ui_rstudio_job_progress_bar: opacify($ui_selection, 1) !default;
 }
 
 /* inactive tabs */
-.rstudio-themes-alternate .gwt-TabLayoutPanelTabs table.rstheme_tabLayoutCenter,
-.rstudio-themes-alternate .rstheme_minimizedWindowObject table.rstheme_tabLayoutCenter {
+.rstudio-themes-default .gwt-TabLayoutPanelTabs table.rstheme_tabLayoutCenter,
+.rstudio-themes-default .rstheme_minimizedWindowObject table.rstheme_tabLayoutCenter {
   background: $ui_rstudio_tabs_inactive_background;
   border-top: 2px solid $ui_rstudio_tabs_inactive_background;
 
@@ -66,12 +66,12 @@ $ui_rstudio_job_progress_bar: opacify($ui_selection, 1) !default;
   }
 }
 
-.rstudio-themes-alternate .rstheme_multiPodUtilityTabArea {
+.rstudio-themes-default .rstheme_multiPodUtilityTabArea {
   background: darken($ui_rstudio_tabs_active_background, 2%);
 }
 
 /* active tabs */
-.rstudio-themes-alternate {
+.rstudio-themes-default {
   .gwt-TabLayoutPanelTabs {
     background: $ui_rstudio_tabs_active_background;
   }
@@ -93,7 +93,7 @@ $ui_rstudio_job_progress_bar: opacify($ui_selection, 1) !default;
 }
 
 /* toolbar and search */
-.rstudio-themes-alternate {
+.rstudio-themes-default {
   .rstheme_center {
     background-color: $ui_rstudio_tabs_inactive_background;
   }
@@ -121,7 +121,7 @@ $ui_rstudio_job_progress_bar: opacify($ui_selection, 1) !default;
 
 /* pane toolbars */
 
-.rstudio-themes-alternate {
+.rstudio-themes-default {
   .rstheme_secondaryToolbar,
   .dataGridHeader {
     background: $ui_background;
@@ -181,7 +181,7 @@ $ui_rstudio_job_progress_bar: opacify($ui_selection, 1) !default;
 }
 
 /* datagrid */
-.rstudio-themes-alternate {
+.rstudio-themes-default {
   .dataGridHeader,
   tr[__gwt_header_row] > :-webkit-any(td, th),
   .dataTables_info {
@@ -193,7 +193,7 @@ $ui_rstudio_job_progress_bar: opacify($ui_selection, 1) !default;
 
 /* hacky toolbars section */
 
-.rstudio-themes-alternate {
+.rstudio-themes-default {
   /* Data Frame Preview */
   .dataTables_wrapper thead th {
     background-color: darken($ui_rstudio_tabs_active_background, 5%) !important;

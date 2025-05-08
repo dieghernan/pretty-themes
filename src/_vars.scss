@@ -47,7 +47,7 @@ $keyword_control_at-rule: $keyword_control !default; //@media in css.
 $keyword_control_import:  $keyword_control !default;
 $keyword_operator:        $foreground !default; //Operators can be textual (e.g. or) or be characters.
 $keyword_other_important: $keyword_control !default; // Important things
-$keyword_other_directive: $keyword_other_important !default; // YANL directives
+$keyword_other_directive: $keyword_other_important !default; // YAML directives
 
 // Markup: For markup languages and generally applies to larger subsets of the text
 $markup_bold:             $foreground !default; //Bold text.

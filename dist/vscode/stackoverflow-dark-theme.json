@@ -137,7 +137,7 @@
       }
     },
     {
-      "name": "YANL directives",
+      "name": "YAML directives",
       "scope": "keyword.other.directive",
       "settings": {
         "foreground": "#88aece"
@@ -173,7 +173,10 @@
     },
     {
       "name": "Markup raw code",
-      "scope": ["markup.raw", "markup.inline.raw"],
+      "scope": [
+        "markup.raw",
+        "markup.inline.raw"
+      ],
       "settings": {
         "foreground": "#cccccc"
       }
@@ -306,7 +309,10 @@
     },
     {
       "name": "Markup Link",
-      "scope": ["markup.link", "meta.link"],
+      "scope": [
+        "markup.link",
+        "meta.link"
+      ],
       "settings": {
         "foreground": "#b5bd68"
       }
@@ -334,22 +340,23 @@
     }
   ],
   "colors": {
-    "activityBar.activeBackground": "#494949",
+    "activityBar.activeBackground": "#463224",
     "activityBar.background": "#201D1C",
     "activityBar.foreground": "#f08d49",
     "activityBar.inactiveForeground": "#999999",
     "activityBarBadge.background": "#f08d49",
     "activityBarBadge.foreground": "#1c1b1b",
-    "badge.background": "#494949",
-    "badge.foreground": "#ffffff",
+    "badge.background": "#f08d49",
+    "badge.foreground": "#1c1b1b",
     "breadcrumb.activeSelectionForeground": "#ffffff",
-    "breadcrumb.background": "#1c1b1b",
+    "breadcrumb.background": "#333232",
     "breadcrumb.focusForeground": "#ffffff",
     "breadcrumb.foreground": "#999999",
     "button.background": "#f08d49",
     "button.foreground": "#1c1b1b",
-    "button.secondaryBackground": "#1c1b1b",
+    "button.secondaryBackground": "#201D1C",
     "button.secondaryForeground": "#ffffff",
+    "dropdown.background": "#333232",
     "dropdown.foreground": "#ffffff",
     "editor.background": "#1c1b1b",
     "editor.foreground": "#ffffff",
@@ -362,24 +369,27 @@
     "editorBracketHighlight.foreground1": "#ffffff",
     "editorCodeLens.foreground": "#999999",
     "editorCursor.foreground": "#f08d49",
+    "editorGroupHeader.tabsBackground": "#201D1C",
     "editorHoverWidget.background": "#1c1b1b",
     "editorHoverWidget.border": "#999999",
     "editorLineNumber.foreground": "#999999",
+    "editorRuler.foreground": "#272626",
     "editorSuggestWidget.foreground": "#ffffff",
     "editorSuggestWidget.selectedBackground": "#494949",
     "editorWhitespace.foreground": "#272626",
-    "extensionButton.prominentForeground": "#ffffff",
     "focusBorder": "#999999",
-    "focusBorder.1": "#999999",
     "foreground": "#ffffff",
     "gitDecoration.ignoredResourceForeground": "#999999",
-    "input.background": "#1c1b1b",
+    "input.background": "#333232",
     "input.foreground": "#ffffff",
     "input.placeholderForeground": "#999999",
     "list.activeSelectionBackground": "#494949",
     "list.activeSelectionForeground": "#ffffff",
     "list.dropBackground": "#494949",
-    "panel.background": "#1c1b1b",
+    "list.hoverBackground": "#494949",
+    "list.inactiveSelectionBackground": "#605F5F",
+    "menu.background": "#201D1C",
+    "panel.background": "#333232",
     "panelTitle.activeForeground": "#ffffff",
     "panelTitle.inactiveForeground": "#999999",
     "peekView.border": "#494949",
@@ -390,22 +400,28 @@
     "peekViewResult.selectionForeground": "#ffffff",
     "peekViewTitleDescription.foreground": "#999999",
     "peekViewTitleLabel.foreground": "#ffffff",
+    "progressBar.background": "#f08d49",
     "settings.checkboxForeground": "#ffffff",
     "settings.dropdownForeground": "#ffffff",
     "settings.headerForeground": "#ffffff",
     "settings.numberInputForeground": "#ffffff",
     "settings.textInputForeground": "#ffffff",
+    "sideBar.background": "#333232",
+    "sideBar.foreground": "#ffffff",
     "sideBarSectionHeader.background": "#1c1b1b",
+    "sideBarTitle.background": "#201D1C",
     "sideBarTitle.foreground": "#ffffff",
-    "statusBar.background": "#201D1C",
+    "statusBar.background": "#463224",
     "statusBar.foreground": "#ffffff",
     "statusBar.noFolderForeground": "#ffffff",
     "statusBarItem.remoteForeground": "#1c1b1b",
-    "tab.activeBackground": "#1c1b1b",
-    "tab.activeForeground": "#ffffff",
-    "tab.inactiveForeground": "#999999",
+    "tab.activeBackground": "#463224",
+    "tab.activeForeground": "#f08d49",
+    "tab.inactiveBackground": "#333232",
+    "tab.inactiveForeground": "#ffffff",
     "terminal.background": "#1c1b1b",
     "terminal.foreground": "#ffffff",
+    "titleBar.activeBackground": "#201D1C",
     "titleBar.activeForeground": "#ffffff",
     "titleBar.inactiveForeground": "#999999"
   }

@@ -36,3 +36,8 @@ ansiBrightCyan,terminal.ansiBrightCyan
 ansiBrightWhite,terminal.ansiBrightWhite
 gutter,editorGutter.background
 gutterForeground,editorLineNumber.foreground
+invisibles,editorRuler.foreground
+invalid,errorForeground
+invalid,list.errorForeground
+invalid,inputValidation.errorBorder
+invalid,editorBracketHighlight.unexpectedBracket.foreground

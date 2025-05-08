@@ -5,12 +5,29 @@
   "publisher": "dieghernan",
   "license": "MIT",
   "version": "0.0.1-dev",
+  "maintainers": [
+    "dieghernan"
+  ],
   "engines": {
     "vscode": "^1.99.0"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "selenized",
+    "solarized",
+    "cran",
+    "skeletor",
+    "stackoverflow",
+    "theme",
+    "color-theme"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#103C48",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
@@ -19,9 +36,34 @@
         "path": "./dist/vscode/cran-theme.json"
       },
       {
+        "label": "OKSolar Dark",
+        "uiTheme": "vs-dark",
+        "path": "./dist/vscode/oksolar-dark-theme.json"
+      },
+      {
+        "label": "OKSolar Light",
+        "uiTheme": "vs",
+        "path": "./dist/vscode/oksolar-light-theme.json"
+      },
+      {
+        "label": "Selenized Black",
+        "uiTheme": "vs-dark",
+        "path": "./dist/vscode/selenized-black-theme.json"
+      },
+      {
         "label": "Selenized Dark",
         "uiTheme": "vs-dark",
         "path": "./dist/vscode/selenized-dark-theme.json"
+      },
+      {
+        "label": "Selenized Light",
+        "uiTheme": "vs",
+        "path": "./dist/vscode/selenized-light-theme.json"
+      },
+      {
+        "label": "Selenized White",
+        "uiTheme": "vs",
+        "path": "./dist/vscode/selenized-white-theme.json"
       },
       {
         "label": "Skeletor",

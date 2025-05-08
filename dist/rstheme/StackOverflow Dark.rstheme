@@ -2379,6 +2379,57 @@
   color: #88aece;
 }
 
-.ace_support.ace_function {
-  color: #ccc;
+/* ---- RStudio Theme ---- */
+/* background */
+.rstudio-themes-flat .rstudio-themes-dark-grey {
+  background: #333232;
+  color: #1c1b1b;
+  /* collapsed toolbar on rstudio server */
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-background {
+  background: #333232;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey [role="banner"] + [role="navigation"] > table > tbody > tr > td,
+.rstudio-themes-flat .rstudio-themes-dark-grey header + [role="navigation"] > table > tbody > tr > td {
+  background: #201d1c;
+  border-color: #201d1c;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-border {
+  border-color: #201d1c;
+}
+
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs, .rstudio-themes-dark-grey .rstheme_multiPodUtilityTabArea {
+  background: #201d1c;
+}
+
+/* inactive tabs */
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs table.rstheme_tabLayoutCenter,
+.rstudio-themes-dark-grey .rstheme_minimizedWindowObject table.rstheme_tabLayoutCenter {
+  background: #333232;
+}
+
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs table.rstheme_tabLayoutCenter .gwt-Label,
+.rstudio-themes-dark-grey .rstheme_minimizedWindowObject table.rstheme_tabLayoutCenter .gwt-Label {
+  color: #ffffff;
+}
+
+/* active tabs */
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs
+.gwt-TabLayoutPanelTab-selected
+table.rstheme_tabLayoutCenter {
+  background: #463224;
+}
+
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs
+.gwt-TabLayoutPanelTab-selected
+table.rstheme_tabLayoutCenter .gwt-Label {
+  color: #f08d49;
+  font-style: italic;
+}
+
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTab:hover .rstheme_tabLayoutCenter {
+  background: #494949;
 }

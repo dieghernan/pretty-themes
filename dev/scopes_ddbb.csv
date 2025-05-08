@@ -26,7 +26,7 @@ keyword.control.at-rule,@media in css
 keyword.control.import,Imports in some languages
 keyword.operator,Operators can be textual (e.g. or) or be characters
 keyword.other.important,Important things
-keyword.other.directive,YANL directives
+keyword.other.directive,YAML directives
 markup.bold,Bold text
 markup.heading,Section header
 markup.italic,Italic text

@@ -222,7 +222,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>YANL directives</string>
+        <string>YAML directives</string>
         <key>scope</key>
         <string>keyword.other.directive</string>
         <key>settings</key>
