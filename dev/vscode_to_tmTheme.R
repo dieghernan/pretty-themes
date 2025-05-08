@@ -19,28 +19,34 @@ settings <- vs$colors
 
 it <- seq_len(length(settings))
 
-settings_df <- lapply(it, function(i){
+settings_df <- lapply(it, function(i) {
   x <- settings[i]
   val <- unlist(x)
-  if(length(val) < 1) val <- NA
-  tibble(vscode= names(x),
-         color = unname(val))
-  
+  if (length(val) < 1) val <- NA
+  tibble(
+    vscode = names(x),
+    color = unname(val)
+  )
 }) |> bind_rows()
 
 # Match
-end <- mapping |> 
-  left_join(settings_df) |> 
-  filter(!is.na(color)) |> 
-  select(tm, color) |>  distinct()
+end <- mapping |>
+  left_join(settings_df) |>
+  filter(!is.na(color)) |>
+  select(tm, color) |>
+  distinct()
 
 
 
 # As a bare minimum we should have background, caret, foreground, invisibles
 # lineHighlight, selection. If not assing colors
 
-fg <- end |>  filter(tm == "foreground") |>  pull(color)
-bg <- end |>  filter(tm == "background") |>  pull(color)
+fg <- end |>
+  filter(tm == "foreground") |>
+  pull(color)
+bg <- end |>
+  filter(tm == "background") |>
+  pull(color)
 # Suggestion for selection
 sel <- colorspace::mixcolor(0.8, colorspace::hex2RGB(fg), colorspace::hex2RGB(bg)) |>
   colorspace::hex()
@@ -48,49 +54,46 @@ inv <- colorspace::mixcolor(0.95, colorspace::hex2RGB(fg), colorspace::hex2RGB(b
   colorspace::hex()
 
 
-if(!"caret" %in% end$tm ){
-  
-  df <- tibble(tm="caret", color = fg)
-  
+if (!"caret" %in% end$tm) {
+  df <- tibble(tm = "caret", color = fg)
+
   end <- bind_rows(end, df)
-  
 }
-if(!"invisibles" %in% end$tm ){
-  df <- tibble(tm="invisibles", color = inv)
-  
+if (!"invisibles" %in% end$tm) {
+  df <- tibble(tm = "invisibles", color = inv)
+
   end <- bind_rows(end, df)
-  
 }
-if(!"lineHighlight" %in% end$tm ){
-  df <- tibble(tm="lineHighlight", color = sel)
-  
+if (!"lineHighlight" %in% end$tm) {
+  df <- tibble(tm = "lineHighlight", color = sel)
+
   end <- bind_rows(end, df)
-  
 }
-if(!"selection" %in% end$tm ){
-  df <- tibble(tm="selection", color = sel)
-  
+if (!"selection" %in% end$tm) {
+  df <- tibble(tm = "selection", color = sel)
+
   end <- bind_rows(end, df)
-  
 }
 
-themename <- vs$name |>  as.character() |>  unname()
+themename <- vs$name |>
+  as.character() |>
+  unname()
 
 # Create settings
 ll <- NULL
-for(i in seq_len(nrow(end))){
+for (i in seq_len(nrow(end))) {
   this <- end[i, ]
-  tm <- this$tm |>  as.character()
+  tm <- this$tm |> as.character()
   col <- this$color |> as.character()
   ll <- c(ll, list(key = list(tm), string = list(col)))
-  
 }
 
 # Fill the template
 setting <- list(
   dict = list(
     key = list("settings"),
-    dict = ll)
+    dict = ll
+  )
 )
 
 
@@ -100,17 +103,19 @@ ntok <- seq_len(length(tokens))
 
 i <- 16
 
-for(i in ntok){
+for (i in ntok) {
   this <- tokens[i][[1]]
   name <- unlist(this$name)
-  if(length(name) == 0){
+  if (length(name) == 0) {
     name <- ""
   }
-  scope <- this$scope |>  unlist() |> paste0(collapse = ", ")
+  scope <- this$scope |>
+    unlist() |>
+    paste0(collapse = ", ")
   message(i, " is ", scope)
   # Settings are ok
   sett <- this$settings
-  
+
   onl <- list(
     dict = list(
       key = list("name"),
@@ -121,36 +126,33 @@ for(i in ntok){
       dict = list()
     )
   )
-  
+
   dictt <- NULL
   settts <- unlist(sett)
   if ("foreground" %in% names(settts)) {
     dictt <- c(dictt, list(
       key = list("foreground"),
-      string = settts["foreground"] |>  unname() |>  paste0(collapse = " ") |> list()
+      string = settts["foreground"] |> unname() |> paste0(collapse = " ") |> list()
     ))
   }
   if ("background" %in% names(settts)) {
     dictt <- c(dictt, list(
       key = list("background"),
-      string = settts["background"] |>  unname() |>  paste0(collapse = " ") |>  list()
+      string = settts["background"] |> unname() |> paste0(collapse = " ") |> list()
     ))
   }
   if ("fontStyle" %in% names(settts)) {
     dictt <- c(dictt, list(
       key = list("fontStyle"),
-      string = settts["fontStyle"] |>  unname() |>  paste0(collapse = " ") |> list()
+      string = settts["fontStyle"] |> unname() |> paste0(collapse = " ") |> list()
     ))
   }
-  
-  if(!is.null(dictt)){
-  onl$dict$dict <- dictt
-  
-  setting <- c(setting, onl)
+
+  if (!is.null(dictt)) {
+    onl$dict$dict <- dictt
+
+    setting <- c(setting, onl)
   }
-  
-  
-  
 }
 
 
@@ -163,6 +165,3 @@ build$plist$dict$array <- list(setting)
 build |>
   xml2::as_xml_document() |>
   write_xml(output)
-
-
-

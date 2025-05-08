@@ -8,6 +8,8 @@
     <string>Wes Bos</string>
     <key>name</key>
     <string>cobalt2</string>
+    <key>semanticClass</key>
+    <string>theme.dark.cobalt2</string>
     <key>settings</key>
     <array>
       <dict>
@@ -542,11 +544,11 @@
         <key>settings</key>
         <dict>
           <key>background</key>
-          <string>#000000</string>
+          <string>#001221</string>
           <key>fontStyle</key>
           <string>bold</string>
           <key>foreground</key>
-          <string>#fdc500</string>
+          <string>#C8E4FD</string>
         </dict>
       </dict>
       <dict>

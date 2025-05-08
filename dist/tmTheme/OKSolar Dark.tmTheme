@@ -22,15 +22,15 @@
           <key>invisibles</key>
           <string>#093946</string>
           <key>lineHighlight</key>
-          <string>#5B7279</string>
+          <string>#093946</string>
           <key>selection</key>
-          <string>#5B7279</string>
+          <string>#093946</string>
           <key>selectionBackground</key>
-          <string>#5B7279</string>
+          <string>#093946</string>
           <key>guide</key>
           <string>#5B7279</string>
           <key>activeGuide</key>
-          <string>#657377</string>
+          <string>#5B7279</string>
         </dict>
       </dict>
       <dict>
@@ -41,7 +41,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#657377</string>
+          <string>#5B7279</string>
         </dict>
       </dict>
       <dict>
@@ -63,7 +63,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#657377</string>
+          <string>#5B7279</string>
         </dict>
       </dict>
       <dict>
@@ -74,7 +74,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#657377</string>
+          <string>#5B7279</string>
           <key>fontStyle</key>
           <string> bold</string>
         </dict>

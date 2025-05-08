@@ -22,13 +22,13 @@
           <key>invisibles</key>
           <string>#184956</string>
           <key>lineHighlight</key>
-          <string>#2D5B69</string>
+          <string>#184956</string>
           <key>selection</key>
-          <string>#2D5B69</string>
+          <string>#184956</string>
           <key>selectionBackground</key>
-          <string>#2D5B69</string>
+          <string>#184956</string>
           <key>guide</key>
-          <string>#2D5B69</string>
+          <string>#72898F</string>
           <key>activeGuide</key>
           <string>#72898F</string>
         </dict>
