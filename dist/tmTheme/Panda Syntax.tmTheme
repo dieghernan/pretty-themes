@@ -1073,8 +1073,8 @@
     <key>semanticClass</key>
     <string>theme.dark.panda_theme</string>
     <key>author</key>
-    <string>dieghernan</string>
+    <string>Juan Pablo Lomeli Diaz, ported by dieghernan</string>
     <key>comment</key>
-    <string>Based on VSCode Panda Theme https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda</string>
+    <string>Panda Project, created for Editors and Terminals</string>
   </dict>
 </plist>

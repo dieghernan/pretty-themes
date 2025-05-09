@@ -2331,8 +2331,8 @@
     <key>semanticClass</key>
     <string>theme.dark.night_owl</string>
     <key>author</key>
-    <string>dieghernan</string>
+    <string>Sarah Drasner, ported by dieghernan</string>
     <key>comment</key>
-    <string>Based in https://github.com/sdras/night-owl-vscode-theme</string>
+    <string>NIGHT OWL: A VS Code dark theme for contrast for nighttime coding, </string>
   </dict>
 </plist>

@@ -2,8 +2,8 @@ library(tidyverse)
 library(xml2)
 library(jsonlite)
 
-vsinput <- "vendor/panda/Panda.json"
-output <- "dev/devpanda.tmTheme"
+vsinput <- "vendor/tokyo-night/tokyo-night-color-theme.json"
+output <- "dev/devtokyo.tmTheme"
 # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
 mapping <- read_csv("dev/mapping_themes.csv")
 
