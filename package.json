@@ -38,12 +38,6 @@
   "contributes": {
     "themes": [
       {
-        "label": "cobalt2",
-        "uiTheme": "vs-dark",
-        "path": "./dist/vscode/cobalt2-theme.json",
-        "ord": "COBALT2"
-      },
-      {
         "label": "CRAN",
         "uiTheme": "vs",
         "path": "./dist/vscode/cran-theme.json",

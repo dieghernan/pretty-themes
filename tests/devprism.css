@@ -1,11 +1,16 @@
-/* 
- * selenized.dark theme
- * author Diego H <https://github.com/dieghernan/>
+/* Night Owl Theme for prismjs
+ * 
+ * Based on https://github.com/sdras/night-owl-vscode-theme
+ * Copyright 2020, 2025, All rights reserved
+ *
+ * Code licensed under the MIT license
+ *
+ * @author Diego H <https://github.com/dieghernan/>
  */
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #ADBCBC;
-  background: #103C48;
+  color: #d6deeb;
+  background: #011627;
   text-shadow: none;
   text-align: left;
   white-space: pre;
@@ -24,7 +29,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-  background: #103C48;
+  background: #011627;
   border-radius: 0.5em;
   padding: 1em;
   margin: 0.5em 0;
@@ -34,172 +39,251 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #103C48;
+  background: #011627;
 }
 
 .token.atrule {
-  color: #75B938;
+  color: #c792ea;
 }
 
 .token.attr-name {
-  color: #75B938;
+  color: #c5e478;
 }
 
 .token.attr-value {
-  color: #41C7B9;
+  color: #ecc48d;
 }
 
 .token.blockquote.punctuation {
-  color: #ADBCBC;
+  color: #697098;
 }
 
 .token.bold {
-  color: #ADBCBC;
+  color: #c5e478;
   font-weight: bold;
 }
 
 .token.boolean {
-  color: #41C7B9;
+  color: #FF5874;
 }
 
 .token.builtin {
-  color: #ADBCBC;
+  color: #82AAFF;
 }
 
 .token.cdata {
-  color: #72898F;
+  color: #637777;
 }
 
 .token.char {
-  color: #41C7B9;
+  color: #ecc48d;
 }
 
 .token.class-name {
-  color: #4695F7;
+  color: #82AAFF;
 }
 
 .token.class {
-  color: #4695F7;
+  color: #80CBC4;
 }
 
 .token.code, .token.code.keyword {
-  color: #4695F7;
+  color: #C5E478;
 }
 
 .token.comment {
-  color: #72898F;
+  color: #637777;
 }
 
 .token.constant {
-  color: #41C7B9;
+  color: #FF5874;
 }
 
 .token.content {
-  color: #ED8649;
+  color: #C5E478;
 }
 
 .token.directive {
-  color: #75B938;
+  color: #c792ea;
 }
 
 .token.doctype {
-  color: #72898F;
+  color: #637777;
 }
 
 .token.entity {
-  color: #41C7B9;
+  color: #ecc48d;
 }
 
 .token.function {
-  color: #4695F7;
+  color: #82AAFF;
 }
 
 .token.id {
-  color: #75B938;
+  color: #FAD430;
 }
 
 .token.important {
-  color: #75B938;
+  color: #c792ea;
   font-weight: bold;
 }
 
 .token.italic {
-  color: #ADBCBC;
+  color: #c792ea;
   font-style: italic;
 }
 
 .token.keyword.null {
-  color: #41C7B9;
+  color: #FF5874;
 }
 
 .token.keyword {
-  color: #75B938;
+  color: #c792ea;
 }
 
 .token.namespace {
-  color: #4695F7;
+  color: #5f7e97;
 }
 
 .token.number {
-  color: #41C7B9;
+  color: #F78C6C;
 }
 
 .token.operator {
-  color: #75B938;
+  color: #7fdbca;
 }
 
 .token.prolog {
-  color: #72898F;
+  color: #637777;
 }
 
 .token.property {
-  color: #DBB32D;
+  color: #c5e478;
 }
 
 .token.punctuation {
-  color: #ADBCBC;
+  color: #d6deeb;
 }
 
 .token.regex {
-  color: #41C7B9;
+  color: #5ca7e4;
 }
 
 .token.selector {
-  color: #75B938;
+  color: #ff6363;
 }
 
 .token.string {
-  color: #41C7B9;
+  color: #ecc48d;
 }
 
 .token.tag {
-  color: #4695F7;
+  color: #caece6;
 }
 
 .token.title {
-  color: #EBC13D;
+  color: #82b1ff;
 }
 
 .token.variable {
-  color: #ADBCBC;
+  color: #c5e478;
 }
 
 code[class="language-css"] {
-  color: #4695F7;
+  color: #c5e478;
 }
 
 code[class="language-scss"] {
-  color: #4695F7;
+  color: #c5e478;
 }
 
 code[class="language-yaml"] {
-  color: #41C7B9;
+  color: #ecc48d;
 }
 
 .language-scss .token.variable, .language-css .token.variable {
-  color: #ED8649;
+  color: #C5E478;
 }
 
 .language-yaml {
-  color: #41C7B9;
+  color: #ecc48d;
+}
+
+.token.control-flow, .token.boolean,
+.token.keyword,
+.token.comment, .token.function {
+  font-style: italic;
+}
+
+.token.url {
+  color: #FF869A;
+}
+
+.language-css, .language-scss {
+  color: #FAD430 !important;
+}
+
+.language-css .token.property, .language-scss .token.property {
+  color: #80CBC4;
+}
+
+.language-css .token.punctuation, .language-scss .token.punctuation {
+  color: #FAD430;
+}
+
+.language-css .token.class, .language-scss .token.class {
+  color: #C5E478;
+  font-style: italic;
+}
+
+.language-css .token.id, .language-scss .token.id {
+  font-style: italic;
+}
+
+.language-css .token.number, .language-scss .token.number {
+  color: #FF6363;
+}
+
+.language-css .token.function, .language-scss .token.function {
+  color: #C5E478;
+  font-style: normal;
+}
+
+.language-scss .token.selector {
+  color: #C5E478;
+  font-style: italic;
+}
+
+.language-html .token.doctype-tag {
+  color: #caece6;
+}
+
+.language-html .token.attr-name {
+  font-style: italic;
+}
+
+.language-yaml .token.tag {
+  color: #C792EA;
+}
+
+.language-yaml .token.atrule {
+  color: #7FDBCA;
+  font-style: normal;
+}
+
+.language-json .token.string, .language-json .token.punctuation {
+  color: #C792EA;
+}
+
+.language-json .token.property {
+  color: #7FDBCA;
+  font-style: normal;
+}
+
+.token.class-name {
+  color: #ffcb8b;
+}
+
+.token.list {
+  color: #D9F5DD;
 }

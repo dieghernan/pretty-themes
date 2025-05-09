@@ -7,6 +7,7 @@ code { color: #333; background-color: #f7f7f7; }
 
 .hljs-section { font-style: italic; }
 
+/* Source: https://github.com/dieghernan/pretty-themes */
 pre code.hljs { display: block; overflow-x: auto; padding: 1em; }
 
 code.hljs { padding: 3px 5px; }

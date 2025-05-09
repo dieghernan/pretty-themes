@@ -2367,7 +2367,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated and tested in RStudio 2024.12.1+563 ("Kousa Dogwood") */
+/* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
 /* Rules from tmTheme */
 .ace_cursor {
   color: #f08d49;
@@ -2381,6 +2381,7 @@
   color: #88aece;
 }
 
+/* Source: https://github.com/dieghernan/pretty-themes */
 /*
 $bg: white !default;
 $fg: black !default;

@@ -2,8 +2,8 @@ library(tidyverse)
 library(xml2)
 library(jsonlite)
 
-vsinput <- "vendor/tokyo-night/tokyo-night-color-theme.json"
-output <- "dev/devtokyo.tmTheme"
+vsinput <- "vendor/cobalt2/cobalt2.json"
+output <- "dev/devcobalt2.tmTheme"
 # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
 mapping <- read_csv("dev/mapping_themes.csv")
 
@@ -47,11 +47,7 @@ fg <- end |>
 bg <- end |>
   filter(tm == "background") |>
   pull(color)
-# Suggestion for selection
-sel <- colorspace::mixcolor(0.8, colorspace::hex2RGB(fg), colorspace::hex2RGB(bg)) |>
-  colorspace::hex()
-inv <- colorspace::mixcolor(0.95, colorspace::hex2RGB(fg), colorspace::hex2RGB(bg)) |>
-  colorspace::hex()
+
 
 
 if (!"caret" %in% end$tm) {

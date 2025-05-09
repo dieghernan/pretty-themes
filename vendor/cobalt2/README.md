@@ -1,3 +1,3 @@
 # Cobalt2 Theme
 
-From <https://github.com/wesbos/cobalt2/>
+From <https://github.com/wesbos/cobalt2-vscode/>
