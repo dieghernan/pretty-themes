@@ -31,6 +31,10 @@
           <string>#8FAAAB</string>
           <key>activeGuide</key>
           <string>#8FAAAB</string>
+          <key>findHighlight</key>
+          <string>#AC8300</string>
+          <key>findHighlightForeground</key>
+          <string>#FBF7EF</string>
         </dict>
       </dict>
       <dict>

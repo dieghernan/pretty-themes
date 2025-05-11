@@ -4,8 +4,8 @@
  */
 
 $bg_0: #103C48;
-$bg_1: #184956;
-$bg_2: #2D5B69;
+$bg_1: #174956;
+$bg_2: #325b66;
 $dim_0: #72898F;
 $fg_0: #ADBCBC;
 $fg_1: #CAD8D9;
@@ -29,7 +29,7 @@ $br_violet: #BD96FA;
 
 $foreground: $fg_0; // Base color: usually on Settings > Foreground
 $background: $bg_0; // Background color: usually on Settings > Background
-$highlight: $fg_1;
+$highlight: $bg_1;
 $comment: $dim_0;
 $constant_character_escape: $red;
 $constant_language: $cyan;

@@ -31,6 +31,10 @@
           <string>#878787</string>
           <key>activeGuide</key>
           <string>#878787</string>
+          <key>findHighlight</key>
+          <string>#C49700</string>
+          <key>findHighlightForeground</key>
+          <string>#FFFFFF</string>
         </dict>
       </dict>
       <dict>

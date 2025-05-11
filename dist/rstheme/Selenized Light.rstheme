@@ -21,7 +21,7 @@
 }
 
 .ace_marker-layer .ace_selection {
-  background: #ECE3CC;
+  background: #E9E4D0;
 }
 
 .ace_selection.ace_start {
@@ -35,19 +35,19 @@
 
 .ace_marker-layer .ace_bracket {
   margin: -1px 0 0 -1px;
-  border: 1px solid #ECE3CC;
+  border: 1px solid #E9E4D0;
 }
 
 .ace_marker-layer .ace_active-line {
-  background: #ECE3CC;
+  background: #E9E4D0;
 }
 
 .ace_gutter-active-line {
-  background-color: #ECE3CC;
+  background-color: #E9E4D0;
 }
 
 .ace_marker-layer .ace_selected-word {
-  border: 1px solid #ECE3CC;
+  border: 1px solid #E9E4D0;
 }
 
 .ace_fold {
@@ -56,7 +56,7 @@
 }
 
 .ace_invisible {
-  color: #ECE3CC;
+  color: #E9E4D0;
 }
 
 .ace_keyword {
@@ -2391,7 +2391,7 @@
 }
 
 .ace_print-margin {
-  background: #ECE3CC;
+  background: #E9E4D0;
 }
 
 .ace_heading {
@@ -2649,7 +2649,7 @@ $comment: grey90 !default;
 /* job progress bar */
 .rstheme_toolbarWrapper [role="progressbar"] > div,
 .windowframe [role="progressbar"] > div {
-  background-color: #ece3cc;
+  background-color: #e9e4d0;
 }
 
 .rstudio-themes-dark-grey input[type="checkbox" i] {

@@ -20,17 +20,21 @@
           <key>foreground</key>
           <string>#ADBCBC</string>
           <key>invisibles</key>
-          <string>#184956</string>
+          <string>#174956</string>
           <key>lineHighlight</key>
-          <string>#184956</string>
+          <string>#174956</string>
           <key>selection</key>
-          <string>#184956</string>
+          <string>#174956</string>
           <key>selectionBackground</key>
-          <string>#184956</string>
+          <string>#174956</string>
           <key>guide</key>
           <string>#72898F</string>
           <key>activeGuide</key>
           <string>#72898F</string>
+          <key>findHighlight</key>
+          <string>#DBB32D</string>
+          <key>findHighlightForeground</key>
+          <string>#103C48</string>
         </dict>
       </dict>
       <dict>

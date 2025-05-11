@@ -30,7 +30,7 @@
     "theme",
     "color-theme"
   ],
-  "icon": "icon.png",
+  "icon": "icon.svg",
   "galleryBanner": {
     "color": "#103C48",
     "theme": "dark"
