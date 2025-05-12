@@ -131,6 +131,8 @@ read_tmtheme <- function(input) {
   end <- end %>%
     mutate(across(all_of(alln), str_squish)) |>
     distinct()
+  end$foreground <- toupper(end$foreground)
+  end$background <- toupper(end$background)
 
   end
 }
@@ -427,10 +429,25 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
     ) |>
     select(tm, fg, bg, fontweight, fontstyle)
 
+
   col2add <- tmcols_clean |>
     inner_join(mapping, by = "tm") |>
     filter(!is.na(rstheme)) |>
     select(rstheme, fg:fontstyle)
+
+  # Add constant languages as well
+  col2add <- tmcols_clean |>
+    filter(str_detect(tm, "constant.language") |
+      tm == "constant") |>
+    arrange(tm) |>
+    slice_tail(n = 1) |>
+    mutate(rstheme = ".ace_constant") |>
+    select(rstheme, fg:fontstyle) |>
+    bind_rows(col2add) |>
+    arrange(rstheme)
+
+
+
 
   new_css <- c("/* Rules from tmTheme */", "")
   cssrule <- ".ace_heading"

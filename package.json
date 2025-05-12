@@ -40,73 +40,67 @@
       {
         "label": "CRAN",
         "uiTheme": "vs",
-        "path": "./dist/vscode/cran-theme.json",
+        "path": "./dist/vscode/cran-color-theme.json",
         "ord": "CRAN"
       },
       {
         "label": "GitHub Dark",
         "uiTheme": "vs-dark",
-        "path": "./dist/vscode/github-dark-theme.json",
+        "path": "./dist/vscode/github-dark-color-theme.json",
         "ord": "GITHUB DARK"
       },
       {
         "label": "GitHub Light",
         "uiTheme": "vs",
-        "path": "./dist/vscode/github-light-theme.json",
+        "path": "./dist/vscode/github-light-color-theme.json",
         "ord": "GITHUB LIGHT"
       },
       {
         "label": "OKSolar Dark",
         "uiTheme": "vs-dark",
-        "path": "./dist/vscode/oksolar-dark-theme.json",
+        "path": "./dist/vscode/oksolar-dark-color-theme.json",
         "ord": "OKSOLAR DARK"
       },
       {
         "label": "OKSolar Light",
         "uiTheme": "vs",
-        "path": "./dist/vscode/oksolar-light-theme.json",
+        "path": "./dist/vscode/oksolar-light-color-theme.json",
         "ord": "OKSOLAR LIGHT"
       },
       {
         "label": "Selenized Black",
         "uiTheme": "vs-dark",
-        "path": "./dist/vscode/selenized-black-theme.json",
+        "path": "./dist/vscode/selenized-black-color-theme.json",
         "ord": "SELENIZED BLACK"
       },
       {
         "label": "Selenized Dark",
         "uiTheme": "vs-dark",
-        "path": "./dist/vscode/selenized-dark-theme.json",
+        "path": "./dist/vscode/selenized-dark-color-theme.json",
         "ord": "SELENIZED DARK"
       },
       {
         "label": "Selenized Light",
         "uiTheme": "vs",
-        "path": "./dist/vscode/selenized-light-theme.json",
+        "path": "./dist/vscode/selenized-light-color-theme.json",
         "ord": "SELENIZED LIGHT"
       },
       {
         "label": "Selenized White",
         "uiTheme": "vs",
-        "path": "./dist/vscode/selenized-white-theme.json",
+        "path": "./dist/vscode/selenized-white-color-theme.json",
         "ord": "SELENIZED WHITE"
-      },
-      {
-        "label": "Skeletor",
-        "uiTheme": "vs-dark",
-        "path": "./dist/vscode/skeletor-theme.json",
-        "ord": "SKELETOR"
       },
       {
         "label": "StackOverflow Dark",
         "uiTheme": "vs-dark",
-        "path": "./dist/vscode/stackoverflow-dark-theme.json",
+        "path": "./dist/vscode/stackoverflow-dark-color-theme.json",
         "ord": "STACKOVERFLOW DARK"
       },
       {
         "label": "StackOverflow Light",
         "uiTheme": "vs",
-        "path": "./dist/vscode/stackoverflow-light-theme.json",
+        "path": "./dist/vscode/stackoverflow-light-color-theme.json",
         "ord": "STACKOVERFLOW LIGHT"
       }
     ]

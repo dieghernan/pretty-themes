@@ -2392,8 +2392,8 @@
 
 /* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
 /* Rules from tmTheme */
-.ace_print-margin {
-  background: #6a737d;
+.ace_constant {
+  color: #C8E1FF;
 }
 
 .ace_cursor {
@@ -2401,8 +2401,12 @@
 }
 
 .ace_heading {
-  color: #0366d6;
+  color: #0366D6;
   font-weight: bold;
+}
+
+.ace_print-margin {
+  background: #6a737d;
 }
 
 /* Source: https://github.com/dieghernan/pretty-themes */

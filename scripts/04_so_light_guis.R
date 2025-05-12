@@ -11,7 +11,7 @@ source("dev/functions.R")
 
 # VScode -----
 output <- basename(tminput) %>%
-  str_replace_all(".tmTheme", "-theme.json") %>%
+  str_replace_all(".tmTheme", "-color-theme.json") %>%
   str_replace_all(" ", "-") %>%
   file.path("dist", "vscode", .) |>
   tolower()

@@ -2426,17 +2426,21 @@
 
 /* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
 /* Rules from tmTheme */
+.ace_constant {
+  color: #FF9E64;
+}
+
 .ace_cursor {
   color: #c0caf5;
 }
 
-.ace_print-margin {
-  background: #101014;
+.ace_heading {
+  color: #89DDFF;
+  font-weight: bold;
 }
 
-.ace_heading {
-  color: #89ddff;
-  font-weight: bold;
+.ace_print-margin {
+  background: #101014;
 }
 
 /* Source: https://github.com/dieghernan/pretty-themes */
