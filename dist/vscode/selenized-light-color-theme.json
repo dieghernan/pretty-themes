@@ -392,6 +392,7 @@
     "focusBorder": "#909995",
     "foreground": "#53676D",
     "gitDecoration.ignoredResourceForeground": "#909995",
+    "icon.foreground": "#489100",
     "input.background": "#EAE5D0",
     "input.foreground": "#53676D",
     "input.placeholderForeground": "#909995",

@@ -402,7 +402,8 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "gitDecoration.ignoredResourceForeground" = comment,
     "menu.background" = bgaccent1,
     "scrollbarSlider.background" = bgaccent2,
-    "scrollbarSlider.activeBackground" = bgfg2
+    "scrollbarSlider.activeBackground" = bgfg2,
+    "icon.foreground" = accent
   )
 }
 
