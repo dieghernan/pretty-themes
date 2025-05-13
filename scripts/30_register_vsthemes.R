@@ -14,7 +14,8 @@ the_df <- lapply(myvs, function(x) {
 }) %>%
   bind_rows() %>%
   mutate(ord = toupper(label)) |>
-  arrange(ord)
+  arrange(ord) |>
+  select(-ord)
 
 
 tm <- list()
