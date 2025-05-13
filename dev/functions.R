@@ -283,9 +283,13 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     # Integrated Terminal Colors
     "terminal.background" = bg,
     "terminal.foreground" = fg,
+    "terminal.cursor" = accent,
+    "terminalCursor.background" = bg,
+    "terminalCursor.foreground" = accent,
+    "terminal.border" = bgaccent2,
 
     # Base Colors
-    "focusBorder" = comment,
+    "focusBorder" = accent,
     "foreground" = fg,
 
     # Button Control
@@ -316,6 +320,8 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "list.dropBackground" = selection,
     "list.hoverBackground" = selection,
     "list.inactiveSelectionBackground" = bgfg2,
+    "list.highlightForeground" = accent,
+    "list.focusBackground" = selection,
 
     # Activity Bar
 
@@ -350,11 +356,16 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "editor.snippetTabstopHighlightBorder" = comment,
     "editorBracketHighlight.foreground1" = fg,
     "editorCodeLens.foreground" = comment,
-    "editorHoverWidget.background" = bg,
+    "editorHoverWidget.background" = bgaccent1,
     "editorHoverWidget.border" = comment,
     "editorLineNumber.foreground" = comment,
     "editorSuggestWidget.foreground" = fg,
-    "editorSuggestWidget.selectedBackground" = selection,
+    "editorSuggestWidget.background" = bgaccent1,
+    "editorSuggestWidget.focusHighlightForeground" = accent,
+    "editorSuggestWidget.highlightForeground" = accent,
+    "editorSuggestWidget.selectedBackground" = bgaccent1,
+    "editorSuggestWidget.selectedIconForeground" = accent,
+    "editorWidget.background" = bgaccent1,
 
     # Peek View Colors
     "peekView.border" = selection,
@@ -400,10 +411,22 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
 
     # Misc
     "gitDecoration.ignoredResourceForeground" = comment,
-    "menu.background" = bgaccent1,
     "scrollbarSlider.background" = bgaccent2,
     "scrollbarSlider.activeBackground" = bgfg2,
-    "icon.foreground" = accent
+    "icon.foreground" = accent,
+    "menu.background" = bgaccent1,
+    "menu.foreground" = fg,
+    "menu.separatorBackground" = bgaccent2,
+    "menubar.selectionBackground" = selection,
+    "menu.selectionBackground" = selection,
+    "notifications.background" = bgaccent2,
+    "notificationLink.foreground" = accent,
+    "editorLink.activeForeground" = accent,
+    "keybindingLabel.foreground" = fg,
+    "keybindingLabel.background" = bg,
+    "pickerGroup.foreground" = accent,
+    "pickerGroup.border" = bgaccent1,
+    "textLink.foreground" = accent
   )
 }
 
