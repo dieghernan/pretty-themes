@@ -41,26 +41,6 @@
         "label": "CRAN",
         "uiTheme": "vs",
         "path": "./dist/vscode/cran-color-theme.json"
-      },
-      {
-        "label": "GitHub Dark",
-        "uiTheme": "vs-dark",
-        "path": "./dist/vscode/github-dark-color-theme.json"
-      },
-      {
-        "label": "GitHub Light",
-        "uiTheme": "vs",
-        "path": "./dist/vscode/github-light-color-theme.json"
-      },
-      {
-        "label": "StackOverflow Dark",
-        "uiTheme": "vs-dark",
-        "path": "./dist/vscode/stackoverflow-dark-color-theme.json"
-      },
-      {
-        "label": "StackOverflow Light",
-        "uiTheme": "vs",
-        "path": "./dist/vscode/stackoverflow-light-color-theme.json"
       }
     ]
   }

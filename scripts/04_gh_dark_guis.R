@@ -7,27 +7,27 @@ tminput <- "./dist/tmTheme/GitHub Dark.tmTheme"
 xml2::read_xml(tminput) %>%
   xml2::write_xml(tminput)
 
-source("dev/functions.R")
-
-# VScode -----
-output <- basename(tminput) %>%
-  str_replace_all(".tmTheme", "-color-theme.json") %>%
-  str_replace_all(" ", "-") %>%
-  file.path("dist", "vscode", .) |>
-  tolower()
-
-output
-
-tmtheme2vscode(tminput, output)
-
-# Prettify output
-read_json(output) |>
-  write_json(path = output, auto_unbox = TRUE, pretty = TRUE)
-
-# And get type of theme here
-them_type <- read_json(output)$type
-
-message(basename(tminput), " is ", them_type)
+source("src/functions.R")
+#
+# # VScode -----
+# output <- basename(tminput) %>%
+#   str_replace_all(".tmTheme", "-color-theme.json") %>%
+#   str_replace_all(" ", "-") %>%
+#   file.path("dist", "vscode", .) |>
+#   tolower()
+#
+# output
+#
+# tmtheme2vscode(tminput, output)
+#
+# # Prettify output
+# read_json(output) |>
+#   write_json(path = output, auto_unbox = TRUE, pretty = TRUE)
+#
+# # And get type of theme here
+# them_type <- read_json(output)$type
+#
+# message(basename(tminput), " is ", them_type)
 
 # RStudio Theme ----
 

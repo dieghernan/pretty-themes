@@ -1,7 +1,7 @@
 library(tidyverse)
 library(xml2)
 library(jsonlite)
-source("dev/functions.R")
+source("src/functions.R")
 
 # tminput <- "dist/tmTheme/cran.tmTheme"
 # output <- "./dist/vscode/cran-color-theme.json"

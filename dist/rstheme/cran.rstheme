@@ -17,7 +17,7 @@
 }
 
 .ace_cursor {
-  color: #06287e;
+  color: #06287E;
 }
 
 .ace_marker-layer .ace_selection {
@@ -65,7 +65,7 @@
 }
 
 .ace_keyword.ace_operator {
-  color: #4070a0;
+  color: #4070A0;
 }
 
 .ace_constant.ace_language {
@@ -73,7 +73,7 @@
 }
 
 .ace_constant.ace_numeric {
-  color: #40a070;
+  color: #40A070;
 }
 
 .ace_support {
@@ -90,15 +90,15 @@
 
 .ace_invalid {
   font-weight: bold;
-  color: #ff0000;
+  color: #FF0000;
 }
 
 .ace_string {
-  color: #4070a0;
+  color: #4070A0;
 }
 
 .ace_string.ace_regexp {
-  color: #bb6688;
+  color: #BB6688;
 }
 
 .ace_comment {
@@ -107,7 +107,7 @@
 }
 
 .ace_variable {
-  color: #19177c;
+  color: #19177C;
 }
 
 .ace_xml-pe {
@@ -115,16 +115,16 @@
 }
 
 .ace_entity.ace_other.ace_attribute-name {
-  color: #7d9029;
+  color: #7D9029;
 }
 
 .ace_entity.ace_name {
-  color: #06287e;
+  color: #06287E;
 }
 
 .ace_markup.ace_heading {
   font-style: italic;
-  color: #ba2121;
+  color: #BA2121;
 }
 
 .nocolor.ace_editor .ace_line span {
@@ -2365,12 +2365,49 @@
 
 /* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
 /* Rules from tmTheme */
+.ace_cursor {
+  color: #06287E;
+}
+
+.ace_print-margin {
+  background: #DBDBDB;
+}
+
+.ace_comment {
+  color: #60A0B0;
+  font-style: italic;
+}
+
 .ace_constant {
+  color: #40A070;
+}
+
+.ace_constant.ace_language {
   color: #880000;
 }
 
-.ace_cursor {
-  color: #06287e;
+.ace_constant.ace_numeric {
+  color: #40A070;
+}
+
+.ace_constant.ace_numeric.ace_float {
+  color: #40A070;
+}
+
+.ace_entity {
+  color: #06287E;
+}
+
+.ace_entity.ace_name {
+  color: #06287E;
+}
+
+.ace_entity.ace_other {
+  color: #7D9029;
+}
+
+.ace_entity.ace_other.ace_attribute-name {
+  color: #7D9029;
 }
 
 .ace_heading {
@@ -2378,8 +2415,94 @@
   font-style: italic;
 }
 
-.ace_print-margin {
-  background: #DBDBDB;
+.ace_invalid {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.ace_keyword {
+  color: #007020;
+  font-weight: bold;
+}
+
+.ace_keyword.ace_control {
+  color: #007020;
+  font-weight: bold;
+}
+
+.ace_keyword.ace_control.ace_import {
+  color: #008000;
+  font-weight: bold;
+}
+
+.ace_keyword.ace_operator {
+  color: #4070A0;
+}
+
+.ace_markup {
+  color: #007020;
+}
+
+.ace_markup.ace_bold {
+  font-weight: bold;
+}
+
+.ace_markup.ace_heading {
+  color: #BA2121;
+  font-style: italic;
+}
+
+.ace_markup.ace_inline {
+  color: #007020;
+}
+
+.ace_markup.ace_inline.ace_raw {
+  color: #007020;
+}
+
+.ace_markup.ace_italic {
+  font-style: italic;
+}
+
+.ace_markup.ace_raw {
+  color: #007020;
+}
+
+.ace_meta {
+  color: #60A0B0;
+}
+
+.ace_meta.ace_doctype {
+  color: #60A0B0;
+}
+
+.ace_storage {
+  color: #902000;
+}
+
+.ace_storage.ace_type {
+  color: #902000;
+}
+
+.ace_string {
+  color: #4070A0;
+}
+
+.ace_string.ace_regexp {
+  color: #BB6688;
+}
+
+.ace_support {
+  color: #008000;
+}
+
+.ace_variable {
+  color: #19177C;
+}
+
+.ace_xml-pe {
+  color: #60A0B0;
+  font-style: italic;
 }
 
 /* Source: https://github.com/dieghernan/pretty-themes */
@@ -2495,7 +2618,7 @@ $comment: grey90 !default;
 
 .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter .gwt-Label {
-  color: #06287e;
+  color: #06287E;
   font-style: italic;
 }
 
@@ -2505,7 +2628,7 @@ $comment: grey90 !default;
 }
 
 #rstudio_workbench_panel_find_in_files td[colspan="2"] {
-  color: #06287e;
+  color: #06287E;
 }
 
 .rstudio-themes-dark-grey .rstheme_secondaryToolbar,
@@ -2539,7 +2662,7 @@ $comment: grey90 !default;
 .rstudio-themes-flat .popupMiddleCenter .item.item-selected,
 .rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected,
 .rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected {
-  color: #06287e;
+  color: #06287E;
   background: #c7cedf;
 }
 
@@ -2603,7 +2726,7 @@ $comment: grey90 !default;
 .rstudio-themes-flat .gwt-MenuItem.gwt-MenuItem-selected,
 .rstudio-themes-flat .gwt-MenuItem.gwt-MenuItem-selected > table {
   background: #c7cedf;
-  color: #06287e;
+  color: #06287E;
 }
 
 /* hacky toolbars section */
@@ -2615,7 +2738,7 @@ $comment: grey90 !default;
 .rstudio-themes-dark-grey .dataTables_wrapper thead th,
 .rstudio-themes-default .dataTables_wrapper thead th {
   background-color: #c7cedf !important;
-  color: #06287e !important;
+  color: #06287E !important;
 }
 
 .rstudio-themes-dark-grey .dataTables_scrollBody table tbody td:first-child,
@@ -2627,7 +2750,7 @@ $comment: grey90 !default;
 .rstudio-themes-dark-grey .dataTables_info,
 .rstudio-themes-default .dataTables_info {
   background: #f2f3f5 !important;
-  color: #06287e !important;
+  color: #06287E !important;
 }
 
 /* job progress bar */

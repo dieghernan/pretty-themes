@@ -140,7 +140,7 @@ readLines(out_f) |>
   str_replace_all("Template for creating tmTheme files", newname) |>
   writeLines(out_f)
 
-source("dev/functions.R")
+source("src/functions.R")
 
 
 pp <- read_tmtheme(out_f)

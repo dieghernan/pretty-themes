@@ -7,7 +7,7 @@ tminput <- "./dist/tmTheme/cran.tmTheme"
 xml2::read_xml(tminput) %>%
   xml2::write_xml(tminput)
 
-source("dev/functions.R")
+source("src/functions.R")
 
 # VScode -----
 output <- basename(tminput) %>%

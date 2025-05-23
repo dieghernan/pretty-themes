@@ -2,10 +2,10 @@ library(tidyverse)
 library(xml2)
 library(jsonlite)
 
-vsinput <- "vendor/cobalt2/cobalt2.json"
-output <- "dev/devcobalt2.tmTheme"
+vsinput <- "vendor/dracula/dracula.json"
+output <- "dev/devdracula.tmTheme"
 # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
-mapping <- read_csv("dev/mapping_themes.csv")
+mapping <- read_csv("src/mapping_themes.csv")
 
 get_template <- read_xml("./src/templates/template.tmTheme") |>
   as_list()
@@ -48,7 +48,8 @@ bg <- end |>
   filter(tm == "background") |>
   pull(color)
 
-
+# Modify
+sel <- end[end$tm == "selection", ]$color |> as.character()
 
 if (!"caret" %in% end$tm) {
   df <- tibble(tm = "caret", color = fg)

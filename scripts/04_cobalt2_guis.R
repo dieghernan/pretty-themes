@@ -7,7 +7,7 @@ tminput <- "./dist/tmTheme/cobalt2.tmTheme"
 xml2::read_xml(tminput) %>%
   xml2::write_xml(tminput)
 
-source("dev/functions.R")
+source("src/functions.R")
 
 # RStudio Theme ----
 

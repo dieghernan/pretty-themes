@@ -1,4 +1,7 @@
 read_tmtheme <- function(input) {
+  options(dplyr.summarise.inform = FALSE)
+
+
   require(xml2)
   require(tidyverse)
 
@@ -6,7 +9,36 @@ read_tmtheme <- function(input) {
 
   tmtheme <- read_xml(input)
 
-  tm_lst <- tmtheme |> as_list()
+  tmclean <- tmtheme |>
+    as_list() |>
+    rapply(function(x) {
+      x <- trimws(x)
+
+      # Guess if color and convert
+      res <- try(col2rgb(x), silent = TRUE)
+
+      res
+      if (!inherits(res, "try-error")) {
+        x <- rgb(t(res), maxColorValue = 255) |> toupper()
+      }
+
+
+      x <- gsub("  ", " ", x)
+      x <- gsub("  ", " ", x)
+      x <- gsub("  ", " ", x)
+      x <- gsub("  ", " ", x)
+      x <- gsub("  ", " ", x)
+      x <- trimws(x)
+      x
+    }, how = "list")
+
+  # Redo and clean XML
+  xml2::as_xml_document(tmclean) |>
+    xml2::write_xml(input)
+
+  # Read back
+  tm_lst <- read_xml(input) |> as_list()
+
 
   # Metadata
   meta_l <- tm_lst$plist$dict
@@ -50,7 +82,6 @@ read_tmtheme <- function(input) {
     value = vl
   )
 
-  x <- array[2][[1]]
   specs <- lapply(array[topl], function(x) {
     # No spec
     thisloop <- x
@@ -105,13 +136,15 @@ read_tmtheme <- function(input) {
   scopes <- specs$scope
 
   newsc <- lapply(scopes, function(x) {
-    this <- str_split(x, " |,", simplify = TRUE) |> unlist()
+    this <- str_split(x, ",", simplify = TRUE) |> unlist()
     this[this != ""]
   })
   specs$scope <- newsc
 
   specs_end <- specs |>
-    unnest(cols = scope)
+    unnest(cols = scope) %>%
+    distinct()
+
   specs_end$section <- "Scopes"
 
   # Final df
@@ -126,14 +159,122 @@ read_tmtheme <- function(input) {
   )
 
   end <- bind_rows(template, meta_df, top_df, specs_end)
-  end[end$name != "Delete", ]
+  end <- end[end$name != "Delete", ]
   alln <- names(end)
   end <- end %>%
     mutate(across(all_of(alln), str_squish)) |>
     distinct()
-  end$foreground <- toupper(end$foreground)
-  end$background <- toupper(end$background)
+  end$foreground <- end$foreground
+  end$background <- end$background
 
+
+  # Now re-create the theme with clean interface
+  # Settings
+  set <- end |>
+    filter(section == "Top-level config") |>
+    select(name, value)
+
+  ll <- NULL
+
+  for (i in seq_len(nrow(set))) {
+    this <- set[i, ]
+    tm <- this$name |> as.character()
+    col <- this$value |> as.character()
+    ll <- c(ll, list(key = list(tm), string = list(col)))
+  }
+
+  # Fill the template
+  setting <- list(
+    dict = list(
+      key = list("settings"),
+      dict = ll
+    )
+  )
+
+  # Now get the rest of params (token colors)
+  tok <- end |>
+    filter(section == "Scopes") |>
+    select(-section, -value)
+
+  tok$order <- seq_len(nrow(tok))
+
+  tok_g <- tok |>
+    group_by(name, foreground, background, fontStyle) |>
+    summarise(minr = min(order), scope = paste0(scope, collapse = ", ")) |>
+    arrange(minr) %>%
+    select(-minr)
+
+  ntok <- seq_len(nrow(tok_g))
+  i <- 1
+  for (i in ntok) {
+    this <- tok_g[i, ]
+    name <- unlist(this$name)
+    if (length(name) == 0) {
+      name <- ""
+    }
+    scope <- this$scope |>
+      strsplit(",") |>
+      unlist() |>
+      trimws() |>
+      sort() |>
+      paste0(collapse = ", ")
+    # message(i, " is ", scope)
+    # Settings are ok
+
+    onl <- list(
+      dict = list(
+        key = list("name"),
+        string = list(name),
+        key = list("scope"),
+        string = list(scope),
+        key = list("settings"),
+        dict = list()
+      )
+    )
+
+    dictt <- NULL
+    settts <- this[, c("foreground", "background", "fontStyle")] |>
+      unlist() |>
+      as.list()
+
+    settts <- settts[!is.na(settts)]
+
+
+
+    if ("foreground" %in% names(settts)) {
+      dictt <- c(dictt, list(
+        key = list("foreground"),
+        string = settts["foreground"] |> unname() |> paste0(collapse = " ") |> list()
+      ))
+    }
+    if ("background" %in% names(settts)) {
+      dictt <- c(dictt, list(
+        key = list("background"),
+        string = settts["background"] |> unname() |> paste0(collapse = " ") |> list()
+      ))
+    }
+    if ("fontStyle" %in% names(settts)) {
+      dictt <- c(dictt, list(
+        key = list("fontStyle"),
+        string = settts["fontStyle"] |> unname() |> paste0(collapse = " ") |> list()
+      ))
+    }
+
+    if (!is.null(dictt)) {
+      onl$dict$dict <- dictt
+
+      setting <- c(setting, onl)
+    }
+  }
+
+  tm_lst$plist$dict$array <- setting
+
+  # Redo and clean XML
+  xml2::as_xml_document(tm_lst) |>
+    xml2::write_xml(input)
+
+
+  # Output
   end
 }
 
@@ -145,7 +286,7 @@ tmtheme2vscode <- function(tminput, output) {
   options(dplyr.summarise.inform = FALSE)
 
   # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
-  mapping <- read_csv("dev/mapping_themes.csv", show_col_types = FALSE)
+  mapping <- read_csv("src/mapping_themes.csv", show_col_types = FALSE)
 
   get_tmTheme <- read_tmtheme(tminput)
 
@@ -200,6 +341,15 @@ tmtheme2vscode <- function(tminput, output) {
   names(col_l) <- colorss$name |> unlist()
   col_l <- as.list(col_l)
 
+  # If is hc then add rule
+  hc <- grepl("_hc_", ss, fixed = TRUE)
+
+  if (hc) {
+    col_l$contrastBorder <- fg
+    col_l$editor.selectionForeground <- accent
+  }
+
+
   # Blend and sort
   col_end <- modifyList(init, col_l)
 
@@ -214,6 +364,8 @@ tmtheme2vscode <- function(tminput, output) {
 
   tokencols$index <- seq_len(nrow(tokencols))
   tok_g <- tokencols |>
+    group_by(name) |>
+    arrange(name, scope) |>
     group_by(name, foreground, background, fontStyle) |>
     summarise(sc = paste0(scope, collapse = ", "), minr = min(index)) |>
     arrange(minr)
@@ -419,7 +571,7 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "menu.separatorBackground" = bgaccent2,
     "menubar.selectionBackground" = selection,
     "menu.selectionBackground" = selection,
-    "notifications.background" = bgaccent2,
+    "notifications.background" = bgaccent1,
     "notificationLink.foreground" = accent,
     "editorLink.activeForeground" = accent,
     "keybindingLabel.foreground" = fg,
@@ -436,14 +588,15 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
   require(sass)
 
   ## Additional colors -----
-  source("dev/functions.R")
+  source("src/functions.R")
   tmcols <- read_tmtheme(tminput)
-  mapping <- read_csv("dev/mapping_themes.csv", show_col_types = FALSE)
+  mapping <- read_csv("src/mapping_themes.csv", show_col_types = FALSE)
 
   ### Rules ----
 
 
   tmcols_clean <- tmcols |>
+    filter(section != "Scopes") |>
     mutate(
       tm = coalesce(scope, name),
       fg = coalesce(foreground, value),
@@ -459,19 +612,148 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
     filter(!is.na(rstheme)) |>
     select(rstheme, fg:fontstyle)
 
-  # Add constant languages as well
-  col2add <- tmcols_clean |>
-    filter(str_detect(tm, "constant.language") |
-      tm == "constant") |>
+  # Mapping of scopes to ace_editor
+
+
+  tmcols_scopes <- tmcols |>
+    filter(section == "Scopes") |>
+    filter(!str_detect(scope, " ")) |> 
+    mutate(
+      tm = coalesce(scope, name),
+      fg = coalesce(foreground, value),
+      bg = background,
+      fontweight = ifelse(str_detect(fontStyle, "old"), "bold", NA),
+      fontstyle = ifelse(str_detect(fontStyle, "talic"), "italic", NA)
+    ) |>
+    select(tm, fg, bg, fontweight, fontstyle) |>
+    arrange(tm) |> 
+    filter(any(!is.na(fg), !is.na(bg), !is.na(fontweight), !is.na(fontstyle)))
+
+  tmcols_scopes <- tmcols_scopes |>
+    filter(str_detect(tm, "link")) |>
+    filter(str_detect(tm, " ", negate = TRUE)) |>
+    mutate(tm = "markup.href") |>
+    bind_rows(tmcols_scopes) |>
+    distinct() |>
+    arrange(tm)
+
+  tmcols_scopes <- tmcols_scopes |>
+    filter(str_detect(tm, "markup.heading")) |>
+    mutate(tm = "heading") |>
+    bind_rows(tmcols_scopes) |>
+    distinct() |>
+    arrange(tm)
+
+  tmcols_scopes <- tmcols_scopes |>
+    filter(tm %in% c(
+      "entity.name.tag.html",
+      "meta.tag"
+    )) |>
+    mutate(tm = "meta.tag") |>
+    bind_rows(tmcols_scopes) |>
+    distinct() |>
+    arrange(tm)
+
+  tmcols_scopes <- tmcols_scopes |>
+    filter(tm == "comment") |>
+    mutate(tm = "xml-pe") |>
+    bind_rows(tmcols_scopes) |>
+    distinct() |>
+    arrange(tm)
+
+  # Workout levels
+  lev3 <- tmcols_scopes |>
+    filter(str_count(tm, fixed(".")) == 2)
+
+  lev2 <- tmcols_scopes |>
+    filter(str_count(tm, fixed(".")) == 1)
+
+
+  lev1 <- tmcols_scopes |>
+    filter(str_count(tm, fixed(".")) == 0)
+
+  lev3 <- lev3 |>
+    group_by(tm) |>
+    mutate(n_times = n()) |>
+    arrange(desc(n_times)) |>
+    slice_max(n = 1, with_ties = FALSE, order_by = n_times) |>
+    select(-n_times)
+
+  # Convert in lev2 to enrich
+  newlev2 <- lev3 |>
+    mutate(new_tm = str_split_fixed(tm, fixed("."), n = 3)[1:2] |>
+      paste0(collapse = ".")) |>
+    group_by(new_tm) |>
+    group_map(function(x, y) {
+      x |>
+        group_by(fg, bg, fontweight, fontstyle) |>
+        summarise(n = n()) |>
+        ungroup() |>
+        arrange(desc(n)) |>
+        slice_head(n = 1) |>
+        mutate(tm = unlist(y)) |>
+        select(tm, fg:fontstyle)
+    }, .keep = TRUE) |>
+    bind_rows() |>
+    arrange(tm)
+
+
+  lev2 <- newlev2 |>
+    filter(!tm %in% lev2$tm) |>
+    bind_rows(lev2) |>
     arrange(tm) |>
-    slice_tail(n = 1) |>
-    mutate(rstheme = ".ace_constant") |>
-    select(rstheme, fg:fontstyle) |>
-    bind_rows(col2add) |>
-    arrange(rstheme)
+    distinct() |>
+    ungroup()
 
 
 
+  # Convert in lev1 to enrich
+
+  lev1_vars <- str_split_fixed(lev2$tm, fixed("."), n = 2)[, 1] |>
+    unlist()
+  newlev1 <- lev2 |>
+    mutate(new_tm = lev1_vars) |>
+    group_by(new_tm) |>
+    group_map(function(x, y) {
+      x |>
+        group_by(fg, bg, fontweight, fontstyle) |>
+        summarise(n = n()) |>
+        ungroup() |>
+        arrange(desc(n)) |>
+        slice_head(n = 1) |>
+        mutate(tm = unlist(y)) |>
+        select(tm, fg:fontstyle)
+    }, .keep = TRUE) |>
+    bind_rows() |>
+    arrange(tm)
+
+
+  lev1 <- newlev1 |>
+    filter(!tm %in% lev1$tm) |>
+    bind_rows(lev1) |>
+    arrange(tm) |>
+    distinct() |>
+    ungroup()
+
+
+
+  ace_scopes <- lev1 |>
+    bind_rows(lev2, lev3) |>
+    arrange(tm) |>
+    ungroup() |>
+    group_by(tm) |>
+    slice_head(n = 1) |>
+    mutate(
+      rstheme = str_replace_all(tm, fixed("."), ".ace_"),
+      rstheme = paste0(".ace_", rstheme)
+    ) |>
+    filter(!is.na(rstheme)) |> 
+    filter(any(!is.na(fg), !is.na(bg), !is.na(fontweight), !is.na(fontstyle)))
+
+
+  col2add <- col2add |>
+    bind_rows(ace_scopes) |>
+    select(rstheme:fontstyle)
 
   new_css <- c("/* Rules from tmTheme */", "")
   cssrule <- ".ace_heading"

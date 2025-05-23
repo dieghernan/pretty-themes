@@ -13,9 +13,9 @@ require(xml2)
 require(sass)
 
 ## Additional colors -----
-source("dev/functions.R")
+source("src/functions.R")
 tmcols <- read_tmtheme(tminput)
-mapping <- read_csv("dev/mapping_themes.csv", show_col_types = FALSE)
+mapping <- read_csv("src/mapping_themes.csv", show_col_types = FALSE)
 
 ### Rules ----
 
