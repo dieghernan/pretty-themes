@@ -683,6 +683,8 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
   newlev2 <- lev3 |>
     mutate(new_tm = str_split_fixed(tm, fixed("."), n = 3)[1:2] |>
       paste0(collapse = ".")) |>
+    # Just the color
+    mutate(bg = NA, fontweight = NA, fontstyle = NA) |> 
     group_by(new_tm) |>
     group_map(function(x, y) {
       x |>
@@ -695,7 +697,7 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
         select(tm, fg:fontstyle)
     }, .keep = TRUE) |>
     bind_rows() |>
-    arrange(tm)
+    arrange(tm) 
 
 
   lev2 <- newlev2 |>
@@ -711,8 +713,11 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
 
   lev1_vars <- str_split_fixed(lev2$tm, fixed("."), n = 2)[, 1] |>
     unlist()
+  
   newlev1 <- lev2 |>
     mutate(new_tm = lev1_vars) |>
+    # Just the color
+    mutate(bg = NA, fontweight = NA, fontstyle = NA) |> 
     group_by(new_tm) |>
     group_map(function(x, y) {
       x |>
@@ -725,7 +730,7 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
         select(tm, fg:fontstyle)
     }, .keep = TRUE) |>
     bind_rows() |>
-    arrange(tm)
+    arrange(tm) 
 
 
   lev1 <- newlev1 |>

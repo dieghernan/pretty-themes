@@ -2452,11 +2452,10 @@
 
 .ace_entity {
   color: #50FA7B;
-  font-style: italic;
 }
 
 .ace_entity.ace_name {
-  color: #50FA7B;
+  color: #8BE9FD;
 }
 
 .ace_entity.ace_name.ace_class {
@@ -2482,7 +2481,6 @@
 
 .ace_entity.ace_other {
   color: #50FA7B;
-  font-style: italic;
 }
 
 .ace_entity.ace_other.ace_attribute-name {
@@ -2530,26 +2528,17 @@
   color: #FF79C6;
 }
 
-.ace_keyword.ace_control {
-  font-weight: bold;
-}
-
 .ace_keyword.ace_control.ace_new {
   font-weight: bold;
 }
 
 .ace_keyword.ace_expressions-and-types {
   color: #BD93F9;
-  font-style: italic;
 }
 
 .ace_keyword.ace_expressions-and-types.ace_swift {
   color: #BD93F9;
   font-style: italic;
-}
-
-.ace_keyword.ace_operator {
-  font-weight: bold;
 }
 
 .ace_keyword.ace_operator.ace_new {
@@ -2558,7 +2547,6 @@
 
 .ace_keyword.ace_other {
   color: #BD93F9;
-  font-style: italic;
 }
 
 .ace_keyword.ace_other.ace_this {
@@ -2568,7 +2556,6 @@
 
 .ace_keyword.ace_primitive-datatypes {
   color: #8BE9FD;
-  font-style: italic;
 }
 
 .ace_keyword.ace_primitive-datatypes.ace_swift {
@@ -2578,7 +2565,6 @@
 
 .ace_keyword.ace_type {
   color: #8BE9FD;
-  font-style: italic;
 }
 
 .ace_keyword.ace_type.ace_cs {
@@ -2588,7 +2574,6 @@
 
 .ace_log {
   color: #F1FA8C;
-  font-weight: bold;
 }
 
 .ace_log.ace_error {
@@ -2735,7 +2720,6 @@
 
 .ace_meta.ace_protocol-list {
   color: #8BE9FD;
-  font-style: italic;
 }
 
 .ace_meta.ace_protocol-list.ace_objc {
@@ -2745,7 +2729,6 @@
 
 .ace_meta.ace_return-type {
   color: #8BE9FD;
-  font-style: italic;
 }
 
 .ace_meta.ace_return-type.ace_objc {
@@ -2843,7 +2826,6 @@
 
 .ace_storage.ace_type {
   color: #8BE9FD;
-  font-style: italic;
 }
 
 .ace_storage.ace_type.ace_c {

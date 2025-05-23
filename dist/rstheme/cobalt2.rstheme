@@ -2426,7 +2426,6 @@
 
 .ace_keyword.ace_control {
   color: #FF9D00;
-  font-style: italic;
 }
 
 .ace_keyword.ace_control.ace_export {
@@ -2435,12 +2434,11 @@
 }
 
 .ace_markup {
-  color: #A5FF90;
+  color: #9EFFFF;
 }
 
 .ace_markup.ace_bold {
   color: #9EFFFF;
-  font-weight: bold;
 }
 
 .ace_markup.ace_bold.ace_markdown {
@@ -2467,7 +2465,6 @@
 
 .ace_markup.ace_italic {
   color: #9EFFFF;
-  font-style: italic;
 }
 
 .ace_markup.ace_italic.ace_markdown {

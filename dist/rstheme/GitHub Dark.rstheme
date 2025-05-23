@@ -2429,8 +2429,6 @@
 
 .ace_invalid {
   color: #D73A49;
-  font-weight: bold;
-  font-style: italic;
 }
 
 .ace_invalid.ace_broken {
@@ -2504,7 +2502,6 @@
 
 .ace_meta {
   color: #0366D6;
-  font-weight: bold;
 }
 
 .ace_meta.ace_module-reference {
@@ -2522,12 +2519,10 @@
 
 .ace_punctuation {
   color: #176F2C;
-  background-color: #F0FFF4;
 }
 
 .ace_punctuation.ace_definition {
   color: #176F2C;
-  background-color: #F0FFF4;
 }
 
 .ace_punctuation.ace_definition.ace_comment {

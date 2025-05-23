@@ -2518,12 +2518,10 @@
 
 .ace_entity {
   color: #C5E478;
-  font-style: italic;
 }
 
 .ace_entity.ace_name {
   color: #C792EA;
-  font-style: italic;
 }
 
 .ace_entity.ace_name.ace_class {
@@ -2541,7 +2539,6 @@
 
 .ace_entity.ace_other {
   color: #C5E478;
-  font-style: italic;
 }
 
 .ace_entity.ace_other.ace_attribute-name {
@@ -2725,7 +2722,7 @@
 }
 
 .ace_meta {
-  color: #D6DEEB;
+  color: #C792EA;
 }
 
 .ace_meta.ace_array {
@@ -2738,7 +2735,6 @@
 
 .ace_meta.ace_delimiter {
   color: #C792EA;
-  font-style: italic;
 }
 
 .ace_meta.ace_delimiter.ace_period {

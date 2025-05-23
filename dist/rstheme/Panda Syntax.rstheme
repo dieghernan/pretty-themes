@@ -2413,12 +2413,10 @@
 
 .ace_entity {
   color: #19F9D8;
-  font-style: italic;
 }
 
 .ace_entity.ace_name {
   color: #19F9D8;
-  font-style: italic;
 }
 
 .ace_entity.ace_name.ace_function {
@@ -2452,12 +2450,10 @@
 
 .ace_fenced_code {
   color: #BBBBBB;
-  font-style: italic;
 }
 
 .ace_fenced_code.ace_block {
   color: #BBBBBB;
-  font-style: italic;
 }
 
 .ace_fenced_code.ace_block.ace_language {
@@ -2545,7 +2541,6 @@
 
 .ace_markup.ace_inline {
   color: #19F9D8;
-  font-style: italic;
 }
 
 .ace_markup.ace_inline.ace_raw {
@@ -2584,12 +2579,10 @@
 
 .ace_punctuation {
   color: #FFCC95;
-  font-style: italic;
 }
 
 .ace_punctuation.ace_definition {
   color: #FFCC95;
-  font-style: italic;
 }
 
 .ace_punctuation.ace_definition.ace_expression {

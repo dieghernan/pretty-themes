@@ -2670,7 +2670,7 @@
 }
 
 .ace_markup {
-  color: #449DAB;
+  color: #C0CAF5;
 }
 
 .ace_markup.ace_bold {

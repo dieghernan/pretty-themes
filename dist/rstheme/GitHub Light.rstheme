@@ -2417,8 +2417,6 @@
 
 .ace_invalid {
   color: #B31D28;
-  font-weight: bold;
-  font-style: italic;
 }
 
 .ace_invalid.ace_broken {
@@ -2451,7 +2449,6 @@
 
 .ace_markup {
   color: #005CC5;
-  font-weight: bold;
 }
 
 .ace_markup.ace_bold {
