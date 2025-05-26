@@ -13,29 +13,31 @@
           <key>foreground</key>
           <string>#F8F8F2</string>
           <key>hoverHighlight</key>
-          <string>#8BE9FD</string>
+          <string>#8BE9FD50</string>
           <key>selection</key>
           <string>#44475A</string>
           <key>selectionHighlightColor</key>
           <string>#424450</string>
           <key>wordHighlight</key>
-          <string>#8BE9FD</string>
+          <string>#8BE9FD50</string>
           <key>wordHighlightStrong</key>
-          <string>#50FA7B</string>
+          <string>#50FA7B50</string>
           <key>findMatchHighlight</key>
-          <string>#F1FA8C</string>
+          <string>#FFFFFF40</string>
+          <key>findMatchHighlight</key>
+          <string>#F1FA8C80</string>
           <key>currentFindMatchHighlight</key>
-          <string>#FFB86C</string>
+          <string>#FFB86C80</string>
           <key>findRangeHighlight</key>
-          <string>#44475A</string>
+          <string>#44475A75</string>
           <key>referenceHighlight</key>
-          <string>#F1FA8C</string>
+          <string>#F1FA8C80</string>
           <key>rangeHighlight</key>
-          <string>#BD93F9</string>
+          <string>#BD93F915</string>
           <key>invisibles</key>
-          <string>#FFFFFF</string>
+          <string>#FFFFFF1A</string>
           <key>guide</key>
-          <string>#FFFFFF</string>
+          <string>#FFFFFF1A</string>
           <key>ansiBlack</key>
           <string>#21222C</string>
           <key>ansiRed</key>
@@ -1058,8 +1060,8 @@
     <key>semanticClass</key>
     <string>theme.dark.dracula2025</string>
     <key>author</key>
-    <string>dieghernan based in dracula theme</string>
+    <string>dieghernan</string>
     <key>comment</key>
-    <string>Generated from VSCode theme</string>
+    <string>Based on VS Code Dracula Theme</string>
   </dict>
 </plist>

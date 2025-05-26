@@ -39,11 +39,11 @@
 }
 
 .ace_marker-layer .ace_active-line {
-  background: #28707D;
+  background: rgba(40, 112, 125, 0.16);
 }
 
 .ace_gutter-active-line {
-  background-color: #28707D;
+  background-color: rgba(40, 112, 125, 0.16);
 }
 
 .ace_marker-layer .ace_selected-word {
@@ -277,7 +277,7 @@
 }
 
 .xtermBlur {
-  filter: brightness(75%);
+  filter: blur(1px);
 }
 
 .xtermUnderline {
@@ -2434,7 +2434,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
+/* Generated and tested in RStudio 2024.04.2+764.pro1 ("Chocolate Cosmos") */
 /* Rules from tmTheme */
 .ace_cursor {
   color: #80A4C2;
@@ -2678,7 +2678,7 @@
 }
 
 .ace_markup.ace_deleted.ace_diff {
-  color: #EF5350;
+  color: #EF535090;
   font-style: italic;
 }
 

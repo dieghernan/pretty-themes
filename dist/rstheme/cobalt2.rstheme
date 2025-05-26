@@ -211,7 +211,7 @@
 }
 
 .xtermBlur {
-  filter: brightness(75%);
+  filter: blur(1px);
 }
 
 .xtermUnderline {
@@ -2368,7 +2368,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
+/* Generated and tested in RStudio 2024.04.2+764.pro1 ("Chocolate Cosmos") */
 /* Rules from tmTheme */
 .ace_cursor {
   color: #FFC600;
@@ -2513,7 +2513,7 @@
 }
 
 .ace_punctuation.ace_definition {
-  color: #A5FF90;
+  color: #FFEE80;
 }
 
 .ace_punctuation.ace_definition.ace_comment {
@@ -2522,11 +2522,11 @@
 }
 
 .ace_punctuation.ace_definition.ace_deleted {
-  color: #FF628C;
+  color: #FF628CCC;
 }
 
 .ace_punctuation.ace_definition.ace_inserted {
-  color: #A5FF90;
+  color: #A5FF90CC;
 }
 
 .ace_punctuation.ace_definition.ace_parameters {

@@ -2,8 +2,11 @@ library(tidyverse)
 library(xml2)
 library(jsonlite)
 
-vsinput <- "vendor/dracula/dracula.json"
-output <- "dev/devdracula.tmTheme"
+vsinput <- "vendor/tokyo-night/tokyo-night-storm-color-theme.json"
+output <- "dist/tmTheme/Tokyo Night Storm.tmTheme"
+semclass <- "theme.dark.tokyo_night_storm" |>  tolower()
+commtheme <- "A clean Visual Studio Code theme that celebrates the lights of Downtown Tokyo at night"
+
 # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
 mapping <- read_csv("src/mapping_themes.csv")
 
@@ -13,6 +16,8 @@ get_template <- read_xml("./src/templates/template.tmTheme") |>
 # 1. Read vscode and prepare
 
 vs <- read_json(vsinput)
+
+
 
 # Convert settings to tmTheme
 settings <- vs$colors
@@ -57,7 +62,7 @@ if (!"caret" %in% end$tm) {
   end <- bind_rows(end, df)
 }
 if (!"invisibles" %in% end$tm) {
-  df <- tibble(tm = "invisibles", color = inv)
+  df <- tibble(tm = "invisibles", color = sel)
 
   end <- bind_rows(end, df)
 }
@@ -75,6 +80,7 @@ if (!"selection" %in% end$tm) {
 themename <- vs$name |>
   as.character() |>
   unname()
+
 
 # Create settings
 ll <- NULL
@@ -157,8 +163,19 @@ build <- get_template
 build$plist$dict[[2]][[1]] <- themename
 
 
+build$plist$dict[[8]][[1]] <- semclass
+
+build$plist$dict[[12]][[1]] <- commtheme
+
+
+
 build$plist$dict$array <- list(setting)
 
 build |>
   xml2::as_xml_document() |>
   write_xml(output)
+
+source("src/functions.R")
+read_tmtheme(output)
+
+

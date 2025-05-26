@@ -35,7 +35,7 @@
 
 .ace_marker-layer .ace_bracket {
   margin: -1px 0 0 -1px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .ace_marker-layer .ace_active-line {
@@ -56,7 +56,7 @@
 }
 
 .ace_invisible {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .ace_keyword {
@@ -247,7 +247,7 @@
 }
 
 .xtermBlur {
-  filter: brightness(75%);
+  filter: blur(1px);
 }
 
 .xtermUnderline {
@@ -2404,10 +2404,10 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
+/* Generated and tested in RStudio 2024.04.2+764.pro1 ("Chocolate Cosmos") */
 /* Rules from tmTheme */
 .ace_print-margin {
-  background: #FFFFFF;
+  background: #FFFFFF1A;
 }
 
 .ace_cursor {

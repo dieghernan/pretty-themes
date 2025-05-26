@@ -13,25 +13,25 @@
           <key>foreground</key>
           <string>#FFFFFF</string>
           <key>hoverHighlight</key>
-          <string>#FFC600</string>
+          <string>#FFC60033</string>
           <key>selection</key>
           <string>#0050A4</string>
           <key>inactiveSelection</key>
           <string>#003B8B</string>
           <key>selectionHighlightColor</key>
-          <string>#0050A4</string>
+          <string>#0050A480</string>
           <key>wordHighlight</key>
-          <string>#FFFFFF</string>
+          <string>#FFFFFF21</string>
           <key>wordHighlightStrong</key>
-          <string>#FFFFFF</string>
+          <string>#FFFFFF21</string>
           <key>findMatchHighlight</key>
           <string>#0D3A58</string>
           <key>currentFindMatchHighlight</key>
-          <string>#FF7200</string>
+          <string>#FF720066</string>
           <key>findRangeHighlight</key>
           <string>#243E51</string>
           <key>referenceHighlight</key>
-          <string>#193549</string>
+          <string>#19354900</string>
           <key>lineHighlight</key>
           <string>#1F4662</string>
           <key>rangeHighlight</key>
@@ -75,7 +75,7 @@
           <key>ansiBrightWhite</key>
           <string>#FFFFFF</string>
           <key>gutter</key>
-          <string>#122738</string>
+          <string>#12273866</string>
           <key>gutterForeground</key>
           <string>#AAAAAA</string>
           <key>invalid</key>
@@ -169,7 +169,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#A5FF90</string>
+          <string>#A5FF90CC</string>
         </dict>
       </dict>
       <dict>
@@ -191,7 +191,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#FF628C</string>
+          <string>#FF628CCC</string>
         </dict>
       </dict>
       <dict>

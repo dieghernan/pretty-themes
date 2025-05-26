@@ -2,44 +2,44 @@
 <plist>
   <dict>
     <key>name</key>
-    <string>Tokyo Night</string>
+    <string>Tokyo Night Storm</string>
     <key>settings</key>
     <array>
       <dict>
         <key>settings</key>
         <dict>
           <key>background</key>
-          <string>#1A1B26</string>
+          <string>#24283B</string>
           <key>foreground</key>
           <string>#A9B1D6</string>
           <key>selection</key>
-          <string>#515C7E4D</string>
+          <string>#6F7BB640</string>
           <key>inactiveSelection</key>
-          <string>#515C7E25</string>
+          <string>#6F7BB615</string>
           <key>selectionHighlightColor</key>
-          <string>#515C7E44</string>
+          <string>#6F7BB633</string>
           <key>wordHighlight</key>
-          <string>#515C7E44</string>
+          <string>#6F7BB633</string>
           <key>wordHighlightStrong</key>
-          <string>#515C7E55</string>
+          <string>#6F7BB644</string>
           <key>findMatchHighlight</key>
           <string>#3D59A166</string>
           <key>currentFindMatchHighlight</key>
           <string>#3D59A166</string>
           <key>findRangeHighlight</key>
-          <string>#515C7E33</string>
+          <string>#6F7BB625</string>
           <key>referenceHighlight</key>
           <string>#3D59A166</string>
           <key>lineHighlight</key>
-          <string>#1E202E</string>
+          <string>#292E42</string>
           <key>rangeHighlight</key>
-          <string>#515C7E20</string>
+          <string>#6F7BB620</string>
           <key>caret</key>
           <string>#C0CAF5</string>
           <key>invisibles</key>
-          <string>#101014</string>
+          <string>#3B4261</string>
           <key>ansiBlack</key>
-          <string>#363B54</string>
+          <string>#414868</string>
           <key>ansiRed</key>
           <string>#F7768E</string>
           <key>ansiGreen</key>
@@ -53,9 +53,9 @@
           <key>ansiCyan</key>
           <string>#7DCFFF</string>
           <key>ansiWhite</key>
-          <string>#787C99</string>
+          <string>#8089B3</string>
           <key>ansiBrightBlack</key>
-          <string>#363B54</string>
+          <string>#414868</string>
           <key>ansiBrightRed</key>
           <string>#F7768E</string>
           <key>ansiBrightGreen</key>
@@ -69,11 +69,30 @@
           <key>ansiBrightCyan</key>
           <string>#7DCFFF</string>
           <key>ansiBrightWhite</key>
-          <string>#ACB0D0</string>
+          <string>#A9B1D6</string>
           <key>gutterForeground</key>
-          <string>#363B54</string>
+          <string>#3B4261</string>
+          <key>invisibles</key>
+          <string>#1B1E2E</string>
+          <key>invalid</key>
+          <string>#5A607D</string>
+          <key>invalid</key>
+          <string>#BB616B</string>
+          <key>invalid</key>
+          <string>#963C47</string>
           <key>invalid</key>
           <string>#DB4B4B</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
+        <key>scope</key>
+        <string>comment, keyword.control.flow, keyword.control.return, meta.directive.vue entity.other.attribute-name.html, meta.directive.vue punctuation.separator.key-value.html, meta.var.expr storage.type, storage.modifier, string.quoted.docstring.multi, string.quoted.docstring.multi.python constant.character.escape, string.quoted.docstring.multi.python punctuation.definition.string.begin, string.quoted.docstring.multi.python punctuation.definition.string.end, tag.decorator.js entity.name.tag.js, tag.decorator.js punctuation.definition.tag.js</string>
+        <key>settings</key>
+        <dict>
+          <key>fontStyle</key>
+          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -84,7 +103,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#51597D</string>
+          <string>#5F6996</string>
         </dict>
       </dict>
       <dict>
@@ -95,7 +114,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#5A638C</string>
+          <string>#6F7BB0</string>
         </dict>
       </dict>
       <dict>
@@ -106,7 +125,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#646E9C</string>
+          <string>#7582BA</string>
         </dict>
       </dict>
       <dict>
@@ -188,7 +207,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Interpolation, PHP tags, Smarty tags</string>
+        <string>Interpolation / PHP tags / Smarty tags</string>
         <key>scope</key>
         <string>meta.embedded.line.tag.smarty, punctuation.definition.template-expression, punctuation.section.embedded, punctuation.section.tag.twig, support.constant.handlebars</string>
         <key>settings</key>
@@ -199,13 +218,13 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Blade, Twig, Smarty Handlebars keywords</string>
+        <string>Twig, Smarty, Blade, Handlebars keyword</string>
         <key>scope</key>
         <string>entity.name.function.blade, keyword.blade, keyword.control.smarty, keyword.control.twig, keyword.operator.comparison.twig, meta.tag.blade keyword.other.type.php, support.constant.handlebars keyword.control</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0DB9D7</string>
+          <string>#2AC3DE</string>
         </dict>
       </dict>
       <dict>
@@ -291,7 +310,7 @@
         <key>name</key>
         <string>Tag - Custom / Unrecognized</string>
         <key>scope</key>
-        <string>entity.name.tag support.class.component, meta.tag, meta.tag.custom entity.name.tag, meta.tag.other.unrecognized.html.derivative entity.name.tag</string>
+        <string>entity.name.tag support.class.component, meta.tag, meta.tag.custom entity.name.tag, meta.tag.other.unrecognized.html.derivative</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -313,7 +332,7 @@
         <key>name</key>
         <string>Globals, PHP Constants, etc</string>
         <key>scope</key>
-        <string>constant.other, constant.other.php, variable.other.global, variable.other.global punctuation.definition.variable, variable.other.global.safer, variable.other.global.safer punctuation.definition.variable</string>
+        <string>constant.other.haskell, constant.other.php, variable.other.global, variable.other.global punctuation.definition.variable, variable.other.global.safer, variable.other.global.safer punctuation.definition.variable</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -357,7 +376,7 @@
         <key>name</key>
         <string>Object Property</string>
         <key>scope</key>
-        <string>meta.function-call variable.other.object.property, support.variable.property, support.variable.property.dom, variable.other.property</string>
+        <string>meta.function-call variable.other.object.property, support.variable.property, support.variable.property.dom, variable.other.object.property.cs, variable.other.property</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -482,7 +501,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0DB9D7</string>
+          <string>#2AC3DE</string>
         </dict>
       </dict>
       <dict>
@@ -504,7 +523,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0DB9D7</string>
+          <string>#2AC3DE</string>
         </dict>
       </dict>
       <dict>
@@ -559,7 +578,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0DB9D7</string>
+          <string>#2AC3DE</string>
         </dict>
       </dict>
       <dict>
@@ -724,7 +743,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0DB9D7</string>
+          <string>#2AC3DE</string>
         </dict>
       </dict>
       <dict>
@@ -911,7 +930,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0DB9D7</string>
+          <string>#2AC3DE</string>
         </dict>
       </dict>
       <dict>
@@ -955,7 +974,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0DB9D7</string>
+          <string>#2AC3DE</string>
         </dict>
       </dict>
       <dict>
@@ -1061,7 +1080,7 @@
         <key>name</key>
         <string>Markdown - Heading 1</string>
         <key>scope</key>
-        <string>heading.1.markdown entity.name, heading.1.markdown punctuation.definition.heading.markdown, markup.heading</string>
+        <string>heading.1.markdown entity.name, heading.1.markdown punctuation.definition.heading.markdown</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -1237,7 +1256,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#51597D</string>
+          <string>#5F6996</string>
           <key>fontStyle</key>
           <string>bold</string>
         </dict>
@@ -1330,24 +1349,13 @@
           <string>#7AA2F7</string>
         </dict>
       </dict>
-      <dict>
-        <key>name</key>
-        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
-        <key>scope</key>
-        <string>comment, keyword.other.important, storage.type</string>
-        <key>settings</key>
-        <dict>
-          <key>fontStyle</key>
-          <string>italic</string>
-        </dict>
-      </dict>
     </array>
     <key>colorSpaceName</key>
     <string>sRGB</string>
     <key>semanticClass</key>
-    <string>theme.dark.tokyo_night</string>
+    <string>theme.dark.tokyo_night_storm</string>
     <key>author</key>
-    <string>enkia, ported by dieghernan</string>
+    <string>dieghernan</string>
     <key>comment</key>
     <string>A clean Visual Studio Code theme that celebrates the lights of Downtown Tokyo at night</string>
   </dict>

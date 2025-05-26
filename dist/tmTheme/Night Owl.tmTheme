@@ -13,31 +13,31 @@
           <key>foreground</key>
           <string>#D6DEEB</string>
           <key>hoverHighlight</key>
-          <string>#7E57C2</string>
+          <string>#7E57C25A</string>
           <key>selection</key>
           <string>#1D3B53</string>
           <key>inactiveSelection</key>
-          <string>#7E57C2</string>
+          <string>#7E57C25A</string>
           <key>selectionHighlightColor</key>
-          <string>#5F7E97</string>
+          <string>#5F7E9779</string>
           <key>wordHighlight</key>
-          <string>#F6BBE5</string>
+          <string>#F6BBE533</string>
           <key>wordHighlightStrong</key>
-          <string>#E2A2F4</string>
+          <string>#E2A2F433</string>
           <key>findMatchHighlight</key>
-          <string>#FFFFFF</string>
+          <string>#FFFFFFCC</string>
           <key>currentFindMatchHighlight</key>
-          <string>#5F7E97</string>
+          <string>#5F7E9779</string>
           <key>referenceHighlight</key>
-          <string>#7E57C2</string>
+          <string>#7E57C25A</string>
           <key>lineHighlight</key>
-          <string>#28707D</string>
+          <string>#28707D29</string>
           <key>rangeHighlight</key>
-          <string>#7E57C2</string>
+          <string>#7E57C25A</string>
           <key>caret</key>
           <string>#80A4C2</string>
           <key>guide</key>
-          <string>#5E81CE</string>
+          <string>#5E81CE52</string>
           <key>ansiBlack</key>
           <string>#011627</string>
           <key>ansiRed</key>
@@ -99,7 +99,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#EF5350</string>
+          <string>#EF535090</string>
           <key>fontStyle</key>
           <string>italic</string>
         </dict>

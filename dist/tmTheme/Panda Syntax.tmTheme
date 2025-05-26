@@ -13,19 +13,19 @@
           <key>foreground</key>
           <string>#E6E6E6</string>
           <key>selection</key>
-          <string>#FFB86C</string>
+          <string>#FFB86C40</string>
           <key>inactiveSelection</key>
-          <string>#FFB86C</string>
+          <string>#FFB86C40</string>
           <key>selectionHighlightColor</key>
-          <string>#FFB86C</string>
+          <string>#FFB86C40</string>
           <key>wordHighlight</key>
-          <string>#FFCC95</string>
+          <string>#FFCC9560</string>
           <key>wordHighlightStrong</key>
-          <string>#FF9AC1</string>
+          <string>#FF9AC170</string>
           <key>findMatchHighlight</key>
-          <string>#FFB86C</string>
+          <string>#FFB86C40</string>
           <key>currentFindMatchHighlight</key>
-          <string>#B084EB</string>
+          <string>#B084EB90</string>
           <key>lineHighlight</key>
           <string>#31353A</string>
           <key>caret</key>

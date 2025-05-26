@@ -15,12 +15,19 @@ read_tmtheme <- function(input) {
       x <- trimws(x)
 
       # Guess if color and convert
-      res <- try(col2rgb(x), silent = TRUE)
+      res <- try(col2rgb(x, alpha = TRUE), silent = TRUE)
 
-      res
+      
       if (!inherits(res, "try-error")) {
-        x <- rgb(t(res), maxColorValue = 255) |> toupper()
+        x <- rgb(t(res[1:3]), maxColorValue = 255) |> toupper()
+        if(res[4] < 255){
+          
+          aa <- res[4] / 255
+          
+          x <- ggplot2::alpha(x, aa) |>  toupper()
+        }
       }
+      
 
 
       x <- gsub("  ", " ", x)
