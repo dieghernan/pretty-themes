@@ -819,8 +819,9 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
     paste0("$comment: ", ., ";")
 
   # SASS stylesheet
-  compiler <- readLines("./src/_better_rstheme.scss")
-
+  compiler <- readLines("./src/_better_rstheme.scss") 
+  
+  
   ## Build ----
 
   # Create a first compilation
@@ -840,6 +841,7 @@ tmtheme2rstheme <- function(tminput, rtheme_out) {
   )
 
   readLines(rtheme_out) %>%
+    str_replace_all(fixed("blur(1px)"), "brightness(75%)") %>%
     # New rules
     c(vtext, "", new_css) %>%
     # Compilers
