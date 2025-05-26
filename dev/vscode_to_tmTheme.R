@@ -2,10 +2,10 @@ library(tidyverse)
 library(xml2)
 library(jsonlite)
 
-vsinput <- "vendor/tokyo-night/tokyo-night-storm-color-theme.json"
-output <- "dist/tmTheme/Tokyo Night Storm.tmTheme"
-semclass <- "theme.dark.tokyo_night_storm" |>  tolower()
-commtheme <- "A clean Visual Studio Code theme that celebrates the lights of Downtown Tokyo at night"
+vsinput <- "vendor/winteriscoming/WinterIsComing-dark-blue-color-no-italics-theme.json"
+output <- "dist/tmTheme/Winter is Coming Dark Blue.tmTheme"
+semclass <- "theme.dark.winteriscoming_dark_blue" |>  tolower()
+commtheme <- "Dark theme with fun and bright foreground colors"
 
 # Based in https://github.com/microsoft/vscode-generator-code/blob/6e3f05ab46b6186e588094517764fdf42f21d094/generators/app/generate-colortheme.js#L237C18-L261C2
 mapping <- read_csv("src/mapping_themes.csv")
@@ -81,6 +81,7 @@ themename <- vs$name |>
   as.character() |>
   unname()
 
+themename <- "Winter is Coming Dark Blue"
 
 # Create settings
 ll <- NULL
