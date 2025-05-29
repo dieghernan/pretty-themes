@@ -41,6 +41,11 @@
         "label": "CRAN",
         "uiTheme": "vs",
         "path": "./dist/vscode/cran-color-theme.json"
+      },
+      {
+        "label": "rOpenSpain",
+        "uiTheme": "vs",
+        "path": "./dist/vscode/ropenspain-color-theme.json"
       }
     ]
   }
